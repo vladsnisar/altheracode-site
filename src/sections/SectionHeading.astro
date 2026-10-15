@@ -1,0 +1,10 @@
+---
+// Small eyebrow + title + lead block used at the top of most sections.
+interface Props { eyebrow?: string; title?: string; lead?: string; center?: boolean }
+const { eyebrow, title, lead, center = false } = Astro.props;
+---
+<div class:list={['reveal', { 'text-center': center }]}>
+  {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+  {title && <h2 class="section-title">{title}</h2>}
+  {lead && <p class="lead">{lead}</p>}
+</div>

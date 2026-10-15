@@ -1,0 +1,13 @@
+---
+import home from '../content/home.json';
+import SectionHeading from './SectionHeading.astro';
+---
+<section class="section process dark bg-deep" id="expertise">
+  <div class="container">
+    <SectionHeading eyebrow={home.expertise_eyebrow} title={home.expertise_title} lead={home.expertise_lead} />
+    <div class="mt-44"><h4 class="sub-title">{home.expertise_primary_title}</h4>
+      <ul class="slash-list">{home.expertise_primary.map(x => <li>{x}</li>)}</ul></div>
+    <div class="mt-38"><h4 class="sub-title">{home.expertise_secondary_title}</h4>
+      <ul class="slash-list">{home.expertise_secondary.map(x => <li>{x}</li>)}</ul></div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+---
+import home from '../content/home.json';
+import SectionHeading from './SectionHeading.astro';
+---
+<section class="section bg-white" id="portfolio">
+  <div class="container">
+    <SectionHeading eyebrow={home.portfolio_eyebrow} title={home.portfolio_title} lead={home.portfolio_lead} />
+    <div class="grid cols-3 reveal mt-46">
+      {home.portfolio.map(p => (
+        <article class="portfolio-card">
+          <div class={`portfolio-thumb ${p.theme ?? ''}`}><span class="chip">{p.tag}</span><span class="glyph">{p.glyph}</span></div>
+          <div class="portfolio-body"><span class="cat">{p.category}</span><h3>{p.title}</h3><p>{p.text}</p><a class="more" href="#contact">Learn more →</a></div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

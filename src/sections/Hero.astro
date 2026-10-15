@@ -1,0 +1,16 @@
+---
+import home from '../content/home.json';
+---
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <h1>{home.hero_title_start}<span class="hl">{home.hero_title_accent}</span>{home.hero_title_end}</h1>
+      <p>{home.hero_text}</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">{home.hero_button_primary} <span class="arrow">→</span></a>
+        <a href="#portfolio" class="btn btn-ghost">{home.hero_button_secondary}</a>
+      </div>
+    </div>
+  </div>
+</section>

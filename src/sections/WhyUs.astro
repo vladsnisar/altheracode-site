@@ -1,0 +1,14 @@
+---
+import home from '../content/home.json';
+import SectionHeading from './SectionHeading.astro';
+---
+<section class="section" id="why-us">
+  <div class="container">
+    <SectionHeading eyebrow={home.why_eyebrow} title={home.why_title} />
+    <div class="grid cols-3 reveal mt-46">
+      {home.why.map(w => (
+        <div class="card"><div class="ic">{w.icon}</div><h3>{w.title}</h3><p>{w.text}</p></div>
+      ))}
+    </div>
+  </div>
+</section>
