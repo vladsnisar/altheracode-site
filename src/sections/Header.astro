@@ -1,0 +1,17 @@
+---
+import site from '../content/site.json';
+---
+<header class="header">
+  <div class="container">
+    <nav class="nav" aria-label="Main">
+      <a class="logo" href="/"><span class="mark">{site.logo_letter}</span><span>{site.brand_name}</span></a>
+      <div class="nav-links" id="navLinks">
+        {site.nav.map(l => <a href={l.href}>{l.label}</a>)}
+      </div>
+      <div class="nav-cta">
+        <a href={site.nav_button.href} class="btn btn-primary">{site.nav_button.label}</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-controls="navLinks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      </div>
+    </nav>
+  </div>
+</header>

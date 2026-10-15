@@ -1,0 +1,17 @@
+---
+import home from '../content/home.json';
+import SectionHeading from './SectionHeading.astro';
+---
+<section class="section bg-white" id="faq">
+  <div class="container">
+    <SectionHeading eyebrow={home.faq_eyebrow} title={home.faq_title} center />
+    <div class="faq reveal">
+      {home.faq.map(f => (
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">{f.q}<span class="plus">+</span></button>
+          <div class="faq-a"><div class="inner">{f.a}</div></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

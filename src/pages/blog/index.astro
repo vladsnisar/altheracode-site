@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+const posts = (await getCollection('blog', p => !p.data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<Base title="Blog — AltheraCode" description="Insights on custom software, AI and product development from the AltheraCode team.">
+  <section class="hero page-hero"><div class="container"><div class="hero-inner">
+    <span class="eyebrow">Blog</span><h1>Insights & updates</h1>
+  </div></div></section>
+  <section class="section"><div class="container">
+    {posts.length === 0 && <p class="lead">No posts yet.</p>}
+    <div class="grid cols-3">
+      {posts.map(p => (
+        <a class="card" href={`/blog/${p.id}`}>
+          {p.data.cover && <img src={p.data.cover} alt="" loading="lazy" style="margin:-30px -30px 18px;width:calc(100% + 60px);max-width:none;border-radius:var(--radius) var(--radius) 0 0" />}
+          <h3>{p.data.title}</h3>
+          <p>{p.data.description}</p>
+        </a>
+      ))}
+    </div>
+  </div></section>
+</Base>

@@ -1,0 +1,14 @@
+---
+import home from '../content/home.json';
+import SectionHeading from './SectionHeading.astro';
+---
+<section class="section" id="services">
+  <div class="container">
+    <SectionHeading eyebrow={home.services_eyebrow} title={home.services_title} lead={home.services_lead} />
+    <div class="grid cols-3 reveal mt-46">
+      {home.services.map(s => (
+        <div class="card"><div class="ic">{s.icon}</div><h3>{s.title}</h3><p>{s.text}</p></div>
+      ))}
+    </div>
+  </div>
+</section>

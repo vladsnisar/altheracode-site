@@ -1,0 +1,12 @@
+---
+import home from '../content/home.json';
+import SectionHeading from './SectionHeading.astro';
+---
+<section class="section bg-white" id="stack">
+  <div class="container text-center">
+    <SectionHeading eyebrow={home.stack_eyebrow} title={home.stack_title} center />
+    <div class="stack-row reveal">
+      {home.stack.map(s => <span class="stack-pill"><span class="dot" style={`background:${s.color}`}></span>{s.name}</span>)}
+    </div>
+  </div>
+</section>

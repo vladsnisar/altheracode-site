@@ -1,20 +1,83 @@
 # Конфігурація панелі редагування Pages CMS (app.pagescms.org).
-# Цей файл описує, які поля ви бачите в браузері. Сам текст лежить у content.json.
+# Тут описано, які поля ви бачите в панелі. Сам текст лежить у src/content/*.json і src/content/blog/*.md.
+# Дизайн, секції та сторінки змінює Claude у коді (див. CLAUDE.md), а не тут.
 
 media:
-  input: media          # сюди завантажуються картинки в панелі
+  input: public/media   # сюди завантажуються картинки в панелі
   output: /media        # так на них посилається сайт
 
 content:
+  # ===================== ЗАГАЛЬНЕ ДЛЯ ВСІХ СТОРІНОК =====================
   - name: site
-    label: Зміст сайту
+    label: Загальне (шапка, футер, контакти)
     type: file
-    path: content.json
+    path: src/content/site.json
     fields:
       # --- БРЕНД ---
       - { name: brand_name, label: "Назва бренду", type: string }
       - { name: logo_letter, label: "Літера в логотипі", type: string }
+      - { name: contact_email, label: "E-mail", type: string }
+      - { name: contact_phone, label: "Телефон", type: string }
+      - { name: contact_whatsapp, label: "WhatsApp", type: string }
+      - { name: formspree_id, label: "ID форми Formspree (для листів)", type: string }
 
+      # --- ФУТЕР ---
+      - { name: footer_tagline, label: "Футер — короткий опис", type: text }
+      - name: socials
+        label: "Соцмережі"
+        type: object
+        list: true
+        fields:
+          - { name: label, label: "Підпис (2 літери)", type: string }
+          - { name: href, label: "Посилання", type: string }
+      - { name: footer_services, label: "Футер — список послуг", type: string, list: true }
+      - name: footer_company
+        label: "Футер — меню «Компанія»"
+        type: object
+        list: true
+        fields:
+          - { name: label, label: "Текст", type: string }
+          - { name: href, label: "Посилання", type: string }
+      - name: locations
+        label: "Адреси офісів"
+        type: object
+        list: true
+        fields:
+          - { name: name, label: "Назва", type: string }
+          - { name: address, label: "Адреса", type: text }
+      - { name: copyright, label: "Копірайт", type: string }
+      # --- SEO ТА АНАЛІТИКА ---
+      - { name: seo_title, label: "SEO — заголовок головної (вкладка браузера, Google)", type: string }
+      - { name: seo_description, label: "SEO — опис головної для Google", type: text }
+      - { name: gtm_id, label: "Google Tag Manager ID (GTM-XXXX)", type: string }
+      # --- МЕНЮ ---
+      - name: nav
+        label: "Меню в шапці"
+        type: object
+        list: true
+        fields:
+          - { name: label, label: "Текст", type: string }
+          - { name: href, label: "Посилання (напр. /#services або /blog)", type: string }
+      - name: nav_button
+        label: "Кнопка в шапці"
+        type: object
+        fields:
+          - { name: label, label: "Текст", type: string }
+          - { name: href, label: "Посилання", type: string }
+      - name: legal_links
+        label: "Футер — юридичні посилання"
+        type: object
+        list: true
+        fields:
+          - { name: label, label: "Текст", type: string }
+          - { name: href, label: "Посилання", type: string }
+
+  # ===================== ГОЛОВНА СТОРІНКА =====================
+  - name: home
+    label: Головна сторінка
+    type: file
+    path: src/content/home.json
+    fields:
       # --- ГЕРОЙ (головний банер) ---
       - { name: hero_title_start, label: "Заголовок — початок", type: string }
       - { name: hero_title_accent, label: "Заголовок — виділене слово (мʼятним)", type: string }
@@ -92,6 +155,7 @@ content:
           - { name: text, label: "Опис", type: text }
 
       # --- ТЕХ-СТЕК ---
+      - { name: stack_eyebrow, label: "Тех-стек — підпис зверху", type: string }
       - { name: stack_title, label: "Тех-стек — заголовок", type: string }
       - name: stack
         label: "Технології (плашки)"
@@ -116,38 +180,26 @@ content:
         fields:
           - { name: q, label: "Питання", type: string }
           - { name: a, label: "Відповідь", type: text }
-
       # --- КОНТАКТИ ---
       - { name: contact_eyebrow, label: "Контакти — підпис зверху", type: string }
       - { name: contact_title, label: "Контакти — заголовок", type: string }
       - { name: contact_text, label: "Контакти — текст", type: text }
-      - { name: contact_email, label: "E-mail", type: string }
-      - { name: contact_phone, label: "Телефон", type: string }
-      - { name: contact_whatsapp, label: "WhatsApp", type: string }
-      - { name: formspree_id, label: "ID форми Formspree (для листів)", type: string }
 
-      # --- ФУТЕР ---
-      - { name: footer_tagline, label: "Футер — короткий опис", type: text }
-      - name: socials
-        label: "Соцмережі"
-        type: object
-        list: true
-        fields:
-          - { name: label, label: "Підпис (2 літери)", type: string }
-          - { name: href, label: "Посилання", type: string }
-      - { name: footer_services, label: "Футер — список послуг", type: string, list: true }
-      - name: footer_company
-        label: "Футер — меню «Компанія»"
-        type: object
-        list: true
-        fields:
-          - { name: label, label: "Текст", type: string }
-          - { name: href, label: "Посилання", type: string }
-      - name: locations
-        label: "Адреси офісів"
-        type: object
-        list: true
-        fields:
-          - { name: name, label: "Назва", type: string }
-          - { name: address, label: "Адреса", type: text }
-      - { name: copyright, label: "Копірайт", type: string }
+  # ===================== БЛОГ =====================
+  - name: blog
+    label: Блог
+    type: collection
+    path: src/content/blog
+    format: yaml-frontmatter
+    filename: "{primary}.md"   # назва файлу = адреса сторінки: /blog/<назва>
+    view:
+      primary: title
+      sort: date
+      order: desc
+    fields:
+      - { name: title, label: "Заголовок", type: string, required: true }
+      - { name: description, label: "Короткий опис (для списку і Google)", type: text }
+      - { name: date, label: "Дата", type: date, required: true }
+      - { name: cover, label: "Обкладинка", type: image }
+      - { name: draft, label: "Чернетка (не публікувати)", type: boolean, default: false }
+      - { name: body, label: "Текст статті", type: rich-text }

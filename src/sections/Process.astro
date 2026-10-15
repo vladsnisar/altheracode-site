@@ -1,0 +1,18 @@
+---
+import home from '../content/home.json';
+import SectionHeading from './SectionHeading.astro';
+const steps = home.process;
+---
+<section class="section process dark" id="process">
+  <div class="container">
+    <SectionHeading eyebrow={home.process_eyebrow} title={home.process_title} lead={home.process_lead} />
+    <div class="process-grid reveal">
+      {steps.map((s, i) => (
+        <div class="step" style={steps.length % 2 === 1 && i === steps.length - 1 ? 'grid-column:1/-1' : undefined}>
+          <div class="n">{String(i + 1).padStart(2, '0')}</div>
+          <div><h3>{s.title}</h3><p>{s.text}</p></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

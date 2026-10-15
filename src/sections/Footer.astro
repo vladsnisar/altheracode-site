@@ -1,0 +1,30 @@
+---
+import site from '../content/site.json';
+const tel = 'tel:' + String(site.contact_phone).replace(/[^+\d]/g, '');
+---
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="about">
+        <a class="logo" href="/" style="color:#fff"><span class="mark">{site.logo_letter}</span><span>{site.brand_name}</span></a>
+        <p>{site.footer_tagline}</p>
+        <div class="socials">
+          {site.socials.map(s => <a href={s.href} target="_blank" rel="noopener">{s.label}</a>)}
+        </div>
+      </div>
+      <div><h4>Services</h4>{site.footer_services.map(s => <a href="/#services">{s}</a>)}</div>
+      <div><h4>Company</h4>{site.footer_company.map(c => <a href={c.href}>{c.label}</a>)}</div>
+      <div><h4>Locations</h4>
+        {site.locations.map(l => <div class="footer-loc"><b>{l.name}</b>{l.address}</div>)}
+        <div class="footer-loc"><b>Contacts</b>
+          <a href={tel} style="display:inline">{site.contact_phone}</a><br />
+          <a href={`mailto:${site.contact_email}`} style="display:inline">{site.contact_email}</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>{site.copyright}</div>
+      <div>{site.legal_links.map(l => <a href={l.href}>{l.label}</a>)}</div>
+    </div>
+  </div>
+</footer>

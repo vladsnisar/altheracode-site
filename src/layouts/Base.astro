@@ -1,0 +1,78 @@
+---
+// Shared page shell: <head>, Google Tag Manager, header, footer, site-wide scripts.
+// Every page wraps its sections in <Base title="..." description="...">.
+import '../styles/global.css';
+import site from '../content/site.json';
+import Header from '../sections/Header.astro';
+import Footer from '../sections/Footer.astro';
+
+interface Props { title?: string; description?: string; image?: string }
+const { title = site.seo_title, description = site.seo_description, image } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const gtm = site.gtm_id;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  {image && <meta property="og:image" content={new URL(image, Astro.site)} />}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <script is:inline>document.documentElement.classList.add('js')</script>
+  {gtm && (
+    <script is:inline define:vars={{ gtm }}>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',gtm);
+    </script>
+  )}
+</head>
+<body>
+  {gtm && <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${gtm}`} height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>}
+  <Header />
+  <main id="top">
+    <slot />
+  </main>
+  <Footer />
+
+  <script>
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn?.addEventListener('click', () => navLinks?.classList.toggle('open'));
+    navLinks?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    // FAQ accordion
+    document.querySelectorAll<HTMLButtonElement>('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement!;
+        const open = item.classList.contains('open');
+        document.querySelectorAll<HTMLElement>('.faq-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector<HTMLElement>('.faq-a')!.style.maxHeight = '';
+          i.querySelector('.faq-q')?.setAttribute('aria-expanded', 'false');
+        });
+        if (!open) {
+          const ans = item.querySelector<HTMLElement>('.faq-a')!;
+          item.classList.add('open');
+          ans.style.maxHeight = ans.scrollHeight + 'px';
+          q.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Fade-in on scroll
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }), { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>

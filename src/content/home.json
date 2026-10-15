@@ -1,6 +1,4 @@
 {
-  "brand_name": "AltheraCode",
-  "logo_letter": "A",
   "hero_title_start": "Innovative ",
   "hero_title_accent": "custom software",
   "hero_title_end": " development company",
@@ -262,68 +260,5 @@
   "contact_eyebrow": "Drop Us a Line",
   "contact_title": "Let's build something extraordinary",
   "contact_text": "If you'd like to get in touch, fill in the form and our team will get back to you shortly.",
-  "contact_email": "hello@altheracode.com",
-  "contact_phone": "+1 (800) 459-1978",
-  "contact_whatsapp": "+1 (800) 459-1978",
-  "formspree_id": "REPLACE_WITH_YOUR_FORMSPREE_ID",
-  "footer_tagline": "Full-cycle solution development for startups & established teams — strong engineering, startup-level speed.",
-  "socials": [
-    {
-      "label": "Up",
-      "href": "https://www.upwork.com/agencies/1305800533778464768/"
-    },
-    {
-      "label": "in",
-      "href": "https://www.linkedin.com/company/areascode/"
-    },
-    {
-      "label": "Wa",
-      "href": "https://api.whatsapp.com/send/?phone=18004591978"
-    },
-    {
-      "label": "Cl",
-      "href": "https://clutch.co/profile/areas-code#summary"
-    }
-  ],
-  "footer_services": [
-    "Software Product Development",
-    "AI Development",
-    "Web & Mobile Development",
-    "AI Integration",
-    "Process Automation",
-    "MVP Development"
-  ],
-  "footer_company": [
-    {
-      "label": "Case Studies",
-      "href": "#portfolio"
-    },
-    {
-      "label": "Our Process",
-      "href": "#process"
-    },
-    {
-      "label": "FAQ",
-      "href": "#faq"
-    },
-    {
-      "label": "Contact",
-      "href": "#contact"
-    },
-    {
-      "label": "Blog",
-      "href": "#"
-    }
-  ],
-  "locations": [
-    {
-      "name": "USA HQ",
-      "address": "Old Bridge, NJ 08857, 40 Oak Street"
-    },
-    {
-      "name": "EST office",
-      "address": "Tallinn, Estonia — Vesivärava tn 51-202, 10152"
-    }
-  ],
-  "copyright": "© 2026 AltheraCode"
+  "stack_eyebrow": "Our Tech Stack"
 }
