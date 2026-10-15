@@ -1,5 +1,5 @@
 {
-  "hero_title_start": "Innovative ",
+  "hero_title_start": "Innovative test",
   "hero_title_accent": "custom software",
   "hero_title_end": " development company",
   "hero_text": "At AltheraCode, we craft software solutions tailored to your business needs. From concept to launch, our team perfects every detail to drive your success and scalability. Let's create something extraordinary together.",
@@ -191,6 +191,7 @@
       "text": "Ongoing support, maintenance and updates to keep your solution running at its best."
     }
   ],
+  "stack_eyebrow": "Our Tech Stack",
   "stack_title": "Tools we build with",
   "stack": [
     {
@@ -259,6 +260,5 @@
   ],
   "contact_eyebrow": "Drop Us a Line",
   "contact_title": "Let's build something extraordinary",
-  "contact_text": "If you'd like to get in touch, fill in the form and our team will get back to you shortly.",
-  "stack_eyebrow": "Our Tech Stack"
+  "contact_text": "If you'd like to get in touch, fill in the form and our team will get back to you shortly."
 }
