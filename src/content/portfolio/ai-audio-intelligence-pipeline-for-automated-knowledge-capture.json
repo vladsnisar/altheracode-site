@@ -28,7 +28,7 @@
       "label": "faster business insight extraction from unstructured voice recordings"
     }
   ],
-  "client_image": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/6a187b72c927651215ddfb42_%D0%97%D0%BD%D1%96%D0%BC%D0%BE%D0%BA%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-05-28%20%D0%BE%2019.28.39.png",
+  "client_image": "/media/portfolio-ai-audio-intelligence-pipeline-for-automated-knowledge-captu.webp",
   "client_text": "A fast-moving operations-focused organization needed an automated system capable of transforming raw audio recordings into structured, searchable business knowledge without requiring manual processing or administrative coordination. The team relied heavily on meetings, voice notes, and spoken updates but lacked an efficient workflow for converting audio content into usable organizational insights.\n\nAs the amount of recorded content increased, manual transcription, fragmented documentation workflows, and inconsistent knowledge storage created delays, reduced visibility, and operational inefficiencies across internal collaboration processes.",
   "product_text": "The solution is an AI-powered audio intelligence pipeline built with n8n for automated transcription, executive summary generation, and structured Notion publishing workflows. The platform automatically detects uploaded MP3 files, processes speech-to-text conversion through AI models, generates concise executive-ready summaries, and publishes structured outputs directly into Notion knowledge environments.",
   "product_list_title": "The platform helps teams:",
