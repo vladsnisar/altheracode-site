@@ -21,27 +21,32 @@
     {
       "icon": "🧭",
       "title": "Product Development",
-      "text": "End-to-end product builds from discovery to a launch-ready solution."
+      "text": "End-to-end product builds from discovery to a launch-ready solution.",
+      "link": "/services/software-product-development-services"
     },
     {
       "icon": "🤖",
       "title": "AI Development",
-      "text": "Custom AI assistants, copilots, chatbots and agents tailored to your workflows."
+      "text": "Custom AI assistants, copilots, chatbots and agents tailored to your workflows.",
+      "link": "/services/custom-ai-development-services"
     },
     {
       "icon": "📱",
       "title": "Web & Mobile Apps",
-      "text": "Fast, reliable web and mobile applications built to scale with your users."
+      "text": "Fast, reliable web and mobile applications built to scale with your users.",
+      "link": "/services/web-mobile-development-services"
     },
     {
       "icon": "⚙️",
       "title": "Process Automation",
-      "text": "Business and intelligent process automation that streamlines operations."
+      "text": "Business and intelligent process automation that streamlines operations.",
+      "link": "/services/business-process-automation-services"
     },
     {
       "icon": "🚀",
       "title": "For Startups",
-      "text": "Startup-level speed with strong engineering — from MVP to product-market fit."
+      "text": "Startup-level speed with strong engineering — from MVP to product-market fit.",
+      "link": "/services/software-development-services-for-startups"
     },
     {
       "icon": "🧩",

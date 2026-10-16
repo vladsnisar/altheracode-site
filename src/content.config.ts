@@ -48,4 +48,16 @@ const portfolio = defineCollection({
   }),
 });
 
-export const collections = { blog, portfolio };
+// Service pages: one JSON file per page in src/content/services/ — a title, a description and a list of sections
+// (hero, intro, cards, process, industries, tech, cases, cta, faq, contact). Edited in Pages CMS → "Послуги".
+const services = defineCollection({
+  loader: glob({ pattern: '**/*.json', base: './src/content/services' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    draft: z.boolean().default(false),
+    sections: z.array(z.object({ type: z.string() }).passthrough()).default([]),
+  }),
+});
+
+export const collections = { blog, portfolio, services };

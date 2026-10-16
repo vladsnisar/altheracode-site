@@ -10,7 +10,8 @@ This repo is the AltheraCode marketing site. **There is no developer.** The mark
   - `src/content/home.json`: homepage text.
   - `src/content/blog/*.md`: blog posts (frontmatter: title, description, date, category, cover, draft).
   - `src/content/portfolio/*.json`: one file per case study (drafts are not built). Rendered by `src/pages/portfolio/[slug].astro`; the list with filters is `src/pages/portfolio/index.astro`.
-  - `src/content/pages.json`: headings and SEO text of `/portfolio` and `/blog`.
+  - `src/content/services/*.json`: one file per service page (`/services/<name>`): SEO title/description plus a list of `sections` (hero, intro, cards, process, industries, tech, cases, cta, faq, contact). Rendered by `src/pages/services/[slug].astro` through `src/sections/ServiceBlock.astro`. To add a new kind of section, add it to `ServiceBlock.astro` and to the `blocks:` list in `.pages.yml`.
+  - `src/content/pages.json`: headings and SEO text of `/portfolio`, `/blog` and `/contact`.
   - `src/content/tech.json`: technology names and logos, matched by name on case-study pages.
   - `public/media/`: uploaded images, served at `/media/...`.
 

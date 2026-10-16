@@ -10,3 +10,12 @@ export const richText = (s: string) =>
 
 export const slugify = (s: string) =>
   s.toLowerCase().replace(/&/g, ' ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+
+// Escapes the text and wraps the first occurrence of `accent` in a highlight span (used in big headings).
+export const highlight = (s: string, accent?: string) => {
+  const safe = esc(s.trim());
+  if (!accent) return safe;
+  const a = esc(accent.trim());
+  const i = safe.indexOf(a);
+  return i < 0 ? safe : `${safe.slice(0, i)}<span class="hl">${a}</span>${safe.slice(i + a.length)}`;
+};
