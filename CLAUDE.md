@@ -8,7 +8,10 @@ This repo is the AltheraCode marketing site. **There is no developer.** The mark
 - Content is edited by marketing in Pages CMS (`.pages.yml`), which writes:
   - `src/content/site.json`: header, footer, contacts, SEO defaults, GTM ID. Used on every page.
   - `src/content/home.json`: homepage text.
-  - `src/content/blog/*.md`: blog posts (frontmatter: title, description, date, cover, draft).
+  - `src/content/blog/*.md`: blog posts (frontmatter: title, description, date, category, cover, draft).
+  - `src/content/portfolio/*.json`: one file per case study (drafts are not built). Rendered by `src/pages/portfolio/[slug].astro`; the list with filters is `src/pages/portfolio/index.astro`.
+  - `src/content/pages.json`: headings and SEO text of `/portfolio` and `/blog`.
+  - `src/content/tech.json`: technology names and logos, matched by name on case-study pages.
   - `public/media/`: uploaded images, served at `/media/...`.
 
 ## Where things live
@@ -27,7 +30,8 @@ This repo is the AltheraCode marketing site. **There is no developer.** The mark
 4. **Reuse what exists.** Use the existing classes before writing new ones: `.section`, `.container`, `.eyebrow`, `.section-title`, `.lead`, `.grid.cols-3`, `.card`, `.btn.btn-primary` / `.btn-ghost`, `.reveal`, `SectionHeading.astro`. New styles go in `global.css` or in a scoped `<style>` block inside the section.
 5. **Keep existing URLs.** The site replaces altheracode.com on Webflow. If a page moves or is renamed, add a 301 redirect line to `public/_redirects` (format: `/old-path /new-path 301`).
 6. **Every page gets a unique `title` and `description`** passed to `<Base>`.
-7. **Images:** marketing uploads them to `public/media/`. Always set `alt` text. Use `loading="lazy"` for images below the fold.
+7. **Text in CMS fields** is plain text: a blank line starts a new paragraph and `**word**` is bold (see `src/lib/text.ts`). Don't put HTML in content files.
+7b. **Images:** marketing uploads them to `public/media/`. Always set `alt` text. Use `loading="lazy"` for images below the fold.
 8. **Interactivity:** put a `<script>` inside the section component (Astro bundles it). No external JS libraries unless they're clearly needed.
 9. **Before opening the PR, run `npm run build` and fix all errors.** Check the changed pages at 1440px and 390px widths, for example by taking Playwright screenshots of `npm run preview`.
 10. Don't change `.pages.yml` field names that already hold content. Renaming a field silently empties it in the CMS. If you have to rename one, move the data in the JSON file in the same PR.

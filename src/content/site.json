@@ -11,7 +11,7 @@
     },
     {
       "label": "Case Studies",
-      "href": "/#portfolio"
+      "href": "/portfolio"
     },
     {
       "label": "Process",
@@ -20,6 +20,10 @@
     {
       "label": "FAQ",
       "href": "/#faq"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog"
     },
     {
       "label": "Contact",
@@ -64,7 +68,7 @@
   "footer_company": [
     {
       "label": "Case Studies",
-      "href": "/#portfolio"
+      "href": "/portfolio"
     },
     {
       "label": "Our Process",
@@ -80,7 +84,7 @@
     },
     {
       "label": "Blog",
-      "href": "#"
+      "href": "/blog"
     }
   ],
   "locations": [
@@ -98,10 +102,6 @@
     {
       "label": "Privacy Policy",
       "href": "/privacy-policy"
-    },
-    {
-      "label": "Terms & Conditions",
-      "href": "/terms-and-conditions"
     }
   ]
 }

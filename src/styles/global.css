@@ -142,3 +142,43 @@ a{color:inherit;text-decoration:none}
 .prose a{color:var(--ink);text-decoration:underline}.prose img{border-radius:var(--radius);margin:24px 0}
 .post-meta{color:var(--muted);font-size:.92rem;margin-bottom:28px}
 .page-hero .hero-inner{padding:80px 0 70px}
+
+/* ---- case studies, listing filters, blog (added with the portfolio/blog migration) ---- */
+.section.tight{padding:48px 0}
+.page-hero .eyebrow{margin-bottom:14px}
+.page-hero h1{font-size:clamp(2.2rem,5vw,3.6rem)}
+.meta-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chip-lg{font-size:.85rem;color:#E2E0EC;border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:6px 14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.stat{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.stat .num{font-family:'Funnel Display',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,2.8rem);line-height:1;color:var(--purple)}
+.stat .lbl{color:var(--muted);margin-top:12px;font-size:.95rem}
+.stats-dark .stat{background:var(--card-dark);border-color:rgba(255,255,255,.08)}
+.stats-dark .num{color:var(--mint)}
+.stats-dark .lbl{color:#B7B4C6}
+.two-col{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.two-col.single{grid-template-columns:1fr}
+.cs-image{border-radius:var(--radius);width:100%;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line)}
+.cs-body p{margin:0 0 16px;max-width:820px}
+.cs-title{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:18px}
+.cs-sub{font-size:1.1rem;margin:22px 0 12px}
+.check-list{list-style:none;display:grid;gap:12px;margin:10px 0 20px;max-width:820px}
+.check-list li{display:flex;gap:12px;align-items:baseline}
+.check-list li::before{content:"✓";color:var(--mint);font-weight:800;flex:none}
+.tech-logos{display:flex;flex-wrap:wrap;gap:12px}
+.tech-logo{display:inline-flex;align-items:center;gap:10px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:10px 16px;font-weight:500}
+.tech-logo img{height:26px;width:auto;max-width:90px;object-fit:contain}
+.btn-ghost-dark{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost-dark:hover{border-color:var(--mint);color:#0b6b5b}
+.filter-chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+.filter-chips button,.chip-btn{font:inherit;font-size:.9rem;font-weight:500;color:#3a3744;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:8px 16px;cursor:pointer;transition:border-color .2s,background .2s}
+.filter-chips button:hover,.chip-btn:hover{border-color:var(--mint)}
+.filter-chips button.active,.chip-btn.active{background:var(--purple);border-color:var(--purple);color:#fff}
+.portfolio-card[hidden]{display:none}
+.portfolio-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.portfolio-thumb .chip{z-index:1}
+.portfolio-body h3 a:hover{color:#0b6b5b}
+a.eyebrow{text-decoration:none}
+@media (max-width:960px){.two-col{grid-template-columns:1fr;gap:28px}}
+@media (max-width:680px){.stats{grid-template-columns:1fr}.section.tight{padding:36px 0}}
+.stats + .lead{margin-top:28px}

@@ -1,0 +1,65 @@
+{
+  "title": "AI Assistant for Marketing & Sales Support Automation",
+  "description": "An AI assistant built to automate meeting summaries, follow-ups, and pipeline reporting across Microsoft 365 and Notion workflows.",
+  "draft": false,
+  "tag": "Under NDA",
+  "categories": [
+    "B2B Marketing"
+  ],
+  "location": "Confidential",
+  "duration": "6–7 Weeks",
+  "services": [
+    "AI Assistant Development",
+    "Workflow Automation",
+    "Marketing & Sales Automation"
+  ],
+  "tech": [],
+  "highlights": [
+    {
+      "value": "92%",
+      "label": "captured meeting decisions and action items automatically after client calls"
+    },
+    {
+      "value": "4x",
+      "label": "accelerated follow-up cycles across marketing and sales workflows"
+    },
+    {
+      "value": "6 hrs",
+      "label": "saved weekly per person by reducing manual tracking and reporting tasks"
+    }
+  ],
+  "client_image": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/6a1832bf778e61a102b96758_%D0%97%D0%BD%D1%96%D0%BC%D0%BE%D0%BA%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-05-28%20%D0%BE%2014.18.41.png",
+  "client_text": "A B2B marketing and sales team managing dozens of Teams meetings, emails, shared documents, and chat threads every week. The team needed a structured AI-powered system to capture decisions, assign follow-ups, and create reliable visibility into sales and marketing activity.",
+  "product_text": "The AI Marketing & Sales Assistant is an automation system designed to turn meetings, emails, and documents into structured actions, reports, and pipeline insights.",
+  "product_list_title": "The platform helps teams:",
+  "product_list": [
+    "Capture meeting summaries, decisions, and action items automatically",
+    "Track ownership, follow-ups, and pipeline updates in Notion",
+    "Generate weekly AI-powered reports for marketing and sales leadership"
+  ],
+  "product_text_2": "The solution was built to reduce missed follow-ups, improve pipeline visibility, and give teams a single source of truth for ongoing marketing and sales activity.",
+  "goals": [
+    "The client needed to replace scattered manual tracking with a centralized automation workflow that could capture decisions, organize action items, and keep stakeholders aligned. The main goal was to reduce operational noise, improve follow-up discipline, and create structured reporting without forcing the team to change its existing Microsoft 365 workflow."
+  ],
+  "challenges": [
+    "▪ Meeting decisions and action items were not captured automatically, which caused follow-ups to be missed or delayed.\n\n▪ Sales pipeline visibility depended on individual memory, manual updates, and information scattered across several tools.\n\n▪ Reporting on marketing activity and sales progress required too much manual effort and lacked a consistent structure."
+  ],
+  "solution": "AltheraCode designed a modular AI automation system connected to the client’s Microsoft 365 environment. The system collected data from Teams meetings, Office 365 emails, chat threads, Word/PDF documents, and other shared sources, then transformed unstructured information into organized action records.\n\nThe workflow used N8N automation, Microsoft Graph API, OpenAI-powered extraction, and a Notion workspace as the central command center. Meeting summaries, decisions, owners, deadlines, pipeline updates, and alerts were automatically structured and routed to the right stakeholders.",
+  "results_text": "The implementation improved meeting accountability, follow-up speed, and sales pipeline visibility across the team. Key outcomes included:",
+  "results": [
+    {
+      "value": "100%",
+      "label": "of key meeting decisions captured automatically after client discussions"
+    },
+    {
+      "value": "3x",
+      "label": "faster follow-up cycle from agreement to responsible owner action"
+    },
+    {
+      "value": "5 hrs",
+      "label": "saved weekly per person by reducing manual reporting and scattered tracking"
+    }
+  ],
+  "results_closing": "A fragmented marketing and sales workflow was transformed into a centralized AI-assisted operating system that improved execution, reduced missed actions, and gave leadership clearer visibility into pipeline activity.",
+  "created": "2026-05-28T12:22"
+}

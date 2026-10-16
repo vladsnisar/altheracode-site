@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "name": "Angular",
+      "logo": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/680fa41a8ed66b2077aadeb4_Angular_logo.svg"
+    },
+    {
+      "name": "AWS",
+      "logo": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/680faaffd5d820b000dffb39_AWS_logo.jpg"
+    },
+    {
+      "name": "DigitalOcean",
+      "logo": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/680fa99dad9313f61c6e5e4f_Digital%20Ocean_logo.svg"
+    },
+    {
+      "name": "Django",
+      "logo": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/67ee6dd2c1f4ea3577a1b270_Tech%20Stack-dj.svg"
+    },
+    {
+      "name": "Docker",
+      "logo": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/680fa937cccb2bce3eaab821_Docker_logo.svg"
+    },
+    {
+      "name": "GitHub",
+      "logo": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/680f9d7adc9441b705ac59f1_GitHub-Mark-32px.png"
+    },
+    {
+      "name": "Go",
+      "logo": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/680fa4e4fb2b4be2fbd8af24_GO_logo.svg"
+    },
+    {
+      "name": "Google Sheets",
+      "logo": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/68caca17b6f7edca9f7ab184_Google_Sheets_logo_(2014-2020).svg.png"
+    },
+    {
+      "name": "JavaScript",
+      "logo": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/680fa5711765f4490be32bcf_java-vertical_logo.svg"
+    },
+    {
+      "name": "MySQL",
+      "logo": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/680fa5bb1c74f6da91541f92_MySQL_logo.svg"
+    },
+    {
+      "name": "n8n",
+      "logo": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/68cac82f7de208ed5dce3fa7_684b0e84bca6e63d2fc38b29_n8n-color.webp"
+    },
+    {
+      "name": "Node.js",
+      "logo": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/680f9dd2370e5aa36fb909a9_Node.js_logo.svg"
+    },
+    {
+      "name": "PostgreSQL",
+      "logo": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/680fa671b9b88e16ae45609b_PostgreSQL_logo.svg"
+    },
+    {
+      "name": "Python",
+      "logo": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/67ee6edc0c206ee6e6fe895a_Tech%20Stack-python.svg"
+    },
+    {
+      "name": "React Native",
+      "logo": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/68c3d792f1e83e1b27a46bf4_%D0%BA%D1%83%D1%84%D1%81%D0%BB.png"
+    },
+    {
+      "name": "Ruby",
+      "logo": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/680fa86a090846c25c20dea9_Ruby_logo.svg"
+    },
+    {
+      "name": "Ruby on Rails",
+      "logo": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/680fa8dc45c0e5648a1f2139_Ruby-On-Rails_logo.svg"
+    },
+    {
+      "name": "Vue.js",
+      "logo": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/67ee6ec3a9d208862655d06b_Tech%20Stack-v.svg"
+    }
+  ]
+}

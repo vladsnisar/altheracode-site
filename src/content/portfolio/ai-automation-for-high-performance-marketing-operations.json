@@ -1,0 +1,67 @@
+{
+  "title": "AI Automation for High-Performance Marketing Operations",
+  "description": "An AI powered marketing operations ecosystem automating lead generation, outreach, reporting, and content workflows in one infrastructure.",
+  "draft": false,
+  "tag": "Under NDA",
+  "categories": [
+    "B2B Marketing & Lead Generation"
+  ],
+  "location": "USA",
+  "duration": "10 Weeks",
+  "services": [
+    "AI Workflow Automation",
+    "CRM Automation",
+    "Lead Generation Infrastructure"
+  ],
+  "tech": [],
+  "highlights": [
+    {
+      "value": "+60%",
+      "label": "pipeline growth across multichannel outbound acquisition campaigns"
+    },
+    {
+      "value": "70%",
+      "label": "reduction in manual operational coordination and reporting work"
+    },
+    {
+      "value": "100%",
+      "label": "real time visibility across campaign, reporting, and onboarding workflows"
+    }
+  ],
+  "client_image": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/6a18538eb3979761a093106b_%D0%97%D0%BD%D1%96%D0%BC%D0%BE%D0%BA%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-05-28%20%D0%BE%2016.38.18.png",
+  "client_text": "A B2B lead generation and outbound marketing company managing multichannel prospecting, onboarding, content delivery, and reporting operations for multiple client accounts. The team needed a scalable automation infrastructure that could increase outreach capacity, reduce repetitive operational work, and centralize campaign visibility across departments. The existing workflows relied heavily on manual coordination between tools, creating operational bottlenecks as campaign volume continued growing.\n\n‍",
+  "product_text": "An AI powered marketing automation ecosystem connecting lead generation, outreach, onboarding, content operations, and reporting into one centralized workflow infrastructure.",
+  "product_list_title": "The automation environment allowed teams to:",
+  "product_list": [
+    "automate outbound lead generation and multichannel outreach",
+    "streamline onboarding and internal operational workflows",
+    "centralize analytics, reporting, and campaign visibility"
+  ],
+  "product_text_2": "The system significantly reduced manual coordination work while improving campaign scalability, operational consistency, execution speed, and visibility across day to day marketing operations.",
+  "goals": [
+    "The primary goal was to build a scalable AI driven marketing operations infrastructure capable of supporting outbound growth without increasing operational overhead. The project focused on automating lead generation workflows, CRM synchronization, onboarding processes, content production pipelines, and reporting operations while improving visibility, personalization quality, and execution speed across all marketing activities."
+  ],
+  "challenges": [
+    "Marketing operations depended on disconnected tools, spreadsheets, and manual coordination between outreach, CRM, onboarding, and reporting workflows",
+    "Outreach scaling created operational bottlenecks, inconsistent personalization quality, and limited visibility into campaign performance across channels",
+    "Reporting, campaign monitoring, and client updates required significant manual effort and delayed optimization decisions across the marketing team"
+  ],
+  "solution": "AltheraCode designed a centralized automation infrastructure built around HubSpot, Airtable, Make.com, GPT-4, and multichannel outreach tools including Expandi, Reply.io, and Lemlist. The ecosystem connected lead generation, onboarding, CRM workflows, content production, analytics, and reporting into one operational environment.\n\nThe architecture automated LinkedIn prospecting, multistep outreach sequences, CRM synchronization, onboarding workflows, AI powered content generation, and reporting pipelines. The solution also included centralized reporting dashboards, Slack based reporting digests, AI assisted monitoring workflows, and real time campaign visibility that helped the marketing team scale operations with significantly less manual coordination work.",
+  "results_text": "The automation ecosystem significantly improved operational scalability, campaign execution speed, and visibility across lead generation, onboarding, reporting, and content workflows across the entire organization.",
+  "results": [
+    {
+      "value": "+60%",
+      "label": "pipeline growth across multichannel outbound acquisition campaigns and lead generation workflows"
+    },
+    {
+      "value": "70%",
+      "label": "reduction in manual operational coordination, reporting, and repetitive marketing tasks"
+    },
+    {
+      "value": "2–3x",
+      "label": "higher AI assisted content production capacity across multichannel marketing operations"
+    }
+  ],
+  "results_closing": "The implementation allowed the company to scale multichannel marketing operations with significantly lower operational overhead while improving reporting visibility, campaign responsiveness, and outbound execution consistency. The team gained a centralized operational system capable of supporting long term outbound growth without expanding manual marketing operations.",
+  "created": "2026-05-28T14:52"
+}

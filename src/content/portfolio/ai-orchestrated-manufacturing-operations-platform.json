@@ -1,0 +1,67 @@
+{
+  "title": "AI Orchestrated Manufacturing Operations Platform",
+  "description": "An AI powered operational platform built to coordinate sales, procurement, operations, and finance workflows inside a live manufacturing environment.",
+  "draft": false,
+  "tag": "Under NDA",
+  "categories": [
+    "Manufacturing & Operations"
+  ],
+  "location": "USA",
+  "duration": "12 weeks",
+  "services": [
+    "AI Workflow Automation",
+    "Enterprise Systems Integration",
+    "Operational Process Orchestration"
+  ],
+  "tech": [],
+  "highlights": [
+    {
+      "value": "12",
+      "label": "rolling production planning horizon tracked across multiple operational teams"
+    },
+    {
+      "value": "30%+",
+      "label": "faster operational updates inside constrained manufacturing planning windows"
+    },
+    {
+      "value": "45 min",
+      "label": "Weekly S&OP review cycles reduced to short exception based meetings"
+    }
+  ],
+  "client_image": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/6a1865b9c08d0acccbc86b14_%D0%97%D0%BD%D1%96%D0%BC%D0%BE%D0%BA%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-05-28%20%D0%BE%2017.56.09.png",
+  "client_text": "A mid sized manufacturing company struggled with disconnected planning workflows across sales, procurement, operations, and finance teams. Critical operational decisions depended on spreadsheets, manual coordination, and delayed reporting across multiple systems.\n\nThe company needed a centralized operational assistant capable of improving planning accuracy, reducing operational bottlenecks, and creating shared visibility across manufacturing activities and delivery planning workflows.",
+  "product_text": "AltheraCode developed a multi agent operational orchestration platform designed to centralize manufacturing planning, production coordination, procurement monitoring, and finance reporting workflows.",
+  "product_list_title": "The platform helps teams:",
+  "product_list": [
+    "Coordinate order intake, procurement, and production planning in real time",
+    "Monitor material availability, staffing capacity, and financial exposure across a rolling 12 week horizon",
+    "Automate operational alerts, approvals, reporting workflows, and exception management across departments"
+  ],
+  "product_text_2": "The solution combined AI driven orchestration, enterprise integrations, and operational reporting into one scalable manufacturing coordination ecosystem built for long term operational growth.",
+  "goals": [
+    "The project focused on eliminating operational silos, improving production planning accuracy, and reducing manual coordination between departments. The company required a scalable operational AI layer capable of supporting live manufacturing visibility, automated planning workflows, procurement monitoring, finance reporting, and structured operational decision making without increasing administrative overhead."
+  ],
+  "challenges": [
+    "Sales teams committed delivery dates without real time visibility into production capacity, staffing limitations, or planning constraints",
+    "Procurement workflows lacked automated alerts for material shortages, supplier delays, and safety stock deviations across active production cycles",
+    "Finance reporting and operational reviews depended on manual updates spread across disconnected systems, spreadsheets, and delayed reporting processes"
+  ],
+  "solution": "AltheraCode designed a modular multi agent orchestration platform built around Microsoft Teams, Dataverse, Power Automate, Power BI, and ERP integrations. The system centralized operational workflows across sales, procurement, operations, and finance while maintaining live planning visibility across a rolling production horizon.\n\nThe platform introduced freeze check validation for incoming orders, automated capacity calculations, procurement monitoring, R/Y/G operational alerts, finance delta reporting, and structured S&OP workflows. All workflows synchronized through a centralized orchestration layer with integrated ERP, WMS, HRIS, and treasury system connectivity to support scalable manufacturing operations and future automation expansion.",
+  "results_text": "The implementation improved operational coordination across manufacturing, procurement, finance, and delivery planning workflows. Teams gained a shared real time planning environment with fewer manual escalations and more predictable execution processes.",
+  "results": [
+    {
+      "value": "90%+",
+      "label": "improvement in operational visibility across daily production planning workflows"
+    },
+    {
+      "value": "30%+",
+      "label": "faster response handling inside constrained manufacturing planning windows"
+    },
+    {
+      "value": "100%",
+      "label": "traceability of approvals, escalations, and operational decision making actions"
+    }
+  ],
+  "results_closing": "The platform also established a scalable AI operations foundation with synchronized planning logic, audit visibility, and workflow orchestration across multiple business functions. The new operational model reduced reactive decision making and improved long range production stability across the organization.",
+  "created": "2026-05-28T15:41"
+}

@@ -1,0 +1,117 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Contact from '../../sections/Contact.astro';
+import { richText, inline } from '../../lib/text';
+import tech from '../../content/tech.json';
+
+export async function getStaticPaths() {
+  const cases = await getCollection('portfolio', p => !p.data.draft);
+  return cases.map(c => ({ params: { slug: c.id }, props: { c } }));
+}
+const { c } = Astro.props;
+const d = c.data;
+const logos = d.tech.map(name => tech.items.find(t => t.name.toLowerCase() === name.toLowerCase()) ?? { name, logo: '' });
+---
+<Base title={`${d.title} — AltheraCode`} description={d.description} image={d.client_image || undefined}>
+  <section class="hero page-hero"><div class="hero-glow"></div><div class="container"><div class="hero-inner">
+    <span class="eyebrow">{d.categories[0] ?? 'Case study'}</span>
+    <h1>{d.title}</h1>
+    {d.description && <p>{d.description}</p>}
+    <div class="meta-chips">
+      {d.tag && <span class="chip-lg">{d.tag}</span>}
+      {d.location && <span class="chip-lg">{d.location}</span>}
+      {d.duration && <span class="chip-lg">{d.duration}</span>}
+      {d.categories.slice(1).map(k => <span class="chip-lg">{k}</span>)}
+    </div>
+  </div></div></section>
+
+  {d.highlights.length > 0 && (
+    <section class="section tight"><div class="container">
+      <div class="stats reveal">
+        {d.highlights.map(h => <div class="stat"><div class="num">{h.value}</div><div class="lbl">{h.label}</div></div>)}
+      </div>
+    </div></section>
+  )}
+
+  {(d.client_text || d.client_image) && (
+    <section class="section bg-white"><div class="container">
+      <div class:list={['two-col', 'reveal', { 'single': !d.client_image }]}>
+        <div class="cs-body">
+          <span class="eyebrow">The Client</span>
+          <h2 class="cs-title">Who we built it for</h2>
+          <Fragment set:html={richText(d.client_text)} />
+        </div>
+        {d.client_image && <img class="cs-image" src={d.client_image} alt={`${d.title} — client`} loading="lazy" />}
+      </div>
+    </div></section>
+  )}
+
+  {(d.product_text || d.product_list.length > 0 || d.product_text_2) && (
+    <section class="section"><div class="container cs-body reveal">
+      <span class="eyebrow">Product / Service</span>
+      <h2 class="cs-title">What we built</h2>
+      <Fragment set:html={richText(d.product_text)} />
+      {d.product_list.length > 0 && (<>
+        {d.product_list_title && <h3 class="cs-sub">{d.product_list_title}</h3>}
+        <ul class="check-list">{d.product_list.map(i => <li set:html={inline(i)} />)}</ul>
+      </>)}
+      <Fragment set:html={richText(d.product_text_2)} />
+    </div></section>
+  )}
+
+  {d.goals.length > 0 && (
+    <section class="section bg-white"><div class="container cs-body reveal">
+      <span class="eyebrow">Goals &amp; Objectives</span>
+      <h2 class="cs-title">What we set out to achieve</h2>
+      {d.goals.map(g => <Fragment set:html={richText(g)} />)}
+    </div></section>
+  )}
+
+  {d.challenges.length > 0 && (
+    <section class="section"><div class="container cs-body reveal">
+      <span class="eyebrow">Project Challenges</span>
+      <h2 class="cs-title">What stood in the way</h2>
+      <ul class="check-list">{d.challenges.map(i => <li set:html={inline(i)} />)}</ul>
+    </div></section>
+  )}
+
+  {d.solution && (
+    <section class="section bg-white"><div class="container cs-body reveal">
+      <span class="eyebrow">Solution</span>
+      <h2 class="cs-title">How we solved it</h2>
+      <Fragment set:html={richText(d.solution)} />
+    </div></section>
+  )}
+
+  {(d.results_text || d.results.length > 0) && (
+    <section class="section process dark"><div class="container reveal">
+      <span class="eyebrow">Our Results</span>
+      <h2 class="section-title">What changed</h2>
+      {d.results_text && <p class="lead">{d.results_text}</p>}
+      {d.results.length > 0 && <div class="stats stats-dark mt-44">
+        {d.results.map(r => <div class="stat"><div class="num">{r.value}</div><div class="lbl">{r.label}</div></div>)}
+      </div>}
+      {d.results_closing && <p class="lead">{d.results_closing}</p>}
+    </div></section>
+  )}
+
+  {(d.services.length > 0 || logos.length > 0) && (
+    <section class="section bg-white"><div class="container cs-body reveal">
+      {d.services.length > 0 && (<>
+        <h3 class="cs-sub">Services</h3>
+        <div class="tags">{d.services.map(s => <span class="tag">{s}</span>)}</div>
+      </>)}
+      {logos.length > 0 && (<>
+        <h3 class="cs-sub" style="margin-top:32px">Tech stack</h3>
+        <div class="tech-logos">
+          {logos.map(t => <span class="tech-logo">{t.logo && <img src={t.logo} alt="" loading="lazy" />}{t.name}</span>)}
+        </div>
+      </>)}
+    </div></section>
+  )}
+
+  <section class="section tight"><div class="container"><a class="btn btn-ghost-dark" href="/portfolio">← All case studies</a></div></section>
+
+  <Contact />
+</Base>
