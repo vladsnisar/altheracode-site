@@ -3,7 +3,7 @@ title: "From MVP to AI Agent: How Startups Can Scale with LLMs"
 description: "Early-stage teams can evolve simple AI prototypes into fully operational agents, boosting business efficiency and depth."
 date: "2025-07-16"
 category: "AI for Startups"
-cover: "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/68bff98df384360748e42818_6877ff9e81fa7c88f684cc1d_charlesdeluvio-Lks7vei-eAg-unsplash.jpg"
+cover: "/media/blog-from-mvp-to-ai-agent-how-startups-can-scale-with-llms.jpg"
 draft: false
 ---
 

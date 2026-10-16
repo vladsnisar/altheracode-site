@@ -34,7 +34,7 @@
       "label": "real-time visibility into reconciliation status across all ISO accounts"
     }
   ],
-  "client_image": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/68d3c0a30f1a8074582ac169_68ca91594624d387a2bbc018_glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg",
+  "client_image": "/media/portfolio-automating-financial-reconciliation-with-n8n.webp",
   "client_text": "A European fintech back-office provider managing monthly residual disbursements across 15 to 20 ISO partner accounts. Three finance staff spent two full days every month-end manually cross-referencing ISO reports against bank deposit records in a shared spreadsheet. They needed full automation with zero disruption to existing tools.\n\n‍",
   "product_text": "The client delivers back-office financial reconciliation: matching expected ISO residual payments against actual bank deposits, surfacing discrepancies, and reporting to finance leadership.",
   "product_list_title": "The service enables teams to:",
