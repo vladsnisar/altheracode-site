@@ -17,7 +17,15 @@
       "title": "Custom Web & Mobile Solution Development Services",
       "text": "AltheraCode delivers end-to-end development for web and mobile solutions—scalable, high-performing solutions built to fit your business. Leveraging advanced AI technologies, every stage from concept to launch is crafted for seamless execution, intuitive design, and long-term growth.",
       "image": "/media/service-web-mobile-development-services-intro.avif",
-      "image_alt": "Custom Web & Mobile Solution Development Services"
+      "image_alt": "Custom Web & Mobile Solution Development Services",
+      "list": [
+        "Project Discovery & Planning",
+        "MVP Development",
+        "Mobile & Web App Development",
+        "UI/UX Design & Prototyping",
+        "Quality Assurance & Testing",
+        "App Modernization & Scaling"
+      ]
     },
     {
       "type": "cases",

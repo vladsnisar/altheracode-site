@@ -29,6 +29,7 @@ const cols = (n: number) => (n === 2 || n === 4 ? 'cols-2' : 'cols-3');
         {b.tag && <span class="eyebrow">{b.tag}</span>}
         <h2 class="cs-title">{b.title}</h2>
         <Fragment set:html={richText(b.text ?? '')} />
+        {b.list?.length > 0 && <ul class="check-list">{b.list.map(i => <li>{i}</li>)}</ul>}
       </div>
       {b.image && <img class="cs-image" src={b.image} alt={b.image_alt || b.title} loading="lazy" />}
     </div>

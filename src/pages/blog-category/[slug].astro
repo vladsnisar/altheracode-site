@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { slugify } from '../../lib/text';
 import cats from '../../content/blog-categories.json';
+import pages from '../../content/pages.json';
 export function getStaticPaths() {
   return cats.blog_categories.map(c => ({ params: { slug: c.slug }, props: { cat: c } }));
 }
@@ -13,6 +14,7 @@ const posts = (await getCollection('blog', p => !p.data.draft && slugify(p.data.
 <Base title={`${cat.name} — AltheraCode Blog`} description={`AltheraCode blog posts about ${cat.name}.`}>
   <section class="hero page-hero"><div class="hero-glow"></div><div class="container"><div class="hero-inner">
     <span class="eyebrow">Blog</span><h1>{cat.name}</h1>
+    {pages.blog.lead && <p>{pages.blog.lead}</p>}
   </div></div></section>
   <section class="section"><div class="container">
     <nav class="filter-chips" aria-label="Blog categories">
