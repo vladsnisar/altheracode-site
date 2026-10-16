@@ -60,4 +60,10 @@ const services = defineCollection({
   }),
 });
 
-export const collections = { blog, portfolio, services };
+// Legal pages (privacy policy): one Markdown file per page in src/content/legal/ (edited in Pages CMS → "Юридичні сторінки").
+const legal = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/legal' }),
+  schema: z.object({ title: z.string(), description: z.string(), heading: z.string() }),
+});
+
+export const collections = { blog, portfolio, services, legal };

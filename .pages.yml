@@ -397,6 +397,22 @@ content:
               - { name: title, label: "Заголовок", type: string }
               - { name: text, label: "Текст під заголовком", type: text }
 
+  # ===================== ЮРИДИЧНІ СТОРІНКИ =====================
+  # Зараз тут Політика конфіденційності (адреса /privacy-policy).
+  - name: legal
+    label: Юридичні сторінки
+    type: collection
+    path: src/content/legal
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      primary: heading
+    fields:
+      - { name: heading, label: "Заголовок на сторінці", type: string, required: true }
+      - { name: title, label: "SEO — заголовок (вкладка браузера, Google)", type: string, required: true }
+      - { name: description, label: "SEO — опис для Google", type: text, required: true }
+      - { name: body, label: "Текст (## = заголовок розділу, - = пункт списку)", type: rich-text }
+
   # ===================== ЛОГОТИПИ ТЕХНОЛОГІЙ =====================
   - name: tech
     label: Логотипи технологій
