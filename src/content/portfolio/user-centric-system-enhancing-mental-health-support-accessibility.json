@@ -1,0 +1,70 @@
+{
+  "title": "User-centric system enhancing mental health support accessibility",
+  "description": "Created a scalable solution with personalized therapist matching, real-time engagement tools, and robust data security.",
+  "draft": true,
+  "tag": "Under NDA",
+  "categories": [
+    "Healthcare"
+  ],
+  "location": "USA",
+  "duration": "2020 – Ongoing",
+  "services": [
+    "Custom Software Development",
+    "DevOps",
+    "UX/UI Design"
+  ],
+  "tech": [
+    "Django",
+    "Docker",
+    "PostgreSQL"
+  ],
+  "highlights": [
+    {
+      "value": "55%",
+      "label": "increase in user engagement through improved accessibility and personalization"
+    },
+    {
+      "value": "450+",
+      "label": "therapists actively using the platform to connect with clients"
+    },
+    {
+      "value": "99.5%",
+      "label": "uptime ensuring uninterrupted access to mental health resources"
+    }
+  ],
+  "client_image": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/68bff7c58335bdcc70863e30_6828e6d4ac8c8f2756a7b592_pexels-rdne-9064691.jpg",
+  "client_text": "A mental health organization (under NDA) focused on expanding access to high-quality therapy and self-help tools through a secure, user-friendly digital platform. Their goal is to remove barriers to mental health support, making it more approachable, efficient, and widely accessible.\n\nWith a digital-first strategy, they enable users to seamlessly connect with licensed therapists while providing self-assessment tools and personalized mental health content.\n\n‍",
+  "product_text": "The core product is a digital therapy platform built to expand access to mental health support through personalized, secure, and user-friendly experiences. It connects individuals with licensed professionals and offers tools for managing mental well-being in one centralized environment.",
+  "product_list_title": "It allows users to:",
+  "product_list": [
+    "Discover and connect with therapists matched to their specific needs",
+    "Access self-guided mental health resources in a private and secure space",
+    "Receive care in a seamless, confidential environment that encourages trust"
+  ],
+  "product_text_2": "With personalization, accessibility, and security at its foundation, the platform serves as a dependable resource for individuals seeking flexible and effective mental health care.",
+  "goals": [
+    "The main objective was to create a secure, user-centric platform that improves access to mental health services while ensuring a seamless and trustworthy experience. The platform needed to be intuitive, scalable, and accessible, allowing users to easily connect with therapists and access personalized resources.",
+    "Given the sensitive nature of mental health care, data privacy and security were top priorities, ensuring compliance with healthcare regulations while maintaining high platform stability. Expanding the therapist network and enhancing user engagement were also key to providing diverse support options and improving overall accessibility."
+  ],
+  "challenges": [
+    "Developing a secure and scalable mental health platform came with several challenges. Ensuring strict data privacy and compliance with healthcare regulations was a top priority, requiring robust security measures and secure data storage.\n\nThe platform also needed to be highly accessible, catering to users with different levels of technical proficiency while maintaining a seamless experience. Scalability was another key factor, as the system had to support a growing number of users and therapists without compromising performance.\n\nAdditionally, maintaining continuous availability was crucial, with a focus on achieving 99.5% uptime to provide uninterrupted access to mental health resources."
+  ],
+  "solution": "To address these challenges, we developed a scalable, secure, and user-friendly mental health platform designed to deliver a seamless experience for both users and therapists. The platform features an intuitive interface that simplifies navigation and encourages engagement, making it easier for individuals to access the support they need.\n\nAI-driven matching intelligently connects users with therapists who best meet their needs, while built-in security measures ensure data protection and compliance with healthcare regulations. The system is supported by scalable cloud infrastructure, capable of handling thousands of users simultaneously, and includes advanced performance monitoring to maintain 99.5% uptime and uninterrupted access.",
+  "results_text": "The custom solution delivered by Althera Code significantly improved user engagement, platform accessibility, and system reliability. Key outcomes included:",
+  "results": [
+    {
+      "value": "55%",
+      "label": "increase in user engagement due to enhanced usability and personalized experiences"
+    },
+    {
+      "value": "450+",
+      "label": "therapists actively using the platform, expanding mental health service accessibility"
+    },
+    {
+      "value": "99.5%",
+      "label": "uptime, ensuring uninterrupted access to critical mental health resources"
+    }
+  ],
+  "results_closing": "This project not only enhanced mental health accessibility but also provided a scalable, privacy-focused platform that ensures a seamless and secure user experience for both clients and therapists.",
+  "created": "2025-03-21T05:25"
+}

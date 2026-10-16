@@ -1,0 +1,66 @@
+{
+  "title": "AI Copilot for Engineering Knowledge Management",
+  "description": "An AI-powered Slack Copilot developed to centralize engineering knowledge and accelerate access to internal rules across technical teams.",
+  "draft": false,
+  "tag": "Under NDA",
+  "categories": [
+    "Construction Engineering"
+  ],
+  "location": "Confidential Enterprise Client",
+  "duration": "3–4 Months",
+  "services": [
+    "AI Copilot Development",
+    "Knowledge Automation",
+    "Workflow Orchestration",
+    "Enterprise AI Integration"
+  ],
+  "tech": [],
+  "highlights": [
+    {
+      "value": "70%",
+      "label": "reduced the time engineers spent searching for internal rules and technical documentation"
+    },
+    {
+      "value": "100%",
+      "label": "maintained controlled knowledge access across internal engineering documentation workflows"
+    },
+    {
+      "value": "50%",
+      "label": "decreased repetitive clarification requests across engineering and compliance teams"
+    }
+  ],
+  "client_image": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/6a181d49c08d0acccba0087e_priscilla-du-preez-OEdkPaxYMXU-unsplash.jpg",
+  "client_text": "A large construction engineering organization managing complex technical standards, internal rules, onboarding materials, and operational engineering documentation across multiple departments. Teams needed a secure AI-powered assistant that could simplify access to internal knowledge, reduce interruptions for senior engineers, and improve consistency in engineering communication workflows.",
+  "product_text": "The Engineering Rule Assistant is an AI Copilot integrated directly into Slack to help engineers access internal rules, standards, and technical documentation faster inside their daily workflow environment.",
+  "product_list_title": "The platform helps teams:",
+  "product_list": [
+    "Retrieve validated engineering answers with source references",
+    "Access internal rules and documentation through natural language queries",
+    "Maintain structured and controlled knowledge-sharing workflows"
+  ],
+  "product_text_2": "The solution was designed to reduce operational delays, simplify onboarding, and improve documentation consistency while keeping all engineering knowledge centralized inside the organization’s internal systems.",
+  "goals": [
+    "The client needed to centralize fragmented engineering knowledge and reduce the operational burden created by manual documentation searches and repeated clarification requests. The primary goal was to improve access to validated technical information, accelerate onboarding, and create a scalable internal knowledge workflow that could support engineering, QA, compliance, and operations teams."
+  ],
+  "challenges": [
+    "▪ Engineering documentation and internal rules were scattered across multiple systems, making knowledge retrieval slow and inconsistent.\n\n▪ Senior engineers were frequently interrupted to clarify standards, technical procedures, and internal requirements for other teams.\n\n▪ Existing workflows lacked structured, centralized knowledge access, creating onboarding delays and inconsistent interpretation of engineering rules."
+  ],
+  "solution": "AltheraCode developed a secure Slack-native AI Copilot integrated with the company’s internal Wiki, Academy Ocean, and engineering documentation systems. The solution combined AI-powered document retrieval, reference-first response logic, and workflow automation inside one centralized engineering knowledge environment.\n\nEngineers could retrieve validated answers with citations directly inside Slack, while the system maintained controlled internal access, structured documentation workflows, and reliable knowledge-sharing across engineering, QA, compliance, and operations teams.",
+  "results_text": "The implementation improved engineering knowledge accessibility, reduced operational friction, and standardized internal documentation workflows across departments. Key outcomes included:",
+  "results": [
+    {
+      "value": "70%",
+      "label": "faster retrieval of engineering rules, standards, and internal technical documentation"
+    },
+    {
+      "value": "60%",
+      "label": "reduction in repetitive clarification requests directed to senior engineering teams"
+    },
+    {
+      "value": "100%",
+      "label": "controlled internal knowledge access maintained across engineering and operational workflows"
+    }
+  ],
+  "results_closing": "A fragmented documentation process was transformed into a centralized AI-assisted knowledge system that improved onboarding, accelerated engineering decision-making, and simplified secure collaboration across technical teams.",
+  "created": "2026-05-28T10:55"
+}

@@ -1,0 +1,66 @@
+{
+  "title": "AI Powered Revenue Operations for HubSpot",
+  "description": "A HubSpot automation system built to streamline CRM workflows, personalize lead nurture, and connect content operations to pipeline activity.",
+  "draft": false,
+  "tag": "Under NDA",
+  "categories": [
+    "B2B SaaS"
+  ],
+  "location": "USA",
+  "duration": "8 weeks",
+  "services": [
+    "CRM Automation",
+    "AI Workflows",
+    "Lead Nurture Automation",
+    "Content Operations"
+  ],
+  "tech": [],
+  "highlights": [
+    {
+      "value": "3.4x",
+      "label": "growth in qualified pipeline value within the first 90 days after launch"
+    },
+    {
+      "value": "70%",
+      "label": "reduction in manual CRM management, reporting, and contact update tasks"
+    },
+    {
+      "value": "4.1x",
+      "label": "increase in content-influenced deals across active sales pipeline workflows"
+    }
+  ],
+  "client_image": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/6a18391fc21a92c4ea44b552_%D0%97%D0%BD%D1%96%D0%BC%D0%BE%D0%BA%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-05-28%20%D0%BE%2014.45.48.png",
+  "client_text": "A B2B software company with a growing sales and marketing operation managing thousands of CRM contacts, nurture sequences, and pipeline activities inside HubSpot. The team struggled with outdated contact data, inconsistent deal stages, and limited visibility into how content influenced pipeline movement. Leadership needed a scalable way to improve CRM data quality, automate lead engagement, and connect marketing operations directly to sales performance.",
+  "product_text": "AltheraCode built an AI-powered HubSpot automation ecosystem combining CRM workflows, nurture automation, and content intelligence.",
+  "product_list_title": "The system enables teams to:",
+  "product_list": [
+    "Automate lead enrichment and deal stage progression",
+    "Generate personalized AI nurture sequences based on pipeline activity",
+    "Connect content planning and reporting directly to CRM performance data"
+  ],
+  "product_text_2": "The solution reduced manual operational work, improved pipeline visibility, and helped the team understand how content influenced lead engagement, nurture performance, and deal progression.",
+  "goals": [
+    "The project aimed to eliminate fragmented CRM workflows, improve contact and pipeline data quality, automate nurture operations, and reduce manual sales coordination inside HubSpot. The client also needed a scalable content workflow tied directly to real pipeline gaps, engagement metrics, and deal progression across marketing and sales operations."
+  ],
+  "challenges": [
+    "▪ CRM data quality had significantly deteriorated due to stale contacts, inconsistent lifecycle stages, and fragmented pipeline management processes.\n\n▪ Marketing nurture sequences were generic and disconnected from actual deal stages, reducing engagement quality and lead progression efficiency.\n\n▪ The content team lacked visibility into which topics, campaigns, or assets were influencing pipeline growth and closed deals"
+  ],
+  "solution": "AltheraCode rebuilt the HubSpot CRM architecture and implemented automated N8N workflows for contact enrichment, deal stage synchronization, nurture automation, and reporting. The system created a structured operational layer across marketing and sales activities without adding manual CRM administration.\n\nThe platform combined GPT-4 powered nurture generation, AI-driven content brief creation, automated Notion publishing, and performance reporting connected directly to pipeline activity and engagement data. Personalized nurture sequences adapted to industry segments and deal stages, while dashboards showed content influence, deal attribution, and CRM performance.",
+  "results_text": "The implementation improved CRM data quality, lead nurture performance, and pipeline visibility across marketing and sales workflows while reducing the operational effort required to manage HubSpot manually.",
+  "results": [
+    {
+      "value": "62%",
+      "label": "increase in email engagement rates after personalized AI nurture automation deployment"
+    },
+    {
+      "value": "70%",
+      "label": "reduction in repetitive CRM administration and manual contact management tasks"
+    },
+    {
+      "value": "4.1x",
+      "label": "growth in content-influenced deal progression across active sales pipeline workflows"
+    }
+  ],
+  "results_closing": "The client transformed fragmented CRM, nurture, and content operations into a scalable automated revenue workflow that improved marketing and sales alignment, increased visibility into pipeline influence, and reduced manual work across the funnel.",
+  "created": "2026-05-28T12:54"
+}

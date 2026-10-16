@@ -1,0 +1,67 @@
+{
+  "title": "Enterprise AI Compliance Workflow Platform",
+  "description": "A secure AI powered platform built to automate enterprise compliance questionnaires, evidence retrieval, and approval based response workflows.",
+  "draft": false,
+  "tag": "Under NDA",
+  "categories": [
+    "Cybersecurity & Compliance"
+  ],
+  "location": "USA",
+  "duration": "4 Months",
+  "services": [
+    "AI Workflow Development",
+    "Compliance Automation",
+    "Enterprise Platform Engineering"
+  ],
+  "tech": [],
+  "highlights": [
+    {
+      "value": "70%",
+      "label": "reduction in repetitive enterprise questionnaire preparation workflows"
+    },
+    {
+      "value": "100%",
+      "label": "tenant isolated architecture with secure document separation controls"
+    },
+    {
+      "value": "3x",
+      "label": "faster compliance review and approval operations across teams"
+    }
+  ],
+  "client_image": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/6a185bf17e01cbae8b0273e0_%D0%97%D0%BD%D1%96%D0%BC%D0%BE%D0%BA%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-05-28%20%D0%BE%2017.14.29.png",
+  "client_text": "A cybersecurity and compliance consultancy supporting enterprise clients with security assessments, vendor reviews, and large scale compliance documentation workflows.\n\nThe company needed a secure internal platform capable of accelerating repetitive compliance operations while maintaining auditability, tenant isolation, and enterprise grade security standards.\n\nThe future product also needed to support long term SaaS scalability without requiring major infrastructure redesign or workflow restructuring later.\n\n‍",
+  "product_text": "An AI powered compliance workflow platform designed to automate enterprise questionnaire handling, evidence retrieval, controlled AI drafting, and approval based review workflows.",
+  "product_list_title": "The platform helps teams:",
+  "product_list": [
+    "Centralize tenant specific compliance evidence and documentation",
+    "Generate AI assisted responses using retrieval based workflows",
+    "Maintain approval driven review processes with audit visibility"
+  ],
+  "product_text_2": "The solution reduced repetitive operational work while improving response consistency, evidence accessibility, and workflow visibility across enterprise compliance operations.",
+  "goals": [
+    "The primary goal was to reduce the operational workload involved in preparing enterprise security questionnaires while improving response accuracy and auditability. The platform also needed to support future SaaS scalability, enforce strict tenant isolation, and create a controlled AI workflow suitable for legally sensitive compliance operations."
+  ],
+  "challenges": [
+    "Sensitive enterprise data required strict tenant isolation, controlled workspace access, and zero cross client exposure across all compliance workflows and document operations.",
+    "AI generated responses needed evidence traceability, confidence visibility, and mandatory human approval before any export or external sharing process.",
+    "Compliance questionnaires had to preserve original structure, formatting accuracy, audit visibility, and client specific documentation requirements across different enterprise review scenarios."
+  ],
+  "solution": "AltheraCode designed a secure multi tenant AI workflow infrastructure using Supabase, RAG pipelines, role based permissions, and tenant isolated storage architecture. The platform enabled consultants to upload enterprise questionnaires, retrieve tenant specific evidence, generate AI assisted responses, and manage review workflows inside one centralized environment.\n\nThe system introduced evidence indexed knowledge bases, confidence scoring, append only audit logs, and approval based export workflows. Every AI generated response remained fully traceable to tenant specific documentation while preserving enterprise grade compliance and security standards across the workflow.",
+  "results_text": "The implementation significantly reduced repetitive compliance preparation work while improving operational visibility and workflow consistency across enterprise questionnaire handling.",
+  "results": [
+    {
+      "value": "92%",
+      "label": "Improved evidence retrieval accuracy across enterprise compliance workflows"
+    },
+    {
+      "value": "4x",
+      "label": "Faster questionnaire processing and response preparation operations"
+    },
+    {
+      "value": "85%",
+      "label": "Reduction in manual document navigation and compliance data lookup tasks"
+    }
+  ],
+  "results_closing": "The platform also established a scalable SaaS ready foundation with secure AI governance, audit visibility, and enterprise grade workflow controls for future expansion.",
+  "created": "2026-05-28T15:28"
+}

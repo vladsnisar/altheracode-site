@@ -1,0 +1,76 @@
+{
+  "title": "AI-driven referral system for seamless healthcare coordination",
+  "description": "Designed an automated platform to improve referral accuracy, reduce admin workload, and streamline patient care.",
+  "draft": true,
+  "tag": "Under NDA",
+  "categories": [
+    "Healthcare"
+  ],
+  "location": "UK",
+  "duration": "2023 – Ongoing",
+  "services": [
+    "Custom Software Development",
+    "DevOps",
+    "Front-end Development",
+    "UX/UI Design"
+  ],
+  "tech": [
+    "Angular",
+    "AWS",
+    "Go",
+    "JavaScript",
+    "MySQL",
+    "PostgreSQL",
+    "Ruby",
+    "Ruby on Rails"
+  ],
+  "highlights": [
+    {
+      "value": "98%",
+      "label": "data accuracy achieved through enhanced referral tracking and processing"
+    },
+    {
+      "value": "50%",
+      "label": "reduction in administrative workload with automated solutions for faster, error-free referrals"
+    },
+    {
+      "value": "3K+",
+      "label": "healthcare providers using the platform, improving patient referrals across care settings"
+    }
+  ],
+  "client_image": "https://cdn.prod.website-files.com/67dcf50a0e3d54283247908c/68bff7d89f74f21d77dc46b4_6828ebe3c207ec8e35f9a22b_pexels-pixabay-40568.jpg",
+  "client_text": "A leading healthcare technology provider (under NDA) specializing in improving care pathways and streamlining medical workflows. Their focus is on bridging communication gaps between healthcare providers to ensure patients are referred to the right level of care as efficiently as possible.\n\nWith years of industry expertise, they develop advanced digital solutions that reduce administrative burdens, enhance data accuracy, and optimize referral management processes. Their mission is to improve patient access to timely and appropriate care while ensuring seamless collaboration across the healthcare ecosystem.",
+  "product_text": "The client’s core product is an AI-powered referral system that streamlines patient coordination by automating admin tasks and improving data accuracy. It offers a faster, more reliable alternative to traditional referral workflows.",
+  "product_list_title": "It enables medical professionals to:",
+  "product_list": [
+    "Process referrals with precision, reducing errors and ensuring timely access to care",
+    "Track referrals in real-time, enhancing communication and reducing delays",
+    "Minimize administrative workload, allowing providers to focus on patient care"
+  ],
+  "product_text_2": "Through seamless integration with existing healthcare systems, the platform improves both the speed and accuracy of referrals, ensuring patients receive the right treatment faster.",
+  "goals": [
+    "The primary goal was to build an efficient, automated referral management system that improves data accuracy and streamlines coordination among healthcare providers. The platform was designed to address common issues such as delays from manual data entry, referral errors, and administrative overload — all of which can disrupt patient care.",
+    "To solve these challenges, the system automated routine tasks to reduce manual workload, enhanced referral accuracy to avoid misdirected cases, and enabled real-time tracking and data exchange for better collaboration between providers. It also complied with strict healthcare data security standards to ensure patient information remained protected. The result is a faster, more reliable referral solution that integrates seamlessly into existing clinical workflows."
+  ],
+  "challenges": [
+    "Developing an advanced referral management system came with several critical challenges. The platform needed to handle vast amounts of patient data across multiple healthcare providers while maintaining strict compliance with data privacy regulations. Ensuring high referral accuracy was a priority, as errors could lead to delays in patient care or incorrect referrals, affecting overall treatment outcomes.\n\nAdditionally, adoption across various healthcare environments required an intuitive system that seamlessly integrated with existing workflows while minimizing training time for medical professionals. The challenge was to develop a solution that combined automation, accuracy, and security, making it both efficient and easy to use."
+  ],
+  "solution": "To address these challenges, we developed a **secure, AI-powered referral management platform** that streamlines workflows and enhances efficiency for healthcare providers. By automating referral processing, the system reduces manual data entry, accelerates approvals, and eases administrative burdens.\n\nWith **real-time validation and error detection**, it ensures **98% data accuracy**, minimizing referral errors and improving reliability. **Seamless tracking** keeps providers updated on referral statuses, enhancing coordination across healthcare facilities.\n\nTo ensure **data security and compliance**, the platform integrates **robust encryption** and strict adherence to healthcare standards. Its **user-friendly interface** simplifies adoption, allowing medical teams to integrate it smoothly with minimal training.",
+  "results_text": "The implementation of the referral management system significantly improved healthcare efficiency by reducing administrative workload and improving care coordination. Key outcomes included:",
+  "results": [
+    {
+      "value": "98%",
+      "label": "data accuracy, reducing referral errors and ensuring patients received the right care faster"
+    },
+    {
+      "value": "50%",
+      "label": "reduction in administrative workload, allowing healthcare staff to dedicate more time to patient interactions"
+    },
+    {
+      "value": "3K+",
+      "label": "healthcare providers using the platform to streamline referrals and reduce care delays"
+    }
+  ],
+  "results_closing": "This project successfully demonstrated the impact of automation and AI-driven accuracy in optimizing healthcare operations. By enhancing referral coordination and reducing administrative bottlenecks, the platform has helped healthcare providers deliver faster, more efficient care while improving patient outcomes.",
+  "created": "2025-03-21T05:24"
+}

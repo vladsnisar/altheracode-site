@@ -2,6 +2,12 @@
 
 The source of www.altheracode.com. It's built with Astro and hosted on Cloudflare Pages.
 
+## Two branches: `staging` and `main`
+
+- `main` is the live site. Never edit it directly in Pages CMS.
+- `staging` is where content edits are made and checked first. Its preview address is `https://staging.altheracode-site.pages.dev`.
+- After Claude's code changes are merged into `main`, ask Claude to "sync staging" so `staging` has them too, before more content edits.
+
 ## How changes happen
 
 **Text, case studies, FAQ, blog posts: Pages CMS** (app.pagescms.org → this repo)
