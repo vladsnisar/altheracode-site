@@ -9,16 +9,38 @@ export async function getStaticPaths() {
 }
 const { post } = Astro.props;
 const { Content } = await render(post);
+const latest = (await getCollection('blog', p => !p.data.draft && p.id !== post.id))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 3);
 const d = post.data;
 ---
 <Base title={d.seo_title || `${d.title} — AltheraCode`} description={d.seo_description || d.description} image={d.cover}>
   <section class="section"><article class="container prose">
     {d.category && <a class="eyebrow" href={`/blog-category/${slugify(d.category)}`}>{d.category}</a>}
     <h1>{d.title}</h1>
+    {d.description && <p class="lead" style="margin:0 0 20px">{d.description}</p>}
     <p class="post-meta">{d.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}</p>
     {d.cover && <img src={d.cover} alt="" />}
     <Content />
     <p style="margin-top:40px"><a href="/blog">← All posts</a></p>
   </article></section>
+  {latest.length > 0 && (
+    <section class="section bg-white"><div class="container">
+      <span class="eyebrow">Our blog</span>
+      <h2 class="section-title">Latest Posts</h2>
+      <div class="grid cols-3" style="margin-top:40px">
+        {latest.map(p => (
+          <article class="portfolio-card">
+            <div class="portfolio-thumb">{p.data.cover ? <img src={p.data.cover} alt="" loading="lazy" /> : <span class="glyph">✎</span>}</div>
+            <div class="portfolio-body">
+              {p.data.category && <span class="cat">{p.data.category}</span>}
+              <h3><a href={`/blog/${p.id}`}>{p.data.title}</a></h3>
+              <p>{p.data.description}</p>
+              <a class="more" href={`/blog/${p.id}`}>Read more →</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div></section>
+  )}
   <Contact />
 </Base>
