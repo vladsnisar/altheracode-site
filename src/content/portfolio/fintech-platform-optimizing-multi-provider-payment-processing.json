@@ -1,0 +1,70 @@
+{
+  "title": "Fintech platform optimizing multi-provider payment processing",
+  "description": "Enabled seamless transactions with multi-provider integration, automation, and cost-efficient payment processing.",
+  "draft": true,
+  "tag": "Under NDA",
+  "categories": [
+    "Fintech"
+  ],
+  "location": "USA",
+  "duration": "12 months",
+  "services": [
+    "Custom Software Development",
+    "Project Management",
+    "DevOps",
+    "Quality Assurance",
+    "UX/UI Design"
+  ],
+  "tech": [
+    "Python"
+  ],
+  "highlights": [
+    {
+      "value": "500K+",
+      "label": "users successfully migrated to the new payment system"
+    },
+    {
+      "value": "1K+",
+      "label": "new users onboarded, expanding the platform’s adoption"
+    },
+    {
+      "value": "$3K",
+      "label": "saved per month on infrastructure costs"
+    }
+  ],
+  "client_image": "/media/portfolio-fintech-platform-optimizing-multi-provider-payment-processin.webp",
+  "client_text": "A fintech platform specializing in multi-tenancy solutions designed to optimize debt management for financial service providers. The company focuses on streamlining debt scheduling and payment processing by integrating multiple payment providers into a single, efficient system.\n\nCommitted to modernizing and humanizing debt recovery, the client sought to enhance payment processing, improve security, and increase operational efficiency for its users.",
+  "product_text": "The core product is a custom-built middleware platform that enables seamless integration with multiple third-party payment providers. Specifically developed for debt management companies, the solution is designed to improve transaction speed, security, and operational efficiency.",
+  "product_list_title": "It allows businesses to:",
+  "product_list": [
+    "Process payments faster and more reliably across various providers",
+    "Automate debt repayment schedules to reduce manual effort",
+    "Improve cost efficiency while staying compliant with financial data regulations"
+  ],
+  "product_text_2": "By replacing the limitations of a closed system, the middleware gives companies greater control, flexibility, and room to scale their financial operations.",
+  "goals": [
+    "The goal was to eliminate payment bottlenecks and boost transaction efficiency by building a custom middleware solution tailored to the client’s needs. The focus was on creating a faster, more reliable system that could handle payments across multiple providers while maintaining strict compliance with industry regulations.",
+    "In addition to improving processing speed and security, the solution expanded available payment options and helped reduce operational costs by optimizing infrastructure. As a result, the client was able to streamline financial operations and deliver a smoother, more flexible payment experience for users."
+  ],
+  "challenges": [
+    "The existing payment gateway system presented multiple pain points that affected user experience and financial efficiency. Long processing times, high infrastructure costs, and security risks created barriers to seamless transactions.\n\nAdditionally, the lack of key API endpoints limited system functionality, restricting flexibility in payment processing. The closed nature of the platform posed compliance challenges, making it difficult to integrate with new financial service providers.\n\nTo resolve these issues, the new system had to be secure, flexible, and capable of handling high transaction volumes while maintaining compliance with financial regulations."
+  ],
+  "solution": "Our team developed a custom, scalable payment middleware that integrates smoothly with a range of external payment providers. The solution was designed to enhance transaction security through 3D Secure authentication, while also automating payment scheduling and reminders to reduce manual workload and increase efficiency.\n\nIt ensured full compliance with regulations such as CCPA, PCI DSS, and other financial security standards, while optimizing server and processing resources to lower infrastructure costs. The middleware also enabled a smooth transition from the client’s previous system, ultimately improving operational efficiency, user experience, and long-term financial stability.\n\n‍",
+  "results_text": "The implementation of the new payment gateway transformed the client’s financial operations, leading to:",
+  "results": [
+    {
+      "value": "500K+",
+      "label": "users migrated smoothly to the new platform"
+    },
+    {
+      "value": "1K+",
+      "label": "new users onboarded, driving adoption in finance"
+    },
+    {
+      "value": "$3K",
+      "label": "saved per month through infrastructure and integration improvements"
+    }
+  ],
+  "results_closing": "By developing a scalable, secure, and cost-effective payment solution, the client positioned itself as a leader in the fintech industry, providing seamless and compliant financial transactions to a growing user base.",
+  "created": "2025-03-21T05:26"
+}

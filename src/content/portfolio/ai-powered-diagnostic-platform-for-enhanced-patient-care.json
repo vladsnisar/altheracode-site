@@ -1,0 +1,47 @@
+{
+  "title": "AI-powered diagnostic platform for enhanced patient care",
+  "description": "Developed a real-time monitoring and predictive analytics solution to optimize diagnostics and clinical workflows.",
+  "draft": true,
+  "tag": "Under NDA",
+  "categories": [
+    "Healthcare"
+  ],
+  "location": "USA",
+  "duration": "August 2023 – Ongoing",
+  "services": [
+    "Back-end Development",
+    "Front-end Development",
+    "Project Management"
+  ],
+  "tech": [
+    "Django",
+    "Python"
+  ],
+  "highlights": [
+    {
+      "value": "30%",
+      "label": "improvement in diagnostic accuracy by integrating AI for more precise patient assessments"
+    },
+    {
+      "value": "50%",
+      "label": "reduction in time spent reviewing patient data, allowing healthcare providers to focus more on patient care"
+    },
+    {
+      "value": "24/7",
+      "label": "real-time monitoring of patient metrics, increasing early detection of potential health risks"
+    }
+  ],
+  "client_image": "/media/portfolio-ai-powered-diagnostic-platform-for-enhanced-patient-care.jpg",
+  "client_text": "A healthcare technology company focused on advancing patient care through AI-powered diagnostics and real-time data analysis. Their goal is to provide healthcare professionals with cutting-edge tools that enhance diagnostic precision, reduce administrative workload, and improve overall patient outcomes.\n\nBy integrating AI-driven solutions, the client aims to bridge gaps in traditional diagnostics, enabling faster, more data-driven decision-making for medical professionals. Their approach combines automation, predictive analytics, and seamless data integration to streamline medical workflows and improve healthcare efficiency.",
+  "product_text": "",
+  "product_list_title": "",
+  "product_list": [],
+  "product_text_2": "",
+  "goals": [],
+  "challenges": [],
+  "solution": "",
+  "results_text": "",
+  "results": [],
+  "results_closing": "",
+  "created": "2025-03-21T05:12"
+}

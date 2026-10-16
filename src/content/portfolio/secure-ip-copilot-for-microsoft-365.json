@@ -1,0 +1,66 @@
+{
+  "title": "Secure IP Copilot for Microsoft 365",
+  "description": "An AI-powered Microsoft 365 copilot built to simplify invention documentation, accelerate technical reviews, and keep sensitive workflows secure.",
+  "draft": false,
+  "tag": "Under NDA",
+  "categories": [
+    "LegalTech"
+  ],
+  "location": "Europe",
+  "duration": "3–4 Months",
+  "services": [
+    "AI Copilot Development",
+    "Workflow Automation",
+    "Document Intelligence",
+    "Enterprise AI Integration"
+  ],
+  "tech": [],
+  "highlights": [
+    {
+      "value": "80%",
+      "label": "reduced the time required to analyze and structure technical invention materials"
+    },
+    {
+      "value": "100%",
+      "label": "maintained all document processing inside the client’s Microsoft Azure ecosystem"
+    },
+    {
+      "value": "3x",
+      "label": "improved consistency across invention submissions and internal review processes"
+    }
+  ],
+  "client_image": "/media/portfolio-secure-ip-copilot-for-microsoft-365.webp",
+  "client_text": "A European innovation and engineering organization managing large volumes of technical invention materials, internal reviews, and documentation workflows. Teams needed a secure AI-powered system that could structure invention submissions, simplify document analysis, and keep all processing inside the company’s Microsoft ecosystem.",
+  "product_text": "The IP Copilot for Microsoft 365 is an enterprise AI assistant designed to streamline invention documentation, technical analysis, and internal innovation workflows inside a secure Microsoft environment.",
+  "product_list_title": "The platform helps teams:",
+  "product_list": [
+    "Process and structure uploaded technical documents automatically",
+    "Standardize invention submissions through guided workflows",
+    "Maintain secure internal collaboration and document review operations"
+  ],
+  "product_text_2": "The solution was built to reduce manual coordination, improve process consistency, and simplify innovation management across internal teams while maintaining secure document handling and structured collaboration workflows inside the client’s Microsoft ecosystem.",
+  "goals": [
+    "The client needed to modernize internal invention disclosure and technical review workflows while maintaining strict security and compliance requirements. The primary goal was to reduce manual document handling, improve collaboration between departments, and create a scalable process for managing growing volumes of technical submissions."
+  ],
+  "challenges": [
+    "▪ No standardized invention submission flow, requiring teams to process documents manually across multiple formats and communication channels.\n\n▪ Security and compliance requirements prevented the use of external AI tools, cloud processing environments, and uncontrolled data-sharing workflows.\n\n▪ Technical reviews depended heavily on engineers, researchers, and legal teams coordinating documentation manually across internal innovation processes."
+  ],
+  "solution": "AltheraCode developed a secure enterprise IP Copilot integrated directly into the client’s Microsoft 365 environment. The solution combined Microsoft Copilot Studio, Azure OpenAI, Power Automate, SharePoint, and Azure Functions into a centralized workflow automation ecosystem.\n\nThe implementation enabled automated analysis of uploaded technical documents, guided invention disclosure workflows, AI-assisted summarization, and structured internal collaboration between engineering, research, and legal teams. All data processing remained fully internal within the organization’s Azure tenant to support enterprise-grade security and compliance requirements.\n\nSpecial attention was given to workflow orchestration, secure architecture design, and controlled document handling to ensure reliable operation in a high-sensitivity enterprise environment.",
+  "results_text": "The implementation improved the speed, consistency, and security of invention documentation workflows across the organization. Key outcomes included:",
+  "results": [
+    {
+      "value": "80%",
+      "label": "faster processing of technical invention documentation and structured review workflows"
+    },
+    {
+      "value": "100%",
+      "label": "internal document processing maintained inside the client’s Microsoft Azure environment"
+    },
+    {
+      "value": "60%",
+      "label": "reduction in manual coordination across engineering, research, and legal review teams"
+    }
+  ],
+  "results_closing": "A fragmented invention management process was transformed into a secure, AI-assisted workflow that improved collaboration, accelerated technical reviews, and reduced operational overhead across departments.",
+  "created": "2026-05-28T08:56"
+}

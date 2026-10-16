@@ -1,0 +1,71 @@
+{
+  "title": "Healthcare platform streamlining patient follow-ups",
+  "description": "Optimized scheduling with self-service booking, automated reminders, enhanced accessibility, and NHS integration.",
+  "draft": true,
+  "tag": "Under NDA",
+  "categories": [
+    "Healthcare"
+  ],
+  "location": "UK",
+  "duration": "2023 – 2024",
+  "services": [
+    "Back-end Development",
+    "Front-end Development",
+    "Monolith App",
+    "UX/UI Design"
+  ],
+  "tech": [
+    "DigitalOcean",
+    "PostgreSQL",
+    "Ruby on Rails"
+  ],
+  "highlights": [
+    {
+      "value": "45%",
+      "label": "reduction in administrative workload through automated patient scheduling and workflow integration"
+    },
+    {
+      "value": "60%",
+      "label": "increase in patient engagement by enabling self-managed follow-ups and appointment control"
+    },
+    {
+      "value": "100%",
+      "label": "compliance with NHS data standards to ensure secure and scalable integration"
+    }
+  ],
+  "client_image": "/media/portfolio-healthcare-platform-streamlining-patient-follow-ups.webp",
+  "client_text": "A healthcare solutions provider with over 12 years of experience in clinically-led electronic referral management. Originally a consulting group, they have evolved into a leader in healthcare management, focusing on optimizing patient care processes and resource allocation. Their solutions support healthcare providers in improving accessibility and streamlining patient referrals.",
+  "product_text": "The platform helps healthcare providers streamline patient-initiated follow-ups (PIFU), optimize referral management, and improve operational efficiency across care pathways. Built with seamless NHS integration in mind, it supports better outcomes with less administrative friction.",
+  "product_list_title": "It empowers clinical teams to:",
+  "product_list": [
+    "Automate patient scheduling and reduce back-office workload",
+    "Enable self-managed follow-up care, boosting patient satisfaction",
+    "Maintain full compliance with NHS standards while improving service responsiveness"
+  ],
+  "product_text_2": "With seamless integration into existing NHS systems, the platform enhances both patient satisfaction and staff productivity — all while ensuring compliance with healthcare data and privacy standards.",
+  "goals": [
+    "The client set out to create a patient-centered follow-up system that would simplify the way individuals manage their own care. The goal was to offer patients more autonomy in scheduling follow-up appointments while easing the burden on administrative staff. By improving the overall allocation of healthcare resources and aligning with NHS standards, the new system was designed to make the follow-up process more efficient and responsive to patient needs.",
+    "In parallel, the team focused on building an AI-powered diagnostic platform capable of accelerating data processing, minimizing errors, and supporting real-time health monitoring. This approach not only allowed for quicker and more accurate medical assessments but also enabled early detection of health risks through continuous tracking. Automating routine administrative tasks gave healthcare professionals more time to concentrate on direct patient care. Together, these efforts marked a step toward a smarter, more streamlined healthcare experience for both providers and patients."
+  ],
+  "challenges": [
+    "Developing the PIFU system required finding the right balance between usability and compliance while addressing the diverse needs of both patients and healthcare providers. One of the key challenges was building an intuitive, accessible interface that allowed patients to easily schedule their own follow-up appointments. At the same time, the system had to meet strict security and regulatory standards to protect sensitive healthcare data.\n\nAnother crucial element was integrating real-time appointment availability to streamline scheduling and minimize delays. Equally important was collecting ongoing patient feedback to refine the experience, keeping the system user-friendly and aligned with evolving expectations.\n\n‍"
+  ],
+  "solution": "Our team developed a patient-initiated follow-up system that integrates with NHS workflows, making scheduling more efficient and patient-friendly.\n\nThe platform allows patients to easily book and reschedule appointments, with automated reminders to reduce no-shows. Real-time availability ensures up-to-date scheduling, while strong security measures protect patient data. Built-in feedback tools help refine the system over time, ensuring it remains user-friendly and meets patient needs. By streamlining follow-up management, the solution has reduced administrative workload, improved patient engagement, and optimized resource allocation for healthcare providers.\n\n‍",
+  "results_text": "The implementation of the PIFU system significantly improved both patient experience and operational efficiency, leading to:",
+  "results": [
+    {
+      "value": "30%",
+      "label": "reduction in administrative workload, freeing up staff for critical tasks"
+    },
+    {
+      "value": "25%",
+      "label": "increase in patient engagement through self-scheduling options"
+    },
+    {
+      "value": "40%",
+      "label": "decrease in missed appointments with automated reminders"
+    }
+  ],
+  "results_closing": "By delivering a scalable, secure, and patient-centered solution, the client improved healthcare accessibility, optimized resources, and enhanced patient satisfaction.",
+  "created": "2025-03-21T05:26"
+}

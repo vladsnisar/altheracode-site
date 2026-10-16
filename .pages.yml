@@ -185,13 +185,103 @@ content:
       - { name: contact_title, label: "Контакти — заголовок", type: string }
       - { name: contact_text, label: "Контакти — текст", type: text }
 
+  # ===================== ЗАГОЛОВКИ СТОРІНОК =====================
+  - name: pages
+    label: Сторінки «Кейси» і «Блог» (заголовки)
+    type: file
+    path: src/content/pages.json
+    fields:
+      - name: portfolio
+        label: "Сторінка /portfolio"
+        type: object
+        fields:
+          - { name: seo_title, label: "SEO — заголовок (вкладка браузера, Google)", type: string }
+          - { name: seo_description, label: "SEO — опис для Google", type: text }
+          - { name: eyebrow, label: "Підпис зверху", type: string }
+          - { name: title, label: "Заголовок", type: string }
+          - { name: lead, label: "Опис під заголовком", type: text }
+      - name: blog
+        label: "Сторінка /blog"
+        type: object
+        fields:
+          - { name: seo_title, label: "SEO — заголовок (вкладка браузера, Google)", type: string }
+          - { name: seo_description, label: "SEO — опис для Google", type: text }
+          - { name: eyebrow, label: "Підпис зверху", type: string }
+          - { name: title, label: "Заголовок", type: string }
+          - { name: lead, label: "Опис під заголовком", type: text }
+
+  # ===================== КЕЙСИ (ПОРТФОЛІО) =====================
+  # Один кейс = один файл. Нова адреса сторінки: /portfolio/<назва-файлу>.
+  # Нові кейси краще зберігати як чернетку, доки вони не готові.
+  - name: portfolio
+    label: Кейси (портфоліо)
+    type: collection
+    path: src/content/portfolio
+    format: json
+    filename: "{primary}.json"
+    view:
+      primary: title
+      sort: created
+      order: desc
+    fields:
+      - { name: title, label: "Назва кейсу", type: string, required: true }
+      - { name: description, label: "Короткий опис (картка, Google)", type: text }
+      - { name: draft, label: "Чернетка (не публікувати) — поставте галочку, доки не готово", type: boolean }
+      - { name: created, label: "Дата створення (за нею сортується список, нові зверху)", type: date, options: { time: true } }
+      - { name: tag, label: "Бейдж на картці (напр. Under NDA)", type: string }
+      - { name: categories, label: "Галузі (перша — головна)", type: string, list: true }
+      - { name: location, label: "Країна/регіон клієнта", type: string }
+      - { name: duration, label: "Тривалість", type: string }
+      - { name: services, label: "Послуги", type: string, list: true }
+      - { name: tech, label: "Технології (назви як у «Логотипи технологій»)", type: string, list: true }
+      - name: highlights
+        label: "Ключові цифри (3 шт. вгорі сторінки)"
+        type: object
+        list: true
+        fields:
+          - { name: value, label: "Цифра (напр. 12h+)", type: string }
+          - { name: label, label: "Підпис", type: string }
+      - { name: client_image, label: "Картинка (картка та блок «Клієнт»)", type: image }
+      - { name: client_text, label: "Клієнт — текст (порожній рядок = новий абзац, **жирний**)", type: text }
+      - { name: product_text, label: "Продукт/послуга — текст", type: text }
+      - { name: product_list_title, label: "Продукт — заголовок списку", type: string }
+      - { name: product_list, label: "Продукт — список", type: string, list: true }
+      - { name: product_text_2, label: "Продукт — текст після списку", type: text }
+      - { name: goals, label: "Цілі (кожен елемент — абзац)", type: text, list: true }
+      - { name: challenges, label: "Виклики проєкту (список)", type: text, list: true }
+      - { name: solution, label: "Рішення — текст", type: text }
+      - { name: results_text, label: "Результати — вступний текст", type: text }
+      - name: results
+        label: "Результати — цифри"
+        type: object
+        list: true
+        fields:
+          - { name: value, label: "Цифра (напр. 87%)", type: string }
+          - { name: label, label: "Підпис", type: string }
+      - { name: results_closing, label: "Результати — заключний текст", type: text }
+
+  # ===================== ЛОГОТИПИ ТЕХНОЛОГІЙ =====================
+  - name: tech
+    label: Логотипи технологій
+    type: file
+    path: src/content/tech.json
+    fields:
+      - name: items
+        label: "Технології"
+        type: object
+        list: true
+        fields:
+          - { name: name, label: "Назва", type: string }
+          - { name: logo, label: "Логотип", type: image }
+
   # ===================== БЛОГ =====================
+  # Один допис = один файл. Адреса: /blog/<назва-файлу>.
   - name: blog
     label: Блог
     type: collection
     path: src/content/blog
     format: yaml-frontmatter
-    filename: "{primary}.md"   # назва файлу = адреса сторінки: /blog/<назва>
+    filename: "{primary}.md"
     view:
       primary: title
       sort: date
@@ -200,6 +290,13 @@ content:
       - { name: title, label: "Заголовок", type: string, required: true }
       - { name: description, label: "Короткий опис (для списку і Google)", type: text }
       - { name: date, label: "Дата", type: date, required: true }
+      - name: category
+        label: "Категорія"
+        type: select
+        options:
+          values: ["AI for Startups", "Custom AI Solutions", "Tech Partner Insights"]
       - { name: cover, label: "Обкладинка", type: image }
-      - { name: draft, label: "Чернетка (не публікувати)", type: boolean, default: false }
+      - { name: seo_title, label: "SEO — заголовок (необов'язково)", type: string }
+      - { name: seo_description, label: "SEO — опис (необов'язково)", type: text }
+      - { name: draft, label: "Чернетка (не публікувати) — поставте галочку, доки не готово", type: boolean }
       - { name: body, label: "Текст статті", type: rich-text }

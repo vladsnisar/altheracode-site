@@ -1,23 +1,40 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import Contact from '../../sections/Contact.astro';
+import { slugify } from '../../lib/text';
+import cats from '../../content/blog-categories.json';
+import pages from '../../content/pages.json';
+const page = pages.blog;
 const posts = (await getCollection('blog', p => !p.data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
-<Base title="Blog — AltheraCode" description="Insights on custom software, AI and product development from the AltheraCode team.">
-  <section class="hero page-hero"><div class="container"><div class="hero-inner">
-    <span class="eyebrow">Blog</span><h1>Insights & updates</h1>
+<Base title={page.seo_title} description={page.seo_description}>
+  <section class="hero page-hero"><div class="hero-glow"></div><div class="container"><div class="hero-inner">
+    <span class="eyebrow">{page.eyebrow}</span><h1>{page.title}</h1>
+    {page.lead && <p>{page.lead}</p>}
   </div></div></section>
   <section class="section"><div class="container">
+    <nav class="filter-chips" aria-label="Blog categories">
+      <a class="chip-btn active" href="/blog">All posts</a>
+      {cats.blog_categories.map(c => <a class="chip-btn" href={`/blog-category/${c.slug}`}>{c.name}</a>)}
+    </nav>
     {posts.length === 0 && <p class="lead">No posts yet.</p>}
     <div class="grid cols-3">
       {posts.map(p => (
-        <a class="card" href={`/blog/${p.id}`}>
-          {p.data.cover && <img src={p.data.cover} alt="" loading="lazy" style="margin:-30px -30px 18px;width:calc(100% + 60px);max-width:none;border-radius:var(--radius) var(--radius) 0 0" />}
-          <h3>{p.data.title}</h3>
-          <p>{p.data.description}</p>
-        </a>
+        <article class="portfolio-card">
+          <div class="portfolio-thumb">
+            {p.data.cover ? <img src={p.data.cover} alt="" loading="lazy" /> : <span class="glyph">✎</span>}
+          </div>
+          <div class="portfolio-body">
+            {p.data.category && <span class="cat">{p.data.category}</span>}
+            <h3><a href={`/blog/${p.id}`}>{p.data.title}</a></h3>
+            <p>{p.data.description}</p>
+            <a class="more" href={`/blog/${p.id}`}>Read more →</a>
+          </div>
+        </article>
       ))}
     </div>
   </div></section>
+  <Contact />
 </Base>

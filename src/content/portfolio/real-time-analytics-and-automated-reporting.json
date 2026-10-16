@@ -1,0 +1,68 @@
+{
+  "title": "Real-Time Analytics and Automated Reporting",
+  "description": "An automated analytics system built to centralize marketing and sales reporting, real-time alerts, and KPI dashboards across multiple data sources.",
+  "draft": false,
+  "tag": "Under NDA",
+  "categories": [
+    "Marketing & Sales Analytics"
+  ],
+  "location": "USA",
+  "duration": "6 weeks",
+  "services": [
+    "Analytics Automation",
+    "Dashboard Development",
+    "Workflow Automation",
+    "AI Reporting"
+  ],
+  "tech": [],
+  "highlights": [
+    {
+      "value": "4 hrs",
+      "label": "decision-making lag reduced from 5 days to under 4 hours"
+    },
+    {
+      "value": "+34%",
+      "label": "increase in campaign ROI through real-time performance visibility"
+    },
+    {
+      "value": "14",
+      "label": "automated alert rules deployed across marketing and sales operations"
+    }
+  ],
+  "client_image": "/media/portfolio-real-time-analytics-and-automated-reporting.webp",
+  "client_text": "A B2B technology company with a growing marketing and sales operation managing multiple acquisition channels, campaign workflows, and reporting streams across several platforms. The leadership team needed faster visibility into campaign performance, operational KPIs, and sales activity without relying on manual spreadsheet consolidation and delayed reporting cycles.",
+  "product_text": "AltheraCode developed a centralized analytics and reporting ecosystem connecting marketing, sales, and operational data sources into one automated workflow.",
+  "product_list_title": "The platform helps teams:",
+  "product_list": [
+    "monitor KPIs in real time across channels and campaigns",
+    "receive automated alerts when performance thresholds change",
+    "generate executive-ready reports without manual consolidation"
+  ],
+  "product_text_2": "The solution replaced fragmented reporting processes with a live operational analytics layer used daily by leadership and campaign teams.",
+  "goals": [
+    "The project aimed to eliminate manual reporting work, reduce decision-making delays, and improve visibility across marketing and sales performance. Operational goals included consolidating multiple data sources, automating KPI tracking, enabling real-time alerts, and creating a single reporting environment accessible to both executives and operational teams."
+  ],
+  "challenges": [
+    "Marketing and sales data was scattered across multiple tools, making it difficult to maintain one reliable source of truth for reporting and campaign performance tracking.",
+    "Leadership received reports several days after the actual reporting period, which slowed budget adjustments and delayed reaction to underperforming campaigns.",
+    "Manual reporting workflows required constant spreadsheet consolidation, KPI reconciliation, and cross-team coordination every week."
+  ],
+  "solution": "AltheraCode designed a centralized analytics infrastructure built around Airtable as the operational data layer, with Looker Studio and Metabase dashboards supporting both leadership reporting and day-to-day marketing operations. The system connected HubSpot, Google Ads, LinkedIn Ads, GA4, and campaign tracking sources through automated N8N workflows, eliminating fragmented reporting processes across teams.\n\nThe architecture enabled real-time KPI synchronization, automated Slack and Microsoft Teams alerts, and threshold-based monitoring for campaign performance anomalies. AI-generated weekly summaries powered by GPT-4 helped leadership quickly interpret marketing trends, identify operational risks, and make faster budget and campaign decisions without relying on manual reporting cycles.",
+  "results_text": "The automated reporting environment significantly improved operational visibility and reduced the time spent on manual analytics preparation across the organization.",
+  "results": [
+    {
+      "value": "12 rs",
+      "label": "manual reporting workload eliminated from weekly operations"
+    },
+    {
+      "value": "60 min",
+      "label": "data synchronization frequency across all connected reporting systems"
+    },
+    {
+      "value": "92%",
+      "label": "reduction in reporting and decision-making delays across marketing and sales operations"
+    }
+  ],
+  "results_closing": "The company gained a centralized analytics workflow that improved reporting accuracy, enabled faster operational decisions, and increased responsiveness across marketing and sales teams.",
+  "created": "2026-05-28T12:35"
+}

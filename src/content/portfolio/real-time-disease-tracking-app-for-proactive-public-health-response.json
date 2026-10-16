@@ -1,0 +1,71 @@
+{
+  "title": "Real-time disease tracking app for proactive public health response",
+  "description": "Built a secure mobile platform with real-time disease tracking, geolocation-based alerts, and predictive health insights.",
+  "draft": true,
+  "tag": "Under NDA",
+  "categories": [
+    "Healthcare"
+  ],
+  "location": "Germany",
+  "duration": "2023",
+  "services": [
+    "App Development",
+    "Custom Software Development",
+    "Front-end Development",
+    "UX/UI Design"
+  ],
+  "tech": [
+    "GitHub",
+    "Node.js",
+    "React Native"
+  ],
+  "highlights": [
+    {
+      "value": "40%",
+      "label": "increase in user engagement through intuitive design and real-time updates"
+    },
+    {
+      "value": "30%",
+      "label": "faster response times, supporting better outbreak management"
+    },
+    {
+      "value": "90%+",
+      "label": "user satisfaction, reflecting strong adoption and ease of use"
+    }
+  ],
+  "client_image": "/media/portfolio-real-time-disease-tracking-app-for-proactive-public-health-r.jpg",
+  "client_text": "A public health organization dedicated to enhancing community health through technology-driven solutions. Their mission is to provide real-time, location-based health data to individuals, healthcare professionals, and public health authorities, ensuring faster responses to potential outbreaks.\n\nBy integrating modern tools, they aim to improve public health monitoring, promote preventive measures, and enable proactive decision-making. Their approach combines real-time data analysis, user-friendly technology, and privacy-first security measures to create a reliable health-tracking solution.",
+  "product_text": "The core product is a mobile application built to track disease outbreaks in real time and deliver location-based health alerts to users. Designed to support both the general public and public health officials, the app helps individuals stay informed and enables faster, data-driven responses to emerging health threats.",
+  "product_list_title": "It allows users to:",
+  "product_list": [
+    "Receive instant alerts about nearby outbreaks and health risks based on location data",
+    "View interactive maps with real-time updates to assess local exposure",
+    "Access preventive recommendations tailored to current health conditions"
+  ],
+  "product_text_2": "For public health teams, the platform provides tools for monitoring, containment planning, and resource coordination. With secure data handling and customizable notifications, the app ensures timely, relevant, and easy-to-understand health insights for all users.",
+  "goals": [
+    "The primary goal was to develop a secure and scalable mobile platform that strengthens public awareness, improves disease tracking, and accelerates healthcare response times. The app was built to deliver accurate, real-time health information based on users’ locations while ensuring strict data privacy and compliance standards.",
+    "By combining geolocation alerts with predictive analytics, the platform empowers individuals to make informed health decisions and supports public health officials with timely, data-driven insights. Its intuitive interface ensures broad accessibility, while real-time outbreak tracking enhances coordination among healthcare organizations and helps reduce the spread of disease."
+  ],
+  "challenges": [
+    "Developing a real-time disease tracking app posed several key challenges. The platform had to process and deliver location-based health data quickly, ensuring high accuracy without compromising user privacy.\n\nThe system needed to aggregate and anonymize large volumes of data, meeting strict data protection regulations. Additionally, achieving precise geolocation tracking was crucial for delivering timely, reliable alerts to users.\n\nAnother challenge was ensuring accessibility and ease of use, as the app needed to appeal to both tech-savvy users and individuals with limited digital experience. The team had to balance data security, real-time accuracy, and intuitive design to create a trusted and effective public health tool."
+  ],
+  "solution": "To address these challenges, we developed a secure, AI-powered mobile app for real-time disease tracking with a strong focus on user privacy.\n\nThe app integrates geolocation services to provide accurate, location-based health alerts, while advanced encryption ensures data protection and compliance with privacy regulations. Its intuitive interface allows users to easily access critical health updates, and customizable notifications keep individuals and healthcare providers informed about local outbreaks.\n\nBy combining real-time data processing, robust security, and seamless usability, the app became a trusted tool for public health monitoring.",
+  "results_text": "The launch of the real-time disease tracking app led to significant improvements in public health awareness and response times.",
+  "results": [
+    {
+      "value": "40%",
+      "label": "increase in user engagement through intuitive design and real-time updates"
+    },
+    {
+      "value": "35%",
+      "label": "faster response times for healthcare teams managing outbreaks"
+    },
+    {
+      "value": "90%+",
+      "label": "adoption rate with strong user feedback on usability and effectiveness"
+    }
+  ],
+  "results_closing": "By providing real-time health insights, the app empowers individuals and healthcare professionals to take proactive steps in disease prevention. This project showcased how technology-driven solutions enhance public health, improve crisis response, and create safer communities.",
+  "created": "2025-03-21T05:23"
+}

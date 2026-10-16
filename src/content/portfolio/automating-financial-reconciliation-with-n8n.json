@@ -1,0 +1,71 @@
+{
+  "title": "Automating Financial Reconciliation with n8n",
+  "description": "Implemented an AI-powered workflow to automate financial reconciliations, cutting review cycles in half and ensuring accurate, real-time reporting.",
+  "draft": false,
+  "tag": "Under NDA",
+  "categories": [
+    "AI Development Workflow",
+    "Automation"
+  ],
+  "location": "Europe",
+  "duration": "June 2025 – August 2025",
+  "services": [
+    "AI Development",
+    "AI Integration",
+    "Workflow Automation",
+    "AI Agent Development"
+  ],
+  "tech": [
+    "PostgreSQL",
+    "n8n",
+    "Python"
+  ],
+  "highlights": [
+    {
+      "value": "70%",
+      "label": "reduction in reconciliation time through automated n8n workflows"
+    },
+    {
+      "value": "90%",
+      "label": "fewer manual errors vs hand-matched spreadsheet process"
+    },
+    {
+      "value": "95%",
+      "label": "real-time visibility into reconciliation status across all ISO accounts"
+    }
+  ],
+  "client_image": "/media/portfolio-automating-financial-reconciliation-with-n8n.webp",
+  "client_text": "A European fintech back-office provider managing monthly residual disbursements across 15 to 20 ISO partner accounts. Three finance staff spent two full days every month-end manually cross-referencing ISO reports against bank deposit records in a shared spreadsheet. They needed full automation with zero disruption to existing tools.\n\n‍",
+  "product_text": "The client delivers back-office financial reconciliation: matching expected ISO residual payments against actual bank deposits, surfacing discrepancies, and reporting to finance leadership.",
+  "product_list_title": "The service enables teams to:",
+  "product_list": [
+    "Consolidate ISO payment data from multiple partners into one reconciliation view",
+    "Identify mismatches, missing submissions, and late deposits automatically",
+    "Generate timestamped reports for compliance and monthly financial close"
+  ],
+  "product_text_2": "The goal of the product is to reduce the operational burden of manual reconciliation and to ensure that businesses have reliable, real-time insights into their financial status.",
+  "goals": [
+    "Eliminate manual reconciliation by building an automation system that ingests reports in multiple formats, applies per-ISO tolerance logic, matches expected vs received amounts, and produces a live dashboard with zero human input on routine cycles. Every run must produce a traceable, timestamped audit record for compliance."
+  ],
+  "challenges": [
+    "■ No standardised input format: ISO reports arrived as CSV, Excel, and PDF with inconsistent column naming requiring a multi-format normalisation layer\n\n■ Per-ISO tolerance logic: each account had a different contractual mismatch threshold that the engine had to evaluate dynamically to avoid false alerts\n\n■ No new tooling: the solution had to integrate into the existing reporting workflow without replacing or rebuilding what finance leadership already used"
+  ],
+  "solution": "AltheraCode built an event-driven reconciliation pipeline in n8n with five stages, triggered by monthly cron and callable via webhook on early ISO submission.\n\n**Ingestion and Normalisation.** n8n polls Dropbox and SMTP inbox, maps 4 report formats to a canonical schema, writes to PostgreSQL staging table.\n\n**Tolerance-Aware Matching.** Engine queries daily bank deposit data, evaluates amount delta against per-ISO config in PostgreSQL, writes matched / mismatch / missing status.\n\n**Alert Engine.** Mismatch emails sent to ISO with delta detail and CC to finance team. Missing submissions trigger reminder plus 48-hour manager escalation.\n\n**Live Dashboard Write.** Summary row appended to existing reporting sheet after each run: period totals, counts, net delta, timestamp.\n\n**Archive and Audit Log.** Source files, email records, and summary zipped to Dropbox per period. Immutable PostgreSQL audit entry per run.",
+  "results_text": "The financial reconciliation automation delivered by Althera Code significantly improved efficiency, accuracy, and overall reliability of the process. Key outcomes included:",
+  "results": [
+    {
+      "value": "65%",
+      "label": "reduction in manual data entry and transcription errors per monthly cycle"
+    },
+    {
+      "value": "50%",
+      "label": "faster reconciliation close, from day 4-5 down to day 2 of each month"
+    },
+    {
+      "value": "24/7",
+      "label": "automated mismatch alerts, discrepancies flagged within minutes of each run"
+    }
+  ],
+  "results_closing": "A 40-hour monthly manual process replaced by a fully automated, audit-ready pipeline that runs without human input and gives the finance team back two full working days every month.",
+  "created": "2025-09-17T10:51"
+}

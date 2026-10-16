@@ -1,0 +1,67 @@
+{
+  "title": "AI Voice Assistant for Eligibility & Claim Status Automation",
+  "description": "AI-powered voice assistant for automated eligibility verification, claim-status support, and healthcare call-center operations.",
+  "draft": false,
+  "tag": "Under NDA",
+  "categories": [
+    "Healthcare"
+  ],
+  "location": "USA",
+  "duration": "3 Months",
+  "services": [
+    "Workflow Automation",
+    "AI Voice Assistant Development",
+    "Healthcare System Integration"
+  ],
+  "tech": [],
+  "highlights": [
+    {
+      "value": "70%",
+      "label": "reduction in repetitive healthcare support inquiry handling workflows"
+    },
+    {
+      "value": "24/7",
+      "label": "automated response availability across member support operations"
+    },
+    {
+      "value": "4x",
+      "label": "faster eligibility verification and claim-status response handling"
+    }
+  ],
+  "client_image": "/media/portfolio-ai-voice-assistant-for-eligibility-claim-status-automation.webp",
+  "client_text": "A healthcare insurance organization managing large volumes of inbound member and provider requests related to eligibility verification, claim-status communication, and support operations. The support environment relied heavily on manual call handling, fragmented data retrieval, and repetitive inquiry processing across multiple internal systems.\n\nAs operational demand increased, the organization needed a scalable AI support layer capable of improving response consistency, reducing operational workload, and maintaining compliance visibility across healthcare communication workflows.",
+  "product_text": "The solution is an AI-powered voice assistant platform designed for healthcare insurance providers handling high volumes of inbound support interactions. The platform automates eligibility verification, claim-status communication, and routine information retrieval through secure real-time integrations with healthcare systems.",
+  "product_list_title": "The platform helps teams:",
+  "product_list": [
+    "Automate eligibility and claim-status support inquiries",
+    "Retrieve information from healthcare systems in real time",
+    "Route complex support cases into human escalation workflows"
+  ],
+  "product_text_2": "The solution reduced repetitive support handling while improving response consistency, operational visibility, and communication efficiency across healthcare support operations. It also created a scalable AI support foundation capable of supporting future omnichannel automation initiatives.",
+  "goals": [
+    "The primary goal was to reduce repetitive call-center workload related to eligibility checks and claim-status inquiries without compromising compliance, response accuracy, or member experience quality. The organization also needed a scalable AI communication layer capable of operating continuously across high-volume healthcare support workflows while improving operational efficiency and support consistency."
+  ],
+  "challenges": [
+    "Healthcare support teams relied on repetitive manual workflows for eligibility verification and claim-status communication across disconnected systems",
+    "High inbound call volume created operational pressure on support agents and increased delays during peak support periods",
+    "Compliance sensitive communication workflows required audit visibility, secure authentication, and controlled escalation handling across support operations"
+  ],
+  "solution": "AltheraCode designed a secure AI voice assistant platform integrating conversational AI, speech processing, healthcare APIs, claims systems, and CRM workflows into one connected support environment. The platform automated inbound eligibility verification, claim-status retrieval, and support request handling while maintaining secure operational controls and escalation visibility.\n\nThe architecture introduced real-time authentication workflows, structured escalation routing, audit logging, and secure healthcare system integrations capable of supporting both automated and human assisted support scenarios. The solution created a scalable AI communication infrastructure built for long term healthcare support automation and operational growth.",
+  "results_text": "The implementation significantly reduced repetitive support workload across eligibility verification and claim-status operations while improving response consistency and operational scalability across healthcare communication workflows. The AI assistant also helped healthcare teams improve information accessibility without increasing manual support staffing requirements.",
+  "results": [
+    {
+      "value": "85%",
+      "label": "reduction in repetitive eligibility and claim-status inquiry handling"
+    },
+    {
+      "value": "3x",
+      "label": "faster healthcare response and information retrieval workflows"
+    },
+    {
+      "value": "92%",
+      "label": "improved communication consistency across support operations"
+    }
+  ],
+  "results_closing": "The platform also established a scalable AI-ready healthcare support foundation capable of supporting future automation workflows, omnichannel communication expansion, and more advanced patient-support operations. Secure escalation handling, audit visibility, and structured workflow orchestration created a more efficient long-term operational environment.",
+  "created": "2026-05-28T16:26"
+}

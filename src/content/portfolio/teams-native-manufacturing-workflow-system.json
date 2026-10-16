@@ -1,0 +1,66 @@
+{
+  "title": "Teams-Native Manufacturing Workflow System",
+  "description": "A Teams-native operational system built to automate manufacturing, supply chain, and finance workflows through Microsoft Dynamics 365.",
+  "draft": false,
+  "tag": "Under NDA",
+  "categories": [
+    "Manufacturing"
+  ],
+  "location": "Europe",
+  "duration": "4–6 Months",
+  "services": [
+    "Workflow Automation",
+    "ERP Integration",
+    "Enterprise Process Orchestration",
+    "Microsoft Teams Automation"
+  ],
+  "tech": [],
+  "highlights": [
+    {
+      "value": "75%",
+      "label": "reduction in manual cross-department coordination and operational follow-ups"
+    },
+    {
+      "value": "100%",
+      "label": "controlled workflow execution maintained inside the company’s Microsoft ecosystem"
+    },
+    {
+      "value": "2x",
+      "label": "faster approval cycles across procurement, finance, and production operations"
+    }
+  ],
+  "client_image": "/media/portfolio-teams-native-manufacturing-workflow-system.webp",
+  "client_text": "A manufacturing enterprise managing complex workflows across sales, supply chain, logistics, production, and finance teams. The company needed a centralized operational system that could reduce manual coordination, improve process visibility, and standardize cross-functional decision-making inside Microsoft Teams and Dynamics 365.",
+  "product_text": "The solution is a Teams-native operational workflow platform integrated with Microsoft Dynamics 365 Supply Chain Management and Finance modules. It centralizes approvals, operational alerts, procurement coordination, production planning, and financial workflows inside one controlled environment.",
+  "product_list_title": "The platform helps teams:",
+  "product_list": [
+    "Coordinate operational workflows directly inside Microsoft Teams",
+    "Automate approvals, escalations, and cross-department notifications",
+    "Synchronize operational actions with Dynamics 365 ERP systems"
+  ],
+  "product_text_2": "The system was designed to reduce operational friction, improve auditability, and create a more structured workflow environment across manufacturing operations.",
+  "goals": [
+    "The client needed to eliminate fragmented communication between departments and reduce delays caused by manual coordination across ERP workflows. The primary objective was to create a centralized operational layer connecting manufacturing, logistics, procurement, production, and finance teams inside a unified Microsoft ecosystem."
+  ],
+  "challenges": [
+    "▪ Operational decisions depended heavily on manual communication across multiple departments and disconnected workflows.\n\n▪ Approval routing, procurement coordination, and production planning lacked centralized visibility and structured escalation logic.\n\n▪ Teams needed real-time operational notifications tied directly to ERP events while maintaining auditability and controlled workflow governance."
+  ],
+  "solution": "AltheraCode developed a Teams-native workflow orchestration system integrated with Microsoft Dynamics 365 Supply Chain Management and Finance modules. The platform centralized operational alerts, approval routing, procurement coordination, production workflows, and financial approvals inside one connected environment.\n\nThe implementation combined ERP event processing, workflow orchestration, escalation rules, structured notifications, and audit logging to create a controlled operational workflow system across manufacturing departments.",
+  "results_text": "The implementation improved workflow visibility, operational responsiveness, and coordination between manufacturing, supply chain, production, and finance teams. Key outcomes included:",
+  "results": [
+    {
+      "value": "65%",
+      "label": "fewer manual approval and escalation touchpoints across operational workflows"
+    },
+    {
+      "value": "40%",
+      "label": "faster response time to production, procurement, and logistics risks"
+    },
+    {
+      "value": "24/7",
+      "label": "real-time operational visibility through automated Teams notifications and ERP-triggered alerts"
+    }
+  ],
+  "results_closing": "A disconnected operational environment was transformed into a centralized workflow system that improved decision-making speed, reduced process bottlenecks, and created more transparent coordination across departments.",
+  "created": "2026-05-28T11:38"
+}

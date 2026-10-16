@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "name": "Angular",
+      "logo": "/media/tech-angular.svg"
+    },
+    {
+      "name": "AWS",
+      "logo": "/media/tech-aws.jpg"
+    },
+    {
+      "name": "DigitalOcean",
+      "logo": "/media/tech-digitalocean.svg"
+    },
+    {
+      "name": "Django",
+      "logo": "/media/tech-django.svg"
+    },
+    {
+      "name": "Docker",
+      "logo": "/media/tech-docker.svg"
+    },
+    {
+      "name": "GitHub",
+      "logo": "/media/tech-github.png"
+    },
+    {
+      "name": "Go",
+      "logo": "/media/tech-go.svg"
+    },
+    {
+      "name": "Google Sheets",
+      "logo": "/media/tech-google-sheets.webp"
+    },
+    {
+      "name": "JavaScript",
+      "logo": "/media/tech-javascript.svg"
+    },
+    {
+      "name": "MySQL",
+      "logo": "/media/tech-mysql.svg"
+    },
+    {
+      "name": "n8n",
+      "logo": "/media/tech-n8n.webp"
+    },
+    {
+      "name": "Node.js",
+      "logo": "/media/tech-node-js.svg"
+    },
+    {
+      "name": "PostgreSQL",
+      "logo": "/media/tech-postgresql.svg"
+    },
+    {
+      "name": "Python",
+      "logo": "/media/tech-python.svg"
+    },
+    {
+      "name": "React Native",
+      "logo": "/media/tech-react-native.png"
+    },
+    {
+      "name": "Ruby",
+      "logo": "/media/tech-ruby.svg"
+    },
+    {
+      "name": "Ruby on Rails",
+      "logo": "/media/tech-ruby-on-rails.svg"
+    },
+    {
+      "name": "Vue.js",
+      "logo": "/media/tech-vue-js.svg"
+    }
+  ]
+}

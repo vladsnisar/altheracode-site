@@ -1,0 +1,67 @@
+{
+  "title": "AI Audio Intelligence Pipeline for Automated Knowledge Capture",
+  "description": "An n8n-powered AI workflow that converts raw MP3 recordings into structured executive summaries automatically published to Notion.",
+  "draft": false,
+  "tag": "Under NDA",
+  "categories": [
+    "Knowledge Management"
+  ],
+  "location": "USA",
+  "duration": "1 Month",
+  "services": [
+    "AI Workflow Automation",
+    "n8n Automation Development",
+    "Knowledge Management Systems"
+  ],
+  "tech": [],
+  "highlights": [
+    {
+      "value": "1,500+",
+      "label": "character-limited executive summaries generated automatically from raw audio"
+    },
+    {
+      "value": "12h+",
+      "label": "weekly operational time saved across audio processing and summary publishing"
+    },
+    {
+      "value": "6x",
+      "label": "faster business insight extraction from unstructured voice recordings"
+    }
+  ],
+  "client_image": "/media/portfolio-ai-audio-intelligence-pipeline-for-automated-knowledge-captu.webp",
+  "client_text": "A fast-moving operations-focused organization needed an automated system capable of transforming raw audio recordings into structured, searchable business knowledge without requiring manual processing or administrative coordination. The team relied heavily on meetings, voice notes, and spoken updates but lacked an efficient workflow for converting audio content into usable organizational insights.\n\nAs the amount of recorded content increased, manual transcription, fragmented documentation workflows, and inconsistent knowledge storage created delays, reduced visibility, and operational inefficiencies across internal collaboration processes.",
+  "product_text": "The solution is an AI-powered audio intelligence pipeline built with n8n for automated transcription, executive summary generation, and structured Notion publishing workflows. The platform automatically detects uploaded MP3 files, processes speech-to-text conversion through AI models, generates concise executive-ready summaries, and publishes structured outputs directly into Notion knowledge environments.",
+  "product_list_title": "The platform helps teams:",
+  "product_list": [
+    "Convert voice recordings into structured business knowledge",
+    "Eliminate repetitive manual transcription workflows",
+    "Improve accessibility and organization of operational insights"
+  ],
+  "product_text_2": "The automation workflow significantly reduced manual content handling while improving knowledge accessibility, searchability, and operational efficiency across internal information management processes. It also established a scalable workflow foundation capable of supporting future AI processing pipelines, multilingual transcription, and expanded document automation operations.",
+  "goals": [
+    "The primary goal was to design an end-to-end AI automation workflow capable of converting raw MP3 recordings into structured executive summaries without requiring manual coordination or repetitive processing tasks. The organization also needed a centralized knowledge management flow capable of automatically organizing generated insights inside a collaborative Notion environment. Another objective was to create a modular automation architecture capable of supporting additional file formats, larger content volumes, multilingual workflows, and future AI-powered knowledge processing extensions."
+  ],
+  "challenges": [
+    "Manual transcription and content organization workflows consumed excessive operational time and delayed access to critical information",
+    "The organization required a scalable pipeline capable of processing raw audio automatically while maintaining structured and searchable output formatting",
+    "The workflow needed reliable orchestration logic, automated error handling, and flexible infrastructure capable of supporting future workflow expansion"
+  ],
+  "solution": "AltheraCode designed an AI-powered audio processing automation workflow integrating event-driven file ingestion, transcription orchestration, executive summary generation, and structured Notion publishing into one connected operational system. The platform automatically retrieves uploaded MP3 recordings, validates content, processes speech-to-text conversion, and transforms raw audio into concise structured business insights.\n\nThe architecture introduced intelligent audio ingestion pipelines, automated transcription services, AI summarization layers, modular workflow orchestration, scalable Notion publishing infrastructure, and fault-tolerant automation logic built for continuous operational processing. The solution created a reusable AI knowledge management environment capable of supporting future automation workflows and larger organizational intelligence operations.",
+  "results_text": "The implementation significantly accelerated knowledge extraction workflows and reduced repetitive administrative coordination while improving accessibility, searchability, and operational consistency across business information management processes. Automated AI-generated summaries also improved internal visibility and enabled teams to access structured insights faster without manually reviewing long audio recordings.",
+  "results": [
+    {
+      "value": "87%",
+      "label": "reduction in manual transcription and repetitive content processing workflows"
+    },
+    {
+      "value": "5x",
+      "label": "faster conversion of spoken information into structured business insights"
+    },
+    {
+      "value": "24/7",
+      "label": "continuous automated processing and AI-powered knowledge publishing operations"
+    }
+  ],
+  "results_closing": "The platform also established a scalable operational knowledge infrastructure capable of supporting future AI content workflows, multilingual processing pipelines, advanced search capabilities, and larger enterprise information management ecosystems. Modular automation architecture, structured AI orchestration, and centralized publishing workflows created a more efficient long-term knowledge processing environment.",
+  "created": "2026-05-28T17:35"
+}

@@ -1,0 +1,64 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Contact from '../../sections/Contact.astro';
+import pages from '../../content/pages.json';
+const page = pages.portfolio;
+
+const cases = (await getCollection('portfolio', p => !p.data.draft))
+  .sort((a, b) => b.data.created.valueOf() - a.data.created.valueOf());
+// Filter chips = every category used by a published case, most used first
+const counts = new Map<string, number>();
+cases.forEach(c => c.data.categories.forEach(k => counts.set(k, (counts.get(k) ?? 0) + 1)));
+const categories = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).map(([k]) => k);
+---
+<Base title={page.seo_title} description={page.seo_description}>
+  <section class="hero page-hero"><div class="hero-glow"></div><div class="container"><div class="hero-inner">
+    <span class="eyebrow">{page.eyebrow}</span>
+    <h1>{page.title}</h1>
+    {page.lead && <p>{page.lead}</p>}
+  </div></div></section>
+
+  <section class="section"><div class="container">
+    {categories.length > 1 && (
+      <div class="filter-chips" id="caseFilters" role="group" aria-label="Filter case studies by industry">
+        <button type="button" class="active" data-filter="">All</button>
+        {categories.map(k => <button type="button" data-filter={k}>{k}</button>)}
+      </div>
+    )}
+    <div class="grid cols-3" id="caseGrid">
+      {cases.map(c => (
+        <article class="portfolio-card" data-cats={JSON.stringify(c.data.categories)}>
+          <div class="portfolio-thumb">
+            {c.data.client_image
+              ? <img src={c.data.client_image} alt="" loading="lazy" />
+              : <span class="glyph">{(c.data.categories[0] ?? c.data.title).slice(0, 2)}</span>}
+            {c.data.tag && <span class="chip">{c.data.tag}</span>}
+          </div>
+          <div class="portfolio-body">
+            <span class="cat">{c.data.categories[0]}</span>
+            <h3><a href={`/portfolio/${c.id}`}>{c.data.title}</a></h3>
+            <p>{c.data.description}</p>
+            <a class="more" href={`/portfolio/${c.id}`}>Learn more →</a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div></section>
+
+  <Contact />
+</Base>
+
+<script>
+  const bar = document.getElementById('caseFilters');
+  bar?.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('button[data-filter]');
+    if (!btn) return;
+    bar.querySelectorAll('button').forEach(b => b.classList.toggle('active', b === btn));
+    const want = btn.dataset.filter;
+    document.querySelectorAll<HTMLElement>('#caseGrid .portfolio-card').forEach(card => {
+      const cats: string[] = JSON.parse(card.dataset.cats || '[]');
+      card.hidden = !!want && !cats.includes(want);
+    });
+  });
+</script>
