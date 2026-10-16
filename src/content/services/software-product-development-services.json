@@ -1,0 +1,352 @@
+{
+  "title": "Software Product Development Services – Althera Code",
+  "description": "Custom software product development services from idea to scalable solution. Build, launch, and grow your product with a dedicated team and proven process.",
+  "sections": [
+    {
+      "type": "hero",
+      "title_accent": "Software Product Development Services",
+      "title": "Software Product Development Services That Turn Ideas into Scalable Products",
+      "text": "We help startups and businesses turn ideas into market-ready products, from early validation to full-scale launch. By combining modern technologies, efficient development, and a strong focus on market fit, we ensure your product is built for real success.",
+      "button_text": "Consult Our Experts",
+      "button_link": "/contact",
+      "breadcrumb": "Software Product Development Services"
+    },
+    {
+      "type": "intro",
+      "tag": "Precision Built",
+      "title": "From Idea to Scalable Product — What We Actually Deliver",
+      "text": "We shape and build digital products designed for launch, growth, and long-term use. Clear product logic, strong technical foundations, and thoughtful architecture define how every solution is structured and evolves over time. Through custom software product development, solutions are created to grow with the product and adapt to changing demands.",
+      "image": "/media/service-intro-image.avif",
+      "image_alt": "From Idea to Scalable Product — What We Actually Deliver"
+    },
+    {
+      "type": "cards",
+      "dark": false,
+      "tag": "Expert Development & AI Solutions",
+      "title": "Full-Cycle Software Product Development Services",
+      "text": "",
+      "items": [
+        {
+          "title": "Product/Idea Discovery and Validation",
+          "text": "Clear product direction, validated ideas, and a defined roadmap before development begins. This stage aligns business goals with real opportunities and reduces early-stage risks."
+        },
+        {
+          "title": "MVP and PoC Development",
+          "text": "Functional MVPs built to test core features and gather early feedback. A focused approach to software product development services for startups or operating business enables faster validation and smarter product decisions."
+        },
+        {
+          "title": "Product Strategy and Technical Consulting",
+          "text": "Product planning aligned with business goals, technical requirements, and long term scalability. This stage helps structure development priorities and supports more confident product decisions."
+        },
+        {
+          "title": "Full-Scale Product Development",
+          "text": "Scalable digital products built with clean architecture and reliable performance. As a software product development company, the focus remains on long-term stability and maintainability."
+        },
+        {
+          "title": "Architecture and System Design",
+          "text": "Well-structured system architecture designed for scalability, flexibility, and performance. Strong technical foundations support product growth without major rework."
+        },
+        {
+          "title": "AI Integration and Smart Features",
+          "text": "Advanced functionality enhanced with automation, AI capabilities, and data-driven features. Modern software product development solutions rely on intelligent systems to improve efficiency."
+        },
+        {
+          "title": "Quality Assurance and Testing",
+          "text": "Structured testing processes that ensure product stability and consistent performance. Quality control supports reliable operation across environments and use cases."
+        },
+        {
+          "title": "Product Scaling and Ongoing Development",
+          "text": "Ongoing improvements, updates, and scaling strategies to support product growth. Custom software product development enables solutions to adapt to evolving requirements."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "tag": "Innovate Now",
+      "title": "Our Software Product Development Process",
+      "text": "At AltheraCode, product development follows a clear and structured flow where each step builds on the previous one. This approach keeps decisions grounded, reduces uncertainty, and ensures the product moves forward with a clear direction and purpose.",
+      "steps": [
+        {
+          "title": "Discovery and Product Understanding",
+          "text": "Deep understanding of business goals, product vision, and key requirements. This stage defines direction and sets a clear foundation for further development."
+        },
+        {
+          "title": "Strategy and Roadmap Planning",
+          "text": "A structured roadmap with defined milestones, priorities, and timelines. The focus stays on aligning product decisions with business objectives."
+        },
+        {
+          "title": "Product Design and Prototyping",
+          "text": "User flows, interfaces, and interactive prototypes that shape how the product will function. Design decisions are guided by usability and product logic."
+        },
+        {
+          "title": "Development and Iteration",
+          "text": "Product development moves forward in iterations, allowing continuous refinement based on feedback and evolving requirements. This approach supports faster progress, better product decisions, and a more stable result over time."
+        },
+        {
+          "title": "Testing & Quality Assurance",
+          "text": "Comprehensive testing ensures stability, performance, and consistent product behavior. Quality control supports reliable operation across use cases."
+        },
+        {
+          "title": "Deployment & Launch",
+          "text": "Smooth transition from development to production with a focus on stability and readiness. The product is prepared for real users and operational use."
+        },
+        {
+          "title": "Product Growth and Support",
+          "text": "Ongoing improvements, updates, and scaling based on product performance and evolving business needs. This stage ensures the product continues to grow, adapt, and stay aligned with changing requirements over time."
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "dark": false,
+      "tag": "",
+      "title": "Key Features We Build for Software Products",
+      "text": "At AltheraCode, software product design and development services focus on building capabilities that go beyond basic functionality. The emphasis is on features that make products scalable, intelligent, and ready for real use from early stages to long-term growth.",
+      "items": [
+        {
+          "title": "Artificial Intelligence",
+          "text": "AI capabilities that automate workflows, improve decision-making, and enable predictive product behavior."
+        },
+        {
+          "title": "Advanced Analytics and Reporting",
+          "text": "Data processing, dashboards, and reporting features that support better product decisions and visibility."
+        },
+        {
+          "title": "Cloud-Based Solutions",
+          "text": "Cloud infrastructure that supports scalability, flexibility, and stable product performance."
+        },
+        {
+          "title": "Workflow Automation",
+          "text": "Automation features that streamline repetitive operations, improve efficiency, and reduce manual workload across business processes."
+        },
+        {
+          "title": "Chatbots and Conversational Interfaces",
+          "text": "Built-in communication tools that improve user interaction and automate support processes."
+        },
+        {
+          "title": "Real-Time Data Processing",
+          "text": "Systems designed to handle live data and provide instant updates where responsiveness is critical."
+        },
+        {
+          "title": "Voice Recognition and Processing",
+          "text": "Voice-enabled functionality that supports natural interaction and improves accessibility."
+        },
+        {
+          "title": "Custom Business Logic",
+          "text": "Product functionality tailored to specific business processes and operational requirements."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Bring your product to market faster with the right technology and a clear path to scale",
+      "accent": "right technology and a clear path",
+      "button_text": "Start Your Project",
+      "button_link": "/contact"
+    },
+    {
+      "type": "cards",
+      "dark": false,
+      "tag": "",
+      "title": "Why Choose AltheraCode for Software Product Development",
+      "text": "",
+      "items": [
+        {
+          "title": "Product-Focused Approach",
+          "text": "Development is aligned with product goals, user needs, and long-term scalability from the very beginning. This ensures the solution supports real usage, not just technical requirements."
+        },
+        {
+          "title": "End-to-End Development",
+          "text": "Full-cycle support covers everything from early discovery to launch and further product growth. Each stage is connected through a clear and structured process."
+        },
+        {
+          "title": "Strong Technical Expertise",
+          "text": "Work is based on modern technologies, scalable architectures, and experience with complex product environments. This allows building solutions that remain stable as the product evolves."
+        },
+        {
+          "title": "Scalable Solutions",
+          "text": "Systems are designed to handle growth without performance or stability issues. The architecture supports both early-stage products and large-scale expansion."
+        },
+        {
+          "title": "Fast and Structured Execution",
+          "text": "Clear workflows and defined milestones help keep development predictable and efficient. This reduces delays and keeps the product moving forward."
+        },
+        {
+          "title": "Flexible Collaboration",
+          "text": "Collaboration adapts to different team structures, workflows, and product needs. This makes it easier to integrate into existing teams or processes."
+        },
+        {
+          "title": "Focus on Real Product Value",
+          "text": "Decisions are driven by usability, product performance, and business impact. This helps ensure the product delivers value beyond basic functionality."
+        },
+        {
+          "title": "Long-Term Partnership Mindset",
+          "text": "Support continues after launch with updates, improvements, and product evolution. This helps maintain product relevance as requirements change over time."
+        }
+      ]
+    },
+    {
+      "type": "industries",
+      "tag": "Innovation through technology",
+      "title": "Industries We Work With",
+      "items": [
+        {
+          "title": "Manufacturing & Industrial Automation",
+          "text": "Solutions that connect machines, data, and processes into a unified digital environment. Enable predictive maintenance, real-time monitoring, and more efficient production cycles."
+        },
+        {
+          "title": "Construction & Civil Engineering",
+          "text": "Platforms that bring clarity to complex projects, from planning to on-site execution. Improve coordination, increase visibility, and reduce costly delays across teams."
+        },
+        {
+          "title": "Real Estate & PropTech",
+          "text": "Digital platforms for property management, operations, client communication, and business automation. Built to improve efficiency, visibility, and coordination across real estate workflows."
+        },
+        {
+          "title": "Healthcare & Medical Technology",
+          "text": "Digital products that streamline clinical workflows, patient interactions, and data management. Built to meet strict compliance requirements while improving care delivery and operational efficiency"
+        },
+        {
+          "title": "E-commerce & Retail",
+          "text": "Flexible platforms that support growth, personalization, and seamless customer journeys. Built to handle high traffic, evolving user behavior, and multi-channel operations."
+        },
+        {
+          "title": "Transportation & Logistics",
+          "text": "Real-time systems for route optimization, fleet management, and supply chain coordination. Help reduce delays, improve service quality, and keep operations predictable."
+        },
+        {
+          "title": "Energy & Utilities",
+          "text": "Technology solutions for smarter resource management, monitoring, and infrastructure control. Support efficiency goals while adapting to changing demand and sustainability needs."
+        },
+        {
+          "title": "Telecommunications & Connectivity",
+          "text": "Robust systems for network operations, infrastructure monitoring, and service management. Built to ensure stability, scalability, and uninterrupted connectivity."
+        },
+        {
+          "title": "Education & EdTech",
+          "text": "Digital platforms that support learning experiences, virtual classrooms, and performance tracking. Help institutions deliver more engaging, accessible, and data-driven education."
+        }
+      ]
+    },
+    {
+      "type": "tech",
+      "title": "Technologies We Work With",
+      "logos": [
+        {
+          "image": "/media/logo-net-core.avif",
+          "name": ".NET Core"
+        },
+        {
+          "image": "/media/logo-java.avif",
+          "name": "Java"
+        },
+        {
+          "image": "/media/logo-python.avif",
+          "name": "Python"
+        },
+        {
+          "image": "/media/logo-javascript.avif",
+          "name": "JavaScript"
+        },
+        {
+          "image": "/media/logo-csharp.avif",
+          "name": "C#"
+        },
+        {
+          "image": "/media/logo-php.avif",
+          "name": "PHP"
+        },
+        {
+          "image": "/media/logo-nodejs.avif",
+          "name": "Node.js"
+        },
+        {
+          "image": "/media/logo-react-native.avif",
+          "name": "React Native"
+        },
+        {
+          "image": "/media/logo-aws.avif",
+          "name": "AWS"
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Technology and execution that move your product forward, from first release to real growth",
+      "accent": "",
+      "button_text": "Talk to an Expert",
+      "button_link": "/contact"
+    },
+    {
+      "type": "cases",
+      "tag": "Portfolio",
+      "title": "Our Success Stories",
+      "text": "Our team builds software that solves real challenges. We create smart, scalable solutions across industries, optimizing workflows and enhancing efficiency.",
+      "cases": [
+        "ai-audio-intelligence-pipeline-for-automated-knowledge-capture",
+        "ai-telegram-assistant-for-real-time-team-communication",
+        "ai-powered-real-time-insight-engine-for-smarter-information-filtering"
+      ]
+    },
+    {
+      "type": "cards",
+      "dark": true,
+      "tag": "",
+      "title": "Engagement Models for Product Development",
+      "text": "",
+      "items": [
+        {
+          "title": "Dedicated Team",
+          "text": "A dedicated team works as a natural extension of your product and internal processes, aligned with your goals and priorities. At AltheraCode, this model supports long-term collaboration with consistent development, faster iterations, and deep product understanding."
+        },
+        {
+          "title": "Full Product Development",
+          "text": "From early concept to launch and further growth, the entire development process is handled end to end with clear ownership and accountability. This approach provides a structured path to delivery with predictable timelines and a product built for long-term scalability."
+        },
+        {
+          "title": "Team Augmentation",
+          "text": "When additional expertise is needed, engineers integrate into your team and adapt to your workflows, tools, and pace. AltheraCode extends your capabilities without disrupting your structure, helping you move faster while keeping full control."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "Why outsource software product development?",
+          "a": "Outsourcing allows you to move faster without spending months on hiring and setup. You get access to a team that already has delivery processes, product experience, and technical expertise in place. With outsourced software product development services, companies can launch faster and focus on business decisions instead of managing execution."
+        },
+        {
+          "q": "How much does software product development cost?",
+          "a": "The cost varies depending on the scope, complexity, integrations, and expected scale of the product. There is a big difference between building an MVP and developing a full platform with multiple user roles and systems behind it. A custom software product development company usually defines the budget after a discovery phase, where requirements, risks, and priorities are clearly mapped."
+        },
+        {
+          "q": "How long does it take to build a software product?",
+          "a": "There is no universal timeline. Some products can be launched in a few months as an MVP, while others require long-term development with multiple iterations. What matters more is how the process is structured and how quickly you can start validating your idea in the market."
+        },
+        {
+          "q": "What are the key stages of the software product development process?",
+          "a": "It typically starts with discovery, where the idea is shaped into clear requirements. Then comes product design and architecture, followed by development and testing. After launch, the focus shifts to continuous improvement, scaling, and adding features based on user feedback."
+        },
+        {
+          "q": "What is MVP and Poс in software product development?",
+          "a": "A PoC, or Proof of Concept, is created to validate whether a technical idea, feature, or solution is feasible before full product development begins. An MVP is a simplified version of a product that includes only core functionality. It is built to test the idea in real conditions, gather feedback, and understand what actually matters to users before investing in full development."
+        },
+        {
+          "q": "How do you ensure product-market fit and product success?",
+          "a": "Product-market fit is not something you achieve once and move on. It is a continuous process of testing, learning, and adjusting. Teams that stay close to users, track behavior, and iterate quickly are the ones that build products people actually use."
+        },
+        {
+          "q": "Can you scale and improve a product after launch?",
+          "a": "Yes, and in most cases that is when the real product work begins. After launch, teams focus on performance, infrastructure, and new features. Scaling is not only about technology but also about adapting the product to growing user needs and business goals."
+        }
+      ]
+    },
+    {
+      "type": "contact",
+      "title": "Ready to launch your product development?",
+      "text": "If you’d like to get in touch, please fill in the form"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "title": "Web & Mobile Development Services - AltheraCode",
+  "description": "Althera Code helps companies design, build, and scale digital solutions — with strong engineering and startup-level speed.",
+  "sections": [
+    {
+      "type": "hero",
+      "title_accent": "Web & Mobile Solutions",
+      "title": "Where Strategy Meets Code: Custom Web & Mobile Solutions",
+      "text": "Your idea deserves more than just code—it needs creativity, expertise, and flawless execution. We build web and mobile apps that drive results and support your business growth.",
+      "button_text": "Consult Our Experts",
+      "button_link": "/contact",
+      "breadcrumb": "Web & Mobile Development Services"
+    },
+    {
+      "type": "intro",
+      "tag": "Precision Built",
+      "title": "Custom Web & Mobile Solution Development Services",
+      "text": "AltheraCode delivers end-to-end development for web and mobile solutions—scalable, high-performing solutions built to fit your business. Leveraging advanced AI technologies, every stage from concept to launch is crafted for seamless execution, intuitive design, and long-term growth.",
+      "image": "/media/service-web-mobile-development-services-intro.avif",
+      "image_alt": "Custom Web & Mobile Solution Development Services"
+    },
+    {
+      "type": "cases",
+      "tag": "",
+      "title": "Our Portfolio",
+      "text": "Our team builds software that solves real challenges. We create smart, scalable solutions across industries, optimizing workflows and enhancing efficiency.",
+      "cases": [
+        "ai-audio-intelligence-pipeline-for-automated-knowledge-capture",
+        "ai-telegram-assistant-for-real-time-team-communication",
+        "ai-powered-real-time-insight-engine-for-smarter-information-filtering",
+        "viral-content-automation-engine-for-scalable-ai-video-production",
+        "ai-voice-assistant-for-eligibility-claim-status-automation",
+        "ai-orchestrated-manufacturing-operations-platform"
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Tech Expertise that Moves Your Business Forward – Meet AltheraCode.",
+      "accent": "Meet AltheraCode",
+      "button_text": "Let's Start",
+      "button_link": "/contact"
+    },
+    {
+      "type": "cards",
+      "dark": false,
+      "tag": "Expert Development & AI Solutions",
+      "title": "Why Choose AltheraCode",
+      "text": "",
+      "items": [
+        {
+          "title": "Experienced Solution Developers",
+          "text": "With 7+ years of expertise, our team has successfully built and launched solutions across healthtech, fintech, and AI-driven SaaS platforms—delivering scalable, high-performance software."
+        },
+        {
+          "title": "End-to-End Support",
+          "text": "From concept to launch—and beyond—we ensure a seamless experience with reliable post-launch support."
+        },
+        {
+          "title": "AI-Driven Innovation",
+          "text": "We integrate cutting-edge AI and automation where it adds the most value, optimizing efficiency, decision-making, and user experience."
+        },
+        {
+          "title": "Agile & Scalable Solutions",
+          "text": "Our agile approach ensures flexibility, rapid iteration, and continuous improvements, allowing your solution to evolve with market needs."
+        },
+        {
+          "title": "Collaborative & Transparent Process",
+          "text": "We work closely with you, ensuring clear communication, strategic decision-making, and a development roadmap that aligns with your vision."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "tag": "Innovate Now",
+      "title": "Our Process",
+      "text": "At AltheraCode, we specialize in end-to-end solution development, transforming concepts into powerful, AI-driven innovations. Whether it’s healthtech software, SaaS platforms, or enterprise systems, we guide you from ideation to launch, ensuring seamless execution and cutting-edge results.",
+      "steps": [
+        {
+          "title": "Discovery & Analysis",
+          "text": "We begin by understanding your unique business needs, challenges, and goals. Through in-depth research and consultation, we identify the best solutions for your project."
+        },
+        {
+          "title": "Strategy & Planning",
+          "text": "Our team designs a tailored roadmap, outlining clear milestones, timelines, and deliverables to ensure a smooth development process."
+        },
+        {
+          "title": "Design & Prototyping",
+          "text": "We create intuitive, user-focused designs and interactive prototypes, ensuring your vision is brought to life before development begins."
+        },
+        {
+          "title": "Agile Development",
+          "text": "Our developers build scalable and secure solutions, working in sprints for continuous feedback and improvements, keeping you involved every step of the way."
+        },
+        {
+          "title": "Testing & Quality Assurance",
+          "text": "Every feature is rigorously tested to meet the highest performance, usability, and security standards, with AI-assisted testing ensuring precision and efficiency."
+        },
+        {
+          "title": "Deployment & Launch",
+          "text": "Once everything is ready, we ensure a seamless launch, providing full support during the transition to live operation."
+        },
+        {
+          "title": "Post-Launch Support",
+          "text": "We don’t stop at delivery. Our team provides ongoing support, maintenance, and updates to keep your solution running at its best."
+        }
+      ]
+    },
+    {
+      "type": "tech",
+      "title": "Our Tech Stack",
+      "logos": [
+        {
+          "image": "/media/logo-net-core.avif",
+          "name": ".NET Core"
+        },
+        {
+          "image": "/media/logo-java.avif",
+          "name": "Java"
+        },
+        {
+          "image": "/media/logo-python.avif",
+          "name": "Python"
+        },
+        {
+          "image": "/media/logo-javascript.avif",
+          "name": "JavaScript"
+        },
+        {
+          "image": "/media/logo-csharp.avif",
+          "name": "C#"
+        },
+        {
+          "image": "/media/logo-php.avif",
+          "name": "PHP"
+        },
+        {
+          "image": "/media/logo-nodejs.avif",
+          "name": "Node.js"
+        },
+        {
+          "image": "/media/logo-react-native.avif",
+          "name": "React Native"
+        },
+        {
+          "image": "/media/logo-aws.avif",
+          "name": "AWS"
+        }
+      ]
+    },
+    {
+      "type": "contact",
+      "title": "Drop Us a Line",
+      "text": "If you’d like to get in touch, please fill in the form"
+    }
+  ]
+}

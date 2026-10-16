@@ -12,7 +12,7 @@ const tel = 'tel:' + String(site.contact_phone).replace(/[^+\d]/g, '');
           {site.socials.map(s => <a href={s.href} target="_blank" rel="noopener">{s.label}</a>)}
         </div>
       </div>
-      <div><h4>Services</h4>{site.footer_services.map(s => <a href="/#services">{s}</a>)}</div>
+      <div><h4>Services</h4>{site.footer_service_links.map(s => <a href={s.href}>{s.label}</a>)}</div>
       <div><h4>Company</h4>{site.footer_company.map(c => <a href={c.href}>{c.label}</a>)}</div>
       <div><h4>Locations</h4>
         {site.locations.map(l => <div class="footer-loc"><b>{l.name}</b>{l.address}</div>)}

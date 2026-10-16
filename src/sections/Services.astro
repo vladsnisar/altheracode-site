@@ -7,7 +7,9 @@ import SectionHeading from './SectionHeading.astro';
     <SectionHeading eyebrow={home.services_eyebrow} title={home.services_title} lead={home.services_lead} />
     <div class="grid cols-3 reveal mt-46">
       {home.services.map(s => (
-        <div class="card"><div class="ic">{s.icon}</div><h3>{s.title}</h3><p>{s.text}</p></div>
+        s.link
+          ? <a class="card card-link" href={s.link}><div class="ic">{s.icon}</div><h3>{s.title}</h3><p>{s.text}</p><span class="more">Learn more →</span></a>
+          : <div class="card"><div class="ic">{s.icon}</div><h3>{s.title}</h3><p>{s.text}</p></div>
       ))}
     </div>
   </div>

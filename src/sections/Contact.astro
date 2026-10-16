@@ -2,6 +2,7 @@
 import home from '../content/home.json';
 import site from '../content/site.json';
 // The form posts to Formspree. Until a real ID is set in Pages CMS ("ID форми Formspree"), it shows a notice instead of sending.
+const { title = home.contact_title, text = home.contact_text, eyebrow = home.contact_eyebrow } = Astro.props;
 const id = site.formspree_id;
 const action = id && !id.startsWith('REPLACE') ? `https://formspree.io/f/${id}` : undefined;
 ---
@@ -9,9 +10,9 @@ const action = id && !id.startsWith('REPLACE') ? `https://formspree.io/f/${id}` 
   <div class="container">
     <div class="contact-wrap">
       <div class="contact-side reveal">
-        <span class="eyebrow">{home.contact_eyebrow}</span>
-        <h2>{home.contact_title}</h2>
-        <p>{home.contact_text}</p>
+        <span class="eyebrow">{eyebrow}</span>
+        <h2>{title}</h2>
+        <p>{text}</p>
         <div class="contact-points">
           <div class="cp"><div class="ic">✉️</div><div><div class="lbl">E-mail</div><div class="val"><a href={`mailto:${site.contact_email}`}>{site.contact_email}</a></div></div></div>
           <div class="cp"><div class="ic">📞</div><div><div class="lbl">Phone</div><div class="val">{site.contact_phone}</div></div></div>
