@@ -293,7 +293,9 @@ content:
       - { name: title, label: "SEO — заголовок сторінки (вкладка браузера, Google)", type: string, required: true }
       - { name: description, label: "SEO — опис для Google", type: text, required: true }
       - { name: draft, label: "Чернетка (не публікувати)", type: boolean }
-      - name: sections
+      # &page_sections: цей самий список секцій використовують і «Нові сторінки» нижче (*page_sections).
+      - &page_sections
+        name: sections
         label: "Секції сторінки (зверху вниз)"
         type: block
         list: true
@@ -397,6 +399,28 @@ content:
             fields:
               - { name: title, label: "Заголовок", type: string }
               - { name: text, label: "Текст під заголовком", type: text }
+
+  # ===================== НОВІ СТОРІНКИ (З СЕКЦІЙ) =====================
+  # Окремі сторінки сайту (напр. «Про нас», «Кар'єра»), які збираються з тих самих секцій, що й сторінки послуг.
+  # Одна сторінка = один файл. Адреса: /<назва-файлу>. Назва файлу створюється з поля «Назва сторінки в панелі»:
+  # «About Us» → about-us.json → www.altheracode.com/about-us. Пізніша зміна назви адресу не змінює.
+  # Адреси, які вже зайняті (contact, blog, portfolio, services, privacy-policy), не публікуються.
+  # Щоб сторінка зʼявилася в меню, додайте посилання в «Загальне» → «Меню в шапці» або «Футер — меню «Компанія»».
+  - name: custom_pages
+    label: Нові сторінки (з секцій)
+    type: collection
+    path: src/content/custom-pages
+    format: json
+    filename: "{primary}.json"
+    view:
+      primary: name
+    fields:
+      - { name: name, label: "Назва сторінки в панелі (з неї створюється адреса: About Us → /about-us)", type: string, required: true }
+      - { name: title, label: "SEO — заголовок сторінки (вкладка браузера, Google)", type: string, required: true }
+      - { name: description, label: "SEO — опис для Google", type: text, required: true }
+      - { name: image, label: "Картинка для соцмереж при пересиланні посилання (необов'язково)", type: image }
+      - { name: draft, label: "Чернетка (не публікувати) — поставте галочку, доки не готово", type: boolean }
+      - *page_sections
 
   # ===================== ЮРИДИЧНІ СТОРІНКИ =====================
   # Зараз тут Політика конфіденційності (адреса /privacy-policy).

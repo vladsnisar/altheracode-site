@@ -1,0 +1,54 @@
+{
+  "name": "New page (template)",
+  "title": "New Page - AltheraCode",
+  "description": "Short description of this page for Google search results.",
+  "draft": true,
+  "sections": [
+    {
+      "type": "hero",
+      "breadcrumb": "New Page",
+      "title": "Page heading goes here",
+      "title_accent": "heading",
+      "text": "One or two sentences that explain what this page is about.",
+      "button_text": "Book a Call",
+      "button_link": "/contact"
+    },
+    {
+      "type": "intro",
+      "tag": "Section label",
+      "title": "Section title",
+      "text": "First paragraph of text.\n\nA blank line starts a new paragraph, and **double asterisks** make words bold.",
+      "list": [
+        "First point",
+        "Second point",
+        "Third point"
+      ],
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "type": "cards",
+      "dark": false,
+      "tag": "Section label",
+      "title": "Cards section title",
+      "text": "Optional text under the title.",
+      "items": [
+        { "title": "Card one", "text": "Card text." },
+        { "title": "Card two", "text": "Card text." },
+        { "title": "Card three", "text": "Card text." }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "A short call to action that invites visitors to get in touch.",
+      "accent": "get in touch",
+      "button_text": "Book a Call",
+      "button_link": "/contact"
+    },
+    {
+      "type": "contact",
+      "title": "Let's talk about your project",
+      "text": "Fill out the form and we'll get back to you shortly."
+    }
+  ]
+}

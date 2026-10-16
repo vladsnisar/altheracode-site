@@ -60,10 +60,25 @@ const services = defineCollection({
   }),
 });
 
+// Standalone pages built from the same sections as service pages: one JSON file per page in src/content/custom-pages/,
+// published at /<file-name> (e.g. about-us.json → /about-us). Edited in Pages CMS → "Нові сторінки (з секцій)".
+// `name` is only the label shown in the CMS list; new files are named after it.
+const customPages = defineCollection({
+  loader: glob({ pattern: '*.json', base: './src/content/custom-pages' }),
+  schema: z.object({
+    name: z.string().default(''),
+    title: z.string(),
+    description: z.string(),
+    image: z.string().optional(),
+    draft: z.boolean().default(false),
+    sections: z.array(z.object({ type: z.string() }).passthrough()).default([]),
+  }),
+});
+
 // Legal pages (privacy policy): one Markdown file per page in src/content/legal/ (edited in Pages CMS → "Юридичні сторінки").
 const legal = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/legal' }),
   schema: z.object({ title: z.string(), description: z.string(), heading: z.string() }),
 });
 
-export const collections = { blog, portfolio, services, legal };
+export const collections = { blog, portfolio, services, customPages, legal };
