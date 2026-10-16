@@ -7,6 +7,10 @@ import Contact from './Contact.astro';
 import { richText, highlight } from '../lib/text';
 
 const { block: b } = Astro.props;
+// Lists can be missing while a section is still being filled in the CMS; treat them as empty so the build doesn't fail.
+const items: any[] = b.items ?? [];
+const steps: any[] = b.steps ?? [];
+const logos: any[] = b.logos ?? [];
 const cases = b.type === 'cases'
   ? (await getCollection('portfolio', p => !p.data.draft)).filter(c => (b.cases ?? []).includes(c.id))
       .sort((x, y) => (b.cases as string[]).indexOf(x.id) - (b.cases as string[]).indexOf(y.id))
@@ -16,7 +20,7 @@ const cols = (n: number) => (n === 2 || n === 4 ? 'cols-2' : 'cols-3');
 {b.type === 'hero' && (
   <section class="hero page-hero"><div class="hero-glow"></div><div class="container"><div class="hero-inner">
     {b.breadcrumb && <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>{b.breadcrumb}</span></nav>}
-    <h1 set:html={highlight(b.title, b.title_accent)} />
+    <h1 set:html={highlight(b.title ?? '', b.title_accent)} />
     {b.text && <p>{b.text}</p>}
     {b.button_text && <div class="hero-actions"><a class="btn btn-primary" href={b.button_link || '/contact'}>{b.button_text} <span class="arrow">→</span></a></div>}
   </div></div></section>
@@ -39,8 +43,8 @@ const cols = (n: number) => (n === 2 || n === 4 ? 'cols-2' : 'cols-3');
 {b.type === 'cards' && (
   <section class:list={['section', { 'process dark': b.dark }]}><div class="container">
     <SectionHeading eyebrow={b.tag} title={b.title} lead={b.text} />
-    <div class:list={['grid', cols(b.items.length), 'reveal', 'svc-cards', { 'on-dark': b.dark }]}>
-      {b.items.map(i => (
+    <div class:list={['grid', cols(items.length), 'reveal', 'svc-cards', { 'on-dark': b.dark }]}>
+      {items.map(i => (
         <div class="card"><h3>{i.title}</h3><Fragment set:html={richText(i.text ?? '')} /></div>
       ))}
     </div>
@@ -51,8 +55,8 @@ const cols = (n: number) => (n === 2 || n === 4 ? 'cols-2' : 'cols-3');
   <section class="section process dark"><div class="container">
     <SectionHeading eyebrow={b.tag} title={b.title} lead={b.text} />
     <div class="process-grid reveal">
-      {b.steps.map((s, i) => (
-        <div class="step" style={b.steps.length % 2 === 1 && i === b.steps.length - 1 ? 'grid-column:1/-1' : undefined}>
+      {steps.map((s, i) => (
+        <div class="step" style={steps.length % 2 === 1 && i === steps.length - 1 ? 'grid-column:1/-1' : undefined}>
           <div class="n">{String(i + 1).padStart(2, '0')}</div>
           <div><h3>{s.title}</h3><p>{s.text}</p></div>
         </div>
@@ -65,7 +69,7 @@ const cols = (n: number) => (n === 2 || n === 4 ? 'cols-2' : 'cols-3');
   <section class="section bg-white"><div class="container">
     <SectionHeading eyebrow={b.tag} title={b.title} />
     <div class="grid cols-3 reveal svc-cards" style="margin-top:44px">
-      {b.items.map(i => (
+      {items.map(i => (
         <div class="card"><h3>{i.title}</h3><Fragment set:html={richText(i.text ?? '')} /></div>
       ))}
     </div>
@@ -76,7 +80,7 @@ const cols = (n: number) => (n === 2 || n === 4 ? 'cols-2' : 'cols-3');
   <section class="section"><div class="container">
     <SectionHeading title={b.title} />
     <div class="tech-logos reveal" style="margin-top:36px">
-      {b.logos.map(l => <span class="tech-logo"><img src={l.image} alt={l.name} loading="lazy" />{l.name}</span>)}
+      {logos.map(l => <span class="tech-logo"><img src={l.image} alt={l.name} loading="lazy" />{l.name}</span>)}
     </div>
   </div></section>
 )}
@@ -106,7 +110,7 @@ const cols = (n: number) => (n === 2 || n === 4 ? 'cols-2' : 'cols-3');
 {b.type === 'cta' && (
   <section class="section"><div class="container">
     <div class="cta-band reveal">
-      <div class="ct"><h2 set:html={highlight(b.title, b.accent)} /></div>
+      <div class="ct"><h2 set:html={highlight(b.title ?? '', b.accent)} /></div>
       <a href={b.button_link || '/contact'} class="btn btn-primary">{b.button_text} <span class="arrow">→</span></a>
     </div>
   </div></section>
@@ -116,7 +120,7 @@ const cols = (n: number) => (n === 2 || n === 4 ? 'cols-2' : 'cols-3');
   <section class="section bg-white"><div class="container">
     <SectionHeading eyebrow="FAQ" title={b.title} center />
     <div class="faq reveal">
-      {b.items.map(f => (
+      {items.map(f => (
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">{f.q}<span class="plus">+</span></button>
           <div class="faq-a"><div class="inner"><Fragment set:html={richText(f.a ?? '')} /></div></div>

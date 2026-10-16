@@ -11,6 +11,7 @@ This repo is the AltheraCode marketing site. **There is no developer.** The mark
   - `src/content/blog/*.md`: blog posts (frontmatter: title, description, date, category, cover, draft).
   - `src/content/portfolio/*.json`: one file per case study (drafts are not built). Rendered by `src/pages/portfolio/[slug].astro`; the list with filters is `src/pages/portfolio/index.astro`.
   - `src/content/services/*.json`: one file per service page (`/services/<name>`): SEO title/description plus a list of `sections` (hero, intro, cards, process, industries, tech, cases, cta, faq, contact). Rendered by `src/pages/services/[slug].astro` through `src/sections/ServiceBlock.astro`. To add a new kind of section, add it to `ServiceBlock.astro` and to the `blocks:` list in `.pages.yml`.
+  - `src/content/custom-pages/*.json`: standalone pages marketing creates in the CMS ("Нові сторінки (з секцій)"), published at `/<file-name>` (e.g. `about-us.json` → `/about-us`). Same fields and `sections` as service pages, plus `name` (the CMS list label; new files are named after it) and an optional social `image`. Rendered by `src/pages/[slug].astro` through `ServiceBlock.astro`. A file whose name matches an existing page (`contact`, `blog`, `portfolio`, `services`, `privacy-policy`, …) is skipped with a build warning. The section list in `.pages.yml` is shared with service pages through the YAML anchor `&page_sections`, so a new section type added there appears in both.
   - `src/content/pages.json`: headings and SEO text of `/portfolio`, `/blog` and `/contact`.
   - `src/content/tech.json`: technology names and logos, matched by name on case-study pages.
   - `public/media/`: uploaded images, served at `/media/...`.
@@ -20,7 +21,7 @@ This repo is the AltheraCode marketing site. **There is no developer.** The mark
 |---|---|
 | Change the order of homepage sections, or add/remove one | `src/pages/index.astro` |
 | Change how a section looks or is built | `src/sections/<Name>.astro` plus classes in `global.css` |
-| Add a new page | `src/pages/<url>.astro` (or `src/pages/<folder>/<url>.astro`), wrapped in `<Base title description>` |
+| Add a new page | If it can be built from the existing sections, marketing can make it in the CMS ("Нові сторінки (з секцій)"), no code needed. Otherwise `src/pages/<url>.astro` (or `src/pages/<folder>/<url>.astro`), wrapped in `<Base title description>` |
 | Change header, footer or `<head>` | `src/sections/Header.astro`, `Footer.astro`, `src/layouts/Base.astro` |
 | Colors, fonts, spacing | `:root` variables in `src/styles/global.css` |
 

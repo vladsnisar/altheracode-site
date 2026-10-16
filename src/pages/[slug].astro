@@ -1,0 +1,25 @@
+---
+// Standalone pages made in Pages CMS → "Нові сторінки (з секцій)".
+// Each file src/content/custom-pages/<name>.json becomes the page /<name>, built from the same sections as service pages.
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import ServiceBlock from '../sections/ServiceBlock.astro';
+
+export async function getStaticPaths() {
+  // Addresses already used by pages in the code (/contact, /blog, /portfolio, /services, ...) can't be taken by a CMS page.
+  const taken = new Set([
+    ...Object.keys(import.meta.glob('./*.astro')).map(f => f.slice(2, -'.astro'.length)),
+    ...Object.keys(import.meta.glob('./*/**/*.astro')).map(f => f.split('/')[1]),
+    'media',
+  ]);
+  const pages = await getCollection('customPages', p => !p.data.draft);
+  for (const p of pages.filter(p => taken.has(p.id))) {
+    console.warn(`[custom-pages] "${p.id}.json" is not published: /${p.id} is already a page on the site. Rename the file.`);
+  }
+  return pages.filter(p => !taken.has(p.id)).map(p => ({ params: { slug: p.id }, props: { page: p } }));
+}
+const { page } = Astro.props;
+---
+<Base title={page.data.title} description={page.data.description} image={page.data.image || undefined}>
+  {page.data.sections.map(block => <ServiceBlock block={block} />)}
+</Base>
