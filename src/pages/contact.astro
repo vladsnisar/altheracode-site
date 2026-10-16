@@ -1,0 +1,9 @@
+---
+import Base from '../layouts/Base.astro';
+import Contact from '../sections/Contact.astro';
+import pages from '../content/pages.json';
+const page = pages.contact;
+---
+<Base title={page.seo_title} description={page.seo_description}>
+  <div class="contact-page"><Contact eyebrow={page.eyebrow} title={page.title} text={page.text} /></div>
+</Base>

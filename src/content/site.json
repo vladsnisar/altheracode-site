@@ -57,14 +57,6 @@
       "href": "https://clutch.co/profile/areas-code#summary"
     }
   ],
-  "footer_services": [
-    "Software Product Development",
-    "AI Development",
-    "Web & Mobile Development",
-    "AI Integration",
-    "Process Automation",
-    "MVP Development"
-  ],
   "footer_company": [
     {
       "label": "Case Studies",
@@ -102,6 +94,56 @@
     {
       "label": "Privacy Policy",
       "href": "/privacy-policy"
+    }
+  ],
+  "footer_service_links": [
+    {
+      "label": "Software Product Development",
+      "href": "/services/software-product-development-services"
+    },
+    {
+      "label": "AI Development",
+      "href": "/services/custom-ai-development-services"
+    },
+    {
+      "label": "AI Assistants",
+      "href": "/services/ai-assistant-development-services"
+    },
+    {
+      "label": "AI Copilots",
+      "href": "/services/ai-copilot-development-services"
+    },
+    {
+      "label": "AI Chatbots",
+      "href": "/services/ai-chatbot-development-services"
+    },
+    {
+      "label": "AI Agents",
+      "href": "/services/custom-ai-agent-development-services"
+    },
+    {
+      "label": "AI Integration",
+      "href": "/services/ai-integration-services"
+    },
+    {
+      "label": "Web & Mobile Development",
+      "href": "/services/web-mobile-development-services"
+    },
+    {
+      "label": "Business Process Automation",
+      "href": "/services/business-process-automation-services"
+    },
+    {
+      "label": "Intelligent Process Automation",
+      "href": "/services/intelligent-process-automation-services"
+    },
+    {
+      "label": "MVP Development",
+      "href": "/services/mvp-software-development-services"
+    },
+    {
+      "label": "Software for Startups",
+      "href": "/services/software-development-services-for-startups"
     }
   ]
 }

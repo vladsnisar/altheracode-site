@@ -30,7 +30,13 @@ content:
         fields:
           - { name: label, label: "Підпис (2 літери)", type: string }
           - { name: href, label: "Посилання", type: string }
-      - { name: footer_services, label: "Футер — список послуг", type: string, list: true }
+      - name: footer_service_links
+        label: "Футер — список послуг (посилання на сторінки послуг)"
+        type: object
+        list: true
+        fields:
+          - { name: label, label: "Назва", type: string }
+          - { name: href, label: "Посилання (напр. /services/ai-integration-services)", type: string }
       - name: footer_company
         label: "Футер — меню «Компанія»"
         type: object
@@ -98,6 +104,7 @@ content:
         list: true
         fields:
           - { name: icon, label: "Іконка (емодзі)", type: string }
+          - { name: link, label: "Посилання картки (напр. /services/ai-integration-services; порожнє = без посилання)", type: string }
           - { name: title, label: "Назва", type: string }
           - { name: text, label: "Опис", type: text }
 
@@ -187,7 +194,7 @@ content:
 
   # ===================== ЗАГОЛОВКИ СТОРІНОК =====================
   - name: pages
-    label: Сторінки «Кейси» і «Блог» (заголовки)
+    label: Сторінки «Кейси», «Блог», «Контакти» (заголовки)
     type: file
     path: src/content/pages.json
     fields:
@@ -209,6 +216,15 @@ content:
           - { name: eyebrow, label: "Підпис зверху", type: string }
           - { name: title, label: "Заголовок", type: string }
           - { name: lead, label: "Опис під заголовком", type: text }
+      - name: contact
+        label: "Сторінка /contact"
+        type: object
+        fields:
+          - { name: seo_title, label: "SEO — заголовок (вкладка браузера, Google)", type: string }
+          - { name: seo_description, label: "SEO — опис для Google", type: text }
+          - { name: eyebrow, label: "Підпис зверху", type: string }
+          - { name: title, label: "Заголовок", type: string }
+          - { name: text, label: "Текст під заголовком", type: text }
 
   # ===================== КЕЙСИ (ПОРТФОЛІО) =====================
   # Один кейс = один файл. Нова адреса сторінки: /portfolio/<назва-файлу>.
@@ -259,6 +275,127 @@ content:
           - { name: value, label: "Цифра (напр. 87%)", type: string }
           - { name: label, label: "Підпис", type: string }
       - { name: results_closing, label: "Результати — заключний текст", type: text }
+
+  # ===================== СТОРІНКИ ПОСЛУГ =====================
+  # Одна сторінка = один файл. Адреса: /services/<назва-файлу>.
+  # Сторінка складається зі «Секцій»: додавайте, перетягуйте та видаляйте їх у списку.
+  # Типи секцій: Головний екран, Вступ із картинкою, Картки, Етапи процесу, Галузі,
+  # Технології, Кейси, Заклик до дії, Питання та відповіді, Форма контакту.
+  - name: services
+    label: Сторінки послуг
+    type: collection
+    path: src/content/services
+    format: json
+    filename: "{primary}.json"
+    view:
+      primary: title
+    fields:
+      - { name: title, label: "SEO — заголовок сторінки (вкладка браузера, Google)", type: string, required: true }
+      - { name: description, label: "SEO — опис для Google", type: text, required: true }
+      - { name: draft, label: "Чернетка (не публікувати)", type: boolean }
+      - name: sections
+        label: "Секції сторінки (зверху вниз)"
+        type: block
+        list: true
+        blockKey: type
+        blocks:
+          - name: hero
+            label: "Головний екран (заголовок + кнопка)"
+            fields:
+              - { name: breadcrumb, label: "Хлібні крихти — назва поточної сторінки", type: string }
+              - { name: title, label: "Заголовок H1 (повний текст)", type: string }
+              - { name: title_accent, label: "Частина заголовка, що підсвічується зеленим (точно як у заголовку)", type: string }
+              - { name: text, label: "Підзаголовок", type: text }
+              - { name: button_text, label: "Кнопка — текст", type: string }
+              - { name: button_link, label: "Кнопка — посилання (напр. /contact)", type: string }
+          - name: intro
+            label: "Вступ: текст + картинка"
+            fields:
+              - { name: tag, label: "Підпис зверху", type: string }
+              - { name: title, label: "Заголовок", type: string }
+              - { name: text, label: "Текст (порожній рядок = новий абзац, **жирний**)", type: text }
+              - { name: image, label: "Картинка", type: image }
+              - { name: image_alt, label: "Опис картинки (alt) для Google та незрячих", type: string }
+          - name: cards
+            label: "Картки (сітка з заголовками та текстом)"
+            fields:
+              - { name: tag, label: "Підпис зверху (необов'язково)", type: string }
+              - { name: title, label: "Заголовок секції", type: string }
+              - { name: text, label: "Вступний текст під заголовком", type: text }
+              - { name: dark, label: "Темний фон", type: boolean }
+              - name: items
+                label: "Картки"
+                type: object
+                list: true
+                fields:
+                  - { name: title, label: "Заголовок картки", type: string }
+                  - { name: text, label: "Текст картки (порожній рядок = новий абзац)", type: text }
+          - name: process
+            label: "Етапи процесу (темна секція з нумерацією)"
+            fields:
+              - { name: tag, label: "Підпис зверху", type: string }
+              - { name: title, label: "Заголовок секції", type: string }
+              - { name: text, label: "Вступний текст", type: text }
+              - name: steps
+                label: "Етапи (нумеруються автоматично)"
+                type: object
+                list: true
+                fields:
+                  - { name: title, label: "Назва етапу", type: string }
+                  - { name: text, label: "Опис етапу", type: text }
+          - name: industries
+            label: "Галузі"
+            fields:
+              - { name: tag, label: "Підпис зверху", type: string }
+              - { name: title, label: "Заголовок секції", type: string }
+              - name: items
+                label: "Галузі"
+                type: object
+                list: true
+                fields:
+                  - { name: title, label: "Назва галузі", type: string }
+                  - { name: text, label: "Опис", type: text }
+          - name: tech
+            label: "Технології (логотипи)"
+            fields:
+              - { name: title, label: "Заголовок секції", type: string }
+              - name: logos
+                label: "Логотипи"
+                type: object
+                list: true
+                fields:
+                  - { name: name, label: "Назва технології (також alt-текст)", type: string }
+                  - { name: image, label: "Логотип", type: image }
+          - name: cases
+            label: "Кейси (картки з портфоліо)"
+            fields:
+              - { name: tag, label: "Підпис зверху", type: string }
+              - { name: title, label: "Заголовок секції", type: string }
+              - { name: text, label: "Вступний текст", type: text }
+              - { name: cases, label: "Кейси: назва файлу кейсу без .json (адреса після /portfolio/). Чернетки не показуються", type: string, list: true }
+          - name: cta
+            label: "Заклик до дії (темна стрічка з кнопкою)"
+            fields:
+              - { name: title, label: "Текст", type: string }
+              - { name: accent, label: "Частина тексту, що підсвічується (точно як у тексті)", type: string }
+              - { name: button_text, label: "Кнопка — текст", type: string }
+              - { name: button_link, label: "Кнопка — посилання (напр. /contact)", type: string }
+          - name: faq
+            label: "Питання та відповіді"
+            fields:
+              - { name: title, label: "Заголовок секції", type: string }
+              - name: items
+                label: "Питання"
+                type: object
+                list: true
+                fields:
+                  - { name: q, label: "Питання", type: string }
+                  - { name: a, label: "Відповідь (порожній рядок = новий абзац)", type: text }
+          - name: contact
+            label: "Форма контакту"
+            fields:
+              - { name: title, label: "Заголовок", type: string }
+              - { name: text, label: "Текст під заголовком", type: text }
 
   # ===================== ЛОГОТИПИ ТЕХНОЛОГІЙ =====================
   - name: tech
