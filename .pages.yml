@@ -314,6 +314,7 @@ content:
               - { name: tag, label: "Підпис зверху", type: string }
               - { name: title, label: "Заголовок", type: string }
               - { name: text, label: "Текст (порожній рядок = новий абзац, **жирний**)", type: text }
+              - { name: list, label: "Список пунктів під текстом (необов'язково)", type: string, list: true }
               - { name: image, label: "Картинка", type: image }
               - { name: image_alt, label: "Опис картинки (alt) для Google та незрячих", type: string }
           - name: cards
