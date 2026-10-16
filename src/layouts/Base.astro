@@ -8,7 +8,9 @@ import Footer from '../sections/Footer.astro';
 
 interface Props { title?: string; description?: string; image?: string }
 const { title = site.seo_title, description = site.seo_description, image } = Astro.props;
-const canonical = new URL(Astro.url.pathname, Astro.site);
+// Pages are built as files (x.html) but published as /x, so the canonical address has no .html and no trailing slash.
+const cleanPath = Astro.url.pathname.replace(/(^|\/)index\.html$/, '$1').replace(/\.html$/, '');
+const canonical = new URL(cleanPath || '/', Astro.site);
 const gtm = site.gtm_id;
 ---
 <!DOCTYPE html>
