@@ -1,0 +1,298 @@
+{
+  "title": "Marketing AI Development Services | Custom AI for Marketing",
+  "description": "We build custom marketing AI: lead generation engines, personalized outreach, content pipelines, CRM automation, and live reporting on your existing stack.",
+  "sections": [
+    {
+      "type": "hero",
+      "breadcrumb": "Marketing AI Development Services",
+      "title": "Marketing AI Development Services for Growth Teams",
+      "title_accent": "Marketing AI",
+      "text": "We build AI systems that find and qualify leads, personalize outreach, draft content, keep your CRM clean, and report on what is working. Everything connects to the tools your marketing team already uses: HubSpot, Google Ads, LinkedIn, Slack, and Notion.",
+      "button_text": "Plan Your Marketing AI",
+      "button_link": "/contact"
+    },
+    {
+      "type": "intro",
+      "tag": "Built for Marketing Teams",
+      "title": "Why Marketing Teams Invest in Custom AI",
+      "text": "Most marketing teams already pay for a dozen tools. The slow part is the work between them: copying leads from LinkedIn into the CRM, rewriting the same email for each segment, and pulling numbers from four dashboards into a Monday report.\n\nOur marketing AI development services target that work. We connect your data sources, add language models where a task needs judgment about text, and automate the steps that follow fixed rules. Your team keeps control of strategy and messaging, and the system handles the volume.\n\nOn a recent project, an outbound engine we built took a B2B SaaS sales team from manual prospecting to more than **1,400 personalized touchpoints a week**, without adding headcount.",
+      "list": [
+        "Lead research, scoring, and enrichment",
+        "Personalized outreach across email and LinkedIn",
+        "Content briefs, drafts, and repurposing",
+        "CRM data quality and lifecycle automation",
+        "Campaign reporting and performance alerts"
+      ],
+      "image": "/media/service-intro-image.avif",
+      "image_alt": "Marketing AI development for growth teams"
+    },
+    {
+      "type": "cards",
+      "dark": false,
+      "tag": "What We Do",
+      "title": "Our Marketing AI Development Services",
+      "text": "",
+      "items": [
+        {
+          "title": "Marketing AI Strategy and Audit",
+          "text": "We map your funnel, tools, and team workload to find the tasks where AI pays back fastest. You get a prioritized roadmap with the effort, cost, and target metric for each automation, so the first build moves a number you already track."
+        },
+        {
+          "title": "Custom Marketing AI Development",
+          "text": "We design and build AI tools around your process: lead scoring models, outreach personalization engines, content generators that follow your brand guidelines, and assistants that answer campaign questions from your own data."
+        },
+        {
+          "title": "AI Lead Generation and Outbound",
+          "text": "We build prospecting systems that research accounts, write tailored openers from company signals and LinkedIn activity, and run multistep sequences in tools like Reply.io, Lemlist, and Expandi. Replies and booked meetings sync to your CRM automatically."
+        },
+        {
+          "title": "Content Automation",
+          "text": "We set up pipelines that turn a topic, a webinar, or a product update into briefs, drafts, social posts, and email copy in your tone of voice. Editors review and approve. The system handles research, formatting, and publishing to Notion, your CMS, or a social scheduler."
+        },
+        {
+          "title": "CRM and Marketing Automation Integration",
+          "text": "We connect AI to HubSpot, Airtable, and your ad platforms through n8n, Make, or custom APIs. Contacts are enriched on arrival, deal stages stay in sync, and nurture sequences adjust to each contact's industry and lifecycle stage."
+        },
+        {
+          "title": "Marketing Analytics and AI Reporting",
+          "text": "We bring data from GA4, Google Ads, LinkedIn Ads, and your CRM into one reporting layer with dashboards in Looker Studio or Metabase. AI writes the weekly summary, and alerts post to Slack or Teams when a campaign falls below target."
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "dark": true,
+      "tag": "",
+      "title": "Marketing AI Solutions We Build",
+      "text": "",
+      "items": [
+        {
+          "title": "Lead Scoring and Qualification Engines",
+          "text": "Models that rank inbound and outbound leads by fit and intent using firmographic data, website behavior, and engagement history. Sales calls go to the accounts most likely to buy."
+        },
+        {
+          "title": "Personalized Outreach Generators",
+          "text": "GPT-based tools that write first lines, follow-ups, and LinkedIn messages for each prospect from real signals such as recent posts, hiring news, tech stack, and funding rounds."
+        },
+        {
+          "title": "AI Content Pipelines",
+          "text": "Workflows that generate, score, and organize content ideas, then turn the approved ones into blog drafts, short-form video concepts, ad variations, and newsletters."
+        },
+        {
+          "title": "Marketing Copilots and Assistants",
+          "text": "Assistants that summarize client calls, log decisions and owners, draft follow-ups, and answer questions like \"which campaigns drove pipeline last quarter?\" from your own data."
+        },
+        {
+          "title": "Ad and Campaign Monitoring Tools",
+          "text": "Systems that watch spend and results across ad platforms, flag sudden drops or cost spikes, and generate new creative variations for your team to test."
+        },
+        {
+          "title": "Segmentation and Nurture Personalization",
+          "text": "Audience segments built from behavior and CRM data, with nurture emails that change based on industry, deal stage, and the content a contact has already read."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Put marketing AI development to work on the tasks your team repeats every week.",
+      "accent": "marketing AI development",
+      "button_text": "Start Your Project",
+      "button_link": "/contact"
+    },
+    {
+      "type": "cases",
+      "tag": "Portfolio",
+      "title": "Marketing AI Success Stories",
+      "text": "Some of the marketing and revenue systems we have built for B2B companies. Each one runs inside the client's existing stack and is tracked against pipeline numbers.",
+      "cases": [
+        "ai-powered-outbound-and-lead-generation-engine",
+        "ai-powered-revenue-operations-for-hubspot",
+        "ai-automation-for-high-performance-marketing-operations"
+      ]
+    },
+    {
+      "type": "cards",
+      "dark": false,
+      "tag": "",
+      "title": "Why Build Marketing AI With AltheraCode?",
+      "text": "",
+      "items": [
+        {
+          "title": "We Know Marketing Operations",
+          "text": "Our engineers have built outbound engines, nurture systems, and reporting stacks for B2B marketing teams. We already speak in lead stages, attribution, and reply rates, so you spend less time explaining your funnel."
+        },
+        {
+          "title": "Results Tied to Pipeline",
+          "text": "Every project starts with a target metric such as reply rate, qualified meetings, cost per lead, or hours saved. On one HubSpot project, qualified pipeline value grew 3.4x in the first 90 days and manual CRM work dropped by 70%."
+        },
+        {
+          "title": "Built on Your Existing Stack",
+          "text": "We integrate with the tools you already pay for instead of asking you to migrate. If HubSpot, Airtable, and Slack run your team today, the AI works inside them."
+        },
+        {
+          "title": "Brand-Safe Output",
+          "text": "Generated content follows your tone-of-voice rules and passes through approval steps you define before anything is published or sent to a prospect."
+        },
+        {
+          "title": "Data Protection",
+          "text": "Customer data stays in your own accounts wherever possible. We set up access controls, logging, and limits on what reaches external AI models from the first release."
+        },
+        {
+          "title": "Ongoing Optimization",
+          "text": "After launch we monitor reply rates, content performance, and output quality, then tune prompts and workflows as your campaigns and audiences change."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Scale marketing output without growing headcount. Let's build your marketing AI.",
+      "accent": "marketing AI",
+      "button_text": "Book a Call",
+      "button_link": "/contact"
+    },
+    {
+      "type": "industries",
+      "tag": "Where It Works",
+      "title": "Marketing AI Across Industries",
+      "items": [
+        {
+          "title": "B2B SaaS",
+          "text": "Outbound engines, lead scoring, and nurture automation for growth teams that need more qualified pipeline without hiring more SDRs."
+        },
+        {
+          "title": "Marketing and Lead Generation Agencies",
+          "text": "One system for running prospecting, onboarding, content, and reporting across many client accounts, with per-client dashboards and automated digests."
+        },
+        {
+          "title": "E-commerce and Retail",
+          "text": "Product descriptions, segmented email campaigns, review analysis, and ad creative variations produced at catalog scale."
+        },
+        {
+          "title": "Healthcare",
+          "text": "Patient acquisition campaigns, appointment reminder flows, and content workflows with review steps that check medical accuracy before publishing."
+        },
+        {
+          "title": "Fintech and Financial Services",
+          "text": "Lead qualification for complex products, personalized onboarding sequences, and content that goes through compliance review before it reaches customers."
+        },
+        {
+          "title": "Media and Content",
+          "text": "Idea generation, trend tracking, and short-form video planning pipelines that keep a production team supplied with ready-to-shoot concepts."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "tag": "How We Work",
+      "title": "Our Marketing AI Development Process",
+      "text": "We build in short cycles and ship the workflow with the biggest payoff first, so your team sees results early and helps shape what comes next.",
+      "steps": [
+        {
+          "title": "Funnel and Workflow Discovery",
+          "text": "We review your funnel, tools, data sources, and the weekly tasks that take most of your team's time. Together we choose which processes AI should take over and the metrics that will show it works."
+        },
+        {
+          "title": "Solution Design",
+          "text": "We define the architecture: which data feeds the system, where language models are used, where simple rules are enough, and which steps need human approval."
+        },
+        {
+          "title": "Prototype on Real Data",
+          "text": "We build a working prototype using a sample of your leads, content, or campaign data. Your team tests the output and tells us what sounds off-brand or misses context."
+        },
+        {
+          "title": "Development and Integration",
+          "text": "We build the production version and connect it to your CRM, ad accounts, email tools, and messaging apps, with logging and error alerts in place."
+        },
+        {
+          "title": "Launch and Team Onboarding",
+          "text": "We roll out in stages, train your team on the new workflows, and document how to adjust prompts, templates, and rules without calling a developer."
+        },
+        {
+          "title": "Measurement and Optimization",
+          "text": "After launch we track the target metrics, review output quality, and tune prompts, scoring models, and sequences as your campaigns change."
+        }
+      ]
+    },
+    {
+      "type": "tech",
+      "title": "Our Tech Stack for Marketing AI Development",
+      "logos": [
+        {
+          "image": "/media/logo-python.avif",
+          "name": "Python"
+        },
+        {
+          "image": "/media/tech-n8n.webp",
+          "name": "n8n"
+        },
+        {
+          "image": "/media/logo-langchain.webp",
+          "name": "LangChain"
+        },
+        {
+          "image": "/media/logo-rag.png",
+          "name": "RAG"
+        },
+        {
+          "image": "/media/logo-nlp.png",
+          "name": "NLP"
+        },
+        {
+          "image": "/media/logo-javascript.avif",
+          "name": "JavaScript"
+        },
+        {
+          "image": "/media/logo-fastapi.webp",
+          "name": "FastAPI"
+        },
+        {
+          "image": "/media/logo-postgresql.svg",
+          "name": "PostgreSQL"
+        },
+        {
+          "image": "/media/tech-google-sheets.webp",
+          "name": "Google Sheets"
+        },
+        {
+          "image": "/media/logo-aws.avif",
+          "name": "AWS"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "title": "Marketing AI Development: FAQs",
+      "items": [
+        {
+          "q": "What is marketing AI development?",
+          "a": "It is the design and build of AI systems for marketing work: researching and scoring leads, writing personalized outreach, producing content, keeping CRM data accurate, and reporting on campaigns. Built-in AI features in marketing tools cover generic tasks. Custom marketing AI development is shaped around your funnel, your data, and your brand voice."
+        },
+        {
+          "q": "How long does a marketing AI project take?",
+          "a": "A single workflow, such as AI-personalized outbound or automated weekly reporting, usually takes 3 to 6 weeks from discovery to launch. A connected system covering lead generation, CRM, content, and analytics takes 2 to 4 months, delivered in stages so the first parts go live early."
+        },
+        {
+          "q": "How much do marketing AI development services cost?",
+          "a": "Cost depends on the number of workflows, integrations, and data sources, and on how much custom model work is needed. We estimate each project after a discovery call and break the estimate down by phase, so you can start with one workflow and expand once it pays off."
+        },
+        {
+          "q": "Will AI-generated content sound like our brand?",
+          "a": "Yes. We build your tone-of-voice guidelines, approved messaging, and best-performing past content into the system, and add review steps so your team approves drafts before they are published or sent. We keep checking output quality after launch."
+        },
+        {
+          "q": "Can you integrate AI with HubSpot and our other marketing tools?",
+          "a": "Yes. We have built AI workflows on HubSpot, Airtable, Notion, Google Sheets, Slack, Microsoft Teams, Google Ads, LinkedIn Ads, GA4, and outreach tools such as Reply.io, Lemlist, and Expandi. If a tool has an API, we can usually connect it through n8n, Make, or custom code."
+        },
+        {
+          "q": "Is our customer data safe?",
+          "a": "We build with access controls, encrypted storage, and audit logs, and keep customer data inside your own accounts wherever possible. We can also limit what data is sent to external AI models and work within GDPR and your internal security policies."
+        }
+      ]
+    },
+    {
+      "type": "contact",
+      "title": "Your Marketing AI Starts Here",
+      "text": "Tell us which marketing tasks take up most of your team's week, and we'll show you what AI can take over."
+    }
+  ]
+}
