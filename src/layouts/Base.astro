@@ -15,8 +15,10 @@ interface Props {
   image?: string;
   /** Structured data (JSON-LD) objects for this page. */
   schema?: object[];
+  /** Page without the site header and footer (the 404 page, as on the live site). */
+  bare?: boolean;
 }
-const { title = site.seo_title, description = site.seo_description, image, schema = [] } = Astro.props;
+const { title = site.seo_title, description = site.seo_description, image, schema = [], bare = false } = Astro.props;
 // Pages are built as files (x.html) but published as /x, so the canonical address has no .html and no trailing slash.
 const cleanPath = Astro.url.pathname.replace(/(^|\/)index\.html$/, '$1').replace(/\.html$/, '');
 const canonical = new URL(cleanPath || '/', Astro.site);
@@ -54,13 +56,15 @@ const gtm = site.gtm_id;
 </head>
 <body>
   {gtm && <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${gtm}`} height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>}
-  <div class="page-wrapper">
-    <Header />
-    <main class="main-wrapper">
-      <slot />
-      <Footer />
-    </main>
-  </div>
+  {bare ? <slot /> : (
+    <div class="page-wrapper">
+      <Header />
+      <main class="main-wrapper">
+        <slot />
+        <Footer />
+      </main>
+    </div>
+  )}
   <script is:inline>
     // Carried over from the Webflow site-wide custom code: visitors located in Russia see "Access Denied".
     // (Cloudflare can do this more reliably at the network level with a country rule.)

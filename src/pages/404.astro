@@ -1,9 +1,24 @@
 ---
+// "Page Not Found" (served by Cloudflare Pages for any missing address). Like the live site, it has no header or footer:
+// just the logo, the bracketed heading, a line of text and a button back home.
 import Base from '../layouts/Base.astro';
+import site from '../content/site.json';
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
 ---
-<Base title="Page not found — AltheraCode">
-  <section class="hero page-hero"><div class="container"><div class="hero-inner">
-    <h1>Page not found</h1><p>The page you are looking for doesn't exist or has moved.</p>
-    <div class="hero-actions"><a class="btn btn-primary" href="/">Back to homepage <span class="arrow">→</span></a></div>
-  </div></div></section>
+<Base title="Not Found" description="The page you are looking for doesn't exist or has been moved." bare>
+  <div class="utility-page_component">
+    <a href="/" class="logo-404 w-inline-block" aria-label="AltheraCode home">
+      <img src={site.logo} loading="eager" height="20" alt="Althera Code logo" />
+    </a>
+    <div class="utility-page_wrapper">
+      <div class="hero-heading-box">
+        <img src="/media/wf/67d3ea97-image.svg" loading="eager" height="60" class="hero-heading-element" alt={alt} />
+        <h1>Page <span class="mint">Not Found</span></h1>
+        <img src="/media/wf/67d3ea97-2.svg" loading="eager" height="60" class="hero-heading-element" alt={alt} />
+      </div>
+      <div class="hero-subheading _404">The page you are looking for doesn't exist or has been moved</div>
+      <a href="/" class="button-main w-button">Go Home</a>
+    </div>
+    <img src="/media/wf/67dbe974-service-2-bg-image.avif" loading="eager" width="533.5" class="_404-bg" alt="" />
+  </div>
 </Base>
