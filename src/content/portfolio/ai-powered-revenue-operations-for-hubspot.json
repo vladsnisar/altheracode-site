@@ -43,7 +43,9 @@
     "The project aimed to eliminate fragmented CRM workflows, improve contact and pipeline data quality, automate nurture operations, and reduce manual sales coordination inside HubSpot. The client also needed a scalable content workflow tied directly to real pipeline gaps, engagement metrics, and deal progression across marketing and sales operations."
   ],
   "challenges": [
-    "▪ CRM data quality had significantly deteriorated due to stale contacts, inconsistent lifecycle stages, and fragmented pipeline management processes.\n\n▪ Marketing nurture sequences were generic and disconnected from actual deal stages, reducing engagement quality and lead progression efficiency.\n\n▪ The content team lacked visibility into which topics, campaigns, or assets were influencing pipeline growth and closed deals"
+    "▪ CRM data quality had significantly deteriorated due to stale contacts, inconsistent lifecycle stages, and fragmented pipeline management processes.",
+    "▪ Marketing nurture sequences were generic and disconnected from actual deal stages, reducing engagement quality and lead progression efficiency.",
+    "▪ The content team lacked visibility into which topics, campaigns, or assets were influencing pipeline growth and closed deals"
   ],
   "solution": "AltheraCode rebuilt the HubSpot CRM architecture and implemented automated N8N workflows for contact enrichment, deal stage synchronization, nurture automation, and reporting. The system created a structured operational layer across marketing and sales activities without adding manual CRM administration.\n\nThe platform combined GPT-4 powered nurture generation, AI-driven content brief creation, automated Notion publishing, and performance reporting connected directly to pipeline activity and engagement data. Personalized nurture sequences adapted to industry segments and deal stages, while dashboards showed content influence, deal attribution, and CRM performance.",
   "results_text": "The implementation improved CRM data quality, lead nurture performance, and pipeline visibility across marketing and sales workflows while reducing the operational effort required to manage HubSpot manually.",
@@ -62,5 +64,6 @@
     }
   ],
   "results_closing": "The client transformed fragmented CRM, nurture, and content operations into a scalable automated revenue workflow that improved marketing and sales alignment, increased visibility into pipeline influence, and reduced manual work across the funnel.",
-  "created": "2026-05-28T12:54"
+  "created": "2026-05-28T12:54",
+  "challenges_style": "paragraphs"
 }

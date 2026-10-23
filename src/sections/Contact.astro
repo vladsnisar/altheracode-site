@@ -13,6 +13,8 @@ interface Props {
   variant?: string;
   /** h2 (default) | h3: smaller heading, used on one live page */
   size?: string;
+  /** Classes of the inner padding box (case study pages use large section padding). */
+  pad?: string;
 }
 const {
   title = home.contact_title,
@@ -20,13 +22,14 @@ const {
   image = '/media/wf/67d92299-business-people-working-office-with-laptop-1.avif',
   variant = 'cta-section top',
   size = 'h2',
+  pad = 'padding-global phone-non',
 } = Astro.props;
 const id = site.formspree_id;
 const action = id && !id.startsWith('REPLACE') ? `https://formspree.io/f/${id}` : undefined;
 const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
 ---
 <section class:list={['section', variant]} id="contact">
-  <div class="padding-global phone-non">
+  <div class={pad}>
     <div class="container-large">
       <div class="form-block">
         <div class="form-box">

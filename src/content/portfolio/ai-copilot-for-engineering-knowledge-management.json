@@ -43,7 +43,9 @@
     "The client needed to centralize fragmented engineering knowledge and reduce the operational burden created by manual documentation searches and repeated clarification requests. The primary goal was to improve access to validated technical information, accelerate onboarding, and create a scalable internal knowledge workflow that could support engineering, QA, compliance, and operations teams."
   ],
   "challenges": [
-    "▪ Engineering documentation and internal rules were scattered across multiple systems, making knowledge retrieval slow and inconsistent.\n\n▪ Senior engineers were frequently interrupted to clarify standards, technical procedures, and internal requirements for other teams.\n\n▪ Existing workflows lacked structured, centralized knowledge access, creating onboarding delays and inconsistent interpretation of engineering rules."
+    "▪ Engineering documentation and internal rules were scattered across multiple systems, making knowledge retrieval slow and inconsistent.",
+    "▪ Senior engineers were frequently interrupted to clarify standards, technical procedures, and internal requirements for other teams.",
+    "▪ Existing workflows lacked structured, centralized knowledge access, creating onboarding delays and inconsistent interpretation of engineering rules."
   ],
   "solution": "AltheraCode developed a secure Slack-native AI Copilot integrated with the company’s internal Wiki, Academy Ocean, and engineering documentation systems. The solution combined AI-powered document retrieval, reference-first response logic, and workflow automation inside one centralized engineering knowledge environment.\n\nEngineers could retrieve validated answers with citations directly inside Slack, while the system maintained controlled internal access, structured documentation workflows, and reliable knowledge-sharing across engineering, QA, compliance, and operations teams.",
   "results_text": "The implementation improved engineering knowledge accessibility, reduced operational friction, and standardized internal documentation workflows across departments. Key outcomes included:",
@@ -62,5 +64,6 @@
     }
   ],
   "results_closing": "A fragmented documentation process was transformed into a centralized AI-assisted knowledge system that improved onboarding, accelerated engineering decision-making, and simplified secure collaboration across technical teams.",
-  "created": "2026-05-28T10:55"
+  "created": "2026-05-28T10:55",
+  "challenges_style": "paragraphs"
 }

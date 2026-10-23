@@ -1,117 +1,284 @@
 ---
+// One case study page (/portfolio/<file-name>), matching the live Webflow page section by section:
+// hero with details, Highlights, The Client, Product/Service, Goals & Objectives, Project Challenges + Solution,
+// Our Results and the contact form. Text comes from src/content/portfolio/<file-name>.json; tech logos are matched
+// by name in src/content/tech.json. Section headings and small tags are the same on every live case, so they stay here.
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Contact from '../../sections/Contact.astro';
-import { richText, inline } from '../../lib/text';
+import home from '../../content/home.json';
 import tech from '../../content/tech.json';
+import caseCategories from '../../content/case-categories.json';
+import { richText, inline } from '../../lib/text';
 
 export async function getStaticPaths() {
-  const cases = await getCollection('portfolio', p => !p.data.draft);
-  return cases.map(c => ({ params: { slug: c.id }, props: { c } }));
+  const cases = await getCollection('portfolio', (p) => !p.data.draft);
+  return cases.map((c) => ({ params: { slug: c.id }, props: { c } }));
 }
 const { c } = Astro.props;
 const d = c.data;
-const logos = d.tech.map(name => tech.items.find(t => t.name.toLowerCase() === name.toLowerCase()) ?? { name, logo: '' });
+const logos = d.tech.map((name) => tech.items.find((t) => t.name.toLowerCase() === name.toLowerCase()) ?? { name, logo: '' });
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
+const check = '/media/wf/67dd0cda-check-24px.svg';
+// Industry pills can have a colour per category (set in the CMS, "Кольори галузей у кейсах").
+const catColor = (k: string) => caseCategories.items.find((x) => x.name.toLowerCase() === k.toLowerCase())?.color;
 ---
 <Base title={`${d.title} — AltheraCode`} description={d.description} image={d.client_image || undefined}>
-  <section class="hero page-hero"><div class="hero-glow"></div><div class="container"><div class="hero-inner">
-    <span class="eyebrow">{d.categories[0] ?? 'Case study'}</span>
-    <h1>{d.title}</h1>
-    {d.description && <p>{d.description}</p>}
-    <div class="meta-chips">
-      {d.tag && <span class="chip-lg">{d.tag}</span>}
-      {d.location && <span class="chip-lg">{d.location}</span>}
-      {d.duration && <span class="chip-lg">{d.duration}</span>}
-      {d.categories.slice(1).map(k => <span class="chip-lg">{k}</span>)}
+  <section class="hero-case">
+    <div class="padding-global">
+      <nav class="w-layout-hflex breadcrums-wrapp" aria-label="Breadcrumb">
+        <a class="breadcrumb" href="/">Home</a>
+        <div aria-hidden="true">&gt;</div>
+        <a class="breadcrumb" href="/portfolio">Portfolio</a>
+        <div aria-hidden="true">&gt;</div>
+        <div>{d.title}</div>
+      </nav>
+      <div class="container-large">
+        <div class="case-hero-wrap">
+          <div class="hero-case-title">
+            <div class="case-study">Case Study</div>
+            <div class="hero-heading-box case">
+              <img alt={alt} class="case-heading-element" loading="eager" src="/media/wf/67d3ea97-image.svg" />
+              <h1 class="heading-style-h1">{d.title}</h1>
+              <img alt={alt} class="hero-heading-element right" loading="eager" src="/media/wf/67d3ea97-2.svg" />
+            </div>
+          </div>
+          <div class="hero-details-wrap">
+            <div class="hero-details-row">
+              <div class="details-item-box-1">
+                <div class="hero-details-title">Industry</div>
+                <div class="w-dyn-list">
+                  <div class="categories-list w-dyn-items" role="list">
+                    {d.categories.map((k) => (
+                      <div class="categories-item w-dyn-item" role="listitem" style={catColor(k) ? `background-color:${catColor(k)}` : undefined}><div>{k}</div></div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div class="details-item-box-2">
+                <div class="hero-details-title">Duration</div>
+                <div>{d.duration}</div>
+              </div>
+              <div class="details-item-box-3">
+                <div class="hero-details-title">Customer Location</div>
+                <div>{d.location}</div>
+              </div>
+            </div>
+            <div class="hero-details-row">
+              <div class="details-item-box-4">
+                <div class="hero-details-title">Services</div>
+                <div class="w-dyn-list">
+                  <div class="case_services-links-list w-dyn-items" role="list">
+                    {d.services.map((sv) => (
+                      <div class="w-dyn-item" role="listitem">
+                        <div class="case_services-link-title w-inline-block">
+                          <img alt="" loading="lazy" src="/media/wf/67d3f2be-untitled.svg" />
+                          <div>{sv}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div class="details-item-box-5">
+                <div class="hero-details-title">Tech Stack</div>
+                <div class="collection-list-wrapper-2 w-dyn-list">
+                  {logos.length > 0 ? (
+                    <div class="tech-stack-grid w-dyn-items" role="list">
+                      {logos.map((t) => (
+                        <div class="tech-stack-item w-dyn-item" role="listitem">
+                          {t.logo && <img alt="" class="tech-stack-image" loading="lazy" src={t.logo} />}
+                          <div>{t.name}</div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div class="w-dyn-empty"><div>No items found.</div></div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div></div></section>
+  </section>
 
-  {d.highlights.length > 0 && (
-    <section class="section tight"><div class="container">
-      <div class="stats reveal">
-        {d.highlights.map(h => <div class="stat"><div class="num">{h.value}</div><div class="lbl">{h.label}</div></div>)}
-      </div>
-    </div></section>
-  )}
-
-  {(d.client_text || d.client_image) && (
-    <section class="section bg-white"><div class="container">
-      <div class:list={['two-col', 'reveal', { 'single': !d.client_image }]}>
-        <div class="cs-body">
-          <span class="eyebrow">The Client</span>
-          <h2 class="cs-title">Who we built it for</h2>
-          <Fragment set:html={richText(d.client_text)} />
+  <section class="section dark-bg">
+    <div class="padding-global padding-section-small">
+      <div class="container-large">
+        <div class="highlights-wrap">
+          <div class="highlights-heading-box">
+            <div class="section-tag-box light-purple">
+              <div class="tag-bullet white"></div>
+              <div>Precision Built</div>
+            </div>
+            <div class="heading-box first-highlights">
+              <img alt={alt} loading="lazy" src="/media/wf/67d4099c-image.svg" />
+              <h2 class="heading-style-h2">Highlights</h2>
+            </div>
+          </div>
+          <div class="w-layout-grid highlights-grid">
+            {d.highlights.map((h) => (
+              <div class="highlights-card">
+                <div class="highlights_percent-box">
+                  <div class="percent-text">{h.value}</div>
+                  <div class="highlights-check-box"><img alt="" loading="lazy" src={check} /></div>
+                </div>
+                <div set:html={inline(h.label)} />
+              </div>
+            ))}
+          </div>
         </div>
-        {d.client_image && <img class="cs-image" src={d.client_image} alt={`${d.title} — client`} loading="lazy" />}
       </div>
-    </div></section>
-  )}
+    </div>
+  </section>
 
-  {(d.product_text || d.product_list.length > 0 || d.product_text_2) && (
-    <section class="section"><div class="container cs-body reveal">
-      <span class="eyebrow">Product / Service</span>
-      <h2 class="cs-title">What we built</h2>
-      <Fragment set:html={richText(d.product_text)} />
-      {d.product_list.length > 0 && (<>
-        {d.product_list_title && <h3 class="cs-sub">{d.product_list_title}</h3>}
-        <ul class="check-list">{d.product_list.map(i => <li set:html={inline(i)} />)}</ul>
-      </>)}
-      <Fragment set:html={richText(d.product_text_2)} />
-    </div></section>
-  )}
-
-  {d.goals.length > 0 && (
-    <section class="section bg-white"><div class="container cs-body reveal">
-      <span class="eyebrow">Goals &amp; Objectives</span>
-      <h2 class="cs-title">What we set out to achieve</h2>
-      {d.goals.map(g => <Fragment set:html={richText(g)} />)}
-    </div></section>
-  )}
-
-  {d.challenges.length > 0 && (
-    <section class="section"><div class="container cs-body reveal">
-      <span class="eyebrow">Project Challenges</span>
-      <h2 class="cs-title">What stood in the way</h2>
-      <ul class="check-list">{d.challenges.map(i => <li set:html={inline(i)} />)}</ul>
-    </div></section>
-  )}
-
-  {d.solution && (
-    <section class="section bg-white"><div class="container cs-body reveal">
-      <span class="eyebrow">Solution</span>
-      <h2 class="cs-title">How we solved it</h2>
-      <Fragment set:html={richText(d.solution)} />
-    </div></section>
-  )}
-
-  {(d.results_text || d.results.length > 0) && (
-    <section class="section process dark"><div class="container reveal">
-      <span class="eyebrow">Our Results</span>
-      <h2 class="section-title">What changed</h2>
-      {d.results_text && <p class="lead">{d.results_text}</p>}
-      {d.results.length > 0 && <div class="stats stats-dark mt-44">
-        {d.results.map(r => <div class="stat"><div class="num">{r.value}</div><div class="lbl">{r.label}</div></div>)}
-      </div>}
-      {d.results_closing && <p class="lead">{d.results_closing}</p>}
-    </div></section>
-  )}
-
-  {(d.services.length > 0 || logos.length > 0) && (
-    <section class="section bg-white"><div class="container cs-body reveal">
-      {d.services.length > 0 && (<>
-        <h3 class="cs-sub">Services</h3>
-        <div class="tags">{d.services.map(s => <span class="tag">{s}</span>)}</div>
-      </>)}
-      {logos.length > 0 && (<>
-        <h3 class="cs-sub" style="margin-top:32px">Tech stack</h3>
-        <div class="tech-logos">
-          {logos.map(t => <span class="tech-logo">{t.logo && <img src={t.logo} alt="" loading="lazy" />}{t.name}</span>)}
+  <section class="section">
+    <div class="padding-global padding-section-large">
+      <div class="container-large">
+        <div class="solution-wrap">
+          <div class="solution-content">
+            <div class="heading-text-wrap">
+              <div class="heading-box top-align">
+                <img alt={alt} loading="lazy" src="/media/wf/67d4099c-image.svg" />
+                <h2 class="heading-style-h2">The Client</h2>
+              </div>
+              <div class="client-paraagraph w-richtext" set:html={richText(d.client_text)} />
+            </div>
+          </div>
+          {d.client_image && <img alt={`${d.title} screenshot`} class="client-image" loading="lazy" src={d.client_image} width="616" />}
         </div>
-      </>)}
-    </div></section>
-  )}
+      </div>
+    </div>
+  </section>
 
-  <section class="section tight"><div class="container"><a class="btn btn-ghost-dark" href="/portfolio">← All case studies</a></div></section>
+  <section class="section">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="product-block">
+          <div class="product-wrap">
+            <div class="product-content">
+              <div class="section-tag-box light-pink">
+                <div class="tag-bullet white"></div>
+                <div>Graphic text elements</div>
+              </div>
+              <div class="heading-text-wrap">
+                <h2 class="heading-style-h2">Product/Service</h2>
+                <p set:html={inline(d.product_text)} />
+              </div>
+            </div>
+            <div class="product-items-wrap">
+              <h4 class="heading-style-h4">{d.product_list_title}</h4>
+              <div class="product-items-list">
+                {d.product_list.map((it) => (
+                  <div class="product-item">
+                    <img alt="" loading="lazy" src="/media/wf/67dd158f-image.svg" />
+                    <div set:html={inline(it)} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          {d.product_text_2 && (
+            <div class="product-add-text-box">
+              <p class="add-text" set:html={inline(d.product_text_2)} />
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <Contact />
+  <section class="section">
+    <div class="padding-global padding-section-large">
+      <div class="container-large">
+        <div class="goals-wrap">
+          <div class="goals-title-wrap">
+            <div class="section-tag-box light-purple">
+              <div class="tag-bullet"></div>
+              <div>Precision Built</div>
+            </div>
+            <div class="heading-box goals-first">
+              <img alt={alt} loading="lazy" src="/media/wf/67d4099c-image.svg" />
+              <h2 class="heading-style-h2">Goals &amp; Objectives</h2>
+            </div>
+          </div>
+          <div class="goals-paragraph-wrap">
+            {d.goals[0] && <p class="goals-paragraph-big" set:html={inline(d.goals[0])} />}
+            {d.goals.slice(1).map((g) => <p class="goals-paragraph-smaal" set:html={inline(g)} />)}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="padding-global phone-non">
+      <div class="container-large">
+        <div class="challenges-block">
+          <div class="challenges-wrap dark-bg">
+            <div class="heading-box">
+              <img alt={alt} loading="lazy" src="/media/wf/67dd1a5c-image.svg" />
+              <h2 class="heading-style-h2">Project Challenges</h2>
+            </div>
+            <div class="client-paraagraph w-richtext">
+              {d.challenges_style === 'paragraphs'
+                ? d.challenges.map((x) => <p set:html={inline(x)} />)
+                : <ul role="list">{d.challenges.map((x) => <li set:html={inline(x)} />)}</ul>}
+            </div>
+          </div>
+          <div class="challenges-wrap white-bg">
+            <div class="heading-box">
+              <img alt={alt} loading="lazy" src="/media/wf/67d41741-image.svg" />
+              <h2 class="heading-style-h2">Solution</h2>
+            </div>
+            <div class="client-paraagraph w-richtext" set:html={richText(d.solution)} />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-space-112"></div>
+
+  <section class="section white-bg">
+    <div class="padding-global padding-section-small">
+      <div class="container-large">
+        <div class="results-gap-wrap">
+          <div class="results-title-wrap">
+            <div class="heading-text-wrap max-width-800">
+              <div class="heading-box">
+                <img alt={alt} loading="lazy" src="/media/wf/67dd2e91-untitled.svg" />
+                <h2 class="heading-style-h2">Our Results</h2>
+              </div>
+              {d.results_text && <p class="portfolio-text" set:html={inline(d.results_text)} />}
+            </div>
+            <div class="section-tag-box light-purple results-first">
+              <div class="tag-bullet"></div>
+              <div>Precision Built</div>
+            </div>
+          </div>
+          <div class="w-layout-grid results-grid">
+            {d.results.map((r) => (
+              <div class="results-card">
+                <div class="highlights_percent-box">
+                  <div class="percent-text">{r.value}</div>
+                  <div class="highlights-check-box blue-bg"><img alt="" loading="lazy" src={check} /></div>
+                </div>
+                <div set:html={inline(r.label)} />
+              </div>
+            ))}
+          </div>
+          {d.results_closing && (
+            <div class="results-add-text-box">
+              <p class="add-text results-text" set:html={inline(d.results_closing)} />
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Contact title={home.contact_title} text={home.contact_text} image={home.contact_image} variant="" pad="padding-global padding-section-large" />
 </Base>

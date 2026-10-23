@@ -274,6 +274,19 @@ content:
           - { name: title, label: "Заголовок", type: string }
           - { name: text, label: "Текст під заголовком", type: text }
 
+  - name: case_categories
+    label: Кольори галузей у кейсах
+    type: file
+    path: src/content/case-categories.json
+    fields:
+      - name: items
+        label: "Галузь і колір плашки на сторінці кейсу (галузі без кольору — прозорі)"
+        type: object
+        list: true
+        fields:
+          - { name: name, label: "Галузь (точно як у кейсі)", type: string }
+          - { name: color, label: "Колір (hex, напр. #9cdcfe)", type: string }
+
   # ===================== КЕЙСИ (ПОРТФОЛІО) =====================
   # Один кейс = один файл. Нова адреса сторінки: /portfolio/<назва-файлу>.
   # Нові кейси краще зберігати як чернетку, доки вони не готові.
@@ -314,6 +327,7 @@ content:
       - { name: product_text_2, label: "Продукт — текст після списку", type: text }
       - { name: goals, label: "Цілі (кожен елемент — абзац)", type: text, list: true }
       - { name: challenges, label: "Виклики проєкту (список)", type: text, list: true }
+      - { name: challenges_style, label: "Вигляд труднощів: list = маркований список, paragraphs = окремі абзаци (як на старому сайті)", type: select, options: { values: ["list", "paragraphs"] } }
       - { name: solution, label: "Рішення — текст", type: text }
       - { name: results_text, label: "Результати — вступний текст", type: text }
       - name: results

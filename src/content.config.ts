@@ -43,6 +43,8 @@ const portfolio = defineCollection({
     product_text_2: z.string().default(''),
     goals: z.array(z.string()).default([]),
     challenges: z.array(z.string()).default([]),
+    // "list" (bullets) or "paragraphs" (live cases that type "▪ " before each point)
+    challenges_style: z.string().default('list'),
     solution: z.string().default(''),
     results_text: z.string().default(''),
     results: z.array(pair).default([]),

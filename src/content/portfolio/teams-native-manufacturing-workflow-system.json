@@ -43,7 +43,9 @@
     "The client needed to eliminate fragmented communication between departments and reduce delays caused by manual coordination across ERP workflows. The primary objective was to create a centralized operational layer connecting manufacturing, logistics, procurement, production, and finance teams inside a unified Microsoft ecosystem."
   ],
   "challenges": [
-    "▪ Operational decisions depended heavily on manual communication across multiple departments and disconnected workflows.\n\n▪ Approval routing, procurement coordination, and production planning lacked centralized visibility and structured escalation logic.\n\n▪ Teams needed real-time operational notifications tied directly to ERP events while maintaining auditability and controlled workflow governance."
+    "▪ Operational decisions depended heavily on manual communication across multiple departments and disconnected workflows.",
+    "▪ Approval routing, procurement coordination, and production planning lacked centralized visibility and structured escalation logic.",
+    "▪ Teams needed real-time operational notifications tied directly to ERP events while maintaining auditability and controlled workflow governance."
   ],
   "solution": "AltheraCode developed a Teams-native workflow orchestration system integrated with Microsoft Dynamics 365 Supply Chain Management and Finance modules. The platform centralized operational alerts, approval routing, procurement coordination, production workflows, and financial approvals inside one connected environment.\n\nThe implementation combined ERP event processing, workflow orchestration, escalation rules, structured notifications, and audit logging to create a controlled operational workflow system across manufacturing departments.",
   "results_text": "The implementation improved workflow visibility, operational responsiveness, and coordination between manufacturing, supply chain, production, and finance teams. Key outcomes included:",
@@ -62,5 +64,6 @@
     }
   ],
   "results_closing": "A disconnected operational environment was transformed into a centralized workflow system that improved decision-making speed, reduced process bottlenecks, and created more transparent coordination across departments.",
-  "created": "2026-05-28T11:38"
+  "created": "2026-05-28T11:38",
+  "challenges_style": "paragraphs"
 }
