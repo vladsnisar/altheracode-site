@@ -1,49 +1,92 @@
 ---
+// "Drop Us a Line" contact form with a photo. Markup matches the Webflow site; the form sends through Formspree.
+// Until a real Formspree ID is set in Pages CMS ("ID форми Formspree"), submitting shows the error message
+// with the e-mail address instead of sending.
+// `variant` sets the section's spacing classes, which differ between pages on the live site.
 import home from '../content/home.json';
 import site from '../content/site.json';
-// The form posts to Formspree. Until a real ID is set in Pages CMS ("ID форми Formspree"), it shows a notice instead of sending.
-const { title = home.contact_title, text = home.contact_text, eyebrow = home.contact_eyebrow } = Astro.props;
+
+interface Props {
+  title?: string;
+  text?: string;
+  image?: string;
+  variant?: string;
+}
+const {
+  title = home.contact_title,
+  text = home.contact_text,
+  image = '/media/wf/67d92299-business-people-working-office-with-laptop-1.avif',
+  variant = 'cta-section top',
+} = Astro.props;
 const id = site.formspree_id;
 const action = id && !id.startsWith('REPLACE') ? `https://formspree.io/f/${id}` : undefined;
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
 ---
-<section class="section" id="contact">
-  <div class="container">
-    <div class="contact-wrap">
-      <div class="contact-side reveal">
-        <span class="eyebrow">{eyebrow}</span>
-        <h2>{title}</h2>
-        <p>{text}</p>
-        <div class="contact-points">
-          <div class="cp"><div class="ic">✉️</div><div><div class="lbl">E-mail</div><div class="val"><a href={`mailto:${site.contact_email}`}>{site.contact_email}</a></div></div></div>
-          <div class="cp"><div class="ic">📞</div><div><div class="lbl">Phone</div><div class="val">{site.contact_phone}</div></div></div>
-          <div class="cp"><div class="ic">💬</div><div><div class="lbl">WhatsApp</div><div class="val">{site.contact_whatsapp}</div></div></div>
+<section class:list={['section', variant]} id="contact">
+  <div class="padding-global phone-non">
+    <div class="container-large">
+      <div class="form-block">
+        <div class="form-box">
+          <div class="form-title">
+            <div class="heading-box">
+              <img alt={alt} loading="lazy" src="/media/wf/67d66bce-slash.svg" />
+              <h2 class="heading-style-h2">{title}</h2>
+            </div>
+            {text && <div class="form-text">{text}</div>}
+          </div>
+          <div class="w-form">
+            <form class="contact-form" name="email-form" method="POST" action={action} data-ready={action ? 'yes' : 'no'}>
+              <input class="text-field w-input" maxlength="256" name="Full-Name" placeholder="Full Name" aria-label="Full Name" required type="text" />
+              <input class="text-field w-input" maxlength="256" name="Business-Email" placeholder="Business Email" aria-label="Business Email" required type="email" />
+              <input class="text-field w-input" maxlength="256" name="Phone-Number" placeholder="Phone Number (optional)" aria-label="Phone Number (optional)" type="tel" />
+              <textarea class="text-field w-input" maxlength="5000" name="Message" placeholder="Message" aria-label="Message"></textarea>
+              <input type="hidden" name="Page" value={Astro.url.pathname.replace(/\.html$/, '')} />
+              <div class="form-button-box">
+                <input class="button-main form-button w-button" data-wait="Please wait..." type="submit" value="Submit" />
+                <label class="w-checkbox checkbox-field">
+                  <input class="w-checkbox-input checkbox" name="Agree-with-privacy-policy" required type="checkbox" />
+                  <span class="checkbox-label w-form-label">By submitting this form I agree with the <a href="/privacy-policy">privacy policy</a></span>
+                </label>
+              </div>
+            </form>
+            <div class="form_message-success w-form-done" role="status">
+              <div>Thank you! Your submission has been received!</div>
+            </div>
+            <div class="w-form-fail" role="alert">
+              <div>Oops! Something went wrong while submitting the form.{!action && <> Please e-mail us at <a href={`mailto:${site.contact_email}`}>{site.contact_email}</a>.</>}</div>
+            </div>
+          </div>
         </div>
+        <img alt="Two colleagues working together at a laptop" class="form-image" loading="lazy" src={image} width="585" />
       </div>
-      <form class="form reveal" id="contactForm" method="POST" action={action} data-ready={action ? 'yes' : 'no'}>
-        <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" name="name" placeholder="Your name" required /></div>
-        <div class="field"><label for="f-email">E-mail</label><input id="f-email" type="email" name="email" placeholder="you@company.com" required /></div>
-        <div class="field"><label for="f-company">Company</label><input id="f-company" type="text" name="company" placeholder="Company name" /></div>
-        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="Tell us about your project"></textarea></div>
-        <p class="consent">By submitting this form I agree with the <a href="/privacy-policy">privacy policy</a>.</p>
-        <button type="submit" class="btn btn-primary btn-block">Send message</button>
-        <p class="form-status" id="formStatus" role="status"></p>
-      </form>
     </div>
   </div>
 </section>
 
 <script>
-  const form = document.getElementById('contactForm') as HTMLFormElement | null;
-  const status = document.getElementById('formStatus');
-  form?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    if (!status) return;
-    if (form.dataset.ready !== 'yes') { status.textContent = 'The form is not connected yet. Please e-mail us directly.'; return; }
-    status.textContent = 'Sending…';
-    try {
-      const r = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
-      if (r.ok) { form.reset(); status.textContent = 'Thank you! We will get back to you shortly.'; }
-      else status.textContent = 'Something went wrong. Please e-mail us directly.';
-    } catch { status.textContent = 'Network error. Please e-mail us directly.'; }
+  // Sends the form without leaving the page and shows Webflow's success or error box, like the live site.
+  document.querySelectorAll<HTMLFormElement>('form.contact-form').forEach((form) => {
+    const wrap = form.closest('.w-form');
+    const done = wrap?.querySelector<HTMLElement>('.w-form-done');
+    const fail = wrap?.querySelector<HTMLElement>('.w-form-fail');
+    const button = form.querySelector<HTMLInputElement>('input[type="submit"]');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (fail) fail.style.display = 'none';
+      if (form.dataset.ready !== 'yes') { if (fail) fail.style.display = 'block'; return; }
+      const label = button?.value;
+      if (button) button.value = button.dataset.wait || label || '';
+      try {
+        const r = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+        if (!r.ok) throw new Error(String(r.status));
+        form.style.display = 'none';
+        if (done) done.style.display = 'block';
+        (window as any).dataLayer?.push({ event: 'form_submit', form: 'contact' });
+      } catch {
+        if (fail) fail.style.display = 'block';
+      } finally {
+        if (button && label) button.value = label;
+      }
+    });
   });
 </script>

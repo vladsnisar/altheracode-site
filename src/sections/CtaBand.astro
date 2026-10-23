@@ -1,11 +1,36 @@
 ---
-import home from '../content/home.json';
+// Dark call-to-action band with a photo, bracketed heading (the `accent` words in pink) and a button.
+// Used on the homepage ("Meet AltheraCode") and on pages that pass their own text.
+import { highlight } from '../lib/text';
+
+interface Props {
+  title: string;
+  accent?: string;
+  button_text?: string;
+  button_link?: string;
+  image?: string;
+}
+const {
+  title,
+  accent,
+  button_text = 'Book a Call',
+  button_link = '/contact',
+  image = '/media/wf/67d411d5-cta-image.avif',
+} = Astro.props;
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
 ---
 <section class="section">
-  <div class="container">
-    <div class="cta-band reveal">
-      <div class="ct"><h2>{home.cta_title}</h2><p>{home.cta_text}</p></div>
-      <a href="#contact" class="btn btn-primary">{home.cta_button} <span class="arrow">→</span></a>
+  <div class="padding-global">
+    <div class="cta-dark-block">
+      <img alt="AltheraCode team member" class="cta-image" loading="lazy" src={image} width="426" />
+      <div class="cta-content">
+        <div class="cta-heading-box">
+          <img alt={alt} class="cta-heading-element" loading="lazy" src="/media/wf/67d41309-image.svg" />
+          <h2 class="heading-style-h2" set:html={highlight(title, accent, 'pink')} />
+          <img alt={alt} class="cta-heading-element right" loading="lazy" src="/media/wf/67d41309-2.svg" />
+        </div>
+        <a class="button-main w-button" href={button_link}>{button_text}</a>
+      </div>
     </div>
   </div>
 </section>

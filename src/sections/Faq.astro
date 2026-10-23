@@ -1,17 +1,68 @@
 ---
-import home from '../content/home.json';
-import SectionHeading from './SectionHeading.astro';
+// "Questions & Answers": tag and heading on the left, numbered questions on the right that open and close on click.
+// Used on the homepage and service pages. Questions are numbered automatically; answers use the CMS text format
+// (blank line = new paragraph, "- " or "1. " lines = lists, see src/lib/text.ts).
+import { richText } from '../lib/text';
+
+interface Props {
+  title: string;
+  eyebrow?: string;
+  items: { q: string; a: string }[];
+  id?: string;
+}
+const { title, eyebrow, items, id = 'faq' } = Astro.props;
 ---
-<section class="section bg-white" id="faq">
-  <div class="container">
-    <SectionHeading eyebrow={home.faq_eyebrow} title={home.faq_title} center />
-    <div class="faq reveal">
-      {home.faq.map(f => (
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">{f.q}<span class="plus">+</span></button>
-          <div class="faq-a"><div class="inner">{f.a}</div></div>
+<section class="section" id={id}>
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="faq-wrap">
+        <div class="faq-title-wrap">
+          {eyebrow && (
+            <div class="section-tag-box last">
+              <div class="tag-bullet"></div>
+              <div>{eyebrow}</div>
+            </div>
+          )}
+          <h2 class="heading-style-h2">{title}</h2>
         </div>
-      ))}
+        <div class="faq-list">
+          {items.map((it, i) => (
+            <div class="dropdown-item">
+              <a class="dropdown-item-title w-inline-block" href="#" role="button" aria-expanded="false" aria-controls={`${id}-a${i + 1}`}>
+                <h3 class="heading-style-h4">{i + 1}. {it.q}</h3>
+              </a>
+              <div class="dropdown-item-content" id={`${id}-a${i + 1}`} style="height:0px" set:html={richText(it.a)} />
+              <img class="image-2" loading="lazy" src="/media/wf/67d91e2c-fi-sr-plus.svg" alt="" />
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+  // Each question opens and closes on its own (several can be open), with the plus icon turning into ×,
+  // as Webflow's interaction did on the live site.
+  document.querySelectorAll<HTMLElement>('.faq-list .dropdown-item').forEach((item) => {
+    const title = item.querySelector<HTMLAnchorElement>('.dropdown-item-title');
+    const body = item.querySelector<HTMLElement>('.dropdown-item-content');
+    const icon = item.querySelector<HTMLElement>('.image-2');
+    if (!title || !body) return;
+    body.style.transition = 'height 0.4s ease';
+    if (icon) icon.style.transition = 'transform 0.4s ease';
+    title.addEventListener('click', (e) => {
+      e.preventDefault();
+      const open = title.getAttribute('aria-expanded') !== 'true';
+      title.setAttribute('aria-expanded', String(open));
+      if (icon) icon.style.transform = open ? 'rotate(45deg)' : '';
+      if (open) {
+        body.style.height = body.scrollHeight + 'px';
+        body.addEventListener('transitionend', () => { if (title.getAttribute('aria-expanded') === 'true') body.style.height = 'auto'; }, { once: true });
+      } else {
+        body.style.height = body.scrollHeight + 'px';
+        requestAnimationFrame(() => requestAnimationFrame(() => (body.style.height = '0px')));
+      }
+    });
+  });
+</script>

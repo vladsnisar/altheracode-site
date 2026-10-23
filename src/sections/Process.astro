@@ -1,18 +1,94 @@
 ---
+// "Our Process": dark section with a sticky 01–07 step index and one slide per step (text, button, illustration).
+// Used on the homepage and service pages. A step without its own pictures uses the homepage step's pictures
+// at the same position, so service pages only need titles and text.
 import home from '../content/home.json';
-import SectionHeading from './SectionHeading.astro';
-const steps = home.process;
+
+type Step = {
+  title: string;
+  text: string;
+  button_text?: string;
+  button_link?: string;
+  image?: string;
+  image_width?: string;
+  avatar?: string;
+  avatar_width?: string;
+  icon?: string;
+};
+interface Props {
+  title: string;
+  eyebrow?: string;
+  text?: string;
+  steps: Step[];
+}
+const { title, eyebrow, text, steps } = Astro.props;
+const fallback = home.process as Step[];
+const pic = (s: Step, i: number, k: keyof Step) => s[k] || fallback[i % fallback.length]?.[k] || '';
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
+const num = (i: number) => String(i + 1).padStart(2, '0');
 ---
-<section class="section process dark" id="process">
-  <div class="container">
-    <SectionHeading eyebrow={home.process_eyebrow} title={home.process_title} lead={home.process_lead} />
-    <div class="process-grid reveal">
-      {steps.map((s, i) => (
-        <div class="step" style={steps.length % 2 === 1 && i === steps.length - 1 ? 'grid-column:1/-1' : undefined}>
-          <div class="n">{String(i + 1).padStart(2, '0')}</div>
-          <div><h3>{s.title}</h3><p>{s.text}</p></div>
+<section class="section dark-bg" id="process">
+  <div class="padding-global padding-section-large">
+    <div class="container-large">
+      <div class="process-title-wrap">
+        <div class="process-heading-wrap">
+          <div class="heading-box last">
+            <img alt={alt} loading="lazy" src="/media/wf/67d3f0a0-image.svg" />
+            <h2 class="heading-style-h2">{title}</h2>
+          </div>
+          {eyebrow && (
+            <div class="section-tag-box light-purple">
+              <div class="tag-bullet white"></div>
+              <div>{eyebrow}</div>
+            </div>
+          )}
         </div>
-      ))}
+        {text && <p class="process-text">{text}</p>}
+      </div>
+      <div class="section-space-96"></div>
+      <div class="process-slider-wrap">
+        <div class="slider-sticky-absolute">
+          <div class="slider-pagination-box">
+            {steps.map((_, i) => (
+              <a class="slider-pagination-item w-inline-block" href={`#card-${i + 1}`}><div>{num(i)}</div></a>
+            ))}
+          </div>
+        </div>
+        {steps.map((s, i) => (
+          <div class="process-slide" id={`card-${i + 1}`}>
+            <div class="process-slide-content">
+              <div class="process-slide-title-box">
+                <h3>/ {s.title}</h3>
+                <p>{s.text}</p>
+              </div>
+              <a class="button-main slider-button w-button" href={s.button_link || '/contact'}>{s.button_text || 'Start Now'}</a>
+            </div>
+            <div class="slider-image-box">
+              <img alt={`${s.title} illustration`} class="process-image" loading="lazy" src={pic(s, i, 'image')} width={pic(s, i, 'image_width') || undefined} />
+              <img alt="" class="process-image-2" loading="lazy" src={pic(s, i, 'avatar')} width={pic(s, i, 'avatar_width') || undefined} />
+              <img alt="" class="process-image-absolut" loading="lazy" src={pic(s, i, 'icon')} />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+  // Highlights the step number whose slide is in the middle of the screen (Webflow's scroll-spy did this with w--current).
+  document.querySelectorAll<HTMLElement>('.process-slider-wrap').forEach((wrap) => {
+    const links = wrap.querySelectorAll<HTMLAnchorElement>('.slider-pagination-item');
+    // A number is highlighted only while its slide crosses the middle of the screen; none otherwise.
+    const io = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((e) => {
+          const link = [...links].find((a) => a.hash === '#' + e.target.id);
+          if (e.isIntersecting) links.forEach((a) => a.classList.toggle('w--current', a === link));
+          else link?.classList.remove('w--current');
+        }),
+      { rootMargin: '-50% 0px -50% 0px' }
+    );
+    wrap.querySelectorAll('.process-slide').forEach((s) => io.observe(s));
+  });
+</script>

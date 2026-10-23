@@ -27,6 +27,8 @@ const portfolio = defineCollection({
     draft: z.boolean().default(false),
     created: z.coerce.date(),
     tag: z.string().default(''),
+    // Show the `tag` badge (e.g. "Under NDA") on the card. Off on every live case study.
+    nda: z.boolean().default(false),
     categories: z.array(z.string()).default([]),
     location: z.string().default(''),
     duration: z.string().default(''),

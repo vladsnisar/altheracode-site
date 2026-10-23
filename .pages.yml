@@ -15,21 +15,55 @@ content:
     fields:
       # --- БРЕНД ---
       - { name: brand_name, label: "Назва бренду", type: string }
-      - { name: logo_letter, label: "Літера в логотипі", type: string }
+      - { name: logo, label: "Логотип (шапка і футер)", type: image }
       - { name: contact_email, label: "E-mail", type: string }
       - { name: contact_phone, label: "Телефон", type: string }
-      - { name: contact_whatsapp, label: "WhatsApp", type: string }
+      - { name: contact_whatsapp, label: "WhatsApp (номер, як показувати)", type: string }
+      - { name: contact_whatsapp_link, label: "WhatsApp — посилання", type: string }
       - { name: formspree_id, label: "ID форми Formspree (для листів)", type: string }
 
-      # --- ФУТЕР ---
-      - { name: footer_tagline, label: "Футер — короткий опис", type: text }
-      - name: socials
-        label: "Соцмережі"
+      # --- МЕНЮ ---
+      - { name: nav_services_label, label: "Меню — пункт з випадаючим списком послуг", type: string }
+      - { name: nav_core_title, label: "Випадаюче меню — заголовок колонки 1", type: string }
+      - name: nav_core_services
+        label: "Випадаюче меню — послуги колонки 1 (перші 7 — ліворуч, решта — праворуч)"
         type: object
         list: true
         fields:
-          - { name: label, label: "Підпис (2 літери)", type: string }
+          - { name: label, label: "Назва", type: string }
+          - { name: href, label: "Посилання (напр. /services/ai-integration-services; # = без сторінки)", type: string }
+          - { name: icon, label: "Іконка", type: image }
+          - name: sub
+            label: "Підпункти (з'являються під назвою)"
+            type: object
+            list: true
+            fields:
+              - { name: label, label: "Назва", type: string }
+              - { name: href, label: "Посилання", type: string }
+      - { name: nav_additional_title, label: "Випадаюче меню — заголовок колонки 2", type: string }
+      - name: nav_additional_services
+        label: "Випадаюче меню — послуги колонки 2"
+        type: object
+        list: true
+        fields:
+          - { name: label, label: "Назва", type: string }
           - { name: href, label: "Посилання", type: string }
+          - { name: icon, label: "Іконка", type: image }
+      - name: nav
+        label: "Меню в шапці (після «Services»)"
+        type: object
+        list: true
+        fields:
+          - { name: label, label: "Текст", type: string }
+          - { name: href, label: "Посилання (напр. /blog)", type: string }
+      - name: nav_button
+        label: "Кнопка в шапці"
+        type: object
+        fields:
+          - { name: label, label: "Текст", type: string }
+          - { name: href, label: "Посилання", type: string }
+
+      # --- ФУТЕР ---
       - name: footer_service_links
         label: "Футер — список послуг (посилання на сторінки послуг)"
         type: object
@@ -37,39 +71,22 @@ content:
         fields:
           - { name: label, label: "Назва", type: string }
           - { name: href, label: "Посилання (напр. /services/ai-integration-services)", type: string }
-      - name: footer_company
-        label: "Футер — меню «Компанія»"
-        type: object
-        list: true
-        fields:
-          - { name: label, label: "Текст", type: string }
-          - { name: href, label: "Посилання", type: string }
       - name: locations
-        label: "Адреси офісів"
+        label: "Адреси офісів (новий рядок у полі = новий рядок на сайті)"
         type: object
         list: true
         fields:
-          - { name: name, label: "Назва", type: string }
+          - { name: name, label: "Назва", type: text }
           - { name: address, label: "Адреса", type: text }
-      - { name: copyright, label: "Копірайт", type: string }
-      # --- SEO ТА АНАЛІТИКА ---
-      - { name: seo_title, label: "SEO — заголовок головної (вкладка браузера, Google)", type: string }
-      - { name: seo_description, label: "SEO — опис головної для Google", type: text }
-      - { name: gtm_id, label: "Google Tag Manager ID (GTM-XXXX)", type: string }
-      # --- МЕНЮ ---
-      - name: nav
-        label: "Меню в шапці"
+          - { name: flag, label: "Прапорець", type: image }
+      - name: socials
+        label: "Соцмережі (іконка за назвою: Upwork, LinkedIn, WhatsApp, Clutch)"
         type: object
         list: true
         fields:
-          - { name: label, label: "Текст", type: string }
-          - { name: href, label: "Посилання (напр. /#services або /blog)", type: string }
-      - name: nav_button
-        label: "Кнопка в шапці"
-        type: object
-        fields:
-          - { name: label, label: "Текст", type: string }
+          - { name: label, label: "Назва", type: string }
           - { name: href, label: "Посилання", type: string }
+      - { name: copyright, label: "Копірайт", type: string }
       - name: legal_links
         label: "Футер — юридичні посилання"
         type: object
@@ -78,6 +95,11 @@ content:
           - { name: label, label: "Текст", type: string }
           - { name: href, label: "Посилання", type: string }
 
+      # --- SEO ТА АНАЛІТИКА ---
+      - { name: seo_title, label: "SEO — заголовок головної (вкладка браузера, Google)", type: string }
+      - { name: seo_description, label: "SEO — опис головної для Google", type: text }
+      - { name: gtm_id, label: "Google Tag Manager ID (GTM-XXXX)", type: string }
+
   # ===================== ГОЛОВНА СТОРІНКА =====================
   - name: home
     label: Головна сторінка
@@ -85,112 +107,130 @@ content:
     path: src/content/home.json
     fields:
       # --- ГЕРОЙ (головний банер) ---
-      - { name: hero_title_start, label: "Заголовок — початок", type: string }
-      - { name: hero_title_accent, label: "Заголовок — виділене слово (мʼятним)", type: string }
-      - { name: hero_title_end, label: "Заголовок — кінець", type: string }
+      - { name: hero_title_accent, label: "Заголовок — виділене слово (мʼятним), на початку", type: string }
+      - { name: hero_title_end, label: "Заголовок — решта", type: string }
       - { name: hero_text, label: "Текст під заголовком", type: text }
-      - { name: hero_button_primary, label: "Кнопка головна (текст)", type: string }
-      - { name: hero_button_secondary, label: "Кнопка друга (текст)", type: string }
-
-      - { name: trust_logos, label: "Технології під банером (список)", type: string, list: true }
+      - { name: hero_button_primary, label: "Кнопка (текст)", type: string }
+      - { name: hero_button_link, label: "Кнопка (посилання)", type: string }
 
       # --- ПОСЛУГИ ---
-      - { name: services_eyebrow, label: "Послуги — підпис зверху", type: string }
+      - { name: services_eyebrow, label: "Послуги — мітка зверху", type: string }
       - { name: services_title, label: "Послуги — заголовок", type: string }
       - { name: services_lead, label: "Послуги — опис", type: text }
-      - name: services
-        label: "Послуги (картки)"
+      - { name: services_core_title, label: "Колонка 1 — заголовок", type: string }
+      - name: services_core
+        label: "Колонка 1 — послуги"
         type: object
         list: true
         fields:
-          - { name: icon, label: "Іконка (емодзі)", type: string }
-          - { name: link, label: "Посилання картки (напр. /services/ai-integration-services; порожнє = без посилання)", type: string }
-          - { name: title, label: "Назва", type: string }
-          - { name: text, label: "Опис", type: text }
+          - { name: label, label: "Назва", type: string }
+          - { name: href, label: "Посилання (# = без сторінки)", type: string }
+          - name: sub
+            label: "Підпункти (розкриваються при наведенні)"
+            type: object
+            list: true
+            fields:
+              - { name: label, label: "Назва", type: string }
+              - { name: href, label: "Посилання", type: string }
+      - { name: services_additional_title, label: "Колонка 2 — заголовок", type: string }
+      - name: services_additional
+        label: "Колонка 2 — послуги"
+        type: object
+        list: true
+        fields:
+          - { name: label, label: "Назва", type: string }
+          - { name: href, label: "Посилання (# = без сторінки)", type: string }
 
       # --- ЕКСПЕРТИЗА ---
-      - { name: expertise_eyebrow, label: "Експертиза — підпис зверху", type: string }
+      - { name: expertise_eyebrow, label: "Експертиза — мітка зверху", type: string }
       - { name: expertise_title, label: "Експертиза — заголовок", type: string }
       - { name: expertise_lead, label: "Експертиза — опис", type: text }
-      - { name: expertise_primary_title, label: "Підзаголовок списку 1", type: string }
+      - { name: expertise_image, label: "Експертиза — фото", type: image }
+      - { name: expertise_primary_title, label: "Список 1 — заголовок", type: string }
       - { name: expertise_primary, label: "Список 1", type: string, list: true }
-      - { name: expertise_secondary_title, label: "Підзаголовок списку 2", type: string }
+      - { name: expertise_secondary_title, label: "Список 2 — заголовок", type: string }
       - { name: expertise_secondary, label: "Список 2", type: string, list: true }
 
-      # --- ПОРТФОЛІО ---
-      - { name: portfolio_eyebrow, label: "Портфоліо — підпис зверху", type: string }
+      # --- ПОРТФОЛІО (картки — шість найновіших кейсів, автоматично) ---
       - { name: portfolio_title, label: "Портфоліо — заголовок", type: string }
       - { name: portfolio_lead, label: "Портфоліо — опис", type: text }
-      - name: portfolio
-        label: "Кейси портфоліо"
+      - { name: portfolio_eyebrow, label: "Портфоліо — мітка праворуч", type: string }
+
+      # --- CTA-БЛОК (темний з фото) ---
+      - { name: cta_title, label: "CTA — заголовок повністю", type: string }
+      - { name: cta_accent, label: "CTA — частина заголовка рожевим (має точно збігатися з текстом)", type: string }
+      - { name: cta_button_text, label: "CTA — кнопка (текст)", type: string }
+      - { name: cta_button_link, label: "CTA — кнопка (посилання)", type: string }
+      - { name: cta_image, label: "CTA — фото", type: image }
+
+      # --- ГАЛУЗІ ---
+      - { name: industries_title, label: "Галузі — заголовок", type: string }
+      - { name: industries_eyebrow, label: "Галузі — мітка праворуч", type: string }
+      - name: industries
+        label: "Галузі (плитки)"
         type: object
         list: true
         fields:
-          - { name: category, label: "Категорія", type: string }
-          - { name: title, label: "Назва кейсу", type: string }
-          - { name: text, label: "Опис", type: text }
-          - { name: tag, label: "Бейдж (напр. Under NDA)", type: string }
-          - { name: glyph, label: "Символ на картинці", type: string }
-          - name: theme
-            label: "Колір картинки"
-            type: select
-            options:
-              values: ["", "v2", "v3"]
+          - { name: name, label: "Назва", type: string }
+          - { name: icon, label: "Іконка", type: image }
+      - { name: industries_image, label: "Галузі — фото праворуч", type: image }
 
       # --- ЧОМУ МИ ---
-      - { name: why_eyebrow, label: "Чому ми — підпис зверху", type: string }
       - { name: why_title, label: "Чому ми — заголовок", type: string }
+      - { name: why_eyebrow, label: "Чому ми — мітка праворуч", type: string }
       - name: why
         label: "Переваги (картки)"
         type: object
         list: true
         fields:
-          - { name: icon, label: "Іконка (емодзі)", type: string }
+          - { name: icon, label: "Іконка", type: image }
           - { name: title, label: "Назва", type: string }
           - { name: text, label: "Опис", type: text }
 
       # --- ПРОЦЕС ---
-      - { name: process_eyebrow, label: "Процес — підпис зверху", type: string }
       - { name: process_title, label: "Процес — заголовок", type: string }
+      - { name: process_eyebrow, label: "Процес — мітка", type: string }
       - { name: process_lead, label: "Процес — опис", type: text }
       - name: process
-        label: "Кроки процесу (нумеруються самі)"
+        label: "Кроки процесу (нумеруються самі; картинки також використовуються на сторінках послуг)"
         type: object
         list: true
         fields:
           - { name: title, label: "Назва кроку", type: string }
           - { name: text, label: "Опис", type: text }
+          - { name: button_text, label: "Кнопка (текст)", type: string }
+          - { name: button_link, label: "Кнопка (посилання)", type: string }
+          - { name: image, label: "Ілюстрація", type: image }
+          - { name: image_width, label: "Ширина ілюстрації (px)", type: string }
+          - { name: avatar, label: "Плашка з аватаром", type: image }
+          - { name: avatar_width, label: "Ширина плашки (px)", type: string }
+          - { name: icon, label: "Іконка в куті", type: image }
 
       # --- ТЕХ-СТЕК ---
-      - { name: stack_eyebrow, label: "Тех-стек — підпис зверху", type: string }
       - { name: stack_title, label: "Тех-стек — заголовок", type: string }
       - name: stack
-        label: "Технології (плашки)"
+        label: "Технології (логотипи)"
         type: object
         list: true
         fields:
-          - { name: name, label: "Назва", type: string }
-          - { name: color, label: "Колір крапки (hex, напр. #F58219)", type: string }
+          - { name: name, label: "Назва (для доступності)", type: string }
+          - { name: image, label: "Логотип", type: image }
 
-      # --- CTA-СМУГА ---
-      - { name: cta_title, label: "CTA — заголовок", type: string }
-      - { name: cta_text, label: "CTA — текст", type: text }
-      - { name: cta_button, label: "CTA — кнопка", type: string }
-
-      # --- FAQ ---
-      - { name: faq_eyebrow, label: "FAQ — підпис зверху", type: string }
+      # --- ПИТАННЯ ТА ВІДПОВІДІ ---
+      - { name: faq_eyebrow, label: "FAQ — мітка зверху", type: string }
       - { name: faq_title, label: "FAQ — заголовок", type: string }
       - name: faq
-        label: "Питання та відповіді"
+        label: "Питання та відповіді (нумеруються самі; у відповіді рядки з «- » або «1. » стають списком)"
         type: object
         list: true
         fields:
           - { name: q, label: "Питання", type: string }
           - { name: a, label: "Відповідь", type: text }
-      # --- КОНТАКТИ ---
-      - { name: contact_eyebrow, label: "Контакти — підпис зверху", type: string }
-      - { name: contact_title, label: "Контакти — заголовок", type: string }
-      - { name: contact_text, label: "Контакти — текст", type: text }
+
+      # --- ФОРМА ---
+      - { name: contact_title, label: "Форма — заголовок", type: string }
+      - { name: contact_text, label: "Форма — текст під заголовком", type: text }
+      - { name: contact_image, label: "Форма — фото", type: image }
 
   # ===================== ЗАГОЛОВКИ СТОРІНОК =====================
   - name: pages
@@ -245,6 +285,7 @@ content:
       - { name: draft, label: "Чернетка (не публікувати) — поставте галочку, доки не готово", type: boolean }
       - { name: created, label: "Дата створення (за нею сортується список, нові зверху)", type: date, options: { time: true } }
       - { name: tag, label: "Бейдж на картці (напр. Under NDA)", type: string }
+      - { name: nda, label: "Показувати бейдж на картці (на живому сайті вимкнено для всіх)", type: boolean }
       - { name: categories, label: "Галузі (перша — головна)", type: string, list: true }
       - { name: location, label: "Країна/регіон клієнта", type: string }
       - { name: duration, label: "Тривалість", type: string }

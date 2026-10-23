@@ -174,11 +174,3 @@ margin: 0rem !important;
   padding-left: 0rem !important;
 }
 
-/* Grid helpers. On Webflow these were rules on auto-generated element IDs (#w-node-...);
-   here they are named classes so sections can be reused on any page. */
-.wf-span-1 { grid-column: span 1 / span 1; }
-.wf-span-2 { grid-area: span 1 / span 2 / span 1 / span 2; }
-.wf-span-3 { grid-area: span 1 / span 3 / span 1 / span 3; }
-.wf-justify-end { justify-self: end; }
-.wf-justify-center { justify-self: center; }
-.wf-last { order: 9999; }
