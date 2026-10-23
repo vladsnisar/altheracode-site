@@ -6,87 +6,54 @@
   "gtm_id": "GTM-5DMV749X",
   "nav": [
     {
-      "label": "Services",
-      "href": "/#services"
-    },
-    {
       "label": "Case Studies",
       "href": "/portfolio"
     },
     {
-      "label": "Process",
-      "href": "/#process"
-    },
-    {
-      "label": "FAQ",
-      "href": "/#faq"
+      "label": "Contact Us",
+      "href": "/contact"
     },
     {
       "label": "Blog",
       "href": "/blog"
-    },
-    {
-      "label": "Contact",
-      "href": "/#contact"
     }
   ],
   "nav_button": {
     "label": "Book a Call",
-    "href": "/#contact"
+    "href": "/contact"
   },
   "contact_email": "hello@altheracode.com",
   "contact_phone": "+1 (800) 459-1978",
   "contact_whatsapp": "+1 (800) 459-1978",
   "formspree_id": "REPLACE_WITH_YOUR_FORMSPREE_ID",
-  "footer_tagline": "Full-cycle solution development for startups & established teams — strong engineering, startup-level speed.",
   "socials": [
     {
-      "label": "Up",
+      "label": "Upwork",
       "href": "https://www.upwork.com/agencies/1305800533778464768/"
     },
     {
-      "label": "in",
+      "label": "LinkedIn",
       "href": "https://www.linkedin.com/company/areascode/"
     },
     {
-      "label": "Wa",
-      "href": "https://api.whatsapp.com/send/?phone=18004591978"
+      "label": "WhatsApp",
+      "href": "https://api.whatsapp.com/send/?phone=18004591978&text&type=phone_number&app_absent=0"
     },
     {
-      "label": "Cl",
+      "label": "Clutch",
       "href": "https://clutch.co/profile/areas-code#summary"
-    }
-  ],
-  "footer_company": [
-    {
-      "label": "Case Studies",
-      "href": "/portfolio"
-    },
-    {
-      "label": "Our Process",
-      "href": "/#process"
-    },
-    {
-      "label": "FAQ",
-      "href": "/#faq"
-    },
-    {
-      "label": "Contact",
-      "href": "/#contact"
-    },
-    {
-      "label": "Blog",
-      "href": "/blog"
     }
   ],
   "locations": [
     {
       "name": "USA HQ",
-      "address": "Old Bridge, NJ 08857, 40 Oak Street"
+      "address": "Old Bridge, NJ 08857, 40 Oak Street",
+      "flag": "/media/wf/67d929c0-usa.avif"
     },
     {
-      "name": "EST office",
-      "address": "Tallinn, Estonia — Vesivärava tn 51-202, 10152"
+      "name": "EST office\nTallinn, Estonia",
+      "address": "Harju maakond, Tallinn, Kesklinna\nlinnaosa, Vesivärava tn 51-202, 10152",
+      "flag": "/media/wf/67d92a86-est.webp"
     }
   ],
   "copyright": "© 2026 AltheraCode",
@@ -94,56 +61,186 @@
     {
       "label": "Privacy Policy",
       "href": "/privacy-policy"
+    },
+    {
+      "label": "US Privacy Section",
+      "href": "#"
+    },
+    {
+      "label": "Terms and Conditions",
+      "href": "#"
     }
   ],
   "footer_service_links": [
     {
-      "label": "Software Product Development",
+      "label": "Software Product Development Service",
       "href": "/services/software-product-development-services"
     },
     {
-      "label": "AI Development",
+      "label": "AI Development Service",
       "href": "/services/custom-ai-development-services"
     },
     {
-      "label": "AI Assistants",
+      "label": "AI Assistant Development Service",
       "href": "/services/ai-assistant-development-services"
     },
     {
-      "label": "AI Copilots",
+      "label": "AI Copilot Development Service",
       "href": "/services/ai-copilot-development-services"
     },
     {
-      "label": "AI Chatbots",
+      "label": "AI-Powered Chatbots Development Service",
       "href": "/services/ai-chatbot-development-services"
     },
     {
-      "label": "AI Agents",
+      "label": "Custom AI Agent Development Services",
       "href": "/services/custom-ai-agent-development-services"
     },
     {
-      "label": "AI Integration",
-      "href": "/services/ai-integration-services"
-    },
-    {
-      "label": "Web & Mobile Development",
-      "href": "/services/web-mobile-development-services"
-    },
-    {
-      "label": "Business Process Automation",
-      "href": "/services/business-process-automation-services"
-    },
-    {
-      "label": "Intelligent Process Automation",
-      "href": "/services/intelligent-process-automation-services"
-    },
-    {
-      "label": "MVP Development",
+      "label": "MVP App & Software Development Services",
       "href": "/services/mvp-software-development-services"
     },
     {
-      "label": "Software for Startups",
+      "label": "Software Development Services for Startups",
       "href": "/services/software-development-services-for-startups"
+    },
+    {
+      "label": "Custom AI Integration Services",
+      "href": "/services/ai-integration-services"
+    },
+    {
+      "label": "Web & Mobile Development Service",
+      "href": "/services/web-mobile-development-services"
+    },
+    {
+      "label": "Business Process Automation Services",
+      "href": "/services/business-process-automation-services"
+    },
+    {
+      "label": "Intelligent Process Automation Services & Solutions",
+      "href": "/services/intelligent-process-automation-services"
     }
-  ]
+  ],
+  "nav_services_label": "Services",
+  "nav_core_title": "Core Services",
+  "nav_core_services": [
+    {
+      "label": "Software Product Development",
+      "href": "/services/software-product-development-services",
+      "icon": "/media/wf/67e0f3af-untitled.svg",
+      "sub": [
+        {
+          "label": "Project Discovery Phase",
+          "href": "#"
+        },
+        {
+          "label": "MVP Development",
+          "href": "#"
+        },
+        {
+          "label": "Software Prototyping",
+          "href": "#"
+        },
+        {
+          "label": "Proof Of Concept (POC) Services",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "label": "AI Development",
+      "href": "/services/custom-ai-development-services",
+      "icon": "/media/wf/67e0f3af-untitled.svg"
+    },
+    {
+      "label": "AI Assistant Development",
+      "href": "/services/ai-assistant-development-services",
+      "icon": "/media/wf/67e0f3af-untitled.svg"
+    },
+    {
+      "label": "AI Copilot Development",
+      "href": "/services/ai-copilot-development-services",
+      "icon": "/media/wf/67e0f3af-untitled.svg"
+    },
+    {
+      "label": "AI Chatbots Development",
+      "href": "/services/ai-chatbot-development-services",
+      "icon": "/media/wf/67e0f3af-untitled.svg"
+    },
+    {
+      "label": "AI Agent Development",
+      "href": "/services/custom-ai-agent-development-services",
+      "icon": "/media/wf/67e0f3af-untitled.svg"
+    },
+    {
+      "label": "MVP App & Software Development",
+      "href": "/services/mvp-software-development-services",
+      "icon": "/media/wf/67e0f3af-untitled.svg"
+    },
+    {
+      "label": "Mobile & WEb App Development",
+      "href": "/services/web-mobile-development-services",
+      "icon": "/media/wf/67e0f3af-untitled.svg"
+    },
+    {
+      "label": "Software Development Services for Startups",
+      "href": "/services/software-development-services-for-startups",
+      "icon": "/media/wf/67e0f3af-untitled.svg"
+    },
+    {
+      "label": "Custom AI Integration Services",
+      "href": "/services/ai-integration-services",
+      "icon": "/media/wf/67e0f3af-untitled.svg"
+    },
+    {
+      "label": "Business Process Automation Services",
+      "href": "/services/business-process-automation-services",
+      "icon": "/media/wf/67e0f3af-untitled.svg"
+    },
+    {
+      "label": "Intelligent Process Automation Services & Solutions",
+      "href": "/services/intelligent-process-automation-services",
+      "icon": "/media/wf/67e0f3af-untitled.svg"
+    }
+  ],
+  "nav_additional_title": "Additional Services",
+  "nav_additional_services": [
+    {
+      "label": "Legacy Software Modernization",
+      "href": "#",
+      "icon": "/media/wf/67e0f3af-untitled.svg"
+    },
+    {
+      "label": "DevOps Services",
+      "href": "#",
+      "icon": "/media/wf/67e0f3af-untitled.svg"
+    },
+    {
+      "label": "QA & Testing",
+      "href": "#",
+      "icon": "/media/wf/67e0f3af-untitled.svg"
+    },
+    {
+      "label": "IT Business Analysis",
+      "href": "#",
+      "icon": "/media/wf/67e0f3af-untitled.svg"
+    },
+    {
+      "label": "Support & Maintenance",
+      "href": "#",
+      "icon": "/media/wf/67e0f3af-untitled.svg"
+    },
+    {
+      "label": "Dedicated Team",
+      "href": "#",
+      "icon": "/media/wf/67e0f3af-untitled.svg"
+    },
+    {
+      "label": "Healthcare IT Consulting",
+      "href": "#",
+      "icon": "/media/wf/67e0f3af-untitled.svg"
+    }
+  ],
+  "logo": "/media/wf/67d3dda5-ac-logo.svg",
+  "contact_whatsapp_link": "https://api.whatsapp.com/send/?phone=18004591978&text&type=phone_number&app_absent=0"
 }
