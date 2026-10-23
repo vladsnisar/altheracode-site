@@ -4,193 +4,231 @@
   "sections": [
     {
       "type": "hero",
-      "title_accent": "MVP Software Development",
+      "breadcrumb": "Custom AI Agent Development Services",
       "title": "Custom MVP Software Development Services",
+      "title_accent": "MVP Software Development",
       "text": "Turn your idea into a tangible product with MVP development services that combine speed, strategy, and scalability. Our team transforms early concepts into market-ready solutions, reducing risks and accelerating your path to launch.",
       "button_text": "Consult Our Experts",
       "button_link": "/contact",
-      "breadcrumb": "Custom AI Agent Development Services"
+      "braces": "curly",
+      "heading_class": "mvp"
     },
     {
       "type": "cards",
-      "dark": false,
-      "tag": "Expert Development & AI Solutions",
       "title": "Our MVP Software Development Services",
-      "text": "",
+      "tag": "Expert Development & AI Solutions",
+      "grid": "why-grid _3-columns",
       "items": [
         {
           "title": "End-to-End MVP Development",
-          "text": "Our team manages every phase of MVP creation, from initial validation to full launch. We build functional products that help test real demand, engage early users, and attract investors. Each project is designed to minimize risks, accelerate delivery, and lay a scalable foundation for long-term growth."
+          "text": "Our team manages every phase of MVP creation, from initial validation to full launch. We build functional products that help test real demand, engage early users, and attract investors. Each project is designed to minimize risks, accelerate delivery, and lay a scalable foundation for long-term growth.",
+          "icon": "/media/wf/67dbebec-experienced-solution-developers.avif",
+          "icon_width": "65"
         },
         {
           "title": "Product Discovery & Strategy Design",
-          "text": "Through custom MVP development services, we help you define a clear roadmap based on your business goals and target audience. Our team analyzes market opportunities, user needs, and product potential to ensure your MVP meets real-world demand and delivers measurable impact."
+          "text": "Through custom MVP development services, we help you define a clear roadmap based on your business goals and target audience. Our team analyzes market opportunities, user needs, and product potential to ensure your MVP meets real-world demand and delivers measurable impact.",
+          "icon": "/media/wf/67d66caa-unmatched-flexibility.svg"
         },
         {
           "title": "Rapid Prototyping & Iterative Delivery",
-          "text": "We create interactive prototypes that demonstrate your product’s key functionality and gather early user feedback. Iterative delivery allows continuous refinement of core features, improving usability and accelerating time to market. Each iteration brings you closer to a market-ready product backed by real validation."
+          "text": "We create interactive prototypes that demonstrate your product’s key functionality and gather early user feedback. Iterative delivery allows continuous refinement of core features, improving usability and accelerating time to market. Each iteration brings you closer to a market-ready product backed by real validation.",
+          "icon": "/media/wf/67dab301-end-to-end-development.webp",
+          "icon_width": "56"
         },
         {
           "title": "Scalable Architecture & Technology Stack",
-          "text": "Our engineers design a flexible architecture that supports your MVP’s long-term growth and performance. We select modern technologies that ensure stability, scalability, and seamless integration across platforms. This approach allows your MVP to evolve into a full product without the need for redevelopment."
+          "text": "Our engineers design a flexible architecture that supports your MVP’s long-term growth and performance. We select modern technologies that ensure stability, scalability, and seamless integration across platforms. This approach allows your MVP to evolve into a full product without the need for redevelopment.",
+          "icon": "/media/wf/67d66caa-proven-results.svg"
         },
         {
           "title": "User-Focused Design & Experience",
-          "text": "We apply user-centered design principles to create MVPs that are both intuitive and conversion-driven. Every interface is tested to confirm it communicates value clearly and provides an effortless user journey. The result is a product that resonates with early adopters and attracts long-term engagement."
+          "text": "We apply user-centered design principles to create MVPs that are both intuitive and conversion-driven. Every interface is tested to confirm it communicates value clearly and provides an effortless user journey. The result is a product that resonates with early adopters and attracts long-term engagement.",
+          "icon": "/media/wf/67dab301-collaborative-transparent-process.avif",
+          "icon_width": "56"
         },
         {
           "title": "Post-Launch Improvement & Support",
-          "text": "Once your MVP is launched, we continue to refine its performance through data-driven insights and real user feedback. Our ongoing support ensures your product evolves in line with business goals and market expectations. We optimize functionality, stability, and scalability to keep your MVP growing sustainably."
+          "text": "Once your MVP is launched, we continue to refine its performance through data-driven insights and real user feedback. Our ongoing support ensures your product evolves in line with business goals and market expectations. We optimize functionality, stability, and scalability to keep your MVP growing sustainably.",
+          "icon": "/media/wf/67dab301-ai-driven-innovation.avif",
+          "icon_width": "56"
         }
-      ]
+      ],
+      "spacing": "large"
     },
     {
       "type": "process",
-      "tag": "Innovate Now",
       "title": "Our MVP Development Process",
+      "tag": "Innovate Now",
       "text": "At AltheraCode, we specialize in end-to-end solution development, transforming concepts into powerful, AI-driven innovations. Whether it’s healthtech software, SaaS platforms, or enterprise systems, we guide you from ideation to launch, ensuring seamless execution and cutting-edge results.",
       "steps": [
         {
-          "title": "Discovery & Strategy Alignment",
+          "title": "  Discovery & Strategy Alignment",
           "text": "We begin by defining your product vision, goals, and target audience to ensure a strong foundation for success. At this stage, we identify your market fit, user needs, and business priorities to build a clear MVP strategy. As an experienced MVP software development company, AltheraCode ensures every decision aligns with your growth and investment goals."
         },
         {
-          "title": "Planning & Architecture Design",
+          "title": "  Planning & Architecture Design",
           "text": "Our team creates a detailed roadmap outlining the MVP’s core functionality, technology stack, and integration plan. We focus on balancing speed and scalability, designing a solution that can evolve into a full product later. Each plan is tailored to ensure your MVP remains flexible, efficient, and ready for real-world use."
         },
         {
-          "title": "UX/UI Design & Prototyping",
+          "title": "  UX/UI Design & Prototyping",
           "text": "We design intuitive, user-centric prototypes that bring your product idea to life. Interactive wireframes help visualize the core experience, validate key assumptions, and gather early feedback. This phase ensures your MVP delivers both functional value and a seamless user experience before development begins."
         },
         {
-          "title": "MVP App Development & Integration",
-          "text": "Our engineers develop your product using proven frameworks and agile methodology. We prioritize essential features that define your value proposition while ensuring technical stability. As part of our MVP app and software development services, we integrate your MVP with existing tools to accelerate delivery and reduce time to market."
+          "title": "  MVP App Development & Integration",
+          "text": "Our engineers develop your product using proven frameworks and agile methodology. We prioritize essential features that define your value proposition while ensuring technical stability. As part of our MVP app and software development services , we integrate your MVP with existing tools to accelerate delivery and reduce time to market."
         },
         {
-          "title": "Testing & Quality Assurance",
+          "title": "  Testing & Quality Assurance",
           "text": "Each MVP undergoes comprehensive testing to ensure stability, security, and usability. We simulate real user journeys to validate functionality and guarantee a polished experience. This quality-first approach helps minimize risks and build investor and stakeholder confidence before launch."
         },
         {
-          "title": "Deployment & Launch",
+          "title": "  Deployment & Launch",
           "text": "Once validated, your MVP is deployed into a live environment with full monitoring and performance tracking. Our team oversees launch operations, ensuring a smooth rollout and immediate user feedback collection. We make sure your MVP is market-ready, stable, and positioned for fast growth."
         },
         {
-          "title": "Post-Launch Optimization & Support",
+          "title": "  Post-Launch Optimization & Support",
           "text": "After launch, we continue refining your MVP through real-time analytics and user insights. Our ongoing support ensures continuous improvement, enhanced performance, and smart scaling. With our minimum viable product development services, your MVP evolves into a fully mature solution that drives long-term business success."
         }
       ]
     },
     {
       "type": "industries",
-      "tag": "Innovation through technology",
       "title": "Industries We Serve",
+      "tag": "Innovation through technology",
       "items": [
         {
-          "title": "Healthcare",
+          "name": "Healthcare",
+          "icon": "/media/wf/67d41a8b-heartbeat.avif",
           "text": "MVPs help healthcare startups test telemedicine apps, diagnostic tools, and patient platforms with real users. Early validation reduces risks, attracts investors, and ensures compliance before full-scale development."
         },
         {
-          "title": "Finance",
+          "name": "Finance",
+          "icon": "/media/wf/67d41a4e-monetization-on-24px.avif",
           "text": "Fintech teams use MVPs to launch secure payment apps, lending platforms, and budgeting tools with confidence. This approach validates market demand, strengthens user trust, and ensures long-term scalability."
         },
         {
-          "title": "Education",
+          "name": "Education",
+          "icon": "/media/wf/67d41a4e-education.avif",
           "text": "EdTech startups use MVPs to test virtual classrooms and adaptive learning systems in real conditions. User feedback helps refine engagement, accessibility, and content personalization for better learning outcomes."
         },
         {
-          "title": "Digital Marketing",
+          "name": "Digital Marketing",
+          "icon": "/media/wf/68ed1745-chart-square.svg",
           "text": "Marketing and AdTech companies validate automation tools, dashboards, and engagement platforms through MVPs. Quick testing reveals user needs and helps refine features for higher ROI."
         },
         {
-          "title": "Transportation",
+          "name": "Transportation",
+          "icon": "/media/wf/67d41a4e-transport.webp",
           "text": "MVP software allows logistics startups to test shipment tracking, routing, and fleet optimization systems. Real-world testing enhances efficiency, reduces delays, and shortens time to market for growing businesses."
         },
         {
-          "title": "Telecommunications",
+          "name": "Telecommunications",
+          "icon": "/media/wf/67d41a4f-telecom.avif",
           "text": "Telecom providers use MVPs to build support tools, billing systems, and customer self-service apps. This iterative approach improves usability, enhances CX, and speeds up deployment with minimal risk."
         },
         {
-          "title": "Energy",
+          "name": "Energy",
+          "icon": "/media/wf/67d41a4e-energy.avif",
           "text": "Energy startups leverage MVPs to test monitoring platforms, smart metering apps, and sustainability solutions. Each iteration helps validate performance goals, reduce energy waste, and ensure compliance with green standards."
         },
         {
-          "title": "Real Estate",
+          "name": "Real Estate",
+          "icon": "/media/wf/67d41a4e-house.webp",
           "text": "Proptech startups develop MVPs for property management, tenant communication, and real estate marketplaces. This process helps test monetization paths, optimize automation, and attract early users."
         },
         {
-          "title": "HR",
+          "name": "HR",
+          "icon": "/media/wf/68f92be4-user.svg",
           "text": "MVPs help HR tech companies test recruitment, onboarding, and analytics solutions with real teams. Early feedback streamlines workflows, improves employee engagement, and fosters collaboration across departments."
         },
         {
-          "title": "Retail",
-          "text": "Retailers use MVPs to validate e-commerce, loyalty, and recommendation systems before full rollout. Early testing provides valuable customer insights, refines shopping experience, and boosts long-term brand loyalty."
+          "name": "Retail",
+          "icon": "/media/wf/67d41a4e-retail.avif",
+          "text": "Retailers use MVPs to validate e-commerce, loyalty, and recommendation systems before full rollout. Early testing provides valuable customer insights, refines shopping experience, and boosts long-term brand loyalty.",
+          "layout": "wn-_57b4d746-d6dc-0868-21b7-7a2538127d84-f7cd5d85"
         }
-      ]
+      ],
+      "spacing": "large"
     },
     {
       "type": "cta",
       "title": "Validate ideas faster, reduce risks, and bring your product to market with confidence.",
-      "accent": "",
       "button_text": "Start Your MVP Project",
-      "button_link": "/contact"
+      "button_link": "/contact",
+      "spacing": "none"
     },
     {
-      "type": "cards",
-      "dark": false,
-      "tag": "",
+      "type": "slider",
       "title": "Why Choose AltheraCode for Your Custom MVP",
-      "text": "",
       "items": [
         {
           "title": "Proven Startup Experience",
-          "text": "We’ve helped startups across industries validate ideas, attract funding, and enter the market faster. Each MVP is built with a balance of speed, performance, and business value to maximize early impact."
+          "text": "We’ve helped startups across industries validate ideas, attract funding, and enter the market faster. Each MVP is built with a balance of speed, performance, and business value to maximize early impact.",
+          "icon": "/media/wf/67d66caa-commitment-to-innovation.svg"
         },
         {
           "title": "End-to-End Product Ownership",
-          "text": "AltheraCode covers the entire MVP journey, from concept and prototyping to post-launch improvement. You get a complete, market-ready solution that grows along with your vision."
+          "text": "AltheraCode covers the entire MVP journey, from concept and prototyping to post-launch improvement. You get a complete, market-ready solution that grows along with your vision.",
+          "icon": "/media/wf/67d66caa-unmatched-flexibility.svg"
         },
         {
           "title": "Agile and Adaptive Approach",
-          "text": "Our development process combines flexibility with efficiency, enabling rapid iteration and real-time feedback. This helps reduce costs, shorten time to market, and adapt your MVP to evolving user needs."
+          "text": "Our development process combines flexibility with efficiency, enabling rapid iteration and real-time feedback. This helps reduce costs, shorten time to market, and adapt your MVP to evolving user needs.",
+          "icon": "/media/wf/67d66caa-proven-results.svg"
         },
         {
           "title": "Cross-Functional Expertise",
-          "text": "Our engineers, designers, and product strategists work together to ensure your MVP aligns with your business goals. Every product is functional, intuitive, and built for scalability from the start."
+          "text": "Our engineers, designers, and product strategists work together to ensure your MVP aligns with your business goals. Every product is functional, intuitive, and built for scalability from the start.",
+          "icon": "/media/wf/67dbebeb-end-to-end-development.webp"
         },
         {
           "title": "Scalable Technology Stack",
-          "text": "As a leading MVP software development company, we use modern, scalable technologies to support your future growth. Our solutions are secure, maintainable, and designed for long-term evolution."
+          "text": "As a leading MVP software development company, we use modern, scalable technologies to support your future growth. Our solutions are secure, maintainable, and designed for long-term evolution.",
+          "icon": "/media/wf/67dbebeb-ai-driven-innovation.avif"
         },
         {
           "title": "Continuous Support and Improvement",
-          "text": "We provide ongoing technical support, performance monitoring, and data-driven updates after launch. This ensures your MVP remains reliable, competitive, and ready for the next growth stage."
+          "text": "We provide ongoing technical support, performance monitoring, and data-driven updates after launch. This ensures your MVP remains reliable, competitive, and ready for the next growth stage.",
+          "icon": "/media/wf/67dbebeb-ai-driven-innovation.avif"
         }
-      ]
+      ],
+      "spacing": "large"
     },
     {
       "type": "cases",
-      "tag": "Portfolio",
       "title": "AI Success Stories",
       "text": "We bring ideas to life through MVPs that turn vision into traction. From early prototypes to investor-ready products, our solutions help founders validate real demand, engage users, and evolve fast, transforming bold concepts into successful digital businesses.",
+      "tag": "Portfolio",
       "cases": [
         "ai-audio-intelligence-pipeline-for-automated-knowledge-capture",
         "ai-telegram-assistant-for-real-time-team-communication",
         "ai-powered-real-time-insight-engine-for-smarter-information-filtering"
-      ]
+      ],
+      "spacing": "none"
+    },
+    {
+      "type": "testimonials",
+      "title": "What Our Clients Say About Us",
+      "spacing": "large"
     },
     {
       "type": "cta",
       "title": "Launch smarter, test faster, and turn your MVP into a product users truly trust.",
-      "accent": "",
       "button_text": "Build Your MVP",
-      "button_link": "/contact"
+      "button_link": "/contact",
+      "braces": "curly",
+      "size": "h3",
+      "brace_height": "90",
+      "spacing": "bottom"
     },
     {
       "type": "cards",
       "dark": true,
-      "tag": "",
       "title": "Engagement Models for MVP Development",
-      "text": "",
+      "accent": "MVP Development",
+      "header": "center",
+      "grid": "why-grid",
       "items": [
         {
           "title": "Collaborative Team Extension",
@@ -200,61 +238,70 @@
           "title": "Dedicated MVP Team",
           "text": "With a dedicated MVP development team from AltheraCode, you gain an end-to-end partner focused on execution and growth. We handle product strategy, design, and development while maintaining transparent collaboration at every stage. This approach ensures that your MVP evolves efficiently, aligns with business goals, and sets the foundation for future scaling."
         }
-      ]
+      ],
+      "spacing": "large"
     },
     {
       "type": "tech",
       "title": "Technologies We Use for MVP Development",
       "logos": [
         {
-          "image": "/media/logo-nlp.png",
-          "name": "NLP"
+          "name": "Nlp 13298249",
+          "image": "/media/wf/68ed1db8-nlp-13298249.png",
+          "width": "50"
         },
         {
-          "image": "/media/logo-python.avif",
-          "name": "Python"
+          "name": "python Image",
+          "image": "/media/wf/67d8f3aa-python.avif"
         },
         {
-          "image": "/media/logo-javascript.avif",
-          "name": "JavaScript"
+          "name": "javascript Image",
+          "image": "/media/wf/67d8f3a9-javascript.avif"
         },
         {
-          "image": "/media/logo-rag.png",
-          "name": "RAG"
+          "name": "Rag Logo Vector",
+          "image": "/media/wf/68ed22b4-rag-logo-vector.png",
+          "small": true
         },
         {
-          "image": "/media/logo-langchain.webp",
-          "name": "LangChain"
+          "name": "0 Nbxnga4S23O9Yjq0",
+          "image": "/media/wf/68ed20ec-0-nbxnga4s23o9yjq0.png",
+          "width": "70"
         },
         {
-          "image": "/media/logo-fastapi.webp",
-          "name": "FastAPI"
+          "name": "Original",
+          "image": "/media/wf/68ed20fc-original.webp"
         },
         {
-          "image": "/media/logo-apiflask.png",
-          "name": "APIFlask"
+          "name": "Apiflask Logo",
+          "image": "/media/wf/68ed2196-apiflask-logo.png"
         },
         {
-          "image": "/media/logo-sqlalchemy.jpg",
-          "name": "SQLAlchemy"
+          "name": "0 Msfsws06Immsjyop",
+          "image": "/media/wf/68ed21a9-0-msfsws06immsjyop.jpg",
+          "width": "64"
         },
         {
-          "image": "/media/logo-postgresql.svg",
-          "name": "PostgreSQL"
+          "name": "Postgresql Elephant",
+          "image": "/media/wf/68ed21c1-postgresql-elephant.svg",
+          "width": "64"
         },
         {
-          "image": "/media/logo-aws.avif",
-          "name": "AWS"
+          "name": "aws logo Image",
+          "image": "/media/wf/67d8f384-aws.avif"
         },
         {
-          "image": "/media/logo-azure.png",
-          "name": "Azure"
+          "name": "Azure",
+          "image": "/media/wf/6903510a-azure.png"
         }
-      ]
+      ],
+      "spacing": "large",
+      "variant": "ai"
     },
     {
       "type": "faq",
       "title": "Frequently Asked Questions",
+      "tag": "FAQ",
       "items": [
         {
           "q": "How much does MVP software development cost?",
@@ -288,7 +335,9 @@
           "q": "How can I start my MVP development project with AltheraCode?",
           "a": "Starting is simple - reach out through our contact form to book a discovery call. We’ll discuss your idea, business objectives, and success criteria to build a tailored roadmap. From there, our team defines the tech stack, timeline, and resources needed to turn your concept into a functional MVP."
         }
-      ]
+      ],
+      "spacing": "none",
+      "wide": true
     },
     {
       "type": "contact",

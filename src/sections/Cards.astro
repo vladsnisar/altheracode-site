@@ -1,0 +1,112 @@
+---
+// Grid of cards with a heading, used on service pages. Two looks, as on the live site:
+// - light: icon + title + text cards ("Benefits…", "Our … Services")
+// - dark:  text-only cards on a dark background ("Types of … We Build", "Engagement Models")
+// `header` and `grid` pick the exact layout each live page uses (values are listed in the CMS).
+import { highlight } from '../lib/text';
+import { spacing as pad } from '../lib/spacing';
+import LightCard from './LightCard.astro';
+import DarkCard from './DarkCard.astro';
+
+type Item = { icon?: string; icon_width?: string; title: string; text: string; layout?: string };
+interface Props {
+  dark?: boolean;
+  title: string;
+  accent?: string;
+  accent_color?: string;
+  tag?: string;
+  text?: string;
+  /** left | center | center-narrow */
+  header?: string;
+  /** why-grid | why-grid _3-columns | why-grid-3-col | ai-grid-copy-copy | rows */
+  grid?: string;
+  /** Wrap the last N cards in a group of their own, with the group's classes from the live page. */
+  tail_row?: number;
+  tail_wrap?: string;
+  card_class?: string;
+  /** margin-bottom-32 (default) | gap-16 */
+  inner?: string;
+  items: Item[];
+  spacing?: string;
+}
+const {
+  dark = false, title, accent, accent_color = 'mint', tag, text, header = 'left', grid = 'why-grid',
+  tail_row = 0, tail_wrap = 'w-layout-hflex why-row', card_class, inner = 'margin-bottom-32', items = [], spacing,
+} = Astro.props;
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
+const heading = highlight(title, accent, accent_color);
+const rows = grid === 'rows';
+const chunk = (a: Item[], n: number) => Array.from({ length: Math.ceil(a.length / n) }, (_, i) => a.slice(i * n, i * n + n));
+const main = tail_row > 0 ? items.slice(0, -tail_row) : items;
+const tail = tail_row > 0 ? items.slice(-tail_row) : [];
+---
+<section class:list={['section', { 'dark-bg': dark }]}>
+  <div class={pad(spacing, 'large')}>
+    <div class="container-large">
+      {dark ? (
+        <div class="portfolio-heading-wrap">
+          <div class:list={['heading-text-wrap', header === 'center' ? 'center' : 'max-w-80']}>
+            <div class="heading-box">
+              <img alt={alt} loading="lazy" src="/media/wf/67d4099c-image.svg" />
+              <h2 class="heading-style-h2" set:html={heading} />
+            </div>
+            {text && (header === 'center'
+              ? <div class="description-center"><p>{text}</p></div>
+              : <p>{text}</p>)}
+          </div>
+        </div>
+      ) : (
+        <div class:list={['why-heading-wrap', { center: header !== 'left' }]}>
+          {header === 'center' ? (
+            <div class="heading-box">
+              <img alt={alt} loading="lazy" src="/media/wf/67d66bce-slash.svg" />
+              <h2 class="heading-style-h2" set:html={heading} />
+            </div>
+          ) : (
+            <div class:list={['heading-text-wrap', header === 'center-narrow' ? '_70' : 'max-width-800']}>
+              <div class="heading-box">
+                <img alt={alt} loading="lazy" src="/media/wf/67d66bce-slash.svg" />
+                <h2 class="heading-style-h2" set:html={heading} />
+              </div>
+            </div>
+          )}
+          {tag && (
+            <div class="section-tag-box light-purple first">
+              <div class="tag-bullet"></div>
+              <div>{tag}</div>
+            </div>
+          )}
+        </div>
+      )}
+      <div class="section-space-64"></div>
+      {dark ? (
+        <div class={grid}>
+          {main.map((it) => <DarkCard it={it} card_class={card_class} inner={inner} />)}
+          {tail.length > 0 && (
+            <div class={tail_wrap}>
+              {tail.map((it) => <DarkCard it={it} card_class={card_class} inner={inner} />)}
+            </div>
+          )}
+        </div>
+      ) : rows ? (
+        <div class="w-layout-grid why-wrap">
+          {chunk(items, 3).map((row) => (
+            <div class="w-layout-hflex why-row">
+              {row.map((it) => <LightCard it={it} />)}
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div class={`w-layout-grid ${grid}`}>
+          {main.map((it) => <LightCard it={it} />)}
+          {tail.length > 0 && (
+            <div class={tail_wrap}>
+              {tail.map((it) => <LightCard it={it} />)}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  </div>
+</section>
+

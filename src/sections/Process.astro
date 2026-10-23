@@ -91,4 +91,35 @@ const num = (i: number) => String(i + 1).padStart(2, '0');
     );
     wrap.querySelectorAll('.process-slide').forEach((s) => io.observe(s));
   });
+
+  // Each step sharpens as it scrolls into view (the live site's Webflow interaction "Process Slide"): over the first
+  // 20% of its way up through the screen it goes from 90% size with a 5px blur to full size and sharp. Webflow
+  // smoothed the motion at 50%; skipped for visitors who prefer reduced motion.
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const slides = [...document.querySelectorAll<HTMLElement>('.process-slide')];
+    const cur = slides.map(() => 0);
+    let raf = 0;
+    const goal = (el: HTMLElement) => {
+      const r = el.getBoundingClientRect();
+      const p = (window.innerHeight - r.top) / (window.innerHeight + r.height);
+      return Math.min(Math.max(p / 0.2, 0), 1);
+    };
+    const frame = () => {
+      let moving = false;
+      slides.forEach((el, i) => {
+        const t = goal(el);
+        const next = cur[i] + (t - cur[i]) * 0.5;
+        cur[i] = Math.abs(t - next) < 0.001 ? t : next;
+        if (cur[i] !== t) moving = true;
+        el.style.transform = `scale(${0.9 + 0.1 * cur[i]})`;
+        el.style.filter = `blur(${5 * (1 - cur[i])}px)`;
+      });
+      raf = moving ? requestAnimationFrame(frame) : 0;
+    };
+    const kick = () => { if (!raf) raf = requestAnimationFrame(frame); };
+    slides.forEach((el) => (el.style.willChange = 'filter, transform'));
+    window.addEventListener('scroll', kick, { passive: true });
+    window.addEventListener('resize', kick);
+    kick();
+  }
 </script>

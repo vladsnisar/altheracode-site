@@ -4,48 +4,56 @@
   "sections": [
     {
       "type": "hero",
-      "title_accent": "AI-Driven Software",
+      "breadcrumb": "Custom AI Development Services",
       "title": "AI-Driven Software Development Services Tailored to Your Business",
+      "title_accent": "AI-Driven Software",
       "text": "From AI assistants and copilots to workflow automation and predictive analytics we provide AI development services that deliver measurable impact and sustainable growth.",
       "button_text": "Consult Our Experts",
-      "button_link": "/contact",
-      "breadcrumb": "Custom AI Development Services"
+      "button_link": "/contact"
     },
     {
       "type": "cards",
-      "dark": false,
-      "tag": "",
       "title": "Boost Your Business Growth with AI Software Development Services",
-      "text": "",
+      "header": "center-narrow",
+      "grid": "rows",
       "items": [
         {
           "title": "Faster Decision-Making",
-          "text": "With AI development services, businesses process data in real time, allowing leaders to react quickly and make smarter decisions with confidence. This ensures your team can anticipate market changes and respond faster than competitors."
+          "text": "With AI development services, businesses process data in real time, allowing leaders to react quickly and make smarter decisions with confidence. This ensures your team can anticipate market changes and respond faster than competitors.",
+          "icon": "/media/wf/67dab301-collaborative-transparent-process.avif",
+          "icon_width": "65"
         },
         {
           "title": "Operational Efficiency",
-          "text": "By adopting AI software development services, companies reduce manual work, optimize workflows, and free up resources for strategic growth. As a result, employees focus on higher-value tasks while operations become leaner and more cost-effective."
+          "text": "By adopting AI software development services, companies reduce manual work, optimize workflows, and free up resources for strategic growth. As a result, employees focus on higher-value tasks while operations become leaner and more cost-effective.",
+          "icon": "/media/wf/67d66caa-unmatched-flexibility.svg"
         },
         {
           "title": "Improved Accuracy",
-          "text": "Through custom AI solutions development, organizations minimize human errors, strengthen compliance, and ensure reliable results across operations. Consistent accuracy builds trust with stakeholders and reduces risks that can slow business growth."
+          "text": "Through custom AI solutions development, organizations minimize human errors, strengthen compliance, and ensure reliable results across operations. Consistent accuracy builds trust with stakeholders and reduces risks that can slow business growth.",
+          "icon": "/media/wf/67dab301-end-to-end-development.webp",
+          "icon_width": "56"
         },
         {
           "title": "Scalability and Flexibility",
-          "text": "Well-designed AI solutions scale with your business, supporting new demands, expanding operations, and maintaining consistent performance. This adaptability helps companies innovate without being limited by outdated systems or rigid processes."
+          "text": "Well-designed AI solutions scale with your business, supporting new demands, expanding operations, and maintaining consistent performance. This adaptability helps companies innovate without being limited by outdated systems or rigid processes.",
+          "icon": "/media/wf/67d66caa-proven-results.svg"
         },
         {
           "title": "Innovation Advantage",
-          "text": "Partnering with a trusted AI development company enables businesses to leverage the latest technologies and stay ahead of the competition. It gives you a sustainable edge by turning innovation into measurable business value."
+          "text": "Partnering with a trusted AI development company enables businesses to leverage the latest technologies and stay ahead of the competition. It gives you a sustainable edge by turning innovation into measurable business value.",
+          "icon": "/media/wf/67dbebec-collaborative-transparent-process.avif",
+          "icon_width": "56"
         }
-      ]
+      ],
+      "spacing": "large"
     },
     {
       "type": "cards",
       "dark": true,
-      "tag": "",
       "title": "Our Artificial Intelligence Development Services",
       "text": "We provide custom AI development with a full-cycle approach, from discovery to production. Our expertise spans designing LLM apps, RAG pipelines, and custom-trained models tailored to your business needs.",
+      "grid": "why-grid-3-col",
       "items": [
         {
           "title": "AI Assistant Development",
@@ -67,145 +75,175 @@
           "title": "AI Integration",
           "text": "Our experts connect models and agents to CRMs, ERPs, analytics, data stores, and cloud platforms with secure auth, logging, and observability. We specialize in custom AI solutions development that fits your current workflows without disruption."
         }
-      ]
+      ],
+      "tail_row": 2,
+      "tail_wrap": "w-layout-hflex why-row wn-_96111edc-b629-f129-d10e-df728af3cbbe-4fde6ace",
+      "spacing": "large"
     },
     {
       "type": "cta",
       "title": "Unlock the power of AI to accelerate your growth",
       "accent": "power of AI",
       "button_text": "Let’s Talk AI",
-      "button_link": "/contact"
+      "button_link": "/contact",
+      "spacing": "large"
     },
     {
       "type": "cases",
-      "tag": "Portfolio",
       "title": "Our Artificial Intelligence Portfolio",
       "text": "We specialize in healthcare software solutions and AI automation for digital marketing companies, combining deep industry knowledge with custom AI development services that enhance efficiency, compliance, and measurable outcomes.",
+      "tag": "Portfolio",
       "cases": [
         "ai-audio-intelligence-pipeline-for-automated-knowledge-capture",
         "ai-telegram-assistant-for-real-time-team-communication",
         "ai-powered-real-time-insight-engine-for-smarter-information-filtering"
-      ]
+      ],
+      "spacing": "bottom"
     },
     {
       "type": "industries",
-      "tag": "Innovation through technology",
       "title": "AI Solutions for Your Industry",
+      "tag": "Innovation through technology",
+      "header": "wide",
       "items": [
         {
-          "title": "Healthcare",
+          "name": "Healthcare",
+          "icon": "/media/wf/67d41a8b-heartbeat.avif",
           "text": "Enhance patient care with AI-driven diagnostics, predictive analytics, and personalized treatment planning that reduce errors and improve outcomes."
         },
         {
-          "title": "Digital Marketing",
+          "name": "Digital Marketing",
+          "icon": "/media/wf/68ed1745-chart-square.svg",
           "text": "Boost campaign performance through AI automation, real-time insights, and hyper-personalized engagement that drive conversions and ROI."
         },
         {
-          "title": "Education",
+          "name": "Education",
+          "icon": "/media/wf/67d41a4e-education.avif",
           "text": "Transform learning with adaptive AI platforms, personalized study paths, and advanced analytics that improve student success and teaching efficiency."
         },
         {
-          "title": "Finance",
+          "name": "Finance",
+          "icon": "/media/wf/67d41a4e-monetization-on-24px.avif",
           "text": "Strengthen financial operations with AI tools for fraud detection, risk analysis, and automated compliance, ensuring secure and faster transactions."
         },
         {
-          "title": "Transportation",
+          "name": "Transportation",
+          "icon": "/media/wf/67d41a4e-transport.webp",
           "text": "Optimize routes, predict maintenance, and streamline fleet operations with AI systems that cut costs and improve delivery performance."
         },
         {
-          "title": "Technology",
+          "name": "Technology",
+          "icon": "/media/wf/67d41a4e-tech.webp",
           "text": "Accelerate innovation with custom AI integrations in CRMs, ERPs, and cloud platforms, creating scalable and future-ready tech solutions."
         },
         {
-          "title": "Telecommunications",
+          "name": "Telecommunications",
+          "icon": "/media/wf/67d41a4f-telecom.avif",
           "text": "Deliver better customer experiences with AI chatbots and virtual assistants, resolving inquiries instantly while lowering support costs."
         },
         {
-          "title": "Energy",
+          "name": "Energy",
+          "icon": "/media/wf/67d41a4e-energy.avif",
           "text": "Enable smarter energy management with AI-powered forecasting, consumption analytics, and optimization for sustainable growth."
         },
         {
-          "title": "Real Estate",
+          "name": "Real Estate",
+          "icon": "/media/wf/67d41a4e-house.webp",
           "text": "Speed up property transactions with AI tools for valuation, lead management, and predictive insights that empower realtors and clients."
         },
         {
-          "title": "Retail",
-          "text": "Drive more sales with AI-powered demand forecasting, tailored product recommendations, and automated inventory control."
+          "name": "Retail",
+          "icon": "/media/wf/67d41a4e-retail.avif",
+          "text": "Drive more sales with AI-powered demand forecasting, tailored product recommendations, and automated inventory control.",
+          "layout": "wn-_57b4d746-d6dc-0868-21b7-7a2538127d84-4fde6ace"
         }
-      ]
+      ],
+      "spacing": "none"
+    },
+    {
+      "type": "testimonials",
+      "title": "What Our Clients Say",
+      "spacing": "large"
     },
     {
       "type": "cta",
       "title": "See how AI can reshape your workflows and scale your business.",
       "accent": "AI can reshape",
+      "accent_color": "pink",
       "button_text": "Start Your AI Journey",
-      "button_link": "/contact"
+      "button_link": "/contact",
+      "button_style": "default",
+      "spacing": "none"
     },
     {
-      "type": "cards",
-      "dark": false,
-      "tag": "",
+      "type": "slider",
       "title": "Why Choose AltheraCode as Your AI Software Development Company",
-      "text": "",
       "items": [
         {
           "title": "Tailored Expertise",
-          "text": "We bring deep industry knowledge and hands-on experience, ensuring every solution within AI development services is crafted with precision and aligned to your business goals."
+          "text": "We bring deep industry knowledge and hands-on experience, ensuring every solution within AI development services is crafted with precision and aligned to your business goals.",
+          "icon": "/media/wf/67d66caa-commitment-to-innovation.svg"
         },
         {
           "title": "Proven Track Record",
-          "text": "From startups to enterprises, our AI development services company has consistently delivered measurable results, helping clients achieve growth and efficiency."
+          "text": "From startups to enterprises, our AI development services company has consistently delivered measurable results, helping clients achieve growth and efficiency.",
+          "icon": "/media/wf/67d66caa-unmatched-flexibility.svg"
         },
         {
           "title": "Transparent Collaboration",
-          "text": "We value open communication and keep you informed at every stage, making sure your vision and our AI software development services move in sync."
+          "text": "We value open communication and keep you informed at every stage, making sure your vision and our AI software development services move in sync.",
+          "icon": "/media/wf/67d66caa-proven-results.svg"
         },
         {
           "title": "Scalable Solutions",
-          "text": "Our custom AI software development is designed to adapt and scale with your company, providing long-term value without disrupting existing workflows."
+          "text": "Our custom AI software development is designed to adapt and scale with your company, providing long-term value without disrupting existing workflows.",
+          "icon": "/media/wf/67dbebeb-end-to-end-development.webp"
         },
         {
           "title": "Innovation Advantage",
-          "text": "We leverage the latest in AI development services to help your business stay ahead, delivering solutions that drive growth and competitiveness."
+          "text": "We leverage the latest in AI development services to help your business stay ahead, delivering solutions that drive growth and competitiveness.",
+          "icon": "/media/wf/67dbebeb-ai-driven-innovation.avif"
         },
         {
           "title": "End-to-End Support",
-          "text": "From strategy to launch, our AI solutions development company provides reliable guidance at every stage, ensuring your solutions perform and scale long term."
+          "text": "From strategy to launch, our AI solutions development company provides reliable guidance at every stage, ensuring your solutions perform and scale long term.",
+          "icon": "/media/wf/67dab301-agile-scalable-solutions.webp"
         }
-      ]
+      ],
+      "spacing": "large"
     },
     {
       "type": "process",
-      "tag": "Innovate Now",
       "title": "AI Software Development Workflow",
+      "tag": "Innovate Now",
       "text": "At AltheraCode, we specialize in end-to-end solution development, transforming concepts into powerful, AI-driven innovations. Whether it’s healthtech software, SaaS platforms, or enterprise systems, we guide you from ideation to launch, ensuring seamless execution and cutting-edge results.",
       "steps": [
         {
-          "title": "Discovery & Analysis",
+          "title": " Discovery & Analysis",
           "text": "We begin by understanding your unique business needs, challenges, and goals. Through in-depth research and consultation, we identify the best AI development solutions for your project. This ensures that every step of the process is aligned with measurable outcomes and long-term value."
         },
         {
-          "title": "Strategy & Planning",
+          "title": "  Strategy & Planning",
           "text": "Our team designs a tailored roadmap with clear milestones, timelines, and deliverables to guide the entire AI development journey. This structured planning minimizes risks, improves efficiency, and sets the foundation for scalable innovation."
         },
         {
-          "title": "Design & Prototyping",
+          "title": "  Design & Prototyping",
           "text": "We create intuitive, user-focused designs and interactive prototypes, ensuring your vision is brought to life before development begins. With AI-driven prototyping, you can validate ideas faster and reduce costs by addressing challenges early."
         },
         {
-          "title": "Agile Development",
+          "title": "  Agile Development",
           "text": "Our developers build scalable and secure AI solutions, working in agile sprints for continuous feedback and improvements. This iterative approach ensures transparency, adaptability, and solutions that evolve with your business needs."
         },
         {
-          "title": "Testing & Quality Assurance",
+          "title": "  Testing & Quality Assurance",
           "text": "Every feature is rigorously tested to meet the highest performance, usability, and security standards. With AI-assisted testing, we ensure greater precision, faster bug detection, and consistently reliable results across environments."
         },
         {
-          "title": "Deployment & Launch",
+          "title": "  Deployment & Launch",
           "text": "Once everything is ready, we ensure a seamless launch with full technical support, risk monitoring, and smooth integration into your workflows. Our AI development team provides guidance to minimize downtime and accelerate adoption across your organization."
         },
         {
-          "title": "Post-Launch Support",
+          "title": "  Post-Launch Support",
           "text": "We don’t stop at delivery, our team provides ongoing updates, monitoring, and enhancements to keep your AI solutions performing at their best. From model retraining to feature scaling, we make sure your product adapts to new demands and opportunities."
         }
       ]
@@ -215,50 +253,58 @@
       "title": "AI Development Technologies We Use",
       "logos": [
         {
-          "image": "/media/logo-nlp.png",
-          "name": "NLP"
+          "name": "Nlp 13298249",
+          "image": "/media/wf/68ed1db8-nlp-13298249.png",
+          "width": "50"
         },
         {
-          "image": "/media/logo-python.avif",
-          "name": "Python"
+          "name": "python Image",
+          "image": "/media/wf/67d8f3aa-python.avif"
         },
         {
-          "image": "/media/logo-javascript.avif",
-          "name": "JavaScript"
+          "name": "javascript Image",
+          "image": "/media/wf/67d8f3a9-javascript.avif"
         },
         {
-          "image": "/media/logo-rag.png",
-          "name": "RAG"
+          "name": "Rag Logo Vector",
+          "image": "/media/wf/68ed22b4-rag-logo-vector.png",
+          "small": true
         },
         {
-          "image": "/media/logo-langchain.webp",
-          "name": "LangChain"
+          "name": "0 Nbxnga4S23O9Yjq0",
+          "image": "/media/wf/68ed20ec-0-nbxnga4s23o9yjq0.png",
+          "width": "70"
         },
         {
-          "image": "/media/logo-fastapi.webp",
-          "name": "FastAPI"
+          "name": "Original",
+          "image": "/media/wf/68ed20fc-original.webp"
         },
         {
-          "image": "/media/logo-apiflask.png",
-          "name": "APIFlask"
+          "name": "Apiflask Logo",
+          "image": "/media/wf/68ed2196-apiflask-logo.png"
         },
         {
-          "image": "/media/logo-sqlalchemy.jpg",
-          "name": "SQLAlchemy"
+          "name": "0 Msfsws06Immsjyop",
+          "image": "/media/wf/68ed21a9-0-msfsws06immsjyop.jpg",
+          "width": "64"
         },
         {
-          "image": "/media/logo-postgresql.svg",
-          "name": "PostgreSQL"
+          "name": "Postgresql Elephant",
+          "image": "/media/wf/68ed21c1-postgresql-elephant.svg",
+          "width": "64"
         },
         {
-          "image": "/media/logo-aws.avif",
-          "name": "AWS"
+          "name": "aws logo Image",
+          "image": "/media/wf/67d8f384-aws.avif"
         }
-      ]
+      ],
+      "spacing": "large",
+      "variant": "ai"
     },
     {
       "type": "faq",
       "title": "FAQ’s about AI services",
+      "tag": "FAQ",
       "items": [
         {
           "q": "How can AI benefit my business?",
@@ -284,7 +330,8 @@
           "q": "Can your AI engineers integrate with our team and project management workflows?",
           "a": "Absolutely. As an experienced artificial intelligence development company, we align with your tools and processes to ensure smooth collaboration. You gain both technical expertise and transparent communication at every stage."
         }
-      ]
+      ],
+      "spacing": "none"
     },
     {
       "type": "contact",

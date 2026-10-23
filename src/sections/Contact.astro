@@ -11,12 +11,15 @@ interface Props {
   text?: string;
   image?: string;
   variant?: string;
+  /** h2 (default) | h3: smaller heading, used on one live page */
+  size?: string;
 }
 const {
   title = home.contact_title,
   text = home.contact_text,
   image = '/media/wf/67d92299-business-people-working-office-with-laptop-1.avif',
   variant = 'cta-section top',
+  size = 'h2',
 } = Astro.props;
 const id = site.formspree_id;
 const action = id && !id.startsWith('REPLACE') ? `https://formspree.io/f/${id}` : undefined;
@@ -30,7 +33,7 @@ const alt = 'ALT Althera Code – Innovative Custom Software Development Company
           <div class="form-title">
             <div class="heading-box">
               <img alt={alt} loading="lazy" src="/media/wf/67d66bce-slash.svg" />
-              <h2 class="heading-style-h2">{title}</h2>
+              <h2 class={size === 'h3' ? 'heading-style-h3' : 'heading-style-h2'}>{title}</h2>
             </div>
             {text && <div class="form-text">{text}</div>}
           </div>

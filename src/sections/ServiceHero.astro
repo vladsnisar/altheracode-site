@@ -1,0 +1,63 @@
+---
+// Service page hero: breadcrumb, bracketed headline (the `title_accent` words in mint or pink), intro text and a button.
+// `background` picks the decoration behind it: "service" (three shapes, most pages) or "home" (the homepage's).
+import { highlight } from '../lib/text';
+
+interface Props {
+  breadcrumb?: string;
+  title: string;
+  title_accent?: string;
+  accent_color?: string;
+  text?: string;
+  button_text?: string;
+  button_link?: string;
+  background?: string;
+  /** service (square brackets) | curly ({ }) around the headline */
+  braces?: string;
+  /** Extra classes from the live page for the heading box and the title (exact layout). */
+  heading_class?: string;
+  title_class?: string;
+}
+const {
+  breadcrumb, title, title_accent, accent_color = 'mint', text,
+  button_text = 'Consult Our Experts', button_link = '/contact', background = 'service', braces = 'service', heading_class, title_class,
+} = Astro.props;
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
+const [left, right] = braces === 'curly'
+  ? ['/media/wf/67d3ea97-image.svg', '/media/wf/67d3ea97-2.svg']
+  : ['/media/wf/67dab518-service-cta-heading-element.svg', '/media/wf/67dab518-service-cta-heading-element-2.svg'];
+---
+<section class="section_hero">
+  <div class="padding-global">
+    {breadcrumb && (
+      <nav class="w-layout-hflex breadcrums-wrapp" aria-label="Breadcrumb">
+        <a class="breadcrumb light" href="/">Home</a>
+        <div aria-hidden="true">&gt;</div>
+        <div>{breadcrumb}</div>
+      </nav>
+    )}
+    <div class="container-large">
+      <div class="hero-wrap">
+        <div class:list={['hero-heading-box', heading_class]}>
+          <img alt={alt} class="hero-heading-element" loading="eager" src={left} />
+          <h1 class:list={['heading-style-h1', title_class]} set:html={highlight(title, title_accent, accent_color)} />
+          <img alt={alt} class="hero-heading-element right" loading="eager" src={right} />
+        </div>
+        {text && <p class="hero-subheading">{text}</p>}
+        {button_text && <a class="button-main w-button" href={button_link}>{button_text}</a>}
+      </div>
+    </div>
+  </div>
+  {background === 'home' ? (
+    <>
+      <img alt="" class="hero-bg-image" loading="eager" src="/media/wf/67d3ee02-hero-bg-image-right.avif" width="533.5" />
+      <img alt="" class="hero-bg-image right" loading="eager" src="/media/wf/67d3ee02-hero-bg-image-right.avif" width="533.5" />
+    </>
+  ) : (
+    <div>
+      <img alt="" class="service-hero-bg-image" loading="eager" src="/media/wf/67daa61c-service-bg-image-left.avif" width="372.5" />
+      <img alt="" class="service-hero-bg-image service-right-bg" loading="eager" src="/media/wf/67daa61c-service-bg-image-right.avif" width="354" />
+      <img alt="" class="service-hero-bg-image service-top-bg" loading="eager" src="/media/wf/67dbe3e1-group-85753.avif" width="431.5" />
+    </div>
+  )}
+</section>

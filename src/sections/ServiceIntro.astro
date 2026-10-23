@@ -1,0 +1,82 @@
+---
+// Service page intro: tag, heading, paragraphs and a photo. Two looks, as on the live site:
+// "dark" (dark rounded card, like the homepage's "Our Expertise") or "image" (light, photo on the right).
+// Paragraphs use the CMS text format (blank line = new paragraph).
+import { richText } from '../lib/text';
+
+interface Props {
+  style?: string;
+  tag?: string;
+  title: string;
+  text?: string;
+  image?: string;
+  /** Short tags shown under the text (light look only), e.g. the services a page covers. */
+  list?: string[];
+  /** Extra class on the heading's slash image from the live page. */
+  icon_class?: string;
+  /** Extra classes from the live page for the heading box and the title (exact layout). */
+  heading_class?: string;
+  title_class?: string;
+}
+const { style = 'image', tag, title, text = '', image = '/media/wf/67d40699-our-expertise-image.avif', list = [], icon_class, heading_class, title_class } = Astro.props;
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
+---
+{style === 'dark' ? (
+  <section class="section">
+    <div class="padding-global padding-section-large">
+      <div class="dark-blue-section">
+        <div class="padding-global padding-section-small">
+          <div class="container-large">
+            <div class="expertise-wrap">
+              <div class="expertise-content">
+                <div class="privacy-gap-24">
+                  {tag && (
+                    <div class="section-tag-box light-pink">
+                      <div class="tag-bullet white"></div>
+                      <div>{tag}</div>
+                    </div>
+                  )}
+                  <div class:list={['heading-box first', heading_class]}>
+                    <h2 class:list={['heading-style-h2', title_class]}>{title}</h2>
+                  </div>
+                </div>
+                <div class="expertise-text-box" set:html={richText(text)} />
+              </div>
+              {image && <img alt="Our team at work" class="expertise-image" loading="lazy" src={image} />}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+) : (
+  <section class="section">
+    <div class="padding-global padding-section-large">
+      <div class="container-large">
+        <div class="services-wrap">
+          <div class="services-content-copy">
+            <div class="tag-heading-wrap">
+              {tag && (
+                <div class="section-tag-box">
+                  <div class="tag-bullet"></div>
+                  <div>{tag}</div>
+                </div>
+              )}
+              <div class:list={['heading-box first', heading_class]}>
+                <img alt={alt} class={icon_class} loading="lazy" src="/media/wf/67d3f0a0-image.svg" />
+                <h2 class:list={['heading-style-h2', title_class]}>{title}</h2>
+              </div>
+            </div>
+            <div class="services-text-box" set:html={richText(text)} />
+            {list.length > 0 && (
+              <div class="w-layout-hflex solution-items-wrap">
+                {list.map((item) => <div class="solution-item">{item}</div>)}
+              </div>
+            )}
+          </div>
+          {image && <img alt="Our team at work" class="expertise-image" loading="lazy" src={image} width="576" />}
+        </div>
+      </div>
+    </div>
+  </section>
+)}

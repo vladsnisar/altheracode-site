@@ -3,20 +3,27 @@
 // Used on the homepage and service pages. Questions are numbered automatically; answers use the CMS text format
 // (blank line = new paragraph, "- " or "1. " lines = lists, see src/lib/text.ts).
 import { richText } from '../lib/text';
+import { spacing as pad } from '../lib/spacing';
 
 interface Props {
   title: string;
   eyebrow?: string;
   items: { q: string; a: string }[];
   id?: string;
+  /** large | bottom | large-no-bottom | none (see src/lib/spacing.ts) */
+  spacing?: string;
+  /** Wider left column (the live site's `larger` variant, used on most service pages). */
+  wide?: boolean;
 }
-const { title, eyebrow, items, id = 'faq' } = Astro.props;
+const { title, eyebrow, items, id = 'faq', spacing, wide = false } = Astro.props;
+// A question that already starts with its own number (e.g. "9: …") is shown as written.
+const label = (q: string, i: number) => (/^\d+[.:]\s/.test(q) ? q : `${i + 1}. ${q}`);
 ---
 <section class="section" id={id}>
-  <div class="padding-global">
+  <div class={pad(spacing, 'none')}>
     <div class="container-large">
       <div class="faq-wrap">
-        <div class="faq-title-wrap">
+        <div class:list={['faq-title-wrap', { larger: wide }]}>
           {eyebrow && (
             <div class="section-tag-box last">
               <div class="tag-bullet"></div>
@@ -29,7 +36,7 @@ const { title, eyebrow, items, id = 'faq' } = Astro.props;
           {items.map((it, i) => (
             <div class="dropdown-item">
               <a class="dropdown-item-title w-inline-block" href="#" role="button" aria-expanded="false" aria-controls={`${id}-a${i + 1}`}>
-                <h3 class="heading-style-h4">{i + 1}. {it.q}</h3>
+                <h3 class="heading-style-h4">{label(it.q, i)}</h3>
               </a>
               <div class="dropdown-item-content" id={`${id}-a${i + 1}`} style="height:0px" set:html={richText(it.a)} />
               <img class="image-2" loading="lazy" src="/media/wf/67d91e2c-fi-sr-plus.svg" alt="" />

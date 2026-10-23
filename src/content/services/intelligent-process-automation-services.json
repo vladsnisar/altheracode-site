@@ -4,238 +4,286 @@
   "sections": [
     {
       "type": "hero",
-      "title_accent": "Intelligent Process Automation Services",
+      "breadcrumb": "Intelligent Process Automation Services & Solutions",
       "title": "AI-Powered Intelligent Process Automation Services for Faster, Smarter Operations",
+      "title_accent": "Intelligent Process Automation Services",
       "text": "Replace repetitive tasks, disconnected systems, and manual coordination with intelligent automation built around your business workflows. AltheraCode designs and implements custom workflows that improve efficiency, reduce operational overhead, and help teams scale with confidence while keeping operations running smoothly.",
       "button_text": "Talk to an Expert",
       "button_link": "/contact",
-      "breadcrumb": "Intelligent Process Automation Services & Solutions"
+      "braces": "curly",
+      "heading_class": "mvp"
     },
     {
       "type": "intro",
-      "tag": "Precision Built",
+      "style": "image",
       "title": "AI-Enabled Intelligent Process Automation for Modern Businesses",
+      "tag": "Precision Built",
       "text": "As businesses grow, manual processes, disconnected systems, and increasing operational complexity can slow progress and limit efficiency. Intelligent business process automation services help organizations connect workflows, automate routine operations, and accelerate decision-making across departments. The result is greater visibility, improved productivity, and a more agile business capable of scaling with confidence.",
-      "image": "/media/service-intro-image.avif",
-      "image_alt": "AI-Enabled Intelligent Process Automation for Modern Businesses"
+      "image": "/media/wf/67d40699-our-expertise-image.avif",
+      "heading_class": "top"
     },
     {
       "type": "cards",
-      "dark": false,
-      "tag": "Expert Development & AI Solutions",
       "title": "Our Intelligent Process Automation Services",
-      "text": "",
+      "tag": "Expert Development & AI Solutions",
+      "grid": "why-grid _3-columns",
       "items": [
         {
           "title": "Workflow Discovery & Process Mapping",
-          "text": "Successful automation starts with a clear understanding of how work moves across the organization. As an intelligent process automation company, AltheraCode identifies workflow bottlenecks and opportunities for automation before implementation begins."
+          "text": "Successful automation starts with a clear understanding of how work moves across the organization. As an intelligent process automation company, AltheraCode identifies workflow bottlenecks and opportunities for automation before implementation begins.",
+          "icon": "/media/wf/67dbebec-experienced-solution-developers.avif",
+          "icon_width": "65"
         },
         {
           "title": "AI Workflow Automation",
-          "text": "Routine approvals, repetitive tasks, and manual coordination consume valuable time across teams. AI-powered workflows streamline execution, improve consistency, and keep business processes moving faster with less manual effort."
+          "text": "Routine approvals, repetitive tasks, and manual coordination consume valuable time across teams. AI-powered workflows streamline execution, improve consistency, and keep business processes moving faster with less manual effort.",
+          "icon": "/media/wf/67d66caa-unmatched-flexibility.svg"
         },
         {
           "title": "Business System Integration",
-          "text": "Many operational inefficiencies originate from disconnected applications and fragmented data. Internal systems, third-party platforms, and business tools are connected into a unified ecosystem with reliable information flow."
+          "text": "Many operational inefficiencies originate from disconnected applications and fragmented data. Internal systems, third-party platforms, and business tools are connected into a unified ecosystem with reliable information flow.",
+          "icon": "/media/wf/67dab301-end-to-end-development.webp",
+          "icon_width": "56",
+          "layout": "wn-_1f919933-aeec-0d86-a4d6-f582c10806ca-e3543754"
         },
         {
           "title": "Intelligent Document Processing",
-          "text": "Documents often contain critical business information that still requires significant manual effort to process. AI technologies classify, extract, validate, and route data automatically, reducing delays while improving accuracy and compliance."
+          "text": "Documents often contain critical business information that still requires significant manual effort to process. AI technologies classify, extract, validate, and route data automatically, reducing delays while improving accuracy and compliance.",
+          "icon": "/media/wf/67d66caa-proven-results.svg"
         },
         {
           "title": "Custom AI Agents & Copilots",
-          "text": "Not every process can be solved through traditional automation alone. We develop custom AI agents and copilots that provide context-aware assistance, automate operational tasks, and support faster decision-making."
+          "text": "Not every process can be solved through traditional automation alone. We develop custom AI agents and copilots that provide context-aware assistance, automate operational tasks, and support faster decision-making.",
+          "icon": "/media/wf/67dab301-collaborative-transparent-process.avif",
+          "icon_width": "56"
         },
         {
           "title": "Automation Optimization & Scaling",
-          "text": "Business processes evolve, and automation should evolve with them. Ongoing optimization helps maintain performance, uncover new efficiency opportunities, and support growth without introducing additional operational complexity."
+          "text": "Business processes evolve, and automation should evolve with them. Ongoing optimization helps maintain performance, uncover new efficiency opportunities, and support growth without introducing additional operational complexity.",
+          "icon": "/media/wf/67d66caa-end-to-end-support.svg",
+          "icon_width": "56"
         }
-      ]
+      ],
+      "spacing": "bottom"
     },
     {
-      "type": "cards",
-      "dark": true,
-      "tag": "",
+      "type": "slider",
       "title": "Intelligent Process Automation Solutions We Build",
-      "text": "",
+      "dark": true,
       "items": [
         {
           "title": "AI Workflow Orchestration",
-          "text": "When processes span multiple systems and teams, even simple operations can become difficult to coordinate. AltheraCode designs orchestration workflows that automate handoffs, synchronize actions, and keep critical business processes moving without constant manual oversight."
+          "text": "When processes span multiple systems and teams, even simple operations can become difficult to coordinate. AltheraCode designs orchestration workflows that automate handoffs, synchronize actions, and keep critical business processes moving without constant manual oversight.",
+          "icon": "/media/wf/67d66caa-commitment-to-innovation.svg"
         },
         {
           "title": "Intelligent Document Processing",
-          "text": "Invoices, contracts, reports, and operational records often require significant time and attention to process manually. AI-powered document workflows extract, validate, and route information automatically, reducing administrative effort while improving accuracy, consistency, and processing speed."
+          "text": "Invoices, contracts, reports, and operational records often require significant time and attention to process manually. AI-powered document workflows extract, validate, and route information automatically, reducing administrative effort while improving accuracy, consistency, and processing speed.",
+          "icon": "/media/wf/67d66caa-unmatched-flexibility.svg"
         },
         {
           "title": "AI Agents for Business Operations",
-          "text": "Some operational workflows require more flexibility than traditional automation can provide on its own. Our team develops custom AI agents that execute tasks, provide contextual assistance, and support employees directly within everyday business processes."
+          "text": "Some operational workflows require more flexibility than traditional automation can provide on its own. Our team develops custom AI agents that execute tasks, provide contextual assistance, and support employees directly within everyday business processes.",
+          "icon": "/media/wf/67d66caa-proven-results.svg"
         },
         {
           "title": "Automated Approval Workflows",
-          "text": "As organizations grow, approval processes become more complex and increasingly difficult to manage efficiently. Intelligent approval workflows automatically route requests, enforce business rules, and maintain visibility without creating unnecessary operational delays."
+          "text": "As organizations grow, approval processes become more complex and increasingly difficult to manage efficiently. Intelligent approval workflows automatically route requests, enforce business rules, and maintain visibility without creating unnecessary operational delays.",
+          "icon": "/media/wf/67dbebeb-end-to-end-development.webp"
         },
         {
           "title": "Knowledge Management Assistants",
-          "text": "Important business knowledge is often scattered across documents, communication channels, and internal systems. AI-powered assistants provide instant access to relevant information, helping employees find answers faster and make decisions with greater confidence."
+          "text": "Important business knowledge is often scattered across documents, communication channels, and internal systems. AI-powered assistants provide instant access to relevant information, helping employees find answers faster and make decisions with greater confidence.",
+          "icon": "/media/wf/67dbebec-experienced-solution-developers.avif"
         },
         {
           "title": "Cross-System Process Automation",
-          "text": "Business processes rarely operate within a single platform or application environment. AltheraCode connects business systems, databases, and third-party tools into unified workflows that eliminate manual handoffs and improve information flow across the organization."
+          "text": "Business processes rarely operate within a single platform or application environment. AltheraCode connects business systems, databases, and third-party tools into unified workflows that eliminate manual handoffs and improve information flow across the organization.",
+          "icon": "/media/wf/67dbebeb-ai-driven-innovation.avif"
         },
         {
           "title": "Operational Monitoring & Alerts",
-          "text": "Maintaining visibility becomes increasingly challenging as workflows, systems, and operational dependencies continue to expand. Automated monitoring solutions track process performance in real time and notify teams before small issues develop into larger disruptions."
+          "text": "Maintaining visibility becomes increasingly challenging as workflows, systems, and operational dependencies continue to expand. Automated monitoring solutions track process performance in real time and notify teams before small issues develop into larger disruptions.",
+          "icon": "/media/wf/67dbebec-collaborative-transparent-process.avif"
         },
         {
           "title": "Customer Service Automation",
-          "text": "Customer-facing teams frequently spend valuable time handling repetitive requests and routine support activities. We implement automation solutions that accelerate response times, improve service consistency, and free specialists to focus on complex interactions."
+          "text": "Customer-facing teams frequently spend valuable time handling repetitive requests and routine support activities. We implement automation solutions that accelerate response times, improve service consistency, and free specialists to focus on complex interactions.",
+          "icon": "/media/wf/67dab301-agile-scalable-solutions.webp"
         },
         {
           "title": "Data Collection & Processing Workflows",
-          "text": "Reliable operations depend on accurate information collected from multiple sources across the business. Structured automation workflows gather, organize, enrich, and distribute data automatically, providing teams with timely insights and better operational visibility."
+          "text": "Reliable operations depend on accurate information collected from multiple sources across the business. Structured automation workflows gather, organize, enrich, and distribute data automatically, providing teams with timely insights and better operational visibility.",
+          "icon": "/media/wf/67dbebeb-end-to-end-development.webp"
         }
-      ]
+      ],
+      "spacing": "large",
+      "title_class": "maxw-sol"
     },
     {
       "type": "tech",
-      "title": "Technologies We Use for Business Process Automation",
+      "title": "/  Technologies We Use for Business Process Automation",
       "logos": [
         {
-          "image": "/media/logo-net-core.avif",
-          "name": ".NET Core"
+          "name": "icon Image",
+          "image": "/media/wf/67d8f532-icon.avif"
         },
         {
-          "image": "/media/logo-java.avif",
-          "name": "Java"
+          "name": "java logo Image",
+          "image": "/media/wf/67d8f3a9-java.avif"
         },
         {
-          "image": "/media/logo-python.avif",
-          "name": "Python"
+          "name": "python Image",
+          "image": "/media/wf/67d8f3aa-python.avif"
         },
         {
-          "image": "/media/logo-javascript.avif",
-          "name": "JavaScript"
+          "name": "javascript Image",
+          "image": "/media/wf/67d8f3a9-javascript.avif"
         },
         {
-          "image": "/media/logo-csharp.avif",
-          "name": "C#"
+          "name": "c# logo",
+          "image": "/media/wf/67d8f384-c.avif"
         },
         {
-          "image": "/media/logo-php.avif",
-          "name": "PHP"
+          "name": "php logo Image",
+          "image": "/media/wf/67d8f3a9-php.avif"
         },
         {
-          "image": "/media/logo-nodejs.avif",
-          "name": "Node.js"
+          "name": "node Image",
+          "image": "/media/wf/67d8f3aa-node-gs.avif"
         },
         {
-          "image": "/media/logo-react-native.avif",
-          "name": "React Native"
+          "name": "react Image",
+          "image": "/media/wf/67d8f3aa-reactnative.avif"
         },
         {
-          "image": "/media/logo-aws.avif",
-          "name": "AWS"
+          "name": "aws logo Image",
+          "image": "/media/wf/67d8f384-aws.avif"
         }
-      ]
+      ],
+      "spacing": "large-no-bottom",
+      "no_icon": true,
+      "heading_class": "centered"
     },
     {
       "type": "industries",
-      "tag": "Industries",
       "title": "Intelligent Process Automation Across Industries",
+      "tag": "Industries",
       "items": [
         {
-          "title": "Manufacturing & Industrial Automation",
+          "name": "Manufacturing & Industrial Automation",
+          "icon": "/media/wf/68ed1745-chart-square.svg",
           "text": "AI-enabled process automation that connects production systems, operational data, and workflows to improve monitoring, coordination, and efficiency."
         },
         {
-          "title": "Construction & Civil Engineering",
+          "name": "Construction & Civil Engineering",
+          "icon": "/media/wf/68f92bff-buildings.svg",
           "text": "AI-enabled process automation that connects project teams, approvals, documentation, and field workflows to improve coordination, reporting, and visibility."
         },
         {
-          "title": "Real Estate & PropTech",
+          "name": "Real Estate & PropTech",
+          "icon": "/media/wf/67d41a4e-house.webp",
           "text": "AI-enabled process automation that connects property operations, tenant data, communication, and management workflows to improve coordination, reporting, and efficiency."
         },
         {
-          "title": "Healthcare & Medical Technology",
+          "name": "Healthcare & Medical Technology",
+          "icon": "/media/wf/67d41a8b-heartbeat.avif",
           "text": "AI-enabled process automation that connects patient operations, clinical data, documentation, and administrative workflows to improve reporting, coordination, and efficiency."
         },
         {
-          "title": "E-commerce & Retail",
+          "name": "E-commerce & Retail",
+          "icon": "/media/wf/67d41a4e-retail.avif",
           "text": "AI-enabled process automation that connects inventory systems, order data, customer operations, and retail workflows to improve coordination, processing, and efficiency."
         },
         {
-          "title": "Transportation & Logistics",
+          "name": "Transportation & Logistics",
+          "icon": "/media/wf/67d41a4e-transport.webp",
           "text": "AI-enabled process automation that connects dispatching, routing, fleet data, and logistics workflows to improve coordination, visibility, and operational efficiency."
         },
         {
-          "title": "Energy & Utilities",
+          "name": "Energy & Utilities",
+          "icon": "/media/wf/68f92bf2-lightbulb.svg",
           "text": "AI-enabled process automation that connects infrastructure systems, operational data, maintenance activities, and utility workflows to improve monitoring, reporting, and efficiency."
         },
         {
-          "title": "Telecommunications & Connectivity",
+          "name": "Telecommunications & Connectivity",
+          "icon": "/media/wf/67d41a4f-telecom.avif",
           "text": "AI-enabled process automation that connects network operations, service data, infrastructure monitoring, and support workflows to improve coordination, visibility, and efficiency."
         },
         {
-          "title": "Education & EdTech",
+          "name": "Education & EdTech",
+          "icon": "/media/wf/67d41a4e-education.avif",
           "text": "AI-enabled process automation that connects student data, reporting, internal coordination, and administrative workflows to improve visibility, management, and efficiency."
         }
-      ]
+      ],
+      "spacing": "large-no-bottom"
     },
     {
       "type": "cta",
       "title": "Build Smarter Operations With Intelligent Process Automation",
-      "accent": "",
       "button_text": "Start Your Automation Journey",
-      "button_link": "/contact"
+      "button_link": "/contact",
+      "spacing": "large"
     },
     {
       "type": "cases",
-      "tag": "Portfolio",
       "title": "Intelligent Process Automation Success Stories",
       "text": "See how companies transform disconnected processes into intelligent, automated operations through AI-powered workflows, system integrations, and intelligent process automation solutions.",
+      "tag": "Portfolio",
       "cases": [
         "ai-audio-intelligence-pipeline-for-automated-knowledge-capture",
         "ai-telegram-assistant-for-real-time-team-communication",
         "ai-powered-real-time-insight-engine-for-smarter-information-filtering"
-      ]
+      ],
+      "spacing": "none",
+      "title_class": "maxw-sol"
     },
     {
-      "type": "cards",
-      "dark": false,
-      "tag": "",
+      "type": "testimonials",
+      "title": "What Our Clients Say About Us",
+      "spacing": "large"
+    },
+    {
+      "type": "slider",
       "title": "Related Services",
-      "text": "",
       "items": [
         {
           "title": "AI Development Services",
-          "text": "AI can do far more than automate individual tasks when it is designed around real business objectives. Custom AI solutions help organizations streamline operations, improve decision-making, and unlock new opportunities for growth."
+          "text": "AI can do far more than automate individual tasks when it is designed around real business objectives. Custom AI solutions help organizations streamline operations, improve decision-making, and unlock new opportunities for growth.",
+          "icon": "/media/wf/67dbebec-collaborative-transparent-process.avif"
         },
         {
           "title": "Software Product Development",
-          "text": "From internal platforms to customer-facing applications, software often becomes the foundation of operational efficiency. Our team develops scalable digital products that support automation initiatives and evolving business requirements."
+          "text": "From internal platforms to customer-facing applications, software often becomes the foundation of operational efficiency. Our team develops scalable digital products that support automation initiatives and evolving business requirements.",
+          "icon": "/media/wf/67dab301-end-to-end-development.webp"
         },
         {
           "title": "AI Assistant Development",
-          "text": "Employees spend significant time searching for information, navigating systems, and completing repetitive activities. AI copilots provide contextual assistance directly within existing workflows, helping teams work faster and more effectively."
+          "text": "Employees spend significant time searching for information, navigating systems, and completing repetitive activities. AI copilots provide contextual assistance directly within existing workflows, helping teams work faster and more effectively.",
+          "icon": "/media/wf/67d66caa-proven-results.svg"
         },
         {
           "title": "Data Engineering & Analytics",
-          "text": "Reliable automation depends on reliable data. Modern data platforms and analytics solutions transform fragmented information into actionable insights that support operational decisions and continuous improvement."
+          "text": "Reliable automation depends on reliable data. Modern data platforms and analytics solutions transform fragmented information into actionable insights that support operational decisions and continuous improvement.",
+          "icon": "/media/wf/67dbebeb-end-to-end-development.webp"
         },
         {
           "title": "Legacy System Modernization",
-          "text": "Outdated applications often create barriers to automation, integration, and future growth. Modernization initiatives improve system performance while creating a stronger foundation for AI adoption and process transformation."
+          "text": "Outdated applications often create barriers to automation, integration, and future growth. Modernization initiatives improve system performance while creating a stronger foundation for AI adoption and process transformation.",
+          "icon": "/media/wf/67dbebeb-ai-driven-innovation.avif"
         },
         {
           "title": "Cloud & Infrastructure Solutions",
-          "text": "Scalable automation requires infrastructure that can support growing workloads and changing business needs. Cloud-native architectures provide the flexibility, reliability, and security required for long-term operational success."
+          "text": "Scalable automation requires infrastructure that can support growing workloads and changing business needs. Cloud-native architectures provide the flexibility, reliability, and security required for long-term operational success.",
+          "icon": "/media/wf/67dab301-agile-scalable-solutions.webp"
         }
-      ]
+      ],
+      "spacing": "none"
     },
     {
       "type": "faq",
       "title": "FAQs About IPA Services",
+      "tag": "FAQ",
       "items": [
         {
           "q": "What is the difference between IPA and RPA?",
@@ -261,12 +309,16 @@
           "q": "Does your process automation comply with the EU AI Act?",
           "a": "Yes. As AI systems become subject to increasing regulatory oversight, compliance is a core part of how we design and deliver automation solutions — not an afterthought.\n‍\nThe EU AI Act introduces a risk-based framework that categorizes AI systems by their potential impact on people and organizations. For businesses adopting intelligent process automation, this means understanding how AI components within your workflows are classified, documented, and monitored.\n‍\nHere's what working with AltheraCode means in practice:\n‍\nRisk classification from day one. Before any automation is built, we assess whether AI components within your workflows fall under high-risk, limited-risk, or minimal-risk categories as defined by the EU AI Act. This shapes how we architect the system, what documentation we produce, and what controls are put in place.\n‍\nTransparency and explainability. High-risk AI applications require that decisions made by automated systems be traceable and explainable. We build workflows with audit trails, logging, and decision documentation that satisfy both internal governance requirements and regulatory obligations.\nHuman oversight by design. The EU AI Act places strong emphasis on keeping humans in control of consequential decisions. Our automation architectures include human-in-the-loop checkpoints for approval workflows, exception handling, and escalation - ensuring compliance without disrupting operational efficiency.\n‍\nData governance and documentation. Compliance requires clear records of training data sources, model behavior, and system limitations. We help clients maintain the technical documentation required for conformity assessments and internal audits.\n‍\nOngoing monitoring. Regulatory requirements don't end at deployment. We support continuous monitoring of AI-assisted workflows to detect performance drift, bias, or behavior changes that could trigger compliance concerns over time.\n‍\nWhether you're in healthcare, finance, HR, or any other sector where AI-powered automation interacts with sensitive decisions or personal data, we have the expertise to implement solutions that are both operationally effective and EU AI Act compliant."
         }
-      ]
+      ],
+      "spacing": "large-no-bottom",
+      "wide": true
     },
     {
       "type": "contact",
       "title": "Transform Your Processes With Intelligent Automation",
-      "text": "Fill out the form to find out how AltheraCode can help you connect systems, automate workflows, and unlock new efficiency with AI."
+      "text": "Fill out the form to find out how AltheraCode can help you connect systems, automate workflows, and unlock new efficiency with AI.",
+      "variant": "plain",
+      "size": "h3"
     }
   ]
 }

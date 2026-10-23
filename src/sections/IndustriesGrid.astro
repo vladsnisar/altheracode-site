@@ -1,0 +1,52 @@
+---
+// Service page industries grid: heading, tag and industry cards (icon, name, short description).
+// The homepage uses the simpler Industries.astro (tiles with a photo) instead.
+import { highlight } from '../lib/text';
+import { spacing as pad } from '../lib/spacing';
+
+interface Props {
+  title: string;
+  accent?: string;
+  tag?: string;
+  /** narrow (default on most pages) | wide | plain: width of the heading block */
+  header?: string;
+  /** `layout` carries a Webflow layout class from the live page. */
+  items: { icon?: string; name: string; text?: string; layout?: string }[];
+  spacing?: string;
+}
+const { title, accent, tag, header = 'narrow', items = [], spacing } = Astro.props;
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
+const htw = { narrow: 'max-w-80', wide: 'max-width-800', plain: '' }[header] ?? 'max-w-80';
+---
+<section class="section">
+  <div class={pad(spacing, 'large')}>
+    <div class="container-large">
+      <div class="industries-heading-wrap">
+        <div class:list={['heading-text-wrap', htw]}>
+          <div class="heading-box">
+            <img alt={alt} loading="lazy" src="/media/wf/67d41741-image.svg" />
+            <h2 class="heading-style-h2" set:html={highlight(title, accent, 'mint')} />
+          </div>
+        </div>
+        {tag && (
+          <div class="section-tag-box light-purple first">
+            <div class="tag-bullet"></div>
+            <div>{tag}</div>
+          </div>
+        )}
+      </div>
+      <div class="section-space-96"></div>
+      <div class="industries-wrap-new">
+        {items.map((it) => (
+          <div class:list={['industries-item-copy', it.layout]}>
+            <div class="w-layout-hflex industries-top">
+              {it.icon && <img alt="" loading="lazy" src={it.icon} width="24" />}
+              <div class="title-industry">{it.name}</div>
+            </div>
+            {it.text && <div>{it.text.split('\n').map((l, i) => <>{i > 0 && <br />}{l}</>)}</div>}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

@@ -95,6 +95,10 @@ content:
           - { name: label, label: "Текст", type: string }
           - { name: href, label: "Посилання", type: string }
 
+      # --- CLUTCH (відгуки на сторінках послуг) ---
+      - { name: clutch_company_id, label: "Clutch — ID компанії", type: string }
+      - { name: clutch_reviews, label: "Clutch — ID відгуків через кому (які показувати)", type: string }
+
       # --- SEO ТА АНАЛІТИКА ---
       - { name: seo_title, label: "SEO — заголовок головної (вкладка браузера, Google)", type: string }
       - { name: seo_description, label: "SEO — опис головної для Google", type: text }

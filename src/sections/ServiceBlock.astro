@@ -1,133 +1,56 @@
 ---
-// Renders ONE section of a service page. The sections come from src/content/services/<page>.json
-// (edited in Pages CMS → "Послуги"). The `type` field decides which layout is used.
+// Renders ONE section of a service page or custom page. The sections come from src/content/services/<page>.json
+// or src/content/custom-pages/<page>.json (edited in Pages CMS). The `type` field picks the design; every design
+// matches a section of the live Webflow site.
 import { getCollection } from 'astro:content';
-import SectionHeading from './SectionHeading.astro';
+import ServiceHero from './ServiceHero.astro';
+import ServiceIntro from './ServiceIntro.astro';
+import Cards from './Cards.astro';
+import CardSlider from './CardSlider.astro';
+import ServiceCta from './ServiceCta.astro';
+import Portfolio from './Portfolio.astro';
+import IndustriesGrid from './IndustriesGrid.astro';
+import Testimonials from './Testimonials.astro';
+import Process from './Process.astro';
+import TechStack from './TechStack.astro';
+import Faq from './Faq.astro';
 import Contact from './Contact.astro';
-import { richText, highlight } from '../lib/text';
 
 const { block: b } = Astro.props;
 // Lists can be missing while a section is still being filled in the CMS; treat them as empty so the build doesn't fail.
-const items: any[] = b.items ?? [];
-const steps: any[] = b.steps ?? [];
-const logos: any[] = b.logos ?? [];
+const list = (x: unknown) => (Array.isArray(x) ? x : []);
 const cases = b.type === 'cases'
-  ? (await getCollection('portfolio', p => !p.data.draft)).filter(c => (b.cases ?? []).includes(c.id))
-      .sort((x, y) => (b.cases as string[]).indexOf(x.id) - (b.cases as string[]).indexOf(y.id))
+  ? (await getCollection('portfolio', (p) => !p.data.draft))
+      .filter((c) => list(b.cases).includes(c.id))
+      .sort((x, y) => list(b.cases).indexOf(x.id) - list(b.cases).indexOf(y.id))
   : [];
-const cols = (n: number) => (n === 2 || n === 4 ? 'cols-2' : 'cols-3');
 ---
 {b.type === 'hero' && (
-  <section class="hero page-hero"><div class="hero-glow"></div><div class="container"><div class="hero-inner">
-    {b.breadcrumb && <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>{b.breadcrumb}</span></nav>}
-    <h1 set:html={highlight(b.title ?? '', b.title_accent)} />
-    {b.text && <p>{b.text}</p>}
-    {b.button_text && <div class="hero-actions"><a class="btn btn-primary" href={b.button_link || '/contact'}>{b.button_text} <span class="arrow">→</span></a></div>}
-  </div></div></section>
+  <ServiceHero breadcrumb={b.breadcrumb} title={b.title ?? ''} title_accent={b.title_accent} accent_color={b.accent_color}
+    text={b.text} button_text={b.button_text} button_link={b.button_link || '/contact'} background={b.background} braces={b.braces} heading_class={b.heading_class} title_class={b.title_class} />
 )}
-
-{b.type === 'intro' && (
-  <section class="section"><div class="container">
-    <div class:list={['two-col', 'reveal', { single: !b.image }]}>
-      <div class="cs-body">
-        {b.tag && <span class="eyebrow">{b.tag}</span>}
-        <h2 class="cs-title">{b.title}</h2>
-        <Fragment set:html={richText(b.text ?? '')} />
-        {b.list?.length > 0 && <ul class="check-list">{b.list.map(i => <li>{i}</li>)}</ul>}
-      </div>
-      {b.image && <img class="cs-image" src={b.image} alt={b.image_alt || b.title} loading="lazy" />}
-    </div>
-  </div></section>
-)}
-
+{b.type === 'intro' && <ServiceIntro style={b.style} tag={b.tag} title={b.title ?? ''} text={b.text} image={b.image} list={list(b.list)} icon_class={b.icon_class} heading_class={b.heading_class} title_class={b.title_class} />}
 {b.type === 'cards' && (
-  <section class:list={['section', { 'process dark': b.dark }]}><div class="container">
-    <SectionHeading eyebrow={b.tag} title={b.title} lead={b.text} />
-    <div class:list={['grid', cols(items.length), 'reveal', 'svc-cards', { 'on-dark': b.dark }]}>
-      {items.map(i => (
-        <div class="card"><h3>{i.title}</h3><Fragment set:html={richText(i.text ?? '')} /></div>
-      ))}
-    </div>
-  </div></section>
+  <Cards dark={!!b.dark} title={b.title ?? ''} accent={b.accent} accent_color={b.accent_color} tag={b.tag} text={b.text}
+    header={b.header} grid={b.grid} tail_row={Number(b.tail_row) || 0} tail_wrap={b.tail_wrap} card_class={b.card_class} inner={b.inner}
+    items={list(b.items)} spacing={b.spacing} />
 )}
-
-{b.type === 'process' && (
-  <section class="section process dark"><div class="container">
-    <SectionHeading eyebrow={b.tag} title={b.title} lead={b.text} />
-    <div class="process-grid reveal">
-      {steps.map((s, i) => (
-        <div class="step" style={steps.length % 2 === 1 && i === steps.length - 1 ? 'grid-column:1/-1' : undefined}>
-          <div class="n">{String(i + 1).padStart(2, '0')}</div>
-          <div><h3>{s.title}</h3><p>{s.text}</p></div>
-        </div>
-      ))}
-    </div>
-  </div></section>
-)}
-
-{b.type === 'industries' && (
-  <section class="section bg-white"><div class="container">
-    <SectionHeading eyebrow={b.tag} title={b.title} />
-    <div class="grid cols-3 reveal svc-cards" style="margin-top:44px">
-      {items.map(i => (
-        <div class="card"><h3>{i.title}</h3><Fragment set:html={richText(i.text ?? '')} /></div>
-      ))}
-    </div>
-  </div></section>
-)}
-
-{b.type === 'tech' && (
-  <section class="section"><div class="container">
-    <SectionHeading title={b.title} />
-    <div class="tech-logos reveal" style="margin-top:36px">
-      {logos.map(l => <span class="tech-logo"><img src={l.image} alt={l.name} loading="lazy" />{l.name}</span>)}
-    </div>
-  </div></section>
-)}
-
-{b.type === 'cases' && cases.length > 0 && (
-  <section class="section bg-white"><div class="container">
-    <SectionHeading eyebrow={b.tag} title={b.title} lead={b.text} />
-    <div class="grid cols-3 reveal" style="margin-top:44px">
-      {cases.map(c => (
-        <article class="portfolio-card">
-          <div class="portfolio-thumb">
-            {c.data.client_image ? <img src={c.data.client_image} alt="" loading="lazy" /> : <span class="glyph">{(c.data.categories[0] ?? c.data.title).slice(0, 2)}</span>}
-            {c.data.tag && <span class="chip">{c.data.tag}</span>}
-          </div>
-          <div class="portfolio-body">
-            <span class="cat">{c.data.categories[0]}</span>
-            <h3><a href={`/portfolio/${c.id}`}>{c.data.title}</a></h3>
-            <p>{c.data.description}</p>
-            <a class="more" href={`/portfolio/${c.id}`}>Learn more →</a>
-          </div>
-        </article>
-      ))}
-    </div>
-  </div></section>
-)}
-
+{b.type === 'slider' && <CardSlider dark={!!b.dark} title={b.title ?? ''} text={b.text} items={list(b.items)} spacing={b.spacing} heading_class={b.heading_class} title_class={b.title_class} />}
 {b.type === 'cta' && (
-  <section class="section"><div class="container">
-    <div class="cta-band reveal">
-      <div class="ct"><h2 set:html={highlight(b.title ?? '', b.accent)} /></div>
-      <a href={b.button_link || '/contact'} class="btn btn-primary">{b.button_text} <span class="arrow">→</span></a>
-    </div>
-  </div></section>
+  <ServiceCta title={b.title ?? ''} accent={b.accent} accent_color={b.accent_color} button_text={b.button_text}
+    button_link={b.button_link || '/contact'} button_style={b.button_style} braces={b.braces} size={b.size} brace_height={b.brace_height} spacing={b.spacing} />
 )}
-
-{b.type === 'faq' && (
-  <section class="section bg-white"><div class="container">
-    <SectionHeading eyebrow="FAQ" title={b.title} center />
-    <div class="faq reveal">
-      {items.map(f => (
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">{f.q}<span class="plus">+</span></button>
-          <div class="faq-a"><div class="inner"><Fragment set:html={richText(f.a ?? '')} /></div></div>
-        </div>
-      ))}
-    </div>
-  </div></section>
+{b.type === 'cases' && cases.length > 0 && (
+  <Portfolio title={b.title ?? ''} text={b.text} eyebrow={b.tag} cases={cases} spacing={b.spacing} narrow={b.narrow !== false} heading_class={b.heading_class} title_class={b.title_class} />
 )}
-
-{b.type === 'contact' && <Contact title={b.title} text={b.text} />}
+{b.type === 'industries' && (
+  <IndustriesGrid title={b.title ?? ''} accent={b.accent} tag={b.tag} header={b.header} items={list(b.items)} spacing={b.spacing} />
+)}
+{b.type === 'testimonials' && <Testimonials title={b.title ?? ''} spacing={b.spacing} />}
+{b.type === 'process' && <Process title={b.title ?? ''} eyebrow={b.tag} text={b.text} steps={list(b.steps)} />}
+{b.type === 'tech' && <TechStack title={b.title ?? ''} logos={list(b.logos)} spacing={b.spacing} variant={b.variant} no_icon={!!b.no_icon} heading_class={b.heading_class} title_class={b.title_class} />}
+{b.type === 'faq' && <Faq title={b.title ?? ''} eyebrow={b.tag} items={list(b.items)} spacing={b.spacing} wide={!!b.wide} />}
+{b.type === 'contact' && (
+  <Contact title={b.title} text={b.text} size={b.size} variant={b.variant === 'plain' ? 'cta-section' : 'cta-section top'} />
+)}
+{b.type === 'spacer' && <section class="section"><div class="padding-global phone-non"></div></section>}

@@ -3,24 +3,32 @@
 // Used on the homepage (six newest case studies) and on service pages (the cases chosen for that page).
 // Card text comes from the case-study files in src/content/portfolio/.
 import type { CollectionEntry } from 'astro:content';
+import { spacing as pad } from '../lib/spacing';
 
 interface Props {
   title: string;
   text?: string;
   eyebrow?: string;
   cases: CollectionEntry<'portfolio'>[];
+  /** large | bottom | large-no-bottom | none (see src/lib/spacing.ts) */
+  spacing?: string;
+  /** Narrower heading block, used on most service pages. */
+  narrow?: boolean;
+  /** Extra classes from the live page for the heading box and the title (exact layout). */
+  heading_class?: string;
+  title_class?: string;
 }
-const { title, text, eyebrow, cases } = Astro.props;
+const { title, text, eyebrow, cases, spacing, narrow = false, heading_class, title_class } = Astro.props;
 const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
 ---
 <section class="section">
-  <div class="padding-global padding-section-large">
+  <div class={pad(spacing, 'large')}>
     <div class="container-large">
       <div class="portfolio-heading-wrap">
-        <div class="heading-text-wrap max-width-800">
-          <div class="heading-box">
+        <div class:list={['heading-text-wrap', narrow ? 'max-w-80' : 'max-width-800']}>
+          <div class:list={['heading-box', heading_class]}>
             <img alt={alt} loading="lazy" src="/media/wf/67d4099c-image.svg" />
-            <h2 class="heading-style-h2">{title}</h2>
+            <h2 class:list={['heading-style-h2', title_class]}>{title}</h2>
           </div>
           {text && <p class="portfolio-text">{text}</p>}
         </div>

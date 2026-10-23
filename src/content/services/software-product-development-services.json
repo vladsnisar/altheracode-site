@@ -4,296 +4,361 @@
   "sections": [
     {
       "type": "hero",
-      "title_accent": "Software Product Development Services",
+      "breadcrumb": "Software Product Development Services",
       "title": "Software Product Development Services That Turn Ideas into Scalable Products",
+      "title_accent": "Software Product Development Services",
       "text": "We help startups and businesses turn ideas into market-ready products, from early validation to full-scale launch. By combining modern technologies, efficient development, and a strong focus on market fit, we ensure your product is built for real success.",
       "button_text": "Consult Our Experts",
       "button_link": "/contact",
-      "breadcrumb": "Software Product Development Services"
+      "background": "home",
+      "heading_class": "large"
     },
     {
       "type": "intro",
-      "tag": "Precision Built",
+      "style": "image",
       "title": "From Idea to Scalable Product — What We Actually Deliver",
+      "tag": "Precision Built",
       "text": "We shape and build digital products designed for launch, growth, and long-term use. Clear product logic, strong technical foundations, and thoughtful architecture define how every solution is structured and evolves over time. Through custom software product development, solutions are created to grow with the product and adapt to changing demands.",
-      "image": "/media/service-intro-image.avif",
-      "image_alt": "From Idea to Scalable Product — What We Actually Deliver"
+      "image": "/media/wf/67d40699-our-expertise-image.avif"
     },
     {
       "type": "cards",
-      "dark": false,
-      "tag": "Expert Development & AI Solutions",
       "title": "Full-Cycle Software Product Development Services",
-      "text": "",
+      "tag": "Expert Development & AI Solutions",
+      "grid": "why-grid _3-columns",
+      "tail_row": 2,
+      "tail_wrap": "w-layout-hflex why-row wn-a51f69cc-5440-d2d1-a471-613ab2bd8da5-6ae584c8",
       "items": [
         {
-          "title": "Product/Idea Discovery and Validation",
-          "text": "Clear product direction, validated ideas, and a defined roadmap before development begins. This stage aligns business goals with real opportunities and reduces early-stage risks."
+          "title": "Product/Idea  Discovery and Validation",
+          "text": "Clear product direction, validated ideas, and a defined roadmap before development begins. This stage aligns business goals with real opportunities and reduces early-stage risks.",
+          "icon": "/media/wf/67dbebec-experienced-solution-developers.avif",
+          "icon_width": "65",
+          "layout": "wn-_71f7155e-5881-734c-708a-60bfdfa3e20a-6ae584c8"
         },
         {
           "title": "MVP and PoC Development",
-          "text": "Functional MVPs built to test core features and gather early feedback. A focused approach to software product development services for startups or operating business enables faster validation and smarter product decisions."
+          "text": "Functional MVPs built to test core features and gather early feedback. A focused approach to software product development services for startups or operating business enables faster validation and smarter product decisions.",
+          "icon": "/media/wf/67d66caa-unmatched-flexibility.svg",
+          "layout": "wn-_71f7155e-5881-734c-708a-60bfdfa3e210-6ae584c8"
         },
         {
           "title": "Product Strategy and Technical Consulting",
-          "text": "Product planning aligned with business goals, technical requirements, and long term scalability. This stage helps structure development priorities and supports more confident product decisions."
+          "text": "Product planning aligned with business goals, technical requirements, and long term scalability. This stage helps structure development priorities and supports more confident product decisions.",
+          "icon": "/media/wf/67dab301-end-to-end-development.webp",
+          "icon_width": "56",
+          "layout": "wn-_71f7155e-5881-734c-708a-60bfdfa3e216-6ae584c8"
         },
         {
           "title": "Full-Scale Product Development",
-          "text": "Scalable digital products built with clean architecture and reliable performance. As a software product development company, the focus remains on long-term stability and maintainability."
+          "text": "Scalable digital products built with clean architecture and reliable performance. As a software product development company, the focus remains on long-term stability and maintainability.",
+          "icon": "/media/wf/67d66caa-proven-results.svg",
+          "layout": "wn-_71f7155e-5881-734c-708a-60bfdfa3e21c-6ae584c8"
         },
         {
           "title": "Architecture and System Design",
-          "text": "Well-structured system architecture designed for scalability, flexibility, and performance. Strong technical foundations support product growth without major rework."
+          "text": "Well-structured system architecture designed for scalability, flexibility, and performance. Strong technical foundations support product growth without major rework.",
+          "icon": "/media/wf/67dab301-collaborative-transparent-process.avif",
+          "icon_width": "56",
+          "layout": "wn-_71f7155e-5881-734c-708a-60bfdfa3e222-6ae584c8"
         },
         {
           "title": "AI Integration and Smart Features",
-          "text": "Advanced functionality enhanced with automation, AI capabilities, and data-driven features. Modern software product development solutions rely on intelligent systems to improve efficiency."
+          "text": "Advanced functionality enhanced with automation, AI capabilities, and data-driven features. Modern software product development solutions rely on intelligent systems to improve efficiency.",
+          "icon": "/media/wf/67d66caa-end-to-end-support.svg",
+          "icon_width": "56",
+          "layout": "wn-_71f7155e-5881-734c-708a-60bfdfa3e228-6ae584c8"
         },
         {
           "title": "Quality Assurance and Testing",
-          "text": "Structured testing processes that ensure product stability and consistent performance. Quality control supports reliable operation across environments and use cases."
+          "text": "Structured testing processes that ensure product stability and consistent performance. Quality control supports reliable operation across environments and use cases.",
+          "icon": "/media/wf/67dab301-ai-driven-innovation.avif",
+          "icon_width": "56"
         },
         {
           "title": "Product Scaling and Ongoing Development",
-          "text": "Ongoing improvements, updates, and scaling strategies to support product growth. Custom software product development enables solutions to adapt to evolving requirements."
+          "text": "Ongoing improvements, updates, and scaling strategies to support product growth. Custom software product development enables solutions to adapt to evolving requirements.",
+          "icon": "/media/wf/67dab301-experienced-solution-developers.avif",
+          "icon_width": "56"
         }
-      ]
+      ],
+      "spacing": "bottom"
     },
     {
       "type": "process",
-      "tag": "Innovate Now",
       "title": "Our Software Product Development Process",
+      "tag": "Innovate Now",
       "text": "At AltheraCode, product development follows a clear and structured flow where each step builds on the previous one. This approach keeps decisions grounded, reduces uncertainty, and ensures the product moves forward with a clear direction and purpose.",
       "steps": [
         {
-          "title": "Discovery and Product Understanding",
+          "title": " Discovery and Product Understanding",
           "text": "Deep understanding of business goals, product vision, and key requirements. This stage defines direction and sets a clear foundation for further development."
         },
         {
-          "title": "Strategy and Roadmap Planning",
+          "title": "  Strategy and Roadmap Planning",
           "text": "A structured roadmap with defined milestones, priorities, and timelines. The focus stays on aligning product decisions with business objectives."
         },
         {
-          "title": "Product Design and Prototyping",
+          "title": " Product Design and Prototyping",
           "text": "User flows, interfaces, and interactive prototypes that shape how the product will function. Design decisions are guided by usability and product logic."
         },
         {
-          "title": "Development and Iteration",
+          "title": "  Development and Iteration",
           "text": "Product development moves forward in iterations, allowing continuous refinement based on feedback and evolving requirements. This approach supports faster progress, better product decisions, and a more stable result over time."
         },
         {
-          "title": "Testing & Quality Assurance",
+          "title": "  Testing & Quality Assurance",
           "text": "Comprehensive testing ensures stability, performance, and consistent product behavior. Quality control supports reliable operation across use cases."
         },
         {
-          "title": "Deployment & Launch",
+          "title": "  Deployment & Launch",
           "text": "Smooth transition from development to production with a focus on stability and readiness. The product is prepared for real users and operational use."
         },
         {
-          "title": "Product Growth and Support",
+          "title": "  Product Growth and Support",
           "text": "Ongoing improvements, updates, and scaling based on product performance and evolving business needs. This stage ensures the product continues to grow, adapt, and stay aligned with changing requirements over time."
         }
       ]
     },
     {
-      "type": "cards",
-      "dark": false,
-      "tag": "",
+      "type": "spacer"
+    },
+    {
+      "type": "slider",
       "title": "Key Features We Build for Software Products",
       "text": "At AltheraCode, software product design and development services focus on building capabilities that go beyond basic functionality. The emphasis is on features that make products scalable, intelligent, and ready for real use from early stages to long-term growth.",
       "items": [
         {
           "title": "Artificial Intelligence",
-          "text": "AI capabilities that automate workflows, improve decision-making, and enable predictive product behavior."
+          "text": "AI capabilities that automate workflows, improve decision-making, and enable predictive product behavior.",
+          "icon": "/media/wf/67d66caa-commitment-to-innovation.svg"
         },
         {
           "title": "Advanced Analytics and Reporting",
-          "text": "Data processing, dashboards, and reporting features that support better product decisions and visibility."
+          "text": "Data processing, dashboards, and reporting features that support better product decisions and visibility.",
+          "icon": "/media/wf/67d66caa-unmatched-flexibility.svg"
         },
         {
           "title": "Cloud-Based Solutions",
-          "text": "Cloud infrastructure that supports scalability, flexibility, and stable product performance."
+          "text": "Cloud infrastructure that supports scalability, flexibility, and stable product performance.",
+          "icon": "/media/wf/67d66caa-proven-results.svg"
         },
         {
           "title": "Workflow Automation",
-          "text": "Automation features that streamline repetitive operations, improve efficiency, and reduce manual workload across business processes."
+          "text": "Automation features that streamline repetitive operations, improve efficiency, and reduce manual workload across business processes.",
+          "icon": "/media/wf/67dbebeb-end-to-end-development.webp"
         },
         {
           "title": "Chatbots and Conversational Interfaces",
-          "text": "Built-in communication tools that improve user interaction and automate support processes."
+          "text": "Built-in communication tools that improve user interaction and automate support processes.",
+          "icon": "/media/wf/67dbebeb-ai-driven-innovation.avif"
         },
         {
           "title": "Real-Time Data Processing",
-          "text": "Systems designed to handle live data and provide instant updates where responsiveness is critical."
+          "text": "Systems designed to handle live data and provide instant updates where responsiveness is critical.",
+          "icon": "/media/wf/67dab301-agile-scalable-solutions.webp"
         },
         {
           "title": "Voice Recognition and Processing",
-          "text": "Voice-enabled functionality that supports natural interaction and improves accessibility."
+          "text": "Voice-enabled functionality that supports natural interaction and improves accessibility.",
+          "icon": "/media/wf/67dbebec-collaborative-transparent-process.avif"
         },
         {
           "title": "Custom Business Logic",
-          "text": "Product functionality tailored to specific business processes and operational requirements."
+          "text": "Product functionality tailored to specific business processes and operational requirements.",
+          "icon": "/media/wf/67dbebec-experienced-solution-developers.avif"
         }
-      ]
+      ],
+      "spacing": "large"
     },
     {
       "type": "cta",
       "title": "Bring your product to market faster with the right technology and a clear path to scale",
       "accent": "right technology and a clear path",
+      "accent_color": "pink",
       "button_text": "Start Your Project",
-      "button_link": "/contact"
+      "button_link": "/contact",
+      "spacing": "bottom"
     },
     {
-      "type": "cards",
-      "dark": false,
-      "tag": "",
+      "type": "slider",
       "title": "Why Choose AltheraCode for Software Product Development",
-      "text": "",
       "items": [
         {
           "title": "Product-Focused Approach",
-          "text": "Development is aligned with product goals, user needs, and long-term scalability from the very beginning. This ensures the solution supports real usage, not just technical requirements."
+          "text": "Development is aligned with product goals, user needs, and long-term scalability from the very beginning. This ensures the solution supports real usage, not just technical requirements.",
+          "icon": "/media/wf/67dbebec-collaborative-transparent-process.avif"
         },
         {
           "title": "End-to-End Development",
-          "text": "Full-cycle support covers everything from early discovery to launch and further product growth. Each stage is connected through a clear and structured process."
+          "text": "Full-cycle support covers everything from early discovery to launch and further product growth. Each stage is connected through a clear and structured process.",
+          "icon": "/media/wf/67dab301-end-to-end-development.webp"
         },
         {
           "title": "Strong Technical Expertise",
-          "text": "Work is based on modern technologies, scalable architectures, and experience with complex product environments. This allows building solutions that remain stable as the product evolves."
+          "text": "Work is based on modern technologies, scalable architectures, and experience with complex product environments. This allows building solutions that remain stable as the product evolves.",
+          "icon": "/media/wf/67d66caa-proven-results.svg"
         },
         {
           "title": "Scalable Solutions",
-          "text": "Systems are designed to handle growth without performance or stability issues. The architecture supports both early-stage products and large-scale expansion."
+          "text": "Systems are designed to handle growth without performance or stability issues. The architecture supports both early-stage products and large-scale expansion.",
+          "icon": "/media/wf/67dbebeb-end-to-end-development.webp"
         },
         {
           "title": "Fast and Structured Execution",
-          "text": "Clear workflows and defined milestones help keep development predictable and efficient. This reduces delays and keeps the product moving forward."
+          "text": "Clear workflows and defined milestones help keep development predictable and efficient. This reduces delays and keeps the product moving forward.",
+          "icon": "/media/wf/67dbebeb-ai-driven-innovation.avif"
         },
         {
           "title": "Flexible Collaboration",
-          "text": "Collaboration adapts to different team structures, workflows, and product needs. This makes it easier to integrate into existing teams or processes."
+          "text": "Collaboration adapts to different team structures, workflows, and product needs. This makes it easier to integrate into existing teams or processes.",
+          "icon": "/media/wf/67dab301-agile-scalable-solutions.webp"
         },
         {
           "title": "Focus on Real Product Value",
-          "text": "Decisions are driven by usability, product performance, and business impact. This helps ensure the product delivers value beyond basic functionality."
+          "text": "Decisions are driven by usability, product performance, and business impact. This helps ensure the product delivers value beyond basic functionality.",
+          "icon": "/media/wf/67dab301-experienced-solution-developers.avif"
         },
         {
           "title": "Long-Term Partnership Mindset",
-          "text": "Support continues after launch with updates, improvements, and product evolution. This helps maintain product relevance as requirements change over time."
+          "text": "Support continues after launch with updates, improvements, and product evolution. This helps maintain product relevance as requirements change over time.",
+          "icon": "/media/wf/67dbebec-experienced-solution-developers.avif"
         }
-      ]
+      ],
+      "spacing": "none"
     },
     {
       "type": "industries",
-      "tag": "Innovation through technology",
       "title": "Industries We Work With",
+      "tag": "Innovation through technology",
       "items": [
         {
-          "title": "Manufacturing & Industrial Automation",
+          "name": "Manufacturing & Industrial Automation",
+          "icon": "/media/wf/68f92bf2-lightbulb.svg",
           "text": "Solutions that connect machines, data, and processes into a unified digital environment. Enable predictive maintenance, real-time monitoring, and more efficient production cycles."
         },
         {
-          "title": "Construction & Civil Engineering",
+          "name": "Construction & Civil Engineering",
+          "icon": "/media/wf/68f92bff-buildings.svg",
           "text": "Platforms that bring clarity to complex projects, from planning to on-site execution. Improve coordination, increase visibility, and reduce costly delays across teams."
         },
         {
-          "title": "Real Estate & PropTech",
+          "name": "Real Estate & PropTech",
+          "icon": "/media/wf/67d41a4e-house.webp",
           "text": "Digital platforms for property management, operations, client communication, and business automation. Built to improve efficiency, visibility, and coordination across real estate workflows."
         },
         {
-          "title": "Healthcare & Medical Technology",
+          "name": "Healthcare & Medical Technology",
+          "icon": "/media/wf/67d41a8b-heartbeat.avif",
           "text": "Digital products that streamline clinical workflows, patient interactions, and data management. Built to meet strict compliance requirements while improving care delivery and operational efficiency"
         },
         {
-          "title": "E-commerce & Retail",
+          "name": "E-commerce & Retail",
+          "icon": "/media/wf/67d41a4e-retail.avif",
           "text": "Flexible platforms that support growth, personalization, and seamless customer journeys. Built to handle high traffic, evolving user behavior, and multi-channel operations."
         },
         {
-          "title": "Transportation & Logistics",
+          "name": "Transportation & Logistics",
+          "icon": "/media/wf/67d41a4e-transport.webp",
           "text": "Real-time systems for route optimization, fleet management, and supply chain coordination. Help reduce delays, improve service quality, and keep operations predictable."
         },
         {
-          "title": "Energy & Utilities",
+          "name": "Energy & Utilities",
+          "icon": "/media/wf/67d41a4e-energy.avif",
           "text": "Technology solutions for smarter resource management, monitoring, and infrastructure control. Support efficiency goals while adapting to changing demand and sustainability needs."
         },
         {
-          "title": "Telecommunications & Connectivity",
+          "name": "Telecommunications & Connectivity",
+          "icon": "/media/wf/67d41a4f-telecom.avif",
           "text": "Robust systems for network operations, infrastructure monitoring, and service management. Built to ensure stability, scalability, and uninterrupted connectivity."
         },
         {
-          "title": "Education & EdTech",
+          "name": "Education & EdTech",
+          "icon": "/media/wf/67d41a4e-education.avif",
           "text": "Digital platforms that support learning experiences, virtual classrooms, and performance tracking. Help institutions deliver more engaging, accessible, and data-driven education."
         }
-      ]
+      ],
+      "spacing": "large"
     },
     {
       "type": "tech",
       "title": "Technologies We Work With",
       "logos": [
         {
-          "image": "/media/logo-net-core.avif",
-          "name": ".NET Core"
+          "name": "icon Image",
+          "image": "/media/wf/67d8f532-icon.avif"
         },
         {
-          "image": "/media/logo-java.avif",
-          "name": "Java"
+          "name": "java logo Image",
+          "image": "/media/wf/67d8f3a9-java.avif"
         },
         {
-          "image": "/media/logo-python.avif",
-          "name": "Python"
+          "name": "python Image",
+          "image": "/media/wf/67d8f3aa-python.avif"
         },
         {
-          "image": "/media/logo-javascript.avif",
-          "name": "JavaScript"
+          "name": "javascript Image",
+          "image": "/media/wf/67d8f3a9-javascript.avif"
         },
         {
-          "image": "/media/logo-csharp.avif",
-          "name": "C#"
+          "name": "c# logo",
+          "image": "/media/wf/67d8f384-c.avif"
         },
         {
-          "image": "/media/logo-php.avif",
-          "name": "PHP"
+          "name": "php logo Image",
+          "image": "/media/wf/67d8f3a9-php.avif"
         },
         {
-          "image": "/media/logo-nodejs.avif",
-          "name": "Node.js"
+          "name": "node Image",
+          "image": "/media/wf/67d8f3aa-node-gs.avif"
         },
         {
-          "image": "/media/logo-react-native.avif",
-          "name": "React Native"
+          "name": "react Image",
+          "image": "/media/wf/67d8f3aa-reactnative.avif"
         },
         {
-          "image": "/media/logo-aws.avif",
-          "name": "AWS"
+          "name": "aws logo Image",
+          "image": "/media/wf/67d8f384-aws.avif"
         }
-      ]
+      ],
+      "spacing": "none"
     },
     {
       "type": "cta",
       "title": "Technology and execution that move your product forward, from first release to real growth",
-      "accent": "",
       "button_text": "Talk to an Expert",
-      "button_link": "/contact"
+      "button_link": "/contact",
+      "braces": "curly",
+      "size": "h3",
+      "brace_height": "90",
+      "spacing": "large"
     },
     {
       "type": "cases",
-      "tag": "Portfolio",
       "title": "Our Success Stories",
       "text": "Our team builds software that solves real challenges. We create smart, scalable solutions across industries, optimizing workflows and enhancing efficiency.",
+      "tag": "Portfolio",
       "cases": [
         "ai-audio-intelligence-pipeline-for-automated-knowledge-capture",
         "ai-telegram-assistant-for-real-time-team-communication",
         "ai-powered-real-time-insight-engine-for-smarter-information-filtering"
-      ]
+      ],
+      "spacing": "bottom"
+    },
+    {
+      "type": "testimonials",
+      "title": "What Our Clients Say About Us",
+      "spacing": "bottom"
     },
     {
       "type": "cards",
       "dark": true,
-      "tag": "",
       "title": "Engagement Models for Product Development",
-      "text": "",
+      "accent": "Product Development",
+      "header": "center",
+      "grid": "why-grid _3-columns",
+      "card_class": "_100",
+      "inner": "gap-16",
       "items": [
         {
           "title": "Dedicated Team",
@@ -305,13 +370,16 @@
         },
         {
           "title": "Team Augmentation",
-          "text": "When additional expertise is needed, engineers integrate into your team and adapt to your workflows, tools, and pace. AltheraCode extends your capabilities without disrupting your structure, helping you move faster while keeping full control."
+          "text": "When additional expertise is needed, engineers integrate into your team and adapt to your workflows, tools, and pace. AltheraCode extends your capabilities without disrupting your structure, helping you move faster while keeping full control.",
+          "layout": "wn-_62972f39-ea7d-c1e4-9330-9b362ae5cfe9-6ae584c8"
         }
-      ]
+      ],
+      "spacing": "large"
     },
     {
       "type": "faq",
       "title": "Frequently Asked Questions",
+      "tag": "FAQ",
       "items": [
         {
           "q": "Why outsource software product development?",
@@ -341,12 +409,15 @@
           "q": "Can you scale and improve a product after launch?",
           "a": "Yes, and in most cases that is when the real product work begins. After launch, teams focus on performance, infrastructure, and new features. Scaling is not only about technology but also about adapting the product to growing user needs and business goals."
         }
-      ]
+      ],
+      "spacing": "large-no-bottom",
+      "wide": true
     },
     {
       "type": "contact",
       "title": "Ready to launch your product development?",
-      "text": "If you’d like to get in touch, please fill in the form"
+      "text": "If you’d like to get in touch, please fill in the form",
+      "variant": "plain"
     }
   ]
 }

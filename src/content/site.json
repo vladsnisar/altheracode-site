@@ -241,5 +241,7 @@
     }
   ],
   "logo": "/media/wf/67d3dda5-ac-logo.svg",
-  "contact_whatsapp_link": "https://api.whatsapp.com/send/?phone=18004591978&text&type=phone_number&app_absent=0"
+  "contact_whatsapp_link": "https://api.whatsapp.com/send/?phone=18004591978&text&type=phone_number&app_absent=0",
+  "clutch_company_id": "1428162",
+  "clutch_reviews": "396632,395470,395252,394848,391778,391757,49387"
 }

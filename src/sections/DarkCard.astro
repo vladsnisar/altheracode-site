@@ -1,0 +1,11 @@
+---
+// One dark text card (title, text) used by Cards.astro. `layout` carries a Webflow layout class from the live page.
+interface Props { it: { title: string; text: string; layout?: string }; card_class?: string; inner?: string }
+const { it, card_class, inner = 'margin-bottom-32' } = Astro.props;
+---
+<div class:list={['service-ai-card', card_class, it.layout]}>
+  <div class:list={['heading-text-wrap', inner]}>
+    <h3 class="heading-style-h4">{it.title}</h3>
+    <div>{it.text.split('\n').map((l, i) => <>{i > 0 && <br />}{l}</>)}</div>
+  </div>
+</div>

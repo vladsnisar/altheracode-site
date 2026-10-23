@@ -4,20 +4,21 @@
   "sections": [
     {
       "type": "hero",
-      "title_accent": "Web & Mobile Solutions",
+      "breadcrumb": "Web & Mobile Development Services",
       "title": "Where Strategy Meets Code: Custom Web & Mobile Solutions",
+      "title_accent": "Web & Mobile Solutions",
       "text": "Your idea deserves more than just code—it needs creativity, expertise, and flawless execution. We build web and mobile apps that drive results and support your business growth.",
       "button_text": "Consult Our Experts",
       "button_link": "/contact",
-      "breadcrumb": "Web & Mobile Development Services"
+      "background": "home"
     },
     {
       "type": "intro",
-      "tag": "Precision Built",
+      "style": "image",
       "title": "Custom Web & Mobile Solution Development Services",
+      "tag": "Precision Built",
       "text": "AltheraCode delivers end-to-end development for web and mobile solutions—scalable, high-performing solutions built to fit your business. Leveraging advanced AI technologies, every stage from concept to launch is crafted for seamless execution, intuitive design, and long-term growth.",
-      "image": "/media/service-web-mobile-development-services-intro.avif",
-      "image_alt": "Custom Web & Mobile Solution Development Services",
+      "image": "/media/wf/67daad4a-solution-image.avif",
       "list": [
         "Project Discovery & Planning",
         "MVP Development",
@@ -25,13 +26,17 @@
         "UI/UX Design & Prototyping",
         "Quality Assurance & Testing",
         "App Modernization & Scaling"
-      ]
+      ],
+      "icon_class": "image-4"
+    },
+    {
+      "type": "spacer"
     },
     {
       "type": "cases",
-      "tag": "",
       "title": "Our Portfolio",
       "text": "Our team builds software that solves real challenges. We create smart, scalable solutions across industries, optimizing workflows and enhancing efficiency.",
+      "tag": "Graphic text elements",
       "cases": [
         "ai-audio-intelligence-pipeline-for-automated-knowledge-capture",
         "ai-telegram-assistant-for-real-time-team-communication",
@@ -39,76 +44,84 @@
         "viral-content-automation-engine-for-scalable-ai-video-production",
         "ai-voice-assistant-for-eligibility-claim-status-automation",
         "ai-orchestrated-manufacturing-operations-platform"
-      ]
+      ],
+      "spacing": "bottom"
     },
     {
       "type": "cta",
       "title": "Tech Expertise that Moves Your Business Forward – Meet AltheraCode.",
       "accent": "Meet AltheraCode",
+      "accent_color": "pink",
       "button_text": "Let's Start",
-      "button_link": "/contact"
+      "button_link": "/contact",
+      "spacing": "bottom"
     },
     {
       "type": "cards",
-      "dark": false,
-      "tag": "Expert Development & AI Solutions",
       "title": "Why Choose AltheraCode",
-      "text": "",
+      "tag": "Expert Development & AI Solutions",
+      "grid": "rows",
       "items": [
         {
           "title": "Experienced Solution Developers",
-          "text": "With 7+ years of expertise, our team has successfully built and launched solutions across healthtech, fintech, and AI-driven SaaS platforms—delivering scalable, high-performance software."
+          "text": "With 7+ years of expertise, our team has successfully built and launched solutions across healthtech, fintech, and AI-driven SaaS platforms—delivering scalable, high-performance software.",
+          "icon": "/media/wf/67d66caa-proven-results-1.svg"
         },
         {
           "title": "End-to-End Support",
-          "text": "From concept to launch—and beyond—we ensure a seamless experience with reliable post-launch support."
+          "text": "From concept to launch—and beyond—we ensure a seamless experience with reliable post-launch support.",
+          "icon": "/media/wf/67d66caa-end-to-end-support.svg"
         },
         {
           "title": "AI-Driven Innovation",
-          "text": "We integrate cutting-edge AI and automation where it adds the most value, optimizing efficiency, decision-making, and user experience."
+          "text": "We integrate cutting-edge AI and automation where it adds the most value, optimizing efficiency, decision-making, and user experience.",
+          "icon": "/media/wf/67d66caa-unmatched-flexibility.svg"
         },
         {
           "title": "Agile & Scalable Solutions",
-          "text": "Our agile approach ensures flexibility, rapid iteration, and continuous improvements, allowing your solution to evolve with market needs."
+          "text": "Our agile approach ensures flexibility, rapid iteration, and continuous improvements, allowing your solution to evolve with market needs.",
+          "icon": "/media/wf/67d66caa-transparent-partnership.svg"
         },
         {
           "title": "Collaborative & Transparent Process",
-          "text": "We work closely with you, ensuring clear communication, strategic decision-making, and a development roadmap that aligns with your vision."
+          "text": "We work closely with you, ensuring clear communication, strategic decision-making, and a development roadmap that aligns with your vision.",
+          "icon": "/media/wf/67d66caa-proven-results.svg"
         }
-      ]
+      ],
+      "spacing": "bottom"
     },
     {
       "type": "process",
-      "tag": "Innovate Now",
       "title": "Our Process",
+      "tag": "Innovate Now",
       "text": "At AltheraCode, we specialize in end-to-end solution development, transforming concepts into powerful, AI-driven innovations. Whether it’s healthtech software, SaaS platforms, or enterprise systems, we guide you from ideation to launch, ensuring seamless execution and cutting-edge results.",
       "steps": [
         {
-          "title": "Discovery & Analysis",
+          "title": " Discovery & Analysis",
           "text": "We begin by understanding your unique business needs, challenges, and goals. Through in-depth research and consultation, we identify the best solutions for your project."
         },
         {
-          "title": "Strategy & Planning",
+          "title": "  Strategy & Planning",
           "text": "Our team designs a tailored roadmap, outlining clear milestones, timelines, and deliverables to ensure a smooth development process."
         },
         {
-          "title": "Design & Prototyping",
+          "title": "  Design & Prototyping",
           "text": "We create intuitive, user-focused designs and interactive prototypes, ensuring your vision is brought to life before development begins."
         },
         {
-          "title": "Agile Development",
+          "title": "  Agile Development",
           "text": "Our developers build scalable and secure solutions, working in sprints for continuous feedback and improvements, keeping you involved every step of the way."
         },
         {
-          "title": "Testing & Quality Assurance",
+          "title": "  Testing & Quality Assurance",
           "text": "Every feature is rigorously tested to meet the highest performance, usability, and security standards, with AI-assisted testing ensuring precision and efficiency."
         },
         {
-          "title": "Deployment & Launch",
+          "title": "  Deployment & Launch",
           "text": "Once everything is ready, we ensure a seamless launch, providing full support during the transition to live operation."
         },
         {
-          "title": "Post-Launch Support",
+          "title": "  Post-Launch Support",
           "text": "We don’t stop at delivery. Our team provides ongoing support, maintenance, and updates to keep your solution running at its best."
         }
       ]
@@ -118,47 +131,49 @@
       "title": "Our Tech Stack",
       "logos": [
         {
-          "image": "/media/logo-net-core.avif",
-          "name": ".NET Core"
+          "name": "icon Image",
+          "image": "/media/wf/67d8f532-icon.avif"
         },
         {
-          "image": "/media/logo-java.avif",
-          "name": "Java"
+          "name": "java logo Image",
+          "image": "/media/wf/67d8f3a9-java.avif"
         },
         {
-          "image": "/media/logo-python.avif",
-          "name": "Python"
+          "name": "python Image",
+          "image": "/media/wf/67d8f3aa-python.avif"
         },
         {
-          "image": "/media/logo-javascript.avif",
-          "name": "JavaScript"
+          "name": "javascript Image",
+          "image": "/media/wf/67d8f3a9-javascript.avif"
         },
         {
-          "image": "/media/logo-csharp.avif",
-          "name": "C#"
+          "name": "c# logo",
+          "image": "/media/wf/67d8f384-c.avif"
         },
         {
-          "image": "/media/logo-php.avif",
-          "name": "PHP"
+          "name": "php logo Image",
+          "image": "/media/wf/67d8f3a9-php.avif"
         },
         {
-          "image": "/media/logo-nodejs.avif",
-          "name": "Node.js"
+          "name": "node Image",
+          "image": "/media/wf/67d8f3aa-node-gs.avif"
         },
         {
-          "image": "/media/logo-react-native.avif",
-          "name": "React Native"
+          "name": "react Image",
+          "image": "/media/wf/67d8f3aa-reactnative.avif"
         },
         {
-          "image": "/media/logo-aws.avif",
-          "name": "AWS"
+          "name": "aws logo Image",
+          "image": "/media/wf/67d8f384-aws.avif"
         }
-      ]
+      ],
+      "spacing": "large-no-bottom"
     },
     {
       "type": "contact",
       "title": "Drop Us a Line",
-      "text": "If you’d like to get in touch, please fill in the form"
+      "text": "If you’d like to get in touch, please fill in the form",
+      "variant": "plain"
     }
   ]
 }

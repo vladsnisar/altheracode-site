@@ -4,44 +4,47 @@
   "sections": [
     {
       "type": "hero",
-      "title_accent": "AI Assistant",
+      "breadcrumb": "Custom AI Assistant Development Company",
       "title": "Custom AI Assistant Development Services",
+      "title_accent": "AI Assistant",
       "text": "Unlock efficiency and growth with our AI assistant development services tailored to your workflows. From customer support to internal automation, we build solutions that cut costs and accelerate decisions.",
       "button_text": "Consult Our Experts",
       "button_link": "/contact",
-      "breadcrumb": "Custom AI Assistant Development Company"
+      "background": "home"
     },
     {
       "type": "cards",
-      "dark": false,
-      "tag": "Expert Development & AI Solutions",
       "title": "Why Your Business Needs an AI Assistant",
-      "text": "",
+      "tag": "Expert Development & AI Solutions",
       "items": [
         {
           "title": "Faster Decision-Making",
-          "text": "With intelligent data-driven systems, businesses process information in real time, respond faster to change, and make confident decisions based on facts, not guesswork. Instead of waiting for manual reports, your team gains instant insights that sharpen focus and strengthen competitive advantage."
+          "text": "With intelligent data-driven systems, businesses process information in real time, respond faster to change, and make confident decisions based on facts, not guesswork. Instead of waiting for manual reports, your team gains instant insights that sharpen focus and strengthen competitive advantage.",
+          "icon": "/media/wf/67d66caa-proven-results-1.svg"
         },
         {
           "title": "Operational Efficiency",
-          "text": "By adopting solutions from a custom AI assistant development company, organizations reduce manual work, optimize workflows, and free up resources for strategic growth. This means your teams can focus on innovation rather than routine tasks, boosting overall productivity."
+          "text": "By adopting solutions from a custom AI assistant development company, organizations reduce manual work, optimize workflows, and free up resources for strategic growth. This means your teams can focus on innovation rather than routine tasks, boosting overall productivity.",
+          "icon": "/media/wf/67d66caa-unmatched-flexibility.svg"
         },
         {
           "title": "Improved Accuracy",
-          "text": "Partnering with an experienced AI assistant development team helps minimize human errors, ensure compliance, and deliver reliable results across departments. Accurate data and streamlined processes give leaders peace of mind and stronger foundations for scaling."
+          "text": "Partnering with an experienced AI assistant development team helps minimize human errors, ensure compliance, and deliver reliable results across departments. Accurate data and streamlined processes give leaders peace of mind and stronger foundations for scaling.",
+          "icon": "/media/wf/67d66caa-transparent-partnership.svg"
         },
         {
           "title": "Scalability and Flexibility",
-          "text": "Well-designed assistants from an AI voice assistant development company scale with your business, supporting new demands and enabling seamless integration with existing systems. As your company grows, your AI evolves with it, ensuring long-term value and adaptability."
+          "text": "Well-designed assistants from an AI voice assistant development company scale with your business, supporting new demands and enabling seamless integration with existing systems. As your company grows, your AI evolves with it, ensuring long-term value and adaptability.",
+          "icon": "/media/wf/67d66caa-proven-results.svg"
         }
-      ]
+      ],
+      "spacing": "large"
     },
     {
       "type": "cards",
       "dark": true,
-      "tag": "",
       "title": "Types of AI Assistants We Build",
-      "text": "",
+      "grid": "ai-grid-copy-copy",
       "items": [
         {
           "title": "Chatbots & Voice Assistants",
@@ -59,178 +62,217 @@
           "title": "AI Agents for Complex Workflows",
           "text": "Our AI assistant development experts create goal-oriented systems that handle tasks such as research, reconciliation, and process automation. These agents operate autonomously, maintaining scalability and precision with minimal oversight. By embedding intelligent decision-making, AltheraCode ensures smooth workflow execution and long-term business efficiency."
         }
-      ]
+      ],
+      "spacing": "large"
     },
     {
       "type": "cards",
-      "dark": false,
-      "tag": "",
       "title": "Our AI Assistant Development Services",
-      "text": "",
+      "header": "center",
+      "grid": "why-grid-3-col",
       "items": [
         {
           "title": "Research and Development",
-          "text": "Our AI assistant development team starts with deep research and prototyping to ensure your assistant is tailored to business needs and delivers measurable value. This stage reduces risks and ensures faster time-to-market.\nWe analyze real user scenarios, define key interaction goals, and validate hypotheses early to make sure every feature adds tangible business impact."
+          "text": "Our AI assistant development team starts with deep research and prototyping to ensure your assistant is tailored to business needs and delivers measurable value. This stage reduces risks and ensures faster time-to-market.\nWe analyze real user scenarios, define key interaction goals, and validate hypotheses early to make sure every feature adds tangible business impact.",
+          "icon": "/media/wf/67dbebeb-ai-driven-innovation.avif",
+          "icon_width": "56"
         },
         {
           "title": "System Architecture",
-          "text": "We design robust system architectures that handle large data flows, ensure security, and integrate seamlessly with existing environments. Well-structured architecture guarantees scalability as your business grows.\nOur engineers use modular and cloud-native principles to simplify future upgrades and maintain flexibility for emerging technologies."
+          "text": "We design robust system architectures that handle large data flows, ensure security, and integrate seamlessly with existing environments. Well-structured architecture guarantees scalability as your business grows.\nOur engineers use modular and cloud-native principles to simplify future upgrades and maintain flexibility for emerging technologies.",
+          "icon": "/media/wf/67dab301-agile-scalable-solutions.webp",
+          "icon_width": "56"
         },
         {
           "title": "Prompt Engineering",
-          "text": "We create optimized prompts and conversational flows that make assistants accurate, reliable, and engaging, enhancing both customer and employee experiences. This helps your AI deliver consistent and high-quality responses every time.\nBy continuously fine-tuning prompts and system instructions, we ensure that your AI communicates naturally while maintaining brand tone and intent precision."
+          "text": "We create optimized prompts and conversational flows that make assistants accurate, reliable, and engaging, enhancing both customer and employee experiences. This helps your AI deliver consistent and high-quality responses every time.\nBy continuously fine-tuning prompts and system instructions, we ensure that your AI communicates naturally while maintaining brand tone and intent precision.",
+          "icon": "/media/wf/67dab301-end-to-end-development.webp",
+          "icon_width": "56"
         },
         {
           "title": "Conversational and Interaction Design",
-          "text": "Through advanced AI assistant development services, we design natural dialogues and smooth human handoff to maximize usability and satisfaction. The result is a user-friendly assistant that feels like a real team member.\nWe also focus on emotion-aware design, making interactions context-sensitive and adaptive to user needs across different communication channels."
+          "text": "Through advanced AI assistant development services, we design natural dialogues and smooth human handoff to maximize usability and satisfaction. The result is a user-friendly assistant that feels like a real team member.\nWe also focus on emotion-aware design, making interactions context-sensitive and adaptive to user needs across different communication channels.",
+          "icon": "/media/wf/67dab301-experienced-solution-developers.avif",
+          "icon_width": "56"
         },
         {
           "title": "Testing and Quality Assurance",
-          "text": "Rigorous testing ensures every AI solution is scalable, reliable, and aligned with compliance standards, minimizing risks and ensuring smooth performance. Continuous validation keeps your assistants future-proof. Our QA team uses multi-scenario simulations and load testing to evaluate responses, latency, and user satisfaction under real-world conditions."
+          "text": "Rigorous testing ensures every AI solution is scalable, reliable, and aligned with compliance standards, minimizing risks and ensuring smooth performance. Continuous validation keeps your assistants future-proof. Our QA team uses multi-scenario simulations and load testing to evaluate responses, latency, and user satisfaction under real-world conditions.",
+          "icon": "/media/wf/67dbebeb-end-to-end-development.webp",
+          "icon_width": "56"
         },
         {
           "title": "Integration",
-          "text": "As an experienced AI voice assistant development company, we connect assistants with CRMs, ERPs, cloud platforms, and communication tools to make them a natural part of your daily workflows. This ensures your teams work faster without disrupting established processes.\nWe handle both API-based and custom integrations, aligning AI capabilities with your existing data pipelines to maximize automation ROI."
+          "text": "As an experienced AI voice assistant development company, we connect assistants with CRMs, ERPs, cloud platforms, and communication tools to make them a natural part of your daily workflows. This ensures your teams work faster without disrupting established processes.\nWe handle both API-based and custom integrations, aligning AI capabilities with your existing data pipelines to maximize automation ROI.",
+          "icon": "/media/wf/67d66caa-proven-results.svg"
         }
-      ]
+      ],
+      "spacing": "large"
     },
     {
       "type": "cta",
       "title": "Turn automation into impact with powerful AI Assistants.",
       "accent": "AI Assistants",
+      "accent_color": "pink",
       "button_text": "Talk to Experts",
-      "button_link": "/contact"
+      "button_link": "/contact",
+      "spacing": "none"
     },
     {
       "type": "cases",
-      "tag": "Portfolio",
       "title": "Our AI Solutions Portfolio",
       "text": "We specialize in building AI assistants for businesses of all sizes and across diverse industries, delivering solutions that enhance productivity, streamline workflows, and create measurable growth opportunities.",
+      "tag": "Portfolio",
       "cases": [
         "ai-audio-intelligence-pipeline-for-automated-knowledge-capture",
         "ai-telegram-assistant-for-real-time-team-communication",
         "ai-powered-real-time-insight-engine-for-smarter-information-filtering"
-      ]
+      ],
+      "spacing": "large"
     },
     {
       "type": "industries",
-      "tag": "Innovation through technology",
       "title": "AI Assistant Solutions by Industry",
+      "tag": "Innovation through technology",
+      "header": "plain",
       "items": [
         {
-          "title": "Healthcare",
+          "name": "Healthcare",
+          "icon": "/media/wf/67d41a8b-heartbeat.avif",
           "text": "In healthcare, AI copilots coordinate patient appointments, process insurance checks, and unify diagnostic data in one system. They support doctors with faster access to insights and reduce administrative delays that slow treatment. Clinics experience smoother collaboration, while patients receive more accurate and timely care."
         },
         {
-          "title": "Digital Marketing",
+          "name": "Digital Marketing",
+          "icon": "/media/wf/68ed1745-chart-square.svg",
           "text": "Marketing teams use copilots to analyze audience behavior, predict engagement, and fine-tune targeting strategies. They track campaign performance in real time and automatically adjust budgets and creatives for maximum return. This precision helps brands scale outreach while keeping every touchpoint relevant and data-driven."
         },
         {
-          "title": "Education",
+          "name": "Education",
+          "icon": "/media/wf/67d41a4e-education.avif",
           "text": "Education copilots automate grading, scheduling, and report generation. They identify learning patterns and adapt materials to individual progress, giving teachers more time for mentoring and students a more engaging experience. Schools achieve better organization and a measurable boost in academic performance."
         },
         {
-          "title": "Finance",
+          "name": "Finance",
+          "icon": "/media/wf/67d41a4e-monetization-on-24px.avif",
           "text": "Financial copilots automate compliance, detect anomalies, and transform data into actionable insights. They simplify reporting, reduce errors, and ensure every transaction meets strict regulatory standards. With repetitive work handled intelligently, finance professionals can focus on analysis, forecasting, and growth."
         },
         {
-          "title": "Transportation",
+          "name": "Transportation",
+          "icon": "/media/wf/67d41a4e-transport.webp",
           "text": "Logistics copilots optimize routes, anticipate maintenance needs, and track fleet performance in real time. They adjust deliveries dynamically and minimize idle time, reducing both cost and risk. The result is efficient, predictable operations that keep supply chains running smoothly at any scale."
         },
         {
-          "title": "Technology",
+          "name": "Technology",
+          "icon": "/media/wf/67d41a4e-tech.webp",
           "text": "In fast-paced tech environments, copilots monitor systems, automate testing, and manage integrations between tools and cloud infrastructure. They identify bottlenecks before they escalate and ensure stable performance across deployments. Development cycles become faster, cleaner, and easier to maintain."
         },
         {
-          "title": "Telecommunications",
+          "name": "Telecommunications",
+          "icon": "/media/wf/67d41a4f-telecom.avif",
           "text": "Telecom copilots manage customer requests, troubleshoot network issues, and route complex cases to the right specialists. They keep communication lines efficient, ensuring faster resolutions and improved service reliability. Providers maintain high satisfaction levels while significantly lowering operational overhead."
         },
         {
-          "title": "Energy",
+          "name": "Energy",
+          "icon": "/media/wf/67d41a4e-energy.avif",
           "text": "Energy copilots oversee power distribution, detect inefficiencies, and forecast usage with remarkable accuracy. They balance grid performance and prevent overloads through real-time analytics. These insights drive sustainability initiatives, optimize energy flow, and reduce operational waste."
         },
         {
-          "title": "Real Estate",
+          "name": "Real Estate",
+          "icon": "/media/wf/67d41a4e-house.webp",
           "text": "In real estate, copilots assist with lead management, property tracking, and buyer communication. They analyze market trends and provide instant access to listings and valuations. Agents close deals faster and deliver a transparent, personalized experience that builds long-term client trust."
         },
         {
-          "title": "Retail",
-          "text": "Retail copilots analyze trends, predict demand, and personalize recommendations across channels. They manage stock levels, pricing, and fulfillment to ensure consistency between physical and digital stores. Businesses achieve smoother operations, stronger brand loyalty, and higher profitability."
+          "name": "Retail",
+          "icon": "/media/wf/67d41a4e-retail.avif",
+          "text": "Retail copilots analyze trends, predict demand, and personalize recommendations across channels. They manage stock levels, pricing, and fulfillment to ensure consistency between physical and digital stores. Businesses achieve smoother operations, stronger brand loyalty, and higher profitability.",
+          "layout": "wn-_57b4d746-d6dc-0868-21b7-7a2538127d84-c6632d87"
         }
-      ]
+      ],
+      "spacing": "none"
+    },
+    {
+      "type": "testimonials",
+      "title": "What Our Clients Say",
+      "spacing": "large"
     },
     {
       "type": "cta",
       "title": "Bring AI Assistants to your business workflows today and turn growth into your daily routine.",
       "accent": "AI Assistants",
       "button_text": "Build with Us",
-      "button_link": "/contact"
+      "button_link": "/contact",
+      "button_style": "default",
+      "spacing": "none"
     },
     {
-      "type": "cards",
-      "dark": false,
-      "tag": "",
+      "type": "slider",
       "title": "Why Choose Us for AI Assistant Development",
-      "text": "",
       "items": [
         {
           "title": "Tailored Expertise",
-          "text": "We specialize in building custom AI assistants designed around business workflows and growth goals. This ensures every solution is relevant, efficient, and delivers measurable results.\n\nOur AI assistant development team starts with deep research and prototyping to ensure your assistant is tailored to business needs and delivers measurable value. This stage reduces risks and ensures faster time-to-market. Our team focuses on understanding each client’s communication style and brand voice, ensuring assistants feel like a natural extension of the company rather than just automated tools."
+          "text": "We specialize in building custom AI assistants designed around business workflows and growth goals. This ensures every solution is relevant, efficient, and delivers measurable results.Our AI assistant development team starts with deep research and prototyping to ensure your assistant is tailored to business needs and delivers measurable value. This stage reduces risks and ensures faster time-to-market. Our team focuses on understanding each client’s communication style and brand voice, ensuring assistants feel like a natural extension of the company rather than just automated tools.",
+          "icon": "/media/wf/67d66caa-commitment-to-innovation.svg"
         },
         {
           "title": "Full-Cycle Services",
-          "text": "Our company offers end-to-end solutions, covering every stage from discovery and prototyping to deployment and optimization. Each phase is handled with precision and transparency, ensuring scalability and reliability at every step. Clients experience a smooth, consistent development process with clear communication and no gaps between stages or external vendors."
+          "text": "Our company offers end-to-end solutions, covering every stage from discovery and prototyping to deployment and optimization. Each phase is handled with precision and transparency, ensuring scalability and reliability at every step. Clients experience a smooth, consistent development process with clear communication and no gaps between stages or external vendors.",
+          "icon": "/media/wf/67d66caa-unmatched-flexibility.svg"
         },
         {
           "title": "Proven Industry Experience",
-          "text": "We’ve delivered intelligent solutions across multiple industries, including healthcare, finance, and retail. This cross-sector expertise helps us apply best practices and build systems that meet strict standards for security, compliance, and usability. We understand how different industries operate, and we design assistants that fit naturally into their workflows and everyday processes."
+          "text": "We’ve delivered intelligent solutions across multiple industries, including healthcare, finance, and retail. This cross-sector expertise helps us apply best practices and build systems that meet strict standards for security, compliance, and usability. We understand how different industries operate, and we design assistants that fit naturally into their workflows and everyday processes.",
+          "icon": "/media/wf/67d66caa-proven-results.svg"
         },
         {
           "title": "Skilled Development Team",
-          "text": "Our engineers bring strong expertise in NLP, RAG pipelines, and cloud-based infrastructure. The focus is always on flexibility and long-term reliability. We keep our tech stack sharp, test new frameworks, and make sure that every solution we deliver can evolve along with the client’s business, without losing performance or quality over time."
+          "text": "Our engineers bring strong expertise in NLP, RAG pipelines, and cloud-based infrastructure. The focus is always on flexibility and long-term reliability. We keep our tech stack sharp, test new frameworks, and make sure that every solution we deliver can evolve along with the client’s business, without losing performance or quality over time.",
+          "icon": "/media/wf/67dbebeb-end-to-end-development.webp"
         },
         {
           "title": "Voice-First Innovation",
-          "text": "We craft voice-enabled assistants that feel intuitive and conversational. Using advanced recognition and sentiment analysis, they capture meaning, tone, and emotion, not just words. This creates smoother, more human-like experiences across call centers, apps, and IoT environments, helping companies interact with their audiences naturally."
+          "text": "We craft voice-enabled assistants that feel intuitive and conversational. Using advanced recognition and sentiment analysis, they capture meaning, tone, and emotion, not just words. This creates smoother, more human-like experiences across call centers, apps, and IoT environments, helping companies interact with their audiences naturally.",
+          "icon": "/media/wf/67dbebeb-ai-driven-innovation.avif"
         },
         {
           "title": "Long-Term Partnership",
-          "text": "Beyond deployment, we provide updates, monitoring, and optimization. Our solutions evolve together with your business, ensuring scalability and long-term competitive advantage.\nWe see every collaboration as a continuing journey, offering strategic insights and proactive improvements that help your assistants grow smarter and more valuable over time."
+          "text": "Beyond deployment, we provide updates, monitoring, and optimization. Our solutions evolve together with your business, ensuring scalability and long-term competitive advantage.\nWe see every collaboration as a continuing journey, offering strategic insights and proactive improvements that help your assistants grow smarter and more valuable over time.",
+          "icon": "/media/wf/67dab301-agile-scalable-solutions.webp"
         }
-      ]
+      ],
+      "spacing": "large"
     },
     {
       "type": "process",
-      "tag": "Innovate Now",
       "title": "AI Assistant Development Process",
+      "tag": "Innovate Now",
       "text": "At AltheraCode, we specialize in end-to-end solution development, transforming concepts into powerful, AI-driven innovations. Whether it’s healthtech software, SaaS platforms, or enterprise systems, we guide you from ideation to launch, ensuring seamless execution and cutting-edge results.",
       "steps": [
         {
-          "title": "Discovery & Analysis",
+          "title": " Discovery & Analysis",
           "text": "We begin by understanding your unique business needs, challenges, and goals. Through in-depth research and consultation, we identify the most effective AI assistant development approach for your project. This ensures every step is aligned with measurable outcomes and long-term value."
         },
         {
-          "title": "Strategy & Planning",
+          "title": "  Strategy & Planning",
           "text": "Our team designs a tailored roadmap with clear milestones, timelines, and deliverables to guide the entire AI assistant development journey. This structured planning minimizes risks, improves efficiency, and lays the foundation for scalable automation."
         },
         {
-          "title": "Design & Prototyping",
+          "title": "  Design & Prototyping",
           "text": "We create intuitive, user-focused designs and interactive prototypes, bringing your vision to life before development begins. With AI-driven prototyping, you can validate ideas faster, refine assistant interactions, and reduce costs by addressing challenges early."
         },
         {
-          "title": "Agile Development",
+          "title": "  Agile Development",
           "text": "Our developers build scalable and secure AI assistants, working in agile sprints for continuous feedback and improvements. This iterative approach ensures transparency, adaptability, and solutions that evolve with your business needs."
         },
         {
-          "title": "Testing & Quality Assurance",
+          "title": "  Testing & Quality Assurance",
           "text": "Every feature is rigorously tested to meet the highest performance, usability, and security standards. With AI-assisted testing, we ensure greater precision, smoother dialogues, and consistently reliable results across environments."
         },
         {
-          "title": "Deployment & Launch",
+          "title": "  Deployment & Launch",
           "text": "Once everything is ready, we ensure a seamless launch with full technical support, risk monitoring, and smooth integration into your workflows. Our team focuses on minimizing downtime and accelerating adoption across your organization, making the transition effortless and efficient."
         },
         {
-          "title": "Post-Launch Support",
+          "title": "  Post-Launch Support",
           "text": "We don’t stop at delivery. Our team provides ongoing updates, monitoring, and enhancements to keep your AI assistants performing at their best. From retraining models to scaling new features, we make sure your solution adapts to future demands."
         }
       ]
@@ -240,50 +282,58 @@
       "title": "Technologies We Use to Build AI Assistants",
       "logos": [
         {
-          "image": "/media/logo-nlp.png",
-          "name": "NLP"
+          "name": "Nlp 13298249",
+          "image": "/media/wf/68ed1db8-nlp-13298249.png",
+          "width": "50"
         },
         {
-          "image": "/media/logo-python.avif",
-          "name": "Python"
+          "name": "python Image",
+          "image": "/media/wf/67d8f3aa-python.avif"
         },
         {
-          "image": "/media/logo-javascript.avif",
-          "name": "JavaScript"
+          "name": "javascript Image",
+          "image": "/media/wf/67d8f3a9-javascript.avif"
         },
         {
-          "image": "/media/logo-rag.png",
-          "name": "RAG"
+          "name": "Rag Logo Vector",
+          "image": "/media/wf/68ed22b4-rag-logo-vector.png",
+          "small": true
         },
         {
-          "image": "/media/logo-langchain.webp",
-          "name": "LangChain"
+          "name": "0 Nbxnga4S23O9Yjq0",
+          "image": "/media/wf/68ed20ec-0-nbxnga4s23o9yjq0.png",
+          "width": "70"
         },
         {
-          "image": "/media/logo-fastapi.webp",
-          "name": "FastAPI"
+          "name": "Original",
+          "image": "/media/wf/68ed20fc-original.webp"
         },
         {
-          "image": "/media/logo-apiflask.png",
-          "name": "APIFlask"
+          "name": "Apiflask Logo",
+          "image": "/media/wf/68ed2196-apiflask-logo.png"
         },
         {
-          "image": "/media/logo-sqlalchemy.jpg",
-          "name": "SQLAlchemy"
+          "name": "0 Msfsws06Immsjyop",
+          "image": "/media/wf/68ed21a9-0-msfsws06immsjyop.jpg",
+          "width": "64"
         },
         {
-          "image": "/media/logo-postgresql.svg",
-          "name": "PostgreSQL"
+          "name": "Postgresql Elephant",
+          "image": "/media/wf/68ed21c1-postgresql-elephant.svg",
+          "width": "64"
         },
         {
-          "image": "/media/logo-aws.avif",
-          "name": "AWS"
+          "name": "aws logo Image",
+          "image": "/media/wf/67d8f384-aws.avif"
         }
-      ]
+      ],
+      "spacing": "large",
+      "variant": "ai"
     },
     {
       "type": "faq",
       "title": "FAQ’s about AI Assistants",
+      "tag": "FAQ",
       "items": [
         {
           "q": "What is an AI assistant?",
@@ -291,7 +341,7 @@
         },
         {
           "q": "How long does it take to build a custom AI assistant?",
-          "a": "It usually depends on what you want the assistant to do. A simple version can be built within a few weeks, while more advanced ones with deep integrations may take a few months.\n\nThe cost of developing custom software depends on multiple factors, including project complexity, required features, technology stack, compliance requirements (if applicable), and team size.\n\nMost time goes into discovery and design. Once everything is clear, the rest of the development usually moves quite quickly."
+          "a": "It usually depends on what you want the assistant to do. A simple version can be built within a few weeks, while more advanced ones with deep integrations may take a few months.The cost of developing custom software depends on multiple factors, including project complexity, required features, technology stack, compliance requirements (if applicable), and team size.\n\nMost time goes into discovery and design. Once everything is clear, the rest of the development usually moves quite quickly."
         },
         {
           "q": "How much does custom AI assistant development cost?",
@@ -309,7 +359,9 @@
           "q": "Can AI assistants integrate with existing systems?",
           "a": "Yes, they can connect with tools your team already uses — CRM, ERP, or any cloud platform. It means you don’t need to change your setup. Everything runs securely, with access control and encryption, so your information stays safe while your work becomes faster and more coordinated."
         }
-      ]
+      ],
+      "spacing": "none",
+      "wide": true
     },
     {
       "type": "contact",
