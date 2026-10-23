@@ -4,6 +4,7 @@
 // Card text comes from the case-study files in src/content/portfolio/.
 import type { CollectionEntry } from 'astro:content';
 import { spacing as pad } from '../lib/spacing';
+import PortfolioCard from './PortfolioCard.astro';
 
 interface Props {
   title: string;
@@ -42,30 +43,7 @@ const alt = 'ALT Althera Code – Innovative Custom Software Development Company
       <div class="section-space-96"></div>
       <div class="portfolio-collection w-dyn-list">
         <div class="portfolio-grid w-dyn-items" role="list">
-          {cases.map((c) => (
-            <div class="portfolio-card w-dyn-item" role="listitem">
-              <div class="portfolio-tags-wrap">
-                <div class:list={['portfolio-tag', { 'w-condition-invisible': !(c.data.nda && c.data.tag) }]}>{c.data.tag}</div>
-                <div class="cms-spacer"></div>
-                <div class="category-list w-dyn-list">
-                  <div class="collection-list-2 w-dyn-items" role="list">
-                    {c.data.categories.map((cat) => (
-                      <div class="w-dyn-item" role="listitem">
-                        <div class="portfolio-tag light-blue">{cat}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <div class="heading-text-wrap margin-bottom-32">
-                <h3 class="heading-style-h4">{c.data.title}</h3>
-                <div>{c.data.description}</div>
-              </div>
-              <a class="portfolio-link w-inline-block" href={`/portfolio/${c.id}`}>
-                <div>Learn More</div>
-              </a>
-            </div>
-          ))}
+          {cases.map((c) => <PortfolioCard c={c} />)}
         </div>
         <div role="navigation" aria-label="List" class="w-pagination-wrapper pagination"></div>
       </div>

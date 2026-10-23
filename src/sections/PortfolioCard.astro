@@ -1,0 +1,30 @@
+---
+// One case-study card: NDA badge (only when switched on), categories, title, short description, "Learn More".
+// The homepage and service pages use an h3 title, the case-study list page an h4 (as on the live site).
+import type { CollectionEntry } from 'astro:content';
+interface Props { c: CollectionEntry<'portfolio'>; heading?: 'h3' | 'h4'; hidden?: boolean }
+const { c, heading = 'h3', hidden = false } = Astro.props;
+const H = heading;
+---
+<div class="portfolio-card w-dyn-item" role="listitem" data-more={hidden ? '' : undefined}>
+  <div class="portfolio-tags-wrap">
+    <div class:list={['portfolio-tag', { 'w-condition-invisible': !(c.data.nda && c.data.tag) }]}>{c.data.tag}</div>
+    <div class="cms-spacer"></div>
+    <div class="category-list w-dyn-list">
+      <div class="collection-list-2 w-dyn-items" role="list">
+        {c.data.categories.map((cat) => (
+          <div class="w-dyn-item" role="listitem">
+            <div class="portfolio-tag light-blue">{cat}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+  <div class="heading-text-wrap margin-bottom-32">
+    <H class="heading-style-h4">{c.data.title}</H>
+    <div>{c.data.description}</div>
+  </div>
+  <a class="portfolio-link w-inline-block" href={`/portfolio/${c.id}`}>
+    <div>Learn More</div>
+  </a>
+</div>

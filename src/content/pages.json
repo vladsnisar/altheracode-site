@@ -2,9 +2,22 @@
   "portfolio": {
     "seo_title": "Case Studies — AltheraCode",
     "seo_description": "Explore AltheraCode case studies: AI automation, custom software and product development projects delivered for startups and established teams.",
-    "eyebrow": "Case Studies",
     "title": "Proven Results Through Innovation: Explore Our Case Studies",
-    "lead": "Explore how AltheraCode has helped businesses overcome challenges and achieve measurable results with tailored solutions. Our case studies showcase a range of successful projects, highlighting our focus on innovation, efficiency, and long-term growth."
+    "lead": "Explore how AltheraCode has helped businesses overcome challenges and achieve measurable results with tailored solutions. Our case studies showcase a range of successful projects, highlighting our focus on innovation, efficiency, and long-term growth.",
+    "title_accent": "Case Studies",
+    "button_text": "Book a Call",
+    "button_link": "/contact",
+    "image": "/media/wf/67dbf5c3-business-people-working-office-with-laptop-1.avif",
+    "tags": [
+      "AI integration",
+      "AI agent development",
+      "Open AI api",
+      "Claude (Anthropic api)",
+      "Artificial Intelligence",
+      "Manufacturing",
+      "Construction",
+      "MVP&PoC"
+    ]
   },
   "blog": {
     "seo_title": "Blog — AltheraCode",

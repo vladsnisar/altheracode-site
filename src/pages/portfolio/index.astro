@@ -1,64 +1,84 @@
 ---
+// Case studies list (/portfolio), matching the live page: hero, a row of topic tags, the case-study grid
+// (15 shown, the arrow button shows the rest, like the live "load more"), tech logos and the contact form.
+// Text lives in src/content/pages.json ("portfolio"); cards come from src/content/portfolio/.
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import PortfolioCard from '../../sections/PortfolioCard.astro';
+import TechStack from '../../sections/TechStack.astro';
 import Contact from '../../sections/Contact.astro';
 import pages from '../../content/pages.json';
-const page = pages.portfolio;
+import home from '../../content/home.json';
+import { highlight } from '../../lib/text';
 
-const cases = (await getCollection('portfolio', p => !p.data.draft))
+const page = pages.portfolio;
+const PER_PAGE = 15; // the live list shows 15 case studies before "load more"
+const cases = (await getCollection('portfolio', (p) => !p.data.draft))
   .sort((a, b) => b.data.created.valueOf() - a.data.created.valueOf());
-// Filter chips = every category used by a published case, most used first
-const counts = new Map<string, number>();
-cases.forEach(c => c.data.categories.forEach(k => counts.set(k, (counts.get(k) ?? 0) + 1)));
-const categories = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).map(([k]) => k);
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
 ---
 <Base title={page.seo_title} description={page.seo_description}>
-  <section class="hero page-hero"><div class="hero-glow"></div><div class="container"><div class="hero-inner">
-    <span class="eyebrow">{page.eyebrow}</span>
-    <h1>{page.title}</h1>
-    {page.lead && <p>{page.lead}</p>}
-  </div></div></section>
-
-  <section class="section"><div class="container">
-    {categories.length > 1 && (
-      <div class="filter-chips" id="caseFilters" role="group" aria-label="Filter case studies by industry">
-        <button type="button" class="active" data-filter="">All</button>
-        {categories.map(k => <button type="button" data-filter={k}>{k}</button>)}
+  <section class="section_hero home">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="w-layout-grid portfolio-hero-grid">
+          <div class="hero-wrap portfolio">
+            <div class="hero-heading-box portfolio">
+              <img alt={alt} class="hero-heading-element" loading="eager" src="/media/wf/67dab518-service-cta-heading-element.svg" />
+              <h1 class="heading-style-h2" set:html={highlight(page.title, page.title_accent, 'h-pink')} />
+            </div>
+            {page.lead && <p class="hero-subheading">{page.lead}</p>}
+            {page.button_text && <a class="button-main blue-button book-call-trigger w-button" href={page.button_link || '/contact'}>{page.button_text}</a>}
+          </div>
+          {page.image && <img alt="Two colleagues working together at a laptop" class="portfolio-hero-image" loading="eager" src={page.image} width="640" />}
+        </div>
       </div>
-    )}
-    <div class="grid cols-3" id="caseGrid">
-      {cases.map(c => (
-        <article class="portfolio-card" data-cats={JSON.stringify(c.data.categories)}>
-          <div class="portfolio-thumb">
-            {c.data.client_image
-              ? <img src={c.data.client_image} alt="" loading="lazy" />
-              : <span class="glyph">{(c.data.categories[0] ?? c.data.title).slice(0, 2)}</span>}
-            {c.data.tag && <span class="chip">{c.data.tag}</span>}
-          </div>
-          <div class="portfolio-body">
-            <span class="cat">{c.data.categories[0]}</span>
-            <h3><a href={`/portfolio/${c.id}`}>{c.data.title}</a></h3>
-            <p>{c.data.description}</p>
-            <a class="more" href={`/portfolio/${c.id}`}>Learn more →</a>
-          </div>
-        </article>
-      ))}
     </div>
-  </div></section>
+  </section>
 
-  <Contact />
+  <section class="portfolio-filter-section">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="w-layout-hflex fs-checkbox_row">
+          {page.tags.map((t) => <div class="portfolio-filter-item"><div>{t}</div></div>)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="padding-global padding-section-botton">
+      <div class="container-large">
+        <div class="portfolio-collection w-dyn-list">
+          <div class="portfolio-grid w-dyn-items" role="list" id="caseGrid">
+            {cases.map((c, i) => <PortfolioCard c={c} heading="h4" hidden={i >= PER_PAGE} />)}
+          </div>
+          {cases.length > PER_PAGE && (
+            <div role="navigation" aria-label="List" class="w-pagination-wrapper pagination">
+              <a aria-label="Show more case studies" class="w-pagination-next button-main" href="#caseGrid" id="caseMore">
+                <img alt="" loading="lazy" src="/media/wf/67dcfc20-fi-ss-arrow-small-right.svg" />
+              </a>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TechStack title={home.stack_title} logos={home.stack} spacing="none" />
+  <Contact title={home.contact_title} text={home.contact_text} image={home.contact_image} variant="cta-section" />
 </Base>
 
+<style is:global>
+  /* Case studies beyond the first page stay hidden until "load more" is clicked (shown without JavaScript). */
+  html.w-mod-js .portfolio-card[data-more] { display: none; }
+</style>
+
 <script>
-  const bar = document.getElementById('caseFilters');
-  bar?.addEventListener('click', (e) => {
-    const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('button[data-filter]');
-    if (!btn) return;
-    bar.querySelectorAll('button').forEach(b => b.classList.toggle('active', b === btn));
-    const want = btn.dataset.filter;
-    document.querySelectorAll<HTMLElement>('#caseGrid .portfolio-card').forEach(card => {
-      const cats: string[] = JSON.parse(card.dataset.cats || '[]');
-      card.hidden = !!want && !cats.includes(want);
-    });
+  // "Load more": the arrow shows the remaining case studies and disappears, like the live site (Finsweet load-more).
+  document.getElementById('caseMore')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelectorAll<HTMLElement>('.portfolio-card[data-more]').forEach((el) => el.removeAttribute('data-more'));
+    (e.currentTarget as HTMLElement).closest('.w-pagination-wrapper')?.remove();
   });
 </script>
