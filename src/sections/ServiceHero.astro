@@ -43,7 +43,7 @@ const [left, right] = braces === 'curly'
           <h1 class:list={['heading-style-h1', title_class]} set:html={highlight(title, title_accent, accent_color)} />
           <img alt={alt} class="hero-heading-element right" loading="eager" src={right} />
         </div>
-        {text && <p class="hero-subheading">{text}</p>}
+        {text && <p class="hero-subheading">{text.split('\n').map((l, i) => <>{i > 0 && <br />}{l}</>)}</p>}
         {button_text && <a class="button-main w-button" href={button_link}>{button_text}</a>}
       </div>
     </div>
