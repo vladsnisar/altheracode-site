@@ -29,7 +29,7 @@ const cases = b.type === 'cases'
   <ServiceHero breadcrumb={b.breadcrumb} title={b.title ?? ''} title_accent={b.title_accent} accent_color={b.accent_color}
     text={b.text} button_text={b.button_text} button_link={b.button_link || '/contact'} background={b.background} braces={b.braces} heading_class={b.heading_class} title_class={b.title_class} />
 )}
-{b.type === 'intro' && <ServiceIntro style={b.style} tag={b.tag} title={b.title ?? ''} text={b.text} image={b.image} list={list(b.list)} icon_class={b.icon_class} heading_class={b.heading_class} title_class={b.title_class} />}
+{b.type === 'intro' && <ServiceIntro style={b.style} tag={b.tag} title={b.title ?? ''} text={b.text} image={b.image} image_alt={b.image_alt || undefined} list={list(b.list)} icon_class={b.icon_class} heading_class={b.heading_class} title_class={b.title_class} />}
 {b.type === 'cards' && (
   <Cards dark={!!b.dark} title={b.title ?? ''} accent={b.accent} accent_color={b.accent_color} tag={b.tag} text={b.text}
     header={b.header} grid={b.grid} tail_row={Number(b.tail_row) || 0} tail_wrap={b.tail_wrap} card_class={b.card_class} inner={b.inner}

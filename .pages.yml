@@ -102,6 +102,7 @@ content:
       # --- SEO ТА АНАЛІТИКА ---
       - { name: seo_title, label: "SEO — заголовок головної (вкладка браузера, Google)", type: string }
       - { name: seo_description, label: "SEO — опис головної для Google", type: text }
+      - { name: og_image, label: "Картинка для соцмереж (за замовчуванням для всіх сторінок)", type: image }
       - { name: gtm_id, label: "Google Tag Manager ID (GTM-XXXX)", type: string }
 
   # ===================== ГОЛОВНА СТОРІНКА =====================
@@ -369,62 +370,117 @@ content:
             fields:
               - { name: breadcrumb, label: "Хлібні крихти — назва поточної сторінки", type: string }
               - { name: title, label: "Заголовок H1 (повний текст)", type: string }
-              - { name: title_accent, label: "Частина заголовка, що підсвічується зеленим (точно як у заголовку)", type: string }
-              - { name: text, label: "Підзаголовок", type: text }
+              - { name: title_accent, label: "Частина заголовка, що підсвічується (точно як у заголовку)", type: string }
+              - { name: accent_color, label: "Колір підсвітки", type: select, options: { values: ["mint", "pink"] } }
+              - { name: text, label: "Підзаголовок (новий рядок у полі = новий рядок на сайті)", type: text }
               - { name: button_text, label: "Кнопка — текст", type: string }
               - { name: button_link, label: "Кнопка — посилання (напр. /contact)", type: string }
+              - { name: braces, label: "Дужки навколо заголовка: service = квадратні, curly = фігурні", type: select, options: { values: ["service", "curly"] } }
+              - { name: background, label: "Фон: service = три фігури, home = як на головній", type: select, options: { values: ["service", "home"] } }
+              - { name: heading_class, label: "Технічне (з живого сайту, не змінюйте): клас заголовка", type: string }
+              - { name: title_class, label: "Технічне (з живого сайту, не змінюйте): клас тексту заголовка", type: string }
           - name: intro
             label: "Вступ: текст + картинка"
             fields:
-              - { name: tag, label: "Підпис зверху", type: string }
+              - { name: style, label: "Вигляд: image = світлий з фото, dark = темна картка", type: select, options: { values: ["image", "dark"] } }
+              - { name: tag, label: "Мітка зверху", type: string }
               - { name: title, label: "Заголовок", type: string }
               - { name: text, label: "Текст (порожній рядок = новий абзац, **жирний**)", type: text }
-              - { name: list, label: "Список пунктів під текстом (необов'язково)", type: string, list: true }
+              - { name: list, label: "Плашки під текстом (необов'язково, лише світлий вигляд)", type: string, list: true }
               - { name: image, label: "Картинка", type: image }
               - { name: image_alt, label: "Опис картинки (alt) для Google та незрячих", type: string }
+              - { name: icon_class, label: "Технічне (з живого сайту, не змінюйте): клас значка в заголовку", type: string }
+              - { name: heading_class, label: "Технічне (з живого сайту, не змінюйте): клас заголовка", type: string }
+              - { name: title_class, label: "Технічне (з живого сайту, не змінюйте): клас тексту заголовка", type: string }
           - name: cards
             label: "Картки (сітка з заголовками та текстом)"
             fields:
-              - { name: tag, label: "Підпис зверху (необов'язково)", type: string }
+              - { name: dark, label: "Темний фон (текстові картки)", type: boolean }
               - { name: title, label: "Заголовок секції", type: string }
-              - { name: text, label: "Вступний текст під заголовком", type: text }
-              - { name: dark, label: "Темний фон", type: boolean }
+              - { name: accent, label: "Частина заголовка, що підсвічується (необов'язково)", type: string }
+              - { name: accent_color, label: "Колір підсвітки", type: select, options: { values: ["mint", "pink"] } }
+              - { name: tag, label: "Мітка праворуч (лише світлі картки)", type: string }
+              - { name: text, label: "Текст під заголовком (лише темні картки)", type: text }
+              - { name: header, label: "Заголовок: left = ліворуч, center = по центру, center-narrow = по центру вузький", type: select, options: { values: ["left", "center", "center-narrow"] } }
+              - { name: grid, label: "Сітка карток", type: select, options: { values: ["why-grid", "why-grid _3-columns", "why-grid-3-col", "ai-grid-copy-copy", "rows"] } }
+              - { name: tail_row, label: "Скільки останніх карток винести в окремий ряд (0 = жодної)", type: number }
+              - { name: tail_wrap, label: "Технічне (з живого сайту, не змінюйте): клас окремого ряду", type: string }
+              - { name: card_class, label: "Технічне (з живого сайту, не змінюйте): клас картки", type: string }
+              - { name: inner, label: "Технічне (з живого сайту, не змінюйте): клас вмісту картки", type: string }
+              - { name: spacing, label: "Відступи секції", type: select, options: { values: ["large", "bottom", "large-no-bottom", "none"] } }
               - name: items
                 label: "Картки"
                 type: object
                 list: true
                 fields:
+                  - { name: icon, label: "Іконка (лише світлі картки)", type: image }
+                  - { name: icon_width, label: "Ширина іконки (px)", type: string }
                   - { name: title, label: "Заголовок картки", type: string }
-                  - { name: text, label: "Текст картки (порожній рядок = новий абзац)", type: text }
+                  - { name: text, label: "Текст картки (новий рядок у полі = новий рядок на сайті)", type: text }
+                  - { name: layout, label: "Технічне (з живого сайту, не змінюйте): розташування", type: string }
+          - name: slider
+            label: "Слайдер карток зі стрілками"
+            fields:
+              - { name: dark, label: "Темний фон", type: boolean }
+              - { name: title, label: "Заголовок секції", type: string }
+              - { name: text, label: "Текст під заголовком (необов'язково)", type: text }
+              - { name: spacing, label: "Відступи секції", type: select, options: { values: ["large", "bottom", "large-no-bottom", "none"] } }
+              - { name: heading_class, label: "Технічне (з живого сайту, не змінюйте): клас заголовка", type: string }
+              - { name: title_class, label: "Технічне (з живого сайту, не змінюйте): клас тексту заголовка", type: string }
+              - name: items
+                label: "Картки"
+                type: object
+                list: true
+                fields:
+                  - { name: icon, label: "Іконка", type: image }
+                  - { name: title, label: "Заголовок картки", type: string }
+                  - { name: text, label: "Текст картки (новий рядок у полі = новий рядок на сайті)", type: text }
           - name: process
             label: "Етапи процесу (темна секція з нумерацією)"
             fields:
-              - { name: tag, label: "Підпис зверху", type: string }
+              - { name: tag, label: "Мітка", type: string }
               - { name: title, label: "Заголовок секції", type: string }
               - { name: text, label: "Вступний текст", type: text }
               - name: steps
-                label: "Етапи (нумеруються автоматично)"
+                label: "Етапи (нумеруються автоматично; картинки беруться з головної)"
                 type: object
                 list: true
                 fields:
                   - { name: title, label: "Назва етапу", type: string }
                   - { name: text, label: "Опис етапу", type: text }
+                  - { name: button_text, label: "Кнопка — текст (порожньо = Start Now)", type: string }
+                  - { name: button_link, label: "Кнопка — посилання (порожньо = /contact)", type: string }
           - name: industries
-            label: "Галузі"
+            label: "Галузі (картки з описом)"
             fields:
-              - { name: tag, label: "Підпис зверху", type: string }
+              - { name: tag, label: "Мітка праворуч", type: string }
               - { name: title, label: "Заголовок секції", type: string }
+              - { name: accent, label: "Частина заголовка, що підсвічується (необов'язково)", type: string }
+              - { name: header, label: "Ширина заголовка", type: select, options: { values: ["narrow", "wide", "plain"] } }
+              - { name: spacing, label: "Відступи секції", type: select, options: { values: ["large", "bottom", "large-no-bottom", "none"] } }
               - name: items
                 label: "Галузі"
                 type: object
                 list: true
                 fields:
-                  - { name: title, label: "Назва галузі", type: string }
+                  - { name: icon, label: "Іконка", type: image }
+                  - { name: name, label: "Назва галузі", type: string }
                   - { name: text, label: "Опис", type: text }
+                  - { name: layout, label: "Технічне (з живого сайту, не змінюйте): розташування", type: string }
+          - name: testimonials
+            label: "Відгуки клієнтів (віджет Clutch)"
+            fields:
+              - { name: title, label: "Заголовок секції", type: string }
+              - { name: spacing, label: "Відступи секції", type: select, options: { values: ["large", "bottom", "large-no-bottom", "none"] } }
           - name: tech
             label: "Технології (логотипи)"
             fields:
               - { name: title, label: "Заголовок секції", type: string }
+              - { name: variant, label: "Відстань між логотипами: порожньо = як на головній, ai = щільніше", type: select, options: { values: ["", "ai"] } }
+              - { name: no_icon, label: "Без значка «/» перед заголовком", type: boolean }
+              - { name: spacing, label: "Відступи секції", type: select, options: { values: ["large", "bottom", "large-no-bottom", "none"] } }
+              - { name: heading_class, label: "Технічне (з живого сайту, не змінюйте): клас заголовка", type: string }
+              - { name: title_class, label: "Технічне (з живого сайту, не змінюйте): клас тексту заголовка", type: string }
               - name: logos
                 label: "Логотипи"
                 type: object
@@ -432,36 +488,56 @@ content:
                 fields:
                   - { name: name, label: "Назва технології (також alt-текст)", type: string }
                   - { name: image, label: "Логотип", type: image }
+                  - { name: width, label: "Ширина (px, порожньо = 98)", type: string }
+                  - { name: small, label: "Вписати логотип у плитку", type: boolean }
           - name: cases
             label: "Кейси (картки з портфоліо)"
             fields:
-              - { name: tag, label: "Підпис зверху", type: string }
+              - { name: tag, label: "Мітка праворуч", type: string }
               - { name: title, label: "Заголовок секції", type: string }
               - { name: text, label: "Вступний текст", type: text }
               - { name: cases, label: "Кейси: назва файлу кейсу без .json (адреса після /portfolio/). Чернетки не показуються", type: string, list: true }
+              - { name: narrow, label: "Вужчий заголовок (як на більшості сторінок послуг)", type: boolean }
+              - { name: spacing, label: "Відступи секції", type: select, options: { values: ["large", "bottom", "large-no-bottom", "none"] } }
+              - { name: heading_class, label: "Технічне (з живого сайту, не змінюйте): клас заголовка", type: string }
+              - { name: title_class, label: "Технічне (з живого сайту, не змінюйте): клас тексту заголовка", type: string }
           - name: cta
-            label: "Заклик до дії (темна стрічка з кнопкою)"
+            label: "Заклик до дії (світла стрічка з кнопкою)"
             fields:
               - { name: title, label: "Текст", type: string }
               - { name: accent, label: "Частина тексту, що підсвічується (точно як у тексті)", type: string }
+              - { name: accent_color, label: "Колір підсвітки", type: select, options: { values: ["mint", "pink"] } }
               - { name: button_text, label: "Кнопка — текст", type: string }
               - { name: button_link, label: "Кнопка — посилання (напр. /contact)", type: string }
+              - { name: button_style, label: "Кнопка: blue = темна, default = мʼятна", type: select, options: { values: ["blue", "default"] } }
+              - { name: braces, label: "Дужки: service = квадратні, curly = фігурні", type: select, options: { values: ["service", "curly"] } }
+              - { name: size, label: "Розмір тексту: h2 = великий, h3 = менший, plain = без стилю", type: select, options: { values: ["h2", "h3", "plain"] } }
+              - { name: brace_height, label: "Висота дужок (px, порожньо = автоматично)", type: string }
+              - { name: spacing, label: "Відступи секції", type: select, options: { values: ["large", "bottom", "large-no-bottom", "none"] } }
           - name: faq
             label: "Питання та відповіді"
             fields:
+              - { name: tag, label: "Мітка зверху", type: string }
               - { name: title, label: "Заголовок секції", type: string }
+              - { name: wide, label: "Широка ліва колонка (як на більшості сторінок послуг)", type: boolean }
+              - { name: spacing, label: "Відступи секції", type: select, options: { values: ["large", "bottom", "large-no-bottom", "none"] } }
               - name: items
-                label: "Питання"
+                label: "Питання (нумеруються автоматично)"
                 type: object
                 list: true
                 fields:
                   - { name: q, label: "Питання", type: string }
-                  - { name: a, label: "Відповідь (порожній рядок = новий абзац)", type: text }
+                  - { name: a, label: "Відповідь (порожній рядок = новий абзац; рядки з «- » або «1. » = список)", type: text }
           - name: contact
             label: "Форма контакту"
             fields:
               - { name: title, label: "Заголовок", type: string }
               - { name: text, label: "Текст під заголовком", type: text }
+              - { name: variant, label: "Відступи: порожньо = звичайні, plain = менші зверху", type: select, options: { values: ["", "plain"] } }
+              - { name: size, label: "Розмір заголовка", type: select, options: { values: ["h2", "h3"] } }
+          - name: spacer
+            label: "Порожній відступ"
+            fields: []
 
   # ===================== НОВІ СТОРІНКИ (З СЕКЦІЙ) =====================
   # Окремі сторінки сайту (напр. «Про нас», «Кар'єра»), які збираються з тих самих секцій, що й сторінки послуг.

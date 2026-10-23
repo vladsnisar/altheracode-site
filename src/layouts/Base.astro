@@ -18,7 +18,7 @@ interface Props {
   /** Page without the site header and footer (the 404 page, as on the live site). */
   bare?: boolean;
 }
-const { title = site.seo_title, description = site.seo_description, image, schema = [], bare = false } = Astro.props;
+const { title = site.seo_title, description = site.seo_description, image = site.og_image, schema = [], bare = false } = Astro.props;
 // Pages are built as files (x.html) but published as /x, so the canonical address has no .html and no trailing slash.
 const cleanPath = Astro.url.pathname.replace(/(^|\/)index\.html$/, '$1').replace(/\.html$/, '');
 const canonical = new URL(cleanPath || '/', Astro.site);

@@ -10,6 +10,7 @@ interface Props {
   title: string;
   text?: string;
   image?: string;
+  image_alt?: string;
   /** Short tags shown under the text (light look only), e.g. the services a page covers. */
   list?: string[];
   /** Extra class on the heading's slash image from the live page. */
@@ -18,7 +19,7 @@ interface Props {
   heading_class?: string;
   title_class?: string;
 }
-const { style = 'image', tag, title, text = '', image = '/media/wf/67d40699-our-expertise-image.avif', list = [], icon_class, heading_class, title_class } = Astro.props;
+const { style = 'image', tag, title, text = '', image = '/media/wf/67d40699-our-expertise-image.avif', image_alt = 'Our team at work', list = [], icon_class, heading_class, title_class } = Astro.props;
 const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
 ---
 {style === 'dark' ? (
@@ -42,7 +43,7 @@ const alt = 'ALT Althera Code – Innovative Custom Software Development Company
                 </div>
                 <div class="expertise-text-box" set:html={richText(text)} />
               </div>
-              {image && <img alt="Our team at work" class="expertise-image" loading="lazy" src={image} />}
+              {image && <img alt={image_alt} class="expertise-image" loading="lazy" src={image} />}
             </div>
           </div>
         </div>
@@ -74,7 +75,7 @@ const alt = 'ALT Althera Code – Innovative Custom Software Development Company
               </div>
             )}
           </div>
-          {image && <img alt="Our team at work" class="expertise-image" loading="lazy" src={image} width="576" />}
+          {image && <img alt={image_alt} class="expertise-image" loading="lazy" src={image} width="576" />}
         </div>
       </div>
     </div>
