@@ -1,0 +1,35 @@
+---
+// Blog post list with category tabs ("All Posts" + each category), used on /blog and /blog-category/<slug>.
+// `current` is "all" or the slug of the category being shown (its tab is highlighted, as on the live site).
+import type { CollectionEntry } from 'astro:content';
+import cats from '../content/blog-categories.json';
+import BlogCard from './BlogCard.astro';
+interface Props { posts: CollectionEntry<'blog'>[]; current?: string }
+const { posts, current = 'all' } = Astro.props;
+---
+<section class="section">
+  <div class="padding-global padding-section-large no-bottom">
+    <div class="container-large">
+      <div class="w-layout-vflex blog-wrapper-hero">
+        <div class="w-layout-hflex blog-categories-wrapper">
+          <a aria-current={current === 'all' ? 'page' : undefined} class:list={['blog-category-tab', { 'w--current': current === 'all' }]} href="/blog">All Posts</a>
+          <div class="collection-list-wrapper-3 w-dyn-list">
+            <div class="blog-categories-list w-dyn-items" role="list">
+              {cats.blog_categories.map((c) => (
+                <div class="collection-item w-dyn-item" role="listitem">
+                  <a aria-current={current === c.slug ? 'page' : undefined} class:list={['blog-category-tab', { 'w--current': current === c.slug }]} href={`/blog-category/${c.slug}`}>{c.name}</a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-collection w-dyn-list">
+          <div class="blog-grid w-dyn-items" role="list">
+            {posts.map((p) => <BlogCard post={p} />)}
+          </div>
+          <div aria-label="List" class="w-pagination-wrapper pagination" role="navigation"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

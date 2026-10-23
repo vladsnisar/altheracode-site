@@ -1,16 +1,16 @@
 {
   "blog_categories": [
     {
-      "name": "AI for Startups",
-      "slug": "ai-for-startups"
+      "name": "Tech Partner Insights",
+      "slug": "tech-partner-insights"
     },
     {
       "name": "Custom AI Solutions",
       "slug": "custom-ai-solutions"
     },
     {
-      "name": "Tech Partner Insights",
-      "slug": "tech-partner-insights"
+      "name": "AI for Startups",
+      "slug": "ai-for-startups"
     }
   ]
 }

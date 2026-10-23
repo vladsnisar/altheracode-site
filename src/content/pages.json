@@ -22,9 +22,9 @@
   "blog": {
     "seo_title": "Blog — AltheraCode",
     "seo_description": "Practical guides on AI, custom software and product development from the AltheraCode team.",
-    "eyebrow": "Blog",
     "title": "Practical Guides for AI-Driven Tech Teams",
-    "lead": "Explore expert insights, practical guides, and real-world use cases in AI development, product automation, and startup tech."
+    "lead": "Explore expert insights, practical guides, and real-world use cases in AI development, product automation, and startup tech.",
+    "title_accent": "Practical Guides"
   },
   "contact": {
     "seo_title": "Contact AltheraCode — let’s build smart solutions together",
