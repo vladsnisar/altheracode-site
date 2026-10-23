@@ -1,9 +1,33 @@
 ---
+// Contact page (/contact), matching the live page: heading and intro above the contact form and a photo.
+// Text lives in src/content/pages.json ("contact"); the form is ContactForm.astro.
 import Base from '../layouts/Base.astro';
-import Contact from '../sections/Contact.astro';
+import ContactForm from '../sections/ContactForm.astro';
 import pages from '../content/pages.json';
 const page = pages.contact;
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
 ---
 <Base title={page.seo_title} description={page.seo_description}>
-  <div class="contact-page"><Contact eyebrow={page.eyebrow} title={page.title} text={page.text} /></div>
+  <div class="section-space-96"></div>
+  <section class="section cta-section no-top" id="contact">
+    <div class="padding-global phone-non">
+      <div class="container-large">
+        <div class="contact-form-block">
+          <div class="form-title grid">
+            <div class="heading-box">
+              <img alt={alt} loading="eager" src="/media/wf/67d66bce-slash.svg" />
+              <h1 class="heading-style-h2">{page.title}</h1>
+            </div>
+            {page.text && <div class="form-text">{page.text}</div>}
+          </div>
+          <div class="form-wrap">
+            <div class="form-box">
+              <ContactForm full />
+            </div>
+            {page.image && <img alt="Two colleagues working together at a laptop" class="form-image" loading="eager" src={page.image} width="585" />}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Base>

@@ -270,9 +270,9 @@ content:
         fields:
           - { name: seo_title, label: "SEO — заголовок (вкладка браузера, Google)", type: string }
           - { name: seo_description, label: "SEO — опис для Google", type: text }
-          - { name: eyebrow, label: "Підпис зверху", type: string }
           - { name: title, label: "Заголовок", type: string }
           - { name: text, label: "Текст під заголовком", type: text }
+          - { name: image, label: "Фото біля форми", type: image }
 
   - name: case_categories
     label: Кольори галузей у кейсах

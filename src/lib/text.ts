@@ -1,10 +1,14 @@
 // Tiny helpers for text typed into Pages CMS fields.
-// Blank line = new paragraph, single line break = <br>, **word** = bold. HTML is escaped.
+// Blank line = new paragraph, single line break = <br>, **word** = bold, [text](link) = link. HTML is escaped.
 // Lines starting with "- " or "1. " (with a blank line before and after) become lists.
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
+// [text](link) becomes a link (only web, mailto, tel and site-relative addresses).
+const links = (s: string) =>
+  s.replace(/\[([^\]]+)\]\(((?:https?:\/\/|mailto:|tel:|\/|#)[^)\s]*)\)/g, '<a href="$2">$1</a>');
+
 export const inline = (s: string) =>
-  esc(s.trim()).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
+  links(esc(s.trim())).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
 
 // A block whose lines all start with "- " becomes a bulleted list; "1. ", "2. " … a numbered list.
 const block = (p: string) => {

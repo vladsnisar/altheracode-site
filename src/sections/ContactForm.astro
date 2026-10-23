@@ -1,0 +1,62 @@
+---
+// The contact form itself (fields, success and error boxes), shared by the "Drop Us a Line" section and /contact.
+// It sends through Formspree. Until a real Formspree ID is set in Pages CMS ("ID форми Formspree"), submitting
+// shows the error box with the e-mail address instead of sending.
+// `full` is the /contact page version: an extra Company Name field and a taller message box (as on the live site).
+import site from '../content/site.json';
+interface Props { full?: boolean }
+const { full = false } = Astro.props;
+const id = site.formspree_id;
+const action = id && !id.startsWith('REPLACE') ? `https://formspree.io/f/${id}` : undefined;
+---
+<div class="w-form">
+  <form class="contact-form" name="email-form" method="POST" action={action} data-ready={action ? 'yes' : 'no'}>
+    <input class="text-field w-input" maxlength="256" name="Full-Name" placeholder="Full Name" aria-label="Full Name" required type="text" />
+    <input class="text-field w-input" maxlength="256" name="Business-Email" placeholder="Business Email" aria-label="Business Email" required type="email" />
+    {full && <input class="text-field w-input" maxlength="256" name="Company-Name" placeholder="Company Name (optional)" aria-label="Company Name (optional)" type="text" />}
+    <input class="text-field w-input" maxlength="256" name="Phone-Number" placeholder="Phone Number (optional)" aria-label="Phone Number (optional)" type="tel" />
+    <textarea class:list={['text-field', { message: full }, 'w-input']} maxlength="5000" name="Message" placeholder="Message" aria-label="Message"></textarea>
+    <input type="hidden" name="Page" value={Astro.url.pathname.replace(/\.html$/, '')} />
+    <div class="form-button-box">
+      <input class="button-main form-button w-button" data-wait="Please wait..." type="submit" value="Submit" />
+      <label class="w-checkbox checkbox-field">
+        <input class="w-checkbox-input checkbox" name="Agree-with-privacy-policy" required type="checkbox" />
+        <span class="checkbox-label w-form-label">By submitting this form I agree with the <a href="/privacy-policy">privacy policy</a></span>
+      </label>
+    </div>
+  </form>
+  <div class="form_message-success w-form-done" role="status">
+    <div>Thank you! Your submission has been received!</div>
+  </div>
+  <div class="w-form-fail" role="alert">
+    <div>Oops! Something went wrong while submitting the form.{!action && <> Please e-mail us at <a href={`mailto:${site.contact_email}`}>{site.contact_email}</a>.</>}</div>
+  </div>
+</div>
+
+<script>
+  // Sends the form without leaving the page and shows Webflow's success or error box, like the live site.
+  document.querySelectorAll<HTMLFormElement>('form.contact-form').forEach((form) => {
+    const wrap = form.closest('.w-form');
+    const done = wrap?.querySelector<HTMLElement>('.w-form-done');
+    const fail = wrap?.querySelector<HTMLElement>('.w-form-fail');
+    const button = form.querySelector<HTMLInputElement>('input[type="submit"]');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (fail) fail.style.display = 'none';
+      if (form.dataset.ready !== 'yes') { if (fail) fail.style.display = 'block'; return; }
+      const label = button?.value;
+      if (button) button.value = button.dataset.wait || label || '';
+      try {
+        const r = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+        if (!r.ok) throw new Error(String(r.status));
+        form.style.display = 'none';
+        if (done) done.style.display = 'block';
+        (window as any).dataLayer?.push({ event: 'form_submit', form: 'contact' });
+      } catch {
+        if (fail) fail.style.display = 'block';
+      } finally {
+        if (button && label) button.value = label;
+      }
+    });
+  });
+</script>
