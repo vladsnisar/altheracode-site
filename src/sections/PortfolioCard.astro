@@ -1,10 +1,13 @@
 ---
-// One case-study card: NDA badge (only when switched on), categories, title, short description, "Learn More".
+// One case-study card: NDA badge (only when switched on), coloured categories, title, short description, "Learn More".
 // The homepage and service pages use an h3 title, the case-study list page an h4 (as on the live site).
 import type { CollectionEntry } from 'astro:content';
+import caseCategories from '../content/case-categories.json';
 interface Props { c: CollectionEntry<'portfolio'>; heading?: 'h3' | 'h4'; hidden?: boolean }
 const { c, heading = 'h3', hidden = false } = Astro.props;
 const H = heading;
+// Category labels use the colour set for that category in the CMS ("Кольори галузей у кейсах"), as on the live site.
+const color = (k: string) => caseCategories.items.find((x) => x.name.toLowerCase() === k.toLowerCase())?.color;
 ---
 <div class="portfolio-card w-dyn-item" role="listitem" data-more={hidden ? '' : undefined}>
   <div class="portfolio-tags-wrap">
@@ -14,7 +17,7 @@ const H = heading;
       <div class="collection-list-2 w-dyn-items" role="list">
         {c.data.categories.map((cat) => (
           <div class="w-dyn-item" role="listitem">
-            <div class="portfolio-tag light-blue">{cat}</div>
+            <div class="portfolio-tag light-blue" style={color(cat) ? `background-color:${color(cat)}` : undefined}>{cat}</div>
           </div>
         ))}
       </div>
