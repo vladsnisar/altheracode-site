@@ -109,24 +109,88 @@ const tel = (n: string) => 'tel:' + n.replace(/\s/g, '');
         </div>
       </div>
     </div>
+    <div class="w-nav-overlay" id="navOverlay"></div>
   </div>
 </div>
 
 <script>
-  // Replaces Webflow's navbar and dropdown behaviour: same classes and attributes, so webflow.css styles every state.
+  // Replaces Webflow's navbar, dropdown and menu interactions with the same classes, timings and states as the live site,
+  // so webflow.css styles every state:
+  // - Phone/tablet (991px and below): the menu slides down from the top (400ms) inside an overlay that covers the page,
+  //   every item on its own line, and the three lines turn into a cross (500ms).
+  // - Desktop: the Services mega-menu opens on hover; a service with sub-links (Software Product Development)
+  //   shows them on hover and hides them again when the mouse leaves (500ms).
+  const nav = document.querySelector<HTMLElement>('.nav_component');
   const menu = document.getElementById('navMenu');
   const button = document.getElementById('navButton');
+  const overlay = document.getElementById('navOverlay');
   const dropdown = document.querySelector<HTMLElement>('.nav_dropdown');
   const toggle = dropdown?.querySelector<HTMLElement>('.w-dropdown-toggle');
   const list = dropdown?.querySelector<HTMLElement>('.w-dropdown-list');
+  const lines = [...document.querySelectorAll<HTMLElement>('.nav-burger-line')];
+  const home = menu?.parentElement; // where the menu lives while closed
+  const next = menu?.nextElementSibling ?? null;
   const mobile = () => window.matchMedia('(max-width: 991px)').matches;
+  const SLIDE = 400;
+  const BURGER = 500;
+  let busy = false;
 
-  function setMenu(open: boolean) {
-    if (!menu || !button) return;
-    button.classList.toggle('w--open', open);
-    button.setAttribute('aria-expanded', String(open));
-    if (open) menu.setAttribute('data-nav-menu-open', '');
-    else menu.removeAttribute('data-nav-menu-open');
+  lines.forEach((l) => (l.style.transition = `transform ${BURGER}ms ease, opacity ${BURGER}ms ease, background-color ${BURGER}ms ease`));
+  function burger(open: boolean) {
+    const [a, b, c] = lines;
+    if (a) a.style.transform = open ? 'translateY(10px) rotate(-45deg)' : '';
+    if (b) { b.style.opacity = open ? '0' : ''; b.style.backgroundColor = open ? 'var(--base-color-brand--blue-dark)' : ''; }
+    if (c) c.style.transform = open ? 'translateY(-8px) rotate(45deg)' : '';
+  }
+  // Webflow marks every menu item while the mobile menu is open; webflow.css then stacks them one per line.
+  function markOpen(open: boolean) {
+    menu?.querySelectorAll('.w-nav-link').forEach((a) => a.classList.toggle('w--nav-link-open', open));
+    dropdown?.classList.toggle('w--nav-dropdown-open', open);
+    toggle?.classList.toggle('w--nav-dropdown-toggle-open', open);
+    list?.classList.toggle('w--nav-dropdown-list-open', open);
+  }
+  const isOpen = () => !!button?.classList.contains('w--open');
+
+  function openMenu() {
+    if (!menu || !button || !overlay || busy || isOpen()) return;
+    busy = true;
+    overlay.style.display = 'block';
+    overlay.style.height = document.documentElement.scrollHeight + 'px';
+    overlay.appendChild(menu);
+    menu.setAttribute('data-nav-menu-open', '');
+    markOpen(true);
+    button.classList.add('w--open');
+    button.setAttribute('aria-expanded', 'true');
+    burger(true);
+    const h = menu.offsetHeight;
+    menu.style.transition = 'none';
+    menu.style.transform = `translateY(-${h}px)`;
+    void menu.offsetHeight; // apply the start position before animating
+    menu.style.transition = `transform ${SLIDE}ms ease`;
+    menu.style.transform = 'translateY(0px)';
+    setTimeout(() => (busy = false), SLIDE);
+  }
+  function closeMenu(instant = false) {
+    if (!menu || !button || !overlay || !isOpen()) return;
+    busy = true;
+    button.classList.remove('w--open');
+    button.setAttribute('aria-expanded', 'false');
+    burger(false);
+    const done = () => {
+      overlay.style.display = 'none';
+      overlay.style.height = '';
+      menu.removeAttribute('data-nav-menu-open');
+      markOpen(false);
+      setDropdown(false);
+      menu.style.transition = '';
+      menu.style.transform = '';
+      home?.insertBefore(menu, next);
+      busy = false;
+    };
+    if (instant) return done();
+    menu.style.transition = `transform ${SLIDE}ms ease`;
+    menu.style.transform = `translateY(-${menu.offsetHeight}px)`;
+    setTimeout(done, SLIDE);
   }
   function setDropdown(open: boolean) {
     if (!toggle || !list) return;
@@ -135,7 +199,7 @@ const tel = (n: string) => 'tel:' + n.replace(/\s/g, '');
     toggle.setAttribute('aria-expanded', String(open));
   }
 
-  button?.addEventListener('click', () => setMenu(!button.classList.contains('w--open')));
+  button?.addEventListener('click', () => (isOpen() ? closeMenu() : openMenu()));
   button?.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); button.click(); }
   });
@@ -145,10 +209,56 @@ const tel = (n: string) => 'tel:' + n.replace(/\s/g, '');
   toggle?.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle.click(); }
   });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { setDropdown(false); setMenu(false); } });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { setDropdown(false); closeMenu(); } });
   document.addEventListener('click', (e) => {
-    if (dropdown && !dropdown.contains(e.target as Node)) setDropdown(false);
+    const t = e.target as Node;
+    if (dropdown && !dropdown.contains(t) && !mobile()) setDropdown(false);
+    // A tap on the page below the open menu closes it, as on the live site.
+    if (isOpen() && nav && !nav.contains(t)) closeMenu();
+    if (isOpen() && overlay && t === overlay) closeMenu();
   });
-  menu?.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
-  window.addEventListener('resize', () => { if (!mobile()) setMenu(false); });
+  menu?.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => { if (a.getAttribute('href') !== '#') closeMenu(); }));
+
+  // Sub-links under a service in the mega-menu (desktop only; on phones they are always shown, as on live).
+  const subs = [...document.querySelectorAll<HTMLElement>('.nav_menu .services-link-item')]
+    .map((item) => ({ item, sub: item.querySelector<HTMLElement>('.services-link-item_dropdown') }))
+    .filter((x): x is { item: HTMLElement; sub: HTMLElement } => !!x.sub);
+  function slide(sub: HTMLElement, open: boolean) {
+    const from = sub.getBoundingClientRect().height;
+    const to = open ? sub.scrollHeight : 0;
+    sub.style.transition = 'none';
+    sub.style.height = from + 'px';
+    void sub.offsetHeight;
+    sub.style.transition = 'height 500ms linear';
+    sub.style.height = to + 'px';
+    sub.dataset.open = open ? '1' : '';
+  }
+  function resetSubs() {
+    subs.forEach(({ sub }) => {
+      sub.style.transition = '';
+      sub.style.height = mobile() ? '' : '0px';
+      sub.dataset.open = '';
+    });
+  }
+  subs.forEach(({ item, sub }) => {
+    sub.addEventListener('transitionend', () => { if (sub.dataset.open) sub.style.height = 'auto'; });
+    item.addEventListener('mouseenter', () => { if (!mobile()) slide(sub, true); });
+    item.addEventListener('mouseleave', () => { if (!mobile() && !item.contains(document.activeElement)) slide(sub, false); });
+    item.addEventListener('focusin', () => { if (!mobile() && !sub.dataset.open) slide(sub, true); });
+    item.addEventListener('focusout', () => setTimeout(() => {
+      if (!mobile() && !item.contains(document.activeElement) && !item.matches(':hover')) slide(sub, false);
+    }));
+  });
+  resetSubs();
+  // The mega-menu closes when the mouse leaves it; collapse the sub-links then too, so they start closed next time.
+  dropdown?.addEventListener('mouseleave', () => { if (!mobile()) resetSubs(); });
+
+  let wasMobile = mobile();
+  window.addEventListener('resize', () => {
+    if (mobile() === wasMobile) return;
+    wasMobile = mobile();
+    closeMenu(true);
+    setDropdown(false);
+    resetSubs();
+  });
 </script>

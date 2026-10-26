@@ -281,7 +281,7 @@ content:
     path: src/content/case-categories.json
     fields:
       - name: items
-        label: "Галузь і колір плашки на сторінці кейсу (галузі без кольору — прозорі)"
+        label: "Галузь і колір плашки (на сторінці кейсу і на картках кейсів; галузі без кольору — стандартні)"
         type: object
         list: true
         fields:
