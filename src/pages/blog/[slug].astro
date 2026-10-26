@@ -1,46 +1,98 @@
 ---
+// One blog post (/blog/<file-name>), matching the live page: hero (breadcrumb, category, title, intro, cover image),
+// the article, the contact form and "Latest Posts". Posts are src/content/blog/*.md.
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import BlogCard from '../../sections/BlogCard.astro';
 import Contact from '../../sections/Contact.astro';
+import home from '../../content/home.json';
 import { slugify } from '../../lib/text';
+
 export async function getStaticPaths() {
-  const posts = await getCollection('blog', p => !p.data.draft);
-  return posts.map(post => ({ params: { slug: post.id }, props: { post } }));
+  const posts = await getCollection('blog', (p) => !p.data.draft);
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
 }
 const { post } = Astro.props;
 const { Content } = await render(post);
-const latest = (await getCollection('blog', p => !p.data.draft && p.id !== post.id))
+const empty = !post.body?.trim();
+// Live shows the newest posts here, including the one being read.
+const latest = (await getCollection('blog', (p) => !p.data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 3);
 const d = post.data;
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
 ---
 <Base title={d.seo_title || `${d.title} — AltheraCode`} description={d.seo_description || d.description} image={d.cover}>
-  <section class="section"><article class="container prose">
-    {d.category && <a class="eyebrow" href={`/blog-category/${slugify(d.category)}`}>{d.category}</a>}
-    <h1>{d.title}</h1>
-    {d.description && <p class="lead" style="margin:0 0 20px">{d.description}</p>}
-    <p class="post-meta">{d.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}</p>
-    {d.cover && <img src={d.cover} alt="" />}
-    <Content />
-    <p style="margin-top:40px"><a href="/blog">← All posts</a></p>
-  </article></section>
-  {latest.length > 0 && (
-    <section class="section bg-white"><div class="container">
-      <span class="eyebrow">Our blog</span>
-      <h2 class="section-title">Latest Posts</h2>
-      <div class="grid cols-3" style="margin-top:40px">
-        {latest.map(p => (
-          <article class="portfolio-card">
-            <div class="portfolio-thumb">{p.data.cover ? <img src={p.data.cover} alt="" loading="lazy" /> : <span class="glyph">✎</span>}</div>
-            <div class="portfolio-body">
-              {p.data.category && <span class="cat">{p.data.category}</span>}
-              <h3><a href={`/blog/${p.id}`}>{p.data.title}</a></h3>
-              <p>{p.data.description}</p>
-              <a class="more" href={`/blog/${p.id}`}>Read more →</a>
-            </div>
-          </article>
-        ))}
+  <section class="section_hero blog-details">
+    <div class="padding-global">
+      <nav class="w-layout-hflex breadcrums-wrapp" aria-label="Breadcrumb">
+        <a class="breadcrumb light" href="/">Home</a>
+        <div aria-hidden="true">&gt;</div>
+        <a class="breadcrumb light" href="/blog">Blog</a>
+        <div aria-hidden="true">&gt;</div>
+        <div>{d.title}</div>
+      </nav>
+      <div class="container-large blog-details-con">
+        <div class="hero-wrap">
+          <div>
+            {d.category && (
+              <div class="w-dyn-list">
+                <div class="w-dyn-items" role="list">
+                  <div class="w-dyn-item" role="listitem">
+                    <a class="blog-category-tab-copy" href={`/blog-category/${slugify(d.category)}`}>{d.category}</a>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+          <div class="hero-heading-box service">
+            <img alt={alt} class="hero-heading-element" loading="eager" src="/media/wf/67daa56c-heading-element.svg" />
+            <h1 class="heading-style-h1">{d.title}</h1>
+            <img alt={alt} class="hero-heading-element right" loading="eager" src="/media/wf/67daa56c-heading-element-2.svg" />
+          </div>
+          {d.description && <p class="hero-subheading blog-description">{d.description}</p>}
+        </div>
+        {d.cover && <img alt={d.title} class="blog-hero-image" loading="eager" src={d.cover} />}
       </div>
-    </div></section>
-  )}
-  <Contact />
+    </div>
+    <img alt="" class="service-hero-bg-image" loading="eager" src="/media/wf/67daa61c-service-bg-image-left.avif" width="372.5" />
+    <img alt="" class="service-hero-bg-image service-right-bg" loading="eager" src="/media/wf/67daa61c-service-bg-image-right.avif" width="354" />
+    <img alt="" class="service-hero-bg-image service-top-bg" loading="eager" src="/media/wf/67dbe3e1-group-85753.avif" width="431.5" />
+  </section>
+
+  <section class="section">
+    <div class="padding-global padding-section-large">
+      <div class="container-medium blog">
+        <div class:list={['blog-rich-text', { 'w-dyn-bind-empty': empty }, 'w-richtext']}><Content /></div>
+      </div>
+    </div>
+  </section>
+
+  <Contact title={home.contact_title} text={home.contact_text} image={home.contact_image} variant="" />
+
+  <section class="section">
+    <div class="padding-global padding-section-large">
+      <div class="container-large">
+        <div class="w-layout-vflex blog-wrapper-details">
+          <div class="why-heading-wrap blog wn-_5eb90997-5393-620b-9067-695ed14b4929-ede5ddc5">
+            <div class="heading-text-wrap max-width-800 left">
+              <div class="section-tag-box light-purple first">
+                <div class="tag-bullet"></div>
+                <div>Our blog</div>
+              </div>
+              <div class="heading-box">
+                <img alt={alt} loading="lazy" src="/media/wf/67d66bce-slash.svg" />
+                <h2 class="heading-style-h2">Latest Posts</h2>
+              </div>
+            </div>
+          </div>
+          <a class="button-main w-button wn-_8f1b1e43-0fc7-f77b-cc25-319b77bc0113-ede5ddc5" href="/blog">All Posts</a>
+          <div class="portfolio-collection w-dyn-list wn-_0787d7d8-fc4d-b542-9909-d658bacf5927-ede5ddc5">
+            <div class="blog-grid-copy w-dyn-items" role="list">
+              {latest.map((p) => <BlogCard post={p} small />)}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Base>

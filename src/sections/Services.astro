@@ -1,16 +1,73 @@
 ---
+// Homepage "Services We Provide": heading, intro and two lists of service links. Text comes from home.json.
+// A service with sub-links (e.g. Product Development) shows them when hovered or focused, as on the live site.
 import home from '../content/home.json';
-import SectionHeading from './SectionHeading.astro';
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
+type Item = { label: string; href: string; sub?: { label: string; href: string }[] };
+const columns: { title: string; items: Item[]; cls: string }[] = [
+  { title: home.services_core_title, items: home.services_core, cls: 'services-links-collumn smaller' },
+  { title: home.services_additional_title, items: home.services_additional, cls: 'services-links-collumn' },
+];
 ---
 <section class="section" id="services">
-  <div class="container">
-    <SectionHeading eyebrow={home.services_eyebrow} title={home.services_title} lead={home.services_lead} />
-    <div class="grid cols-3 reveal mt-46">
-      {home.services.map(s => (
-        s.link
-          ? <a class="card card-link" href={s.link}><div class="ic">{s.icon}</div><h3>{s.title}</h3><p>{s.text}</p><span class="more">Learn more →</span></a>
-          : <div class="card"><div class="ic">{s.icon}</div><h3>{s.title}</h3><p>{s.text}</p></div>
-      ))}
+  <div class="padding-global padding-section-large">
+    <div class="container-large">
+      <div class="services-wrap">
+        <div class="services-content">
+          <div class="tag-heading-wrap">
+            <div class="section-tag-box">
+              <div class="tag-bullet"></div>
+              <div>{home.services_eyebrow}</div>
+            </div>
+            <div class="heading-box first">
+              <img alt={alt} loading="lazy" src="/media/wf/67d3f0a0-image.svg" />
+              <h2 class="heading-style-h2">{home.services_title}</h2>
+            </div>
+          </div>
+          <div class="services-text-box">
+            <p>{home.services_lead}</p>
+          </div>
+        </div>
+        <div class="services-links-wrap">
+          {columns.map((col) => (
+            <div class={col.cls}>
+              <h3 class="heading-style-h3">{col.title}</h3>
+              <div class="services-links-list">
+                {col.items.map((s) => (
+                  <div class="services-link-item">
+                    <a class="services-link-title w-inline-block" href={s.href}>
+                      <img alt={alt} loading="lazy" src="/media/wf/67d3f2be-untitled.svg" />
+                      <div>{s.label}</div>
+                    </a>
+                    {s.sub && s.sub.length > 0 && (
+                      <div class="services-link-item_dropdown" style="height:0px">
+                        {s.sub.map((x) => (
+                          <a class="services-dopdown-link w-inline-block" href={x.href}><div>{x.label}</div></a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+  // Opens a service's sub-links on hover or keyboard focus and closes them on leave (Webflow did this with an interaction).
+  document.querySelectorAll<HTMLElement>('.services-wrap .services-link-item').forEach((item) => {
+    const list = item.querySelector<HTMLElement>('.services-link-item_dropdown');
+    if (!list) return;
+    list.style.transition = 'height 0.4s ease';
+    const open = () => (list.style.height = list.scrollHeight + 'px');
+    const close = () => { if (!item.contains(document.activeElement)) list.style.height = '0px'; };
+    item.addEventListener('mouseenter', open);
+    item.addEventListener('mouseleave', close);
+    item.addEventListener('focusin', open);
+    item.addEventListener('focusout', () => setTimeout(close));
+  });
+</script>

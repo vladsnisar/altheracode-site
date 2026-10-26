@@ -1,0 +1,39 @@
+---
+// "What Our Clients Say": heading and the Clutch reviews widget (loaded from widget.clutch.co, as on the live site).
+// The company and the reviews shown are set once for the whole site in site.json ("Clutch").
+import site from '../content/site.json';
+import { spacing as pad } from '../lib/spacing';
+
+interface Props {
+  title: string;
+  spacing?: string;
+}
+const { title, spacing } = Astro.props;
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
+---
+<section class="section">
+  <div class={pad(spacing, 'large')}>
+    <div class="container-large">
+      <div class="heading-center">
+        <div class="heading-box">
+          <img alt={alt} loading="lazy" src="/media/wf/67d66bce-slash.svg" />
+          <h2 class="heading-style-h2">{title}</h2>
+        </div>
+      </div>
+      <div class="section-space-64"></div>
+      <div class="w-embed w-script">
+        <div
+          class="clutch-widget"
+          data-url="https://widget.clutch.co"
+          data-widget-type="12"
+          data-height="375"
+          data-nofollow="false"
+          data-expandifr="true"
+          data-reviews={site.clutch_reviews}
+          data-clutchcompany-id={site.clutch_company_id}
+        ></div>
+      </div>
+    </div>
+  </div>
+</section>
+<script is:inline src="https://widget.clutch.co/static/js/widget.js" async></script>

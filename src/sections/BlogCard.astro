@@ -1,0 +1,36 @@
+---
+// One blog post card (image, title, short description, "Learn More", category link), as on the live blog.
+// `small` is the "Latest Posts" variant used under each post.
+import type { CollectionEntry } from 'astro:content';
+import { slugify } from '../lib/text';
+interface Props { post: CollectionEntry<'blog'>; small?: boolean }
+const { post, small = false } = Astro.props;
+const d = post.data;
+---
+<div class:list={['blog-card', { 'blog-det-card': small }, 'w-dyn-item']} role="listitem">
+  <a class="blog-link-item w-inline-block" href={`/blog/${post.id}`}>
+    <div class="blog-image-wrapp">
+      {d.cover && <img alt="" class="blog-image" loading="lazy" src={d.cover} />}
+    </div>
+    <div class="w-layout-vflex blog-text-wrapp">
+      <div class="heading-text-wrap margin-bottom-32">
+        <h4 class="heading-style-h4">{d.title}</h4>
+        <div>{d.description}</div>
+      </div>
+      <div class="portfolio-link">
+        <div>Learn More</div>
+      </div>
+    </div>
+  </a>
+  {d.category && (
+    <div class="blog-category-link">
+      <div class="w-dyn-list">
+        <div class="w-dyn-items" role="list">
+          <div class="blog-categories-item w-dyn-item" role="listitem">
+            <a class="category" href={`/blog-category/${slugify(d.category)}`}>{d.category}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+</div>

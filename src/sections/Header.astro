@@ -1,17 +1,154 @@
 ---
+// Site header: logo, Services mega-menu, links, "Book a Call" and the mobile menu.
+// Markup and class names match the Webflow site; text and links come from site.json.
 import site from '../content/site.json';
+import SocialIcon from './SocialIcon.astro';
+
+const path = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
+const isCurrent = (href: string) => (href === '/' ? path === '/' || path === '/index' : path === href);
+const core = site.nav_core_services ?? [];
+// The Core Services column is split in two lists: the first seven links, then the rest.
+const coreA = core.slice(0, 7);
+const coreB = core.slice(7);
+const tel = (n: string) => 'tel:' + n.replace(/\s/g, '');
 ---
-<header class="header">
-  <div class="container">
-    <nav class="nav" aria-label="Main">
-      <a class="logo" href="/"><span class="mark">{site.logo_letter}</span><span>{site.brand_name}</span></a>
-      <div class="nav-links" id="navLinks">
-        {site.nav.map(l => <a href={l.href}>{l.label}</a>)}
+<div class="nav_fixed">
+  <div class="nav_component w-nav" data-collapse="medium" role="banner">
+    <div class="padding-global">
+      <div class="nav_container">
+        <a href="/" aria-current={isCurrent('/') ? 'page' : undefined} class:list={['nav_brand w-nav-brand', { 'w--current': isCurrent('/') }]}>
+          <img src={site.logo} loading="eager" alt="Althera Code – Innovative Custom Software Development Company logo" class="nav_logo" />
+        </a>
+        <nav role="navigation" class="nav_menu w-nav-menu" id="navMenu">
+          <div class="nav_dropdown w-dropdown" data-hover="true">
+            <div class="nav_menu_link dropdown w-dropdown-toggle" role="button" tabindex="0" aria-haspopup="menu" aria-expanded="false">
+              <div class="icon w-icon-dropdown-toggle" aria-hidden="true"></div>
+              <div>{site.nav_services_label}</div>
+            </div>
+            <nav class="dropdown-list w-dropdown-list">
+              <div class="nav_services-links-wrap">
+                <div class="nav_services-links-collumn first">
+                  <div class="heading-style-h4 nav-gary">{site.nav_core_title}</div>
+                  <div class="w-layout-grid grid-2">
+                    {[coreA, coreB].map((list) => (
+                      <div class="services-links-list">
+                        {list.map((s) =>
+                          s.sub && s.sub.length ? (
+                            <div class="services-link-item">
+                              <a href={s.href} class:list={['services-link-title nav-white w-inline-block', { 'w--current': isCurrent(s.href) }]}>
+                                <img src={s.icon} loading="lazy" alt="" />
+                                <div>{s.label}</div>
+                              </a>
+                              <div class="services-link-item_dropdown">
+                                {s.sub.map((x) => (
+                                  <a href={x.href} class="services-dopdown-link nav-white w-inline-block"><div>{x.label}</div></a>
+                                ))}
+                              </div>
+                            </div>
+                          ) : (
+                            <a href={s.href} class:list={['services-link-title nav-white w-inline-block', { 'w--current': isCurrent(s.href) }]}>
+                              <img src={s.icon} loading="lazy" alt="" />
+                              <div>{s.label}</div>
+                            </a>
+                          )
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div class="nav_services-links-collumn">
+                  <div class="heading-style-h4 nav-gary">{site.nav_additional_title}</div>
+                  <div class="services-links-list">
+                    {(site.nav_additional_services ?? []).map((s) => (
+                      <a href={s.href} class="services-link-title nav-white w-inline-block">
+                        <img src={s.icon} loading="lazy" alt="" />
+                        <div>{s.label}</div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+          {site.nav.map((l) => (
+            <a href={l.href} aria-current={isCurrent(l.href) ? 'page' : undefined} class:list={['nav_menu_link w-nav-link', { 'w--current': isCurrent(l.href) }]}>{l.label}</a>
+          ))}
+          <div class="nav_contact-wrap">
+            <div class="footer-item">
+              <div class="heading-style-h5">Phone</div>
+              <div><a href={tel(site.contact_phone)} class="footer-link">{site.contact_phone}</a></div>
+            </div>
+            <div class="footer-item">
+              <div class="heading-style-h5">WhatsApp</div>
+              <div><a href={site.contact_whatsapp_link} class="footer-link">{site.contact_whatsapp}</a></div>
+            </div>
+            <div class="footer-item">
+              <div class="heading-style-h5">E-mail</div>
+              <div><a href={`mailto:${site.contact_email}`} class="footer-link">{site.contact_email}</a></div>
+            </div>
+          </div>
+          <div class="nav_social-wrap">
+            <div class="w-layout-grid footer-social-grid">
+              {site.socials.map((s) => (
+                <a href={s.href} target="_blank" rel="noopener" aria-label={s.label} class="social_link w-inline-block">
+                  <div class="icon-1x1-medium w-embed"><SocialIcon name={s.label} /></div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </nav>
+        <div class="nav_button w-nav-button" id="navButton" role="button" tabindex="0" aria-label="menu" aria-controls="navMenu" aria-expanded="false">
+          <div class="nav-burger-wrap">
+            <div class="nav-burger-line"></div>
+            <div class="nav-burger-line"></div>
+            <div class="nav-burger-line"></div>
+          </div>
+        </div>
+        <div class="nav-button-box">
+          <a href={site.nav_button.href} class="button-main nav-button w-button">{site.nav_button.label}</a>
+        </div>
       </div>
-      <div class="nav-cta">
-        <a href={site.nav_button.href} class="btn btn-primary">{site.nav_button.label}</a>
-        <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-controls="navLinks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
-      </div>
-    </nav>
+    </div>
   </div>
-</header>
+</div>
+
+<script>
+  // Replaces Webflow's navbar and dropdown behaviour: same classes and attributes, so webflow.css styles every state.
+  const menu = document.getElementById('navMenu');
+  const button = document.getElementById('navButton');
+  const dropdown = document.querySelector<HTMLElement>('.nav_dropdown');
+  const toggle = dropdown?.querySelector<HTMLElement>('.w-dropdown-toggle');
+  const list = dropdown?.querySelector<HTMLElement>('.w-dropdown-list');
+  const mobile = () => window.matchMedia('(max-width: 991px)').matches;
+
+  function setMenu(open: boolean) {
+    if (!menu || !button) return;
+    button.classList.toggle('w--open', open);
+    button.setAttribute('aria-expanded', String(open));
+    if (open) menu.setAttribute('data-nav-menu-open', '');
+    else menu.removeAttribute('data-nav-menu-open');
+  }
+  function setDropdown(open: boolean) {
+    if (!toggle || !list) return;
+    toggle.classList.toggle('w--open', open);
+    list.classList.toggle('w--open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+  }
+
+  button?.addEventListener('click', () => setMenu(!button.classList.contains('w--open')));
+  button?.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); button.click(); }
+  });
+  dropdown?.addEventListener('mouseenter', () => { if (!mobile()) setDropdown(true); });
+  dropdown?.addEventListener('mouseleave', () => { if (!mobile()) setDropdown(false); });
+  toggle?.addEventListener('click', () => setDropdown(!toggle.classList.contains('w--open')));
+  toggle?.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle.click(); }
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { setDropdown(false); setMenu(false); } });
+  document.addEventListener('click', (e) => {
+    if (dropdown && !dropdown.contains(e.target as Node)) setDropdown(false);
+  });
+  menu?.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
+  window.addEventListener('resize', () => { if (!mobile()) setMenu(false); });
+</script>

@@ -1,40 +1,18 @@
 ---
+// Blog list (/blog), matching the live page: hero, category tabs with all posts, contact form.
+// Heading text lives in src/content/pages.json ("blog"); posts are src/content/blog/*.md (newest first).
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import BlogHero from '../../sections/BlogHero.astro';
+import BlogList from '../../sections/BlogList.astro';
 import Contact from '../../sections/Contact.astro';
-import { slugify } from '../../lib/text';
-import cats from '../../content/blog-categories.json';
 import pages from '../../content/pages.json';
+import home from '../../content/home.json';
 const page = pages.blog;
-const posts = (await getCollection('blog', p => !p.data.draft))
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const posts = (await getCollection('blog', (p) => !p.data.draft)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 <Base title={page.seo_title} description={page.seo_description}>
-  <section class="hero page-hero"><div class="hero-glow"></div><div class="container"><div class="hero-inner">
-    <span class="eyebrow">{page.eyebrow}</span><h1>{page.title}</h1>
-    {page.lead && <p>{page.lead}</p>}
-  </div></div></section>
-  <section class="section"><div class="container">
-    <nav class="filter-chips" aria-label="Blog categories">
-      <a class="chip-btn active" href="/blog">All posts</a>
-      {cats.blog_categories.map(c => <a class="chip-btn" href={`/blog-category/${c.slug}`}>{c.name}</a>)}
-    </nav>
-    {posts.length === 0 && <p class="lead">No posts yet.</p>}
-    <div class="grid cols-3">
-      {posts.map(p => (
-        <article class="portfolio-card">
-          <div class="portfolio-thumb">
-            {p.data.cover ? <img src={p.data.cover} alt="" loading="lazy" /> : <span class="glyph">✎</span>}
-          </div>
-          <div class="portfolio-body">
-            {p.data.category && <span class="cat">{p.data.category}</span>}
-            <h3><a href={`/blog/${p.id}`}>{p.data.title}</a></h3>
-            <p>{p.data.description}</p>
-            <a class="more" href={`/blog/${p.id}`}>Read more →</a>
-          </div>
-        </article>
-      ))}
-    </div>
-  </div></section>
-  <Contact />
+  <BlogHero title={page.title} accent={page.title_accent} text={page.lead} />
+  <BlogList posts={posts} current="all" />
+  <Contact title={home.contact_title} text={home.contact_text} image={home.contact_image} variant="cta-section" />
 </Base>

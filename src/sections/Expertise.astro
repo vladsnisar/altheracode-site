@@ -1,13 +1,54 @@
 ---
+// Homepage "Our Expertise": dark card with intro, photo and two tag lists. Text and photo come from home.json.
 import home from '../content/home.json';
-import SectionHeading from './SectionHeading.astro';
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
+const blocks = [
+  { title: home.expertise_primary_title, items: home.expertise_primary, brace: '/media/wf/67d66740-image.svg', slash: '/media/wf/67d66787-slash.svg' },
+  { title: home.expertise_secondary_title, items: home.expertise_secondary, brace: '/media/wf/67d66740-2.svg', slash: '/media/wf/67d6679c-slash-2.svg' },
+];
 ---
-<section class="section process dark bg-deep" id="expertise">
-  <div class="container">
-    <SectionHeading eyebrow={home.expertise_eyebrow} title={home.expertise_title} lead={home.expertise_lead} />
-    <div class="mt-44"><h4 class="sub-title">{home.expertise_primary_title}</h4>
-      <ul class="slash-list">{home.expertise_primary.map(x => <li>{x}</li>)}</ul></div>
-    <div class="mt-38"><h4 class="sub-title">{home.expertise_secondary_title}</h4>
-      <ul class="slash-list">{home.expertise_secondary.map(x => <li>{x}</li>)}</ul></div>
+<section class="section">
+  <div class="padding-global phone-non">
+    <div class="dark-blue-section">
+      <div class="padding-global padding-section-small">
+        <div class="container-large">
+          <div class="expertise-wrap">
+            <div class="expertise-content">
+              <div class="privacy-gap-24">
+                <div class="section-tag-box light-pink">
+                  <div class="tag-bullet white"></div>
+                  <div>{home.expertise_eyebrow}</div>
+                </div>
+                <div class="heading-box first">
+                  <h2 class="heading-style-h2">{home.expertise_title}</h2>
+                </div>
+              </div>
+              <div class="expertise-text-box">
+                <p>{home.expertise_lead}</p>
+              </div>
+            </div>
+            <img class="expertise-image" loading="lazy" src={home.expertise_image} width="576" alt="Our team at work" />
+          </div>
+          <div class="expertise-items-gap">
+            {blocks.map((b) => (
+              <div class="expertise-items-block">
+                <div class="heading-box expertise-width">
+                  <img alt={alt} class="expertise-heading-element" loading="lazy" src={b.brace} />
+                  <h3 class="heading-style-h3">{b.title}</h3>
+                </div>
+                <div class="expertise-items-wrap">
+                  {b.items.map((item) => (
+                    <div class="expertise-item">
+                      <img alt="" loading="lazy" src={b.slash} />
+                      <div>{item}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

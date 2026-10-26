@@ -42,7 +42,9 @@
     "The client needed to replace scattered manual tracking with a centralized automation workflow that could capture decisions, organize action items, and keep stakeholders aligned. The main goal was to reduce operational noise, improve follow-up discipline, and create structured reporting without forcing the team to change its existing Microsoft 365 workflow."
   ],
   "challenges": [
-    "▪ Meeting decisions and action items were not captured automatically, which caused follow-ups to be missed or delayed.\n\n▪ Sales pipeline visibility depended on individual memory, manual updates, and information scattered across several tools.\n\n▪ Reporting on marketing activity and sales progress required too much manual effort and lacked a consistent structure."
+    "▪ Meeting decisions and action items were not captured automatically, which caused follow-ups to be missed or delayed.",
+    "▪ Sales pipeline visibility depended on individual memory, manual updates, and information scattered across several tools.",
+    "▪ Reporting on marketing activity and sales progress required too much manual effort and lacked a consistent structure."
   ],
   "solution": "AltheraCode designed a modular AI automation system connected to the client’s Microsoft 365 environment. The system collected data from Teams meetings, Office 365 emails, chat threads, Word/PDF documents, and other shared sources, then transformed unstructured information into organized action records.\n\nThe workflow used N8N automation, Microsoft Graph API, OpenAI-powered extraction, and a Notion workspace as the central command center. Meeting summaries, decisions, owners, deadlines, pipeline updates, and alerts were automatically structured and routed to the right stakeholders.",
   "results_text": "The implementation improved meeting accountability, follow-up speed, and sales pipeline visibility across the team. Key outcomes included:",
@@ -61,5 +63,6 @@
     }
   ],
   "results_closing": "A fragmented marketing and sales workflow was transformed into a centralized AI-assisted operating system that improved execution, reduced missed actions, and gave leadership clearer visibility into pipeline activity.",
-  "created": "2026-05-28T12:22"
+  "created": "2026-05-28T12:22",
+  "challenges_style": "paragraphs"
 }

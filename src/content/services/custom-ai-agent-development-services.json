@@ -4,60 +4,72 @@
   "sections": [
     {
       "type": "hero",
+      "breadcrumb": "Custom AI Agent Development Services",
+      "title": "Сustom AI Agent Development Services for Your Business",
       "title_accent": "AI Agent Development",
-      "title": "Custom AI Agent Development Services for Your Business",
       "text": "Transform your operations with custom AI agent development services that bring automation, intelligence, and adaptability to your workflows. Our AI solutions streamline processes, reduce manual effort, and help your business make smarter, faster decisions every day.",
       "button_text": "Consult Our Experts",
       "button_link": "/contact",
-      "breadcrumb": "Custom AI Agent Development Services"
+      "braces": "curly"
     },
     {
       "type": "intro",
-      "tag": "Precision Built",
+      "style": "dark",
       "title": "Why Organizations Need Custom AI Agents",
-      "text": "Precision Build\n\nWhy Organizations Need Custom AI Agents\n\nModern organizations face growing pressure to move faster, operate smarter, and make data-driven decisions at scale. AI agent development services enable teams to automate repetitive tasks, analyze information in real time, and act proactively instead of reactively.\n\nBy implementing custom AI agents, businesses gain systems that collaborate with employees and improve efficiency, accuracy, and responsiveness across every department. These agents help reduce operational costs, eliminate human error, and unlock new levels of productivity that traditional tools cannot achieve.",
-      "image": "/media/service-intro-image.avif",
-      "image_alt": "Why Organizations Need Custom AI Agents"
+      "tag": "Precision Build",
+      "text": "Modern organizations face growing pressure to move faster, operate smarter, and make data-driven decisions at scale. AI agent development services enable teams to automate repetitive tasks, analyze information in real time, and act proactively instead of reactively.\n\nBy implementing custom AI agents, businesses gain systems that collaborate with employees and improve efficiency, accuracy, and responsiveness across every department. These agents help reduce operational costs, eliminate human error, and unlock new levels of productivity that traditional tools cannot achieve.",
+      "image": "/media/wf/67d40699-our-expertise-image.avif"
     },
     {
       "type": "cards",
-      "dark": false,
-      "tag": "Expert Development & AI Solutions",
       "title": "Our AI Agent Development Services",
-      "text": "",
+      "tag": "Expert Development & AI Solutions",
+      "grid": "why-grid _3-columns",
       "items": [
         {
           "title": "Custom AI Agent Design",
-          "text": "We provide custom AI agent development that adapts to your business logic, automating repetitive operations and improving efficiency across teams. Each solution is built to align with your strategic goals and deliver measurable value."
+          "text": "We provide custom AI agent development that adapts to your business logic, automating repetitive operations and improving efficiency across teams. Each solution is built to align with your strategic goals and deliver measurable value.",
+          "icon": "/media/wf/67dbebec-experienced-solution-developers.avif",
+          "icon_width": "65"
         },
         {
           "title": "Intelligent Virtual Assistants",
-          "text": "We design intelligent virtual assistants that manage communication, scheduling, and data processing. They minimize manual effort, ensure smooth coordination, and keep your teams focused on high-value work."
+          "text": "We design intelligent virtual assistants that manage communication, scheduling, and data processing. They minimize manual effort, ensure smooth coordination, and keep your teams focused on high-value work.",
+          "icon": "/media/wf/67d66caa-unmatched-flexibility.svg"
         },
         {
           "title": "Voice-Enabled AI Agents",
-          "text": "We design AI agents capable of understanding and responding to natural voice commands. These voice-enabled systems improve user accessibility and enhance real-time customer interactions."
+          "text": "We design AI agents capable of understanding and responding to natural voice commands. These voice-enabled systems improve user accessibility and enhance real-time customer interactions.",
+          "icon": "/media/wf/67dab301-end-to-end-development.webp",
+          "icon_width": "56"
         },
         {
           "title": "Workflow and System Integration",
-          "text": "As an experienced AI agent development company, we ensure every solution integrates smoothly with your current tools and data systems. This creates unified, automated workflows that boost overall performance."
+          "text": "As an experienced AI agent development company, we ensure every solution integrates smoothly with your current tools and data systems. This creates unified, automated workflows that boost overall performance.",
+          "icon": "/media/wf/67d66caa-proven-results.svg"
         },
         {
           "title": "Continuous Optimization and Support",
-          "text": "We maintain and optimize AI agents to keep them adaptive and reliable. Regular updates improve accuracy, strengthen automation, and extend each agent’s lifecycle."
+          "text": "We maintain and optimize AI agents to keep them adaptive and reliable. Regular updates improve accuracy, strengthen automation, and extend each agent’s lifecycle.",
+          "icon": "/media/wf/67dab301-collaborative-transparent-process.avif",
+          "icon_width": "56"
         },
         {
           "title": "Performance Analytics",
-          "text": "We use data-driven insights to monitor AI agent performance and identify opportunities for improvement. These analytics help refine workflows and enhance decision-making precision."
+          "text": "We use data-driven insights to monitor AI agent performance and identify opportunities for improvement. These analytics help refine workflows and enhance decision-making precision.",
+          "icon": "/media/wf/67dab301-ai-driven-innovation.avif",
+          "icon_width": "56"
         }
-      ]
+      ],
+      "spacing": "bottom"
     },
     {
       "type": "cards",
       "dark": true,
-      "tag": "",
       "title": "Types of AI Agents We Build",
-      "text": "",
+      "accent": "AI Agents",
+      "header": "center",
+      "grid": "why-grid-3-col",
       "items": [
         {
           "title": "Reactive AI Agents",
@@ -83,145 +95,172 @@
           "title": "Collaborative Agents",
           "text": "Engineered by our custom AI agent development company, collaborative agents coordinate across processes and systems. They enhance communication, align decisions, and maintain seamless workflow synchronization."
         }
-      ]
+      ],
+      "spacing": "large"
     },
     {
       "type": "cta",
       "title": "Automate operations, enhance decision-making, and scale impact with custom AI agent development services.",
       "accent": "custom AI agent development services",
+      "accent_color": "pink",
       "button_text": "Build Your AI Agent Today",
-      "button_link": "/contact"
+      "button_link": "/contact",
+      "spacing": "large"
     },
     {
       "type": "cases",
-      "tag": "Portfolio",
       "title": "AI Success Stories",
       "text": "We design and implement AI solutions that transform how organizations automate processes, analyze data, and make decisions. From enterprise automation to customer operations and predictive analytics, our AI agents help businesses improve performance, scalability, and efficiency across every function.",
+      "tag": "Portfolio",
       "cases": [
         "ai-audio-intelligence-pipeline-for-automated-knowledge-capture",
         "ai-telegram-assistant-for-real-time-team-communication",
         "ai-powered-real-time-insight-engine-for-smarter-information-filtering"
-      ]
+      ],
+      "spacing": "none"
     },
     {
-      "type": "cards",
-      "dark": false,
-      "tag": "",
+      "type": "testimonials",
+      "title": "What Our Clients Say About Us",
+      "spacing": "large-no-bottom"
+    },
+    {
+      "type": "slider",
       "title": "Why Build AI Agents With AltheraCode?",
-      "text": "",
       "items": [
         {
           "title": "Proven Development Expertise",
-          "text": "As an experienced AI agent development company, AltheraCode brings deep technical knowledge and business understanding to every project. Each AI solution is built to deliver measurable efficiency, scalability, and reliability."
+          "text": "As an experienced AI agent development company, AltheraCode brings deep technical knowledge and business understanding to every project. Each AI solution is built to deliver measurable efficiency, scalability, and reliability.",
+          "icon": "/media/wf/67d66caa-commitment-to-innovation.svg"
         },
         {
           "title": "Custom AI Agent Software Development",
-          "text": "We design intelligent AI solutions tailored to your industry and workflow. Each system combines automation and analytics to simplify operations, improve decision-making, and support sustainable business growth."
+          "text": "We design intelligent AI solutions tailored to your industry and workflow. Each system combines automation and analytics to simplify operations, improve decision-making, and support sustainable business growth.",
+          "icon": "/media/wf/67d66caa-unmatched-flexibility.svg"
         },
         {
           "title": "Advanced AI Capabilities",
-          "text": "Our team combines NLP, machine learning, and reasoning models to create agents that understand intent and context. This approach enables natural, adaptive decision-making across business processes."
+          "text": "Our team combines NLP, machine learning, and reasoning models to create agents that understand intent and context. This approach enables natural, adaptive decision-making across business processes.",
+          "icon": "/media/wf/67d66caa-proven-results.svg"
         },
         {
           "title": "Enterprise-Grade Security and Compliance",
-          "text": "AltheraCode develops secure infrastructures designed for data integrity and global compliance standards. Each deployment ensures protection of sensitive information without compromising performance."
+          "text": "AltheraCode develops secure infrastructures designed for data integrity and global compliance standards. Each deployment ensures protection of sensitive information without compromising performance.",
+          "icon": "/media/wf/67dbebeb-end-to-end-development.webp"
         },
         {
           "title": "Data-Driven Optimization",
-          "text": "Integrated analytics reveal real-time insights into AI agent performance, user interactions, and efficiency metrics. This data fuels ongoing improvements that enhance accuracy and business alignment."
+          "text": "Integrated analytics reveal real-time insights into AI agent performance, user interactions, and efficiency metrics. This data fuels ongoing improvements that enhance accuracy and business alignment.",
+          "icon": "/media/wf/67dbebeb-ai-driven-innovation.avif"
         },
         {
           "title": "Continuous Partnership and Support",
-          "text": "Our partnership goes beyond delivery, ensuring continuous monitoring and optimization at every stage. We provide expert guidance to keep your AI systems adaptive, stable, and ready for future growth."
+          "text": "Our partnership goes beyond delivery, ensuring continuous monitoring and optimization at every stage. We provide expert guidance to keep your AI systems adaptive, stable, and ready for future growth.",
+          "icon": "/media/wf/67dbebeb-ai-driven-innovation.avif"
         }
-      ]
+      ],
+      "spacing": "large"
     },
     {
       "type": "cta",
       "title": "Transform processes, enhance performance, and unlock new potential with intelligent automation.",
-      "accent": "",
       "button_text": "Talk to Our Experts",
-      "button_link": "/contact"
+      "button_link": "/contact",
+      "braces": "curly",
+      "size": "plain",
+      "spacing": "none"
     },
     {
       "type": "industries",
-      "tag": "Innovation through technology",
       "title": "Industry-Specific AI Agents",
+      "tag": "Innovation through technology",
       "items": [
         {
-          "title": "Healthcare",
+          "name": "Healthcare",
+          "icon": "/media/wf/67d41a8b-heartbeat.avif",
           "text": "In healthcare, intelligent agents streamline patient communication, automate scheduling, and support clinical workflows. They help providers reduce routine tasks and deliver more personalized, responsive care."
         },
         {
-          "title": "Finance",
+          "name": "Finance",
+          "icon": "/media/wf/67d41a4e-monetization-on-24px.avif",
           "text": "Financial organizations rely on AI agents to handle reporting, compliance, and fraud monitoring. These systems accelerate decision-making and improve both security and operational transparency."
         },
         {
-          "title": "Education",
+          "name": "Education",
+          "icon": "/media/wf/67d41a4e-education.avif",
           "text": "Smart agents simplify admissions, assist students in real time, and help educators track performance effortlessly. They make learning environments more efficient, inclusive, and data-informed."
         },
         {
-          "title": "Digital Marketing",
+          "name": "Digital Marketing",
+          "icon": "/media/wf/68ed1745-chart-square.svg",
           "text": "For marketers, AI agents automate campaign workflows, audience segmentation, and performance analysis. This leads to smarter targeting, higher engagement, and better ROI."
         },
         {
-          "title": "Transportation",
+          "name": "Transportation",
+          "icon": "/media/wf/67d41a4e-transport.webp",
           "text": "AI-powered automation enhances logistics, shipment tracking, and customer notifications. By connecting systems in real time, agents reduce delays and improve service quality across the supply chain."
         },
         {
-          "title": "Telecommunications",
+          "name": "Telecommunications",
+          "icon": "/media/wf/67d41a4f-telecom.avif",
           "text": "Telecom providers use AI agents to manage inquiries, analyze user requests, and predict service issues. This ensures faster resolution times, fewer disruptions, and stronger customer retention."
         },
         {
-          "title": "Energy",
+          "name": "Energy",
+          "icon": "/media/wf/67d41a4e-energy.avif",
           "text": "In the energy sector, agents monitor infrastructure, forecast demand, and optimize maintenance schedules. They help companies ensure stability, transparency, and sustainable operations."
         },
         {
-          "title": "Real Estate",
+          "name": "Real Estate",
+          "icon": "/media/wf/67d41a4e-house.webp",
           "text": "AI-driven automation simplifies property management, lead qualification, and client follow-ups. Agents help realtors save time, respond faster, and maintain stronger client relationships."
         },
         {
-          "title": "HR",
+          "name": "HR",
+          "icon": "/media/wf/68f92be4-user.svg",
           "text": "Within HR, AI agents handle candidate screening, onboarding, and employee assistance. They reduce manual workload, shorten hiring cycles, and improve overall workforce experience."
         },
         {
-          "title": "Retail",
-          "text": "In retail, AI agents enhance the entire customer journey, from product discovery to post-purchase care. They personalize interactions, increase satisfaction, and drive repeat business."
+          "name": "Retail",
+          "icon": "/media/wf/67d41a4e-retail.avif",
+          "text": "In retail, AI agents enhance the entire customer journey, from product discovery to post-purchase care. They personalize interactions, increase satisfaction, and drive repeat business.",
+          "layout": "wn-_57b4d746-d6dc-0868-21b7-7a2538127d84-bd4142b3"
         }
-      ]
+      ],
+      "spacing": "large"
     },
     {
       "type": "process",
-      "tag": "Innovate Now",
       "title": "Our AI Agent Development Process",
+      "tag": "Innovate Now",
       "text": "At AltheraCode, we specialize in end-to-end solution development, transforming concepts into powerful, AI-driven innovations. Whether it’s healthtech software, SaaS platforms, or enterprise systems, we guide you from ideation to launch, ensuring seamless execution and cutting-edge results.",
       "steps": [
         {
-          "title": "Discovery & Strategy Alignment",
+          "title": "  Discovery & Strategy Alignment",
           "text": "We start by analyzing your business objectives, workflows, and existing automation gaps. This stage helps uncover where AI agents can create the greatest impact and streamline operations. By aligning strategic goals with technical feasibility, we define a clear vision for scalable, results-driven implementation."
         },
         {
-          "title": "Planning & Architecture Design",
+          "title": "  Planning & Architecture Design",
           "text": "Our team develops a detailed technical roadmap that defines functionality, integration logic, and system requirements. We choose the optimal tools and frameworks to ensure scalability and seamless connectivity. Each plan is designed to balance innovation, performance, and long-term sustainability."
         },
         {
-          "title": "Agent Behavior Design & Prototyping",
+          "title": "  Agent Behavior Design & Prototyping",
           "text": "We create user-centered designs and interactive prototypes that demonstrate how your AI agent will operate within workflows. This step allows you to test logic, gather feedback, and refine usability before development begins. By validating ideas early, we reduce risks and accelerate the path from concept to deployment."
         },
         {
-          "title": "AI Model Development & Integration",
+          "title": "  AI Model Development & Integration",
           "text": "Our engineers build and integrate intelligent agents using advanced LLMs, machine learning models, and automation frameworks. These systems are trained to process data, interpret context, and make accurate decisions in real time. The outcome is a fully functional AI agent ready to support complex business processes."
         },
         {
-          "title": "Testing & Quality Assurance",
+          "title": "  Testing & Quality Assurance",
           "text": "Each AI agent undergoes rigorous testing to ensure precision, stability, and responsiveness. We simulate real-world scenarios to validate how the system performs under actual workloads. This step guarantees enterprise-level reliability and a consistent user experience across all platforms."
         },
         {
-          "title": "Deployment & Launch",
+          "title": "  Deployment & Launch",
           "text": "Once validated, the AI agent is deployed into your live environment with full system integration. Our team manages setup, optimization, and real-time monitoring to ensure a smooth transition. From configuration to rollout, every detail is verified for performance and security."
         },
         {
-          "title": "Post-Launch Optimization & Support",
+          "title": "  Post-Launch Optimization & Support",
           "text": "After deployment, we continuously track performance, user interaction, and system feedback. Insights from real usage are used to fine-tune models and enhance accuracy. Through ongoing optimization, your AI agents remain adaptive, efficient, and aligned with evolving business goals."
         }
       ]
@@ -231,54 +270,62 @@
       "title": "Our Tech Stack for AI Agent Development",
       "logos": [
         {
-          "image": "/media/logo-nlp.png",
-          "name": "NLP"
+          "name": "Nlp 13298249",
+          "image": "/media/wf/68ed1db8-nlp-13298249.png",
+          "width": "50"
         },
         {
-          "image": "/media/logo-python.avif",
-          "name": "Python"
+          "name": "python Image",
+          "image": "/media/wf/67d8f3aa-python.avif"
         },
         {
-          "image": "/media/logo-javascript.avif",
-          "name": "JavaScript"
+          "name": "javascript Image",
+          "image": "/media/wf/67d8f3a9-javascript.avif"
         },
         {
-          "image": "/media/logo-rag.png",
-          "name": "RAG"
+          "name": "Rag Logo Vector",
+          "image": "/media/wf/68ed22b4-rag-logo-vector.png",
+          "small": true
         },
         {
-          "image": "/media/logo-langchain.webp",
-          "name": "LangChain"
+          "name": "0 Nbxnga4S23O9Yjq0",
+          "image": "/media/wf/68ed20ec-0-nbxnga4s23o9yjq0.png",
+          "width": "70"
         },
         {
-          "image": "/media/logo-fastapi.webp",
-          "name": "FastAPI"
+          "name": "Original",
+          "image": "/media/wf/68ed20fc-original.webp"
         },
         {
-          "image": "/media/logo-apiflask.png",
-          "name": "APIFlask"
+          "name": "Apiflask Logo",
+          "image": "/media/wf/68ed2196-apiflask-logo.png"
         },
         {
-          "image": "/media/logo-sqlalchemy.jpg",
-          "name": "SQLAlchemy"
+          "name": "0 Msfsws06Immsjyop",
+          "image": "/media/wf/68ed21a9-0-msfsws06immsjyop.jpg",
+          "width": "64"
         },
         {
-          "image": "/media/logo-postgresql.svg",
-          "name": "PostgreSQL"
+          "name": "Postgresql Elephant",
+          "image": "/media/wf/68ed21c1-postgresql-elephant.svg",
+          "width": "64"
         },
         {
-          "image": "/media/logo-aws.avif",
-          "name": "AWS"
+          "name": "aws logo Image",
+          "image": "/media/wf/67d8f384-aws.avif"
         },
         {
-          "image": "/media/logo-azure.png",
-          "name": "Azure"
+          "name": "Azure",
+          "image": "/media/wf/6903510a-azure.png"
         }
-      ]
+      ],
+      "spacing": "large",
+      "variant": "ai"
     },
     {
       "type": "faq",
       "title": "AI Agents: FAQs",
+      "tag": "FAQ",
       "items": [
         {
           "q": "How can AI agents actually improve business performance?",
@@ -308,7 +355,9 @@
           "q": "How can AI agents be integrated with the tools we already use?",
           "a": "AI agents can be connected to CRMs, ERPs, analytics dashboards, and other software through APIs and automation platforms. At AltheraCode, we design flexible architectures that make integration smooth and non-disruptive. This allows businesses to get value from automation immediately, without changing their entire infrastructure."
         }
-      ]
+      ],
+      "spacing": "none",
+      "wide": true
     },
     {
       "type": "contact",

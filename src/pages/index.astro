@@ -1,28 +1,59 @@
 ---
-// Homepage = list of sections, top to bottom. Reorder, remove or add sections here.
+// Homepage = list of sections, top to bottom, in the same order as the live site.
+// Reorder, remove or add sections here. Text lives in src/content/home.json.
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Hero from '../sections/Hero.astro';
-import TrustBar from '../sections/TrustBar.astro';
 import Services from '../sections/Services.astro';
 import Expertise from '../sections/Expertise.astro';
 import Portfolio from '../sections/Portfolio.astro';
+import CtaBand from '../sections/CtaBand.astro';
+import Industries from '../sections/Industries.astro';
 import WhyUs from '../sections/WhyUs.astro';
 import Process from '../sections/Process.astro';
 import TechStack from '../sections/TechStack.astro';
-import CtaBand from '../sections/CtaBand.astro';
 import Faq from '../sections/Faq.astro';
 import Contact from '../sections/Contact.astro';
+import home from '../content/home.json';
+import site from '../content/site.json';
+
+// The six newest published case studies, as on the live homepage.
+const cases = (await getCollection('portfolio', (c) => !c.data.draft))
+  .sort((a, b) => b.data.created.getTime() - a.data.created.getTime())
+  .slice(0, 6);
+
+const schema = [
+  { '@context': 'https://schema.org/', '@type': 'WebSite', name: 'Althera Code', url: 'https://www.altheracode.com/' },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Althera Code',
+    alternateName: 'altheracode',
+    url: 'https://www.altheracode.com/',
+    logo: new URL(site.logo, 'https://www.altheracode.com').href,
+    sameAs: ['https://clutch.co/profile/althera-code', 'https://www.linkedin.com/company/areascode/'],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: home.faq.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a.replace(/\n+/g, ' ') },
+    })),
+  },
+];
 ---
-<Base>
+<Base schema={schema}>
   <Hero />
-  <TrustBar />
   <Services />
   <Expertise />
-  <Portfolio />
-  <WhyUs />
-  <Process />
-  <TechStack />
-  <CtaBand />
-  <Faq />
-  <Contact />
+  <Portfolio title={home.portfolio_title} text={home.portfolio_lead} eyebrow={home.portfolio_eyebrow} cases={cases} />
+  <CtaBand title={home.cta_title} accent={home.cta_accent} button_text={home.cta_button_text} button_link={home.cta_button_link} image={home.cta_image} />
+  <Industries title={home.industries_title} eyebrow={home.industries_eyebrow} items={home.industries} image={home.industries_image} />
+  <WhyUs title={home.why_title} eyebrow={home.why_eyebrow} items={home.why} />
+  <Process title={home.process_title} eyebrow={home.process_eyebrow} text={home.process_lead} steps={home.process} />
+  <TechStack title={home.stack_title} logos={home.stack} />
+  <Faq title={home.faq_title} eyebrow={home.faq_eyebrow} items={home.faq} />
+  <Contact title={home.contact_title} text={home.contact_text} image={home.contact_image} />
 </Base>

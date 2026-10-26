@@ -1,0 +1,11 @@
+---
+// One light card (icon, title, text) used by Cards.astro.
+// `layout` carries a Webflow layout class from the live page (positions this card in the grid).
+interface Props { it: { icon?: string; icon_width?: string; title: string; text: string; layout?: string } }
+const { it } = Astro.props;
+---
+<div class:list={['why-card', it.layout]}>
+  {it.icon && <img alt="" loading="lazy" src={it.icon} width={it.icon_width || undefined} />}
+  <h3 class="heading-style-h4">{it.title}</h3>
+  <div>{it.text.split('\n').map((l, i) => <>{i > 0 && <br />}{l}</>)}</div>
+</div>

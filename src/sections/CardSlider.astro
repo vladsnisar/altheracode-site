@@ -1,0 +1,96 @@
+---
+// Card slider used on service pages ("Why choose…", "Related services", feature lists):
+// heading with optional intro text, pink arrow buttons and horizontally sliding cards.
+// Runs on Swiper 11 with the live site's settings (loop, 800ms, cards 30px apart).
+// In card text, a line break in the CMS becomes a line break on the page.
+import { spacing as pad } from '../lib/spacing';
+interface Props {
+  title: string;
+  text?: string;
+  dark?: boolean;
+  items: { icon?: string; title: string; text: string }[];
+  /** large | bottom | large-no-bottom | none (see src/lib/spacing.ts) */
+  spacing?: string;
+  /** Extra classes from the live page for the heading box and the title (exact layout). */
+  heading_class?: string;
+  title_class?: string;
+}
+const { title, text, dark = false, items, spacing, heading_class, title_class } = Astro.props;
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
+const lines = (s: string) => s.split('\n');
+// Dark sliders use the purple slash, light ones the dark slash (as on the live site).
+const slash = dark ? '/media/wf/67dd2e91-untitled.svg' : '/media/wf/67d66bce-slash.svg';
+---
+<section class:list={['section', { 'dark-bg': dark }]}>
+  <div class={pad(spacing, 'large')}>
+    <div class="container-large">
+      <div class="why-heading-wrap">
+        {text ? (
+          <div class="w-layout-vflex heading-text-wrap">
+            <div class:list={['heading-box', heading_class]}>
+              <img alt={alt} loading="lazy" src={slash} />
+              <h2 class:list={['heading-style-h2', title_class]}>{title}</h2>
+            </div>
+            <p>{text}</p>
+          </div>
+        ) : (
+          <div class:list={['heading-box', heading_class]}>
+            <img alt={alt} loading="lazy" src={slash} />
+            <h2 class:list={['heading-style-h2', title_class]}>{title}</h2>
+          </div>
+        )}
+        <div class="arrows-wrapper"></div>
+      </div>
+      <div class="section-space-64"></div>
+      <div class="swiper_component" data-card-slider>
+        <div class="swiper_slider-wrapper">
+          <div class="swiper-container">
+            <div class="w-layout-hflex swiper-wrapper">
+              {items.map((it) => (
+                <div class="swiper-slide">
+                  <div class:list={['why-card', { 'dark-card': dark }]}>
+                    {it.icon && <img alt="" loading="lazy" src={it.icon} width="56" />}
+                    <h3 class="heading-style-h4">{it.title}</h3>
+                    <div class="w-layout-vflex vertical-12">
+                      <div>{lines(it.text).map((l, i) => <>{i > 0 && <br />}{l}</>)}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next" role="button" tabindex="0" aria-label="Next">
+          <div class="w-icon-slider-right"></div>
+        </div>
+        <div class="swiper-button-prev" role="button" tabindex="0" aria-label="Previous">
+          <div class="w-icon-slider-left"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import Swiper from 'swiper';
+  import { Navigation } from 'swiper/modules';
+
+  // One slider per section, each driven by its own arrows. The live site loads Swiper's script but not its
+  // stylesheet, so the look comes entirely from webflow.css; we do the same.
+  document.querySelectorAll<HTMLElement>('[data-card-slider]').forEach((root) => {
+    const container = root.querySelector<HTMLElement>('.swiper-container');
+    if (!container || container.dataset.ready) return;
+    container.dataset.ready = '1';
+    new Swiper(container, {
+      modules: [Navigation],
+      loop: true,
+      speed: 800,
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      navigation: {
+        nextEl: root.querySelector<HTMLElement>('.swiper-button-next'),
+        prevEl: root.querySelector<HTMLElement>('.swiper-button-prev'),
+      },
+    });
+  });
+</script>

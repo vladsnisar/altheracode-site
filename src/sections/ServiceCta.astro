@@ -1,0 +1,45 @@
+---
+// Service page call-to-action band: bracketed heading (the `accent` words in mint or pink) and a button,
+// on the light patterned background. `braces` and `size` pick between the two looks used on the live site.
+import { highlight } from '../lib/text';
+import { spacing as pad } from '../lib/spacing';
+
+interface Props {
+  title: string;
+  accent?: string;
+  accent_color?: string;
+  button_text?: string;
+  button_link?: string;
+  /** blue (dark button) | default (mint button) */
+  button_style?: string;
+  /** service (square brackets) | curly ({ }) */
+  braces?: string;
+  /** h2 (large heading) | h3 (smaller, for long sentences) | plain (unstyled heading, used once on the live site) */
+  size?: string;
+  /** Height of the brace images in px, set on some live pages (e.g. "90"). */
+  brace_height?: string;
+  spacing?: string;
+}
+const {
+  title, accent, accent_color = 'mint', button_text = 'Book a Call', button_link = '/contact',
+  button_style = 'blue', braces = 'service', size = 'h2', brace_height, spacing,
+} = Astro.props;
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
+const [left, right] = braces === 'curly'
+  ? ['/media/wf/67d3ea97-image.svg', '/media/wf/67d3ea97-2.svg']
+  : ['/media/wf/67dab518-service-cta-heading-element.svg', '/media/wf/67dab518-service-cta-heading-element-2.svg'];
+---
+<section class="section">
+  <div class={pad(spacing, 'none')}>
+    <div class="service-cta-block">
+      <div class="service-cta-wrap">
+        <div class="cta-heading-box service">
+          <img alt={alt} class="cta-heading-element" loading="lazy" src={left} height={brace_height || undefined} />
+          <h2 class={size === 'h3' ? 'heading-style-h3' : size === 'plain' ? undefined : 'heading-style-h2'} set:html={highlight(title, accent, accent_color)} />
+          <img alt={alt} class="cta-heading-element right" loading="lazy" src={right} height={brace_height || undefined} />
+        </div>
+        <a class:list={['button-main', { 'blue-button': button_style === 'blue' }, 'w-button']} href={button_link}>{button_text}</a>
+      </div>
+    </div>
+  </div>
+</section>

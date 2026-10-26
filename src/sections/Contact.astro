@@ -1,49 +1,45 @@
 ---
+// "Drop Us a Line" section: heading, the contact form (ContactForm.astro) and a photo. Markup matches the Webflow site.
+// `variant` sets the section's spacing classes, which differ between pages on the live site.
 import home from '../content/home.json';
-import site from '../content/site.json';
-// The form posts to Formspree. Until a real ID is set in Pages CMS ("ID форми Formspree"), it shows a notice instead of sending.
-const { title = home.contact_title, text = home.contact_text, eyebrow = home.contact_eyebrow } = Astro.props;
-const id = site.formspree_id;
-const action = id && !id.startsWith('REPLACE') ? `https://formspree.io/f/${id}` : undefined;
+import ContactForm from './ContactForm.astro';
+
+interface Props {
+  title?: string;
+  text?: string;
+  image?: string;
+  variant?: string;
+  /** h2 (default) | h3: smaller heading, used on one live page */
+  size?: string;
+  /** Classes of the inner padding box (case study pages use large section padding). */
+  pad?: string;
+}
+const {
+  title = home.contact_title,
+  text = home.contact_text,
+  image = '/media/wf/67d92299-business-people-working-office-with-laptop-1.avif',
+  variant = 'cta-section top',
+  size = 'h2',
+  pad = 'padding-global phone-non',
+} = Astro.props;
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
 ---
-<section class="section" id="contact">
-  <div class="container">
-    <div class="contact-wrap">
-      <div class="contact-side reveal">
-        <span class="eyebrow">{eyebrow}</span>
-        <h2>{title}</h2>
-        <p>{text}</p>
-        <div class="contact-points">
-          <div class="cp"><div class="ic">✉️</div><div><div class="lbl">E-mail</div><div class="val"><a href={`mailto:${site.contact_email}`}>{site.contact_email}</a></div></div></div>
-          <div class="cp"><div class="ic">📞</div><div><div class="lbl">Phone</div><div class="val">{site.contact_phone}</div></div></div>
-          <div class="cp"><div class="ic">💬</div><div><div class="lbl">WhatsApp</div><div class="val">{site.contact_whatsapp}</div></div></div>
+<section class:list={['section', variant]} id="contact">
+  <div class={pad}>
+    <div class="container-large">
+      <div class="form-block">
+        <div class="form-box">
+          <div class="form-title">
+            <div class="heading-box">
+              <img alt={alt} loading="lazy" src="/media/wf/67d66bce-slash.svg" />
+              <h2 class={size === 'h3' ? 'heading-style-h3' : 'heading-style-h2'}>{title}</h2>
+            </div>
+            {text && <div class="form-text">{text}</div>}
+          </div>
+          <ContactForm />
         </div>
+        <img alt="Two colleagues working together at a laptop" class="form-image" loading="lazy" src={image} width="585" />
       </div>
-      <form class="form reveal" id="contactForm" method="POST" action={action} data-ready={action ? 'yes' : 'no'}>
-        <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" name="name" placeholder="Your name" required /></div>
-        <div class="field"><label for="f-email">E-mail</label><input id="f-email" type="email" name="email" placeholder="you@company.com" required /></div>
-        <div class="field"><label for="f-company">Company</label><input id="f-company" type="text" name="company" placeholder="Company name" /></div>
-        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="Tell us about your project"></textarea></div>
-        <p class="consent">By submitting this form I agree with the <a href="/privacy-policy">privacy policy</a>.</p>
-        <button type="submit" class="btn btn-primary btn-block">Send message</button>
-        <p class="form-status" id="formStatus" role="status"></p>
-      </form>
     </div>
   </div>
 </section>
-
-<script>
-  const form = document.getElementById('contactForm') as HTMLFormElement | null;
-  const status = document.getElementById('formStatus');
-  form?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    if (!status) return;
-    if (form.dataset.ready !== 'yes') { status.textContent = 'The form is not connected yet. Please e-mail us directly.'; return; }
-    status.textContent = 'Sending…';
-    try {
-      const r = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
-      if (r.ok) { form.reset(); status.textContent = 'Thank you! We will get back to you shortly.'; }
-      else status.textContent = 'Something went wrong. Please e-mail us directly.';
-    } catch { status.textContent = 'Network error. Please e-mail us directly.'; }
-  });
-</script>

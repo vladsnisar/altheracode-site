@@ -1,12 +1,97 @@
 ---
-import { getEntry, render } from 'astro:content';
+// Privacy Policy, rendered from src/content/legal/privacy-policy.md into the live page's structure.
+// Markdown rules (Pages CMS → "Юридичні сторінки"):
+// - "Effective Date: …" / "Last Updated: …" lines at the top are shown as the date box.
+// - "## N. Title" starts a numbered section; paragraphs are separated by blank lines; "- " lines are a list.
+// - In the last section, after its first paragraph, short "label" / "value" pairs (e.g. "E-mail" then the address)
+//   become the contact details, and the final paragraph is the closing note — as on the live site.
+import { getEntry } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import { inline } from '../lib/text';
+
 const page = (await getEntry('legal', 'privacy-policy'))!;
-const { Content } = await render(page);
+type Block = { kind: 'p' | 'ul'; lines: string[] };
+const blocksOf = (src: string): Block[] =>
+  src.split(/\n\s*\n/).map((b) => b.trim()).filter(Boolean).map((b) => {
+    const lines = b.split('\n').map((l) => l.trim());
+    return lines.every((l) => l.startsWith('- ')) ? { kind: 'ul', lines: lines.map((l) => l.slice(2)) } : { kind: 'p', lines: [lines.join(' ')] };
+  });
+const [intro, ...rest] = (page.body ?? '').split(/^## /m);
+const sections = rest.map((s) => {
+  const nl = s.indexOf('\n');
+  return { title: s.slice(0, nl).trim(), blocks: blocksOf(s.slice(nl + 1)) };
+});
+const introBlocks = blocksOf(intro);
+const dates = introBlocks.filter((b) => b.kind === 'p' && /^(Effective Date|Last Updated):/i.test(b.lines[0]));
+const introRest = introBlocks.filter((b) => !dates.includes(b));
+const last = sections.pop();
+// Last section: first paragraph, then label/value pairs, then the closing paragraph.
+const lastFirst = last?.blocks[0];
+const lastClosing = last && last.blocks.length > 2 ? last.blocks[last.blocks.length - 1] : undefined;
+const pairBlocks = last ? last.blocks.slice(1, lastClosing ? -1 : undefined) : [];
+const pairs: { label: string; value: string }[] = [];
+for (let i = 0; i + 1 < pairBlocks.length; i += 2) pairs.push({ label: pairBlocks[i].lines[0], value: pairBlocks[i + 1].lines[0] });
+const isEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 ---
 <Base title={page.data.title} description={page.data.description}>
-  <section class="section"><article class="container prose">
-    <h1>{page.data.heading}</h1>
-    <Content />
-  </article></section>
+  <div class="section-space-96"></div>
+  <section class="section">
+    <div class="padding-global padding-section-large">
+      <div class="container-large">
+        <div class="privacy-heading-box">
+          <h1 class="heading-style-h1">{page.data.heading}</h1>
+        </div>
+        <div class="section-space-96"></div>
+        <div class="privacy-gap-48">
+          {dates.length > 0 && (
+            <div class="privacy-text-box">
+              {dates.map((b) => <div class="fd-privacy-text" set:html={inline(b.lines[0])} />)}
+            </div>
+          )}
+          {introRest.length > 0 && (
+            <div class="privacy-gap-24">
+              {introRest.map((b, i) =>
+                b.kind === 'ul' ? null
+                : introRest[i + 1]?.kind === 'ul' ? (
+                  <div class="privacy-text-box">
+                    <div set:html={inline(b.lines[0])} />
+                    <ul role="list">{introRest[i + 1].lines.map((l) => <li set:html={inline(l)} />)}</ul>
+                  </div>
+                ) : <div set:html={inline(b.lines[0])} />
+              )}
+            </div>
+          )}
+          {sections.map((s) => (
+            <div class="privacy-gap-24">
+              <h2 class="heading-style-h3">{s.title}</h2>
+              {s.blocks.map((b) =>
+                b.kind === 'ul'
+                  ? <div class="privacy-text-box"><ul role="list">{b.lines.map((l) => <li set:html={inline(l)} />)}</ul></div>
+                  : <div set:html={inline(b.lines[0])} />
+              )}
+            </div>
+          ))}
+          {last && (
+            <>
+              <div class="privacy-gap-24">
+                <h2 class="heading-style-h3">{last.title}</h2>
+              </div>
+              {lastFirst && <div set:html={inline(lastFirst.lines[0])} />}
+              {pairs.length > 0 && (
+                <div class="privacy-gap-24">
+                  {pairs.map((p) => (
+                    <div class="privacy-gap-12">
+                      <div class="text-block">{p.label}</div>
+                      {isEmail(p.value) ? <a href={`mailto:${p.value}`}>{p.value}</a> : <div>{p.value}</div>}
+                    </div>
+                  ))}
+                </div>
+              )}
+              {lastClosing && <div set:html={inline(lastClosing.lines[0])} />}
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
 </Base>

@@ -1,0 +1,24 @@
+---
+// Blog hero (/blog and category pages): bracketed headline with the accent words in purple and an intro.
+import { highlight } from '../lib/text';
+interface Props { title: string; accent?: string; text?: string }
+const { title, accent, text } = Astro.props;
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
+---
+<section class="section_hero blog">
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="hero-wrap">
+        <div class="hero-heading-box service">
+          <img alt={alt} class="hero-heading-element" loading="eager" src="/media/wf/67daa56c-heading-element.svg" />
+          <h1 class="heading-style-h1" set:html={highlight(title, accent, 'h-purple')} />
+          <img alt={alt} class="hero-heading-element right" loading="eager" src="/media/wf/67daa56c-heading-element-2.svg" />
+        </div>
+        {text && <p class="hero-subheading blog-description">{text}</p>}
+      </div>
+    </div>
+  </div>
+  <img alt="" class="service-hero-bg-image" loading="eager" src="/media/wf/67daa61c-service-bg-image-left.avif" width="372.5" />
+  <img alt="" class="service-hero-bg-image service-right-bg" loading="eager" src="/media/wf/67daa61c-service-bg-image-right.avif" width="354" />
+  <img alt="" class="service-hero-bg-image service-top-bg" loading="eager" src="/media/wf/67dbe3e1-group-85753.avif" width="431.5" />
+</section>

@@ -1,0 +1,44 @@
+---
+// "Industries We Work With": heading, tag, industry tiles with icons and a photo on the right.
+// Used on the homepage and on service pages; text, icons and photo are passed in from the content files.
+interface Props {
+  title: string;
+  eyebrow?: string;
+  items: { name: string; icon?: string }[];
+  image?: string;
+}
+const { title, eyebrow, items, image = '/media/wf/67d417bb-industries-image.avif' } = Astro.props;
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
+---
+<section class="section">
+  <div class="padding-global padding-section-large">
+    <div class="container-large">
+      <div class="industries-heading-wrap">
+        <div class="heading-text-wrap max-width-800">
+          <div class="heading-box">
+            <img alt={alt} loading="lazy" src="/media/wf/67d41741-image.svg" />
+            <h2 class="heading-style-h2">{title}</h2>
+          </div>
+        </div>
+        {eyebrow && (
+          <div class="section-tag-box light-purple first">
+            <div class="tag-bullet"></div>
+            <div>{eyebrow}</div>
+          </div>
+        )}
+      </div>
+      <div class="section-space-96"></div>
+      <div class="industries-wrap">
+        <div class="industries-items-wrap">
+          {items.map((it) => (
+            <div class="industries-item">
+              {it.icon && <img alt="" loading="lazy" src={it.icon} width="24" />}
+              <div>{it.name}</div>
+            </div>
+          ))}
+        </div>
+        {image && <img alt="Our team in the office" class="industries-image" loading="lazy" src={image} width="598" />}
+      </div>
+    </div>
+  </div>
+</section>

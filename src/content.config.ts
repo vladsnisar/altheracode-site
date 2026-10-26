@@ -27,6 +27,8 @@ const portfolio = defineCollection({
     draft: z.boolean().default(false),
     created: z.coerce.date(),
     tag: z.string().default(''),
+    // Show the `tag` badge (e.g. "Under NDA") on the card. Off on every live case study.
+    nda: z.boolean().default(false),
     categories: z.array(z.string()).default([]),
     location: z.string().default(''),
     duration: z.string().default(''),
@@ -41,6 +43,8 @@ const portfolio = defineCollection({
     product_text_2: z.string().default(''),
     goals: z.array(z.string()).default([]),
     challenges: z.array(z.string()).default([]),
+    // "list" (bullets) or "paragraphs" (live cases that type "▪ " before each point)
+    challenges_style: z.string().default('list'),
     solution: z.string().default(''),
     results_text: z.string().default(''),
     results: z.array(pair).default([]),

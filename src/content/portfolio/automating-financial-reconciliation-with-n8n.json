@@ -48,7 +48,9 @@
     "Eliminate manual reconciliation by building an automation system that ingests reports in multiple formats, applies per-ISO tolerance logic, matches expected vs received amounts, and produces a live dashboard with zero human input on routine cycles. Every run must produce a traceable, timestamped audit record for compliance."
   ],
   "challenges": [
-    "■ No standardised input format: ISO reports arrived as CSV, Excel, and PDF with inconsistent column naming requiring a multi-format normalisation layer\n\n■ Per-ISO tolerance logic: each account had a different contractual mismatch threshold that the engine had to evaluate dynamically to avoid false alerts\n\n■ No new tooling: the solution had to integrate into the existing reporting workflow without replacing or rebuilding what finance leadership already used"
+    "■ No standardised input format: ISO reports arrived as CSV, Excel, and PDF with inconsistent column naming requiring a multi-format normalisation layer",
+    "■ Per-ISO tolerance logic: each account had a different contractual mismatch threshold that the engine had to evaluate dynamically to avoid false alerts",
+    "■ No new tooling: the solution had to integrate into the existing reporting workflow without replacing or rebuilding what finance leadership already used"
   ],
   "solution": "AltheraCode built an event-driven reconciliation pipeline in n8n with five stages, triggered by monthly cron and callable via webhook on early ISO submission.\n\n**Ingestion and Normalisation.** n8n polls Dropbox and SMTP inbox, maps 4 report formats to a canonical schema, writes to PostgreSQL staging table.\n\n**Tolerance-Aware Matching.** Engine queries daily bank deposit data, evaluates amount delta against per-ISO config in PostgreSQL, writes matched / mismatch / missing status.\n\n**Alert Engine.** Mismatch emails sent to ISO with delta detail and CC to finance team. Missing submissions trigger reminder plus 48-hour manager escalation.\n\n**Live Dashboard Write.** Summary row appended to existing reporting sheet after each run: period totals, counts, net delta, timestamp.\n\n**Archive and Audit Log.** Source files, email records, and summary zipped to Dropbox per period. Immutable PostgreSQL audit entry per run.",
   "results_text": "The financial reconciliation automation delivered by Althera Code significantly improved efficiency, accuracy, and overall reliability of the process. Key outcomes included:",
@@ -67,5 +69,6 @@
     }
   ],
   "results_closing": "A 40-hour monthly manual process replaced by a fully automated, audit-ready pipeline that runs without human input and gives the finance team back two full working days every month.",
-  "created": "2025-09-17T10:51"
+  "created": "2025-09-17T10:51",
+  "challenges_style": "paragraphs"
 }

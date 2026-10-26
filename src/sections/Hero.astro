@@ -1,16 +1,24 @@
 ---
+// Homepage hero: bracketed headline, intro text and "Book a Call". Text comes from home.json.
 import home from '../content/home.json';
+const alt = 'ALT Althera Code – Innovative Custom Software Development Company. + SVG Image';
 ---
-<section class="hero">
-  <div class="hero-glow"></div>
-  <div class="container">
-    <div class="hero-inner">
-      <h1>{home.hero_title_start}<span class="hl">{home.hero_title_accent}</span>{home.hero_title_end}</h1>
-      <p>{home.hero_text}</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">{home.hero_button_primary} <span class="arrow">→</span></a>
-        <a href="#portfolio" class="btn btn-ghost">{home.hero_button_secondary}</a>
+<section class="section_hero home">
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="hero-wrap">
+        <div class="hero-heading-box">
+          <img alt={alt} class="hero-heading-element" loading="eager" src="/media/wf/67d3ea97-image.svg" />
+          <h1 class="heading-style-h1">
+            <span class="mint">{home.hero_title_accent}</span>{' '}{home.hero_title_end}
+          </h1>
+          <img alt={alt} class="hero-heading-element right" loading="eager" src="/media/wf/67d3ea97-2.svg" />
+        </div>
+        <p class="hero-subheading">{home.hero_text}</p>
+        <a class="button-main w-button" href={home.hero_button_link}>{home.hero_button_primary}</a>
       </div>
     </div>
   </div>
+  <img alt="" class="hero-bg-image" loading="eager" src="/media/wf/67d3ee02-hero-bg-image-right.avif" width="533.5" />
+  <img alt="" class="hero-bg-image right" loading="eager" src="/media/wf/67d3ee02-hero-bg-image-right.avif" width="533.5" />
 </section>

@@ -43,7 +43,9 @@
     "The client needed to modernize internal invention disclosure and technical review workflows while maintaining strict security and compliance requirements. The primary goal was to reduce manual document handling, improve collaboration between departments, and create a scalable process for managing growing volumes of technical submissions."
   ],
   "challenges": [
-    "▪ No standardized invention submission flow, requiring teams to process documents manually across multiple formats and communication channels.\n\n▪ Security and compliance requirements prevented the use of external AI tools, cloud processing environments, and uncontrolled data-sharing workflows.\n\n▪ Technical reviews depended heavily on engineers, researchers, and legal teams coordinating documentation manually across internal innovation processes."
+    "▪ No standardized invention submission flow, requiring teams to process documents manually across multiple formats and communication channels.",
+    "▪ Security and compliance requirements prevented the use of external AI tools, cloud processing environments, and uncontrolled data-sharing workflows.",
+    "▪ Technical reviews depended heavily on engineers, researchers, and legal teams coordinating documentation manually across internal innovation processes."
   ],
   "solution": "AltheraCode developed a secure enterprise IP Copilot integrated directly into the client’s Microsoft 365 environment. The solution combined Microsoft Copilot Studio, Azure OpenAI, Power Automate, SharePoint, and Azure Functions into a centralized workflow automation ecosystem.\n\nThe implementation enabled automated analysis of uploaded technical documents, guided invention disclosure workflows, AI-assisted summarization, and structured internal collaboration between engineering, research, and legal teams. All data processing remained fully internal within the organization’s Azure tenant to support enterprise-grade security and compliance requirements.\n\nSpecial attention was given to workflow orchestration, secure architecture design, and controlled document handling to ensure reliable operation in a high-sensitivity enterprise environment.",
   "results_text": "The implementation improved the speed, consistency, and security of invention documentation workflows across the organization. Key outcomes included:",
@@ -62,5 +64,6 @@
     }
   ],
   "results_closing": "A fragmented invention management process was transformed into a secure, AI-assisted workflow that improved collaboration, accelerated technical reviews, and reduced operational overhead across departments.",
-  "created": "2026-05-28T08:56"
+  "created": "2026-05-28T08:56",
+  "challenges_style": "paragraphs"
 }

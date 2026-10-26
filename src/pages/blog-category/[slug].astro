@@ -1,38 +1,24 @@
 ---
+// One blog category (/blog-category/<slug>): same as /blog, showing only that category's posts with its tab highlighted.
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import BlogHero from '../../sections/BlogHero.astro';
+import BlogList from '../../sections/BlogList.astro';
+import Contact from '../../sections/Contact.astro';
 import { slugify } from '../../lib/text';
 import cats from '../../content/blog-categories.json';
 import pages from '../../content/pages.json';
+import home from '../../content/home.json';
 export function getStaticPaths() {
-  return cats.blog_categories.map(c => ({ params: { slug: c.slug }, props: { cat: c } }));
+  return cats.blog_categories.map((c) => ({ params: { slug: c.slug }, props: { cat: c } }));
 }
 const { cat } = Astro.props;
-const posts = (await getCollection('blog', p => !p.data.draft && slugify(p.data.category ?? '') === cat.slug))
+const page = pages.blog;
+const posts = (await getCollection('blog', (p) => !p.data.draft && slugify(p.data.category ?? '') === cat.slug))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 <Base title={`${cat.name} — AltheraCode Blog`} description={`AltheraCode blog posts about ${cat.name}.`}>
-  <section class="hero page-hero"><div class="hero-glow"></div><div class="container"><div class="hero-inner">
-    <span class="eyebrow">Blog</span><h1>{cat.name}</h1>
-    {pages.blog.lead && <p>{pages.blog.lead}</p>}
-  </div></div></section>
-  <section class="section"><div class="container">
-    <nav class="filter-chips" aria-label="Blog categories">
-      <a class="chip-btn" href="/blog">All posts</a>
-      {cats.blog_categories.map(c => <a class:list={['chip-btn', { active: c.slug === cat.slug }]} href={`/blog-category/${c.slug}`}>{c.name}</a>)}
-    </nav>
-    {posts.length === 0 && <p class="lead">No posts in this category yet.</p>}
-    <div class="grid cols-3">
-      {posts.map(p => (
-        <article class="portfolio-card">
-          <div class="portfolio-thumb">{p.data.cover ? <img src={p.data.cover} alt="" loading="lazy" /> : <span class="glyph">✎</span>}</div>
-          <div class="portfolio-body">
-            <h3><a href={`/blog/${p.id}`}>{p.data.title}</a></h3>
-            <p>{p.data.description}</p>
-            <a class="more" href={`/blog/${p.id}`}>Read more →</a>
-          </div>
-        </article>
-      ))}
-    </div>
-  </div></section>
+  <BlogHero title={page.title} accent={page.title_accent} text={page.lead} />
+  <BlogList posts={posts} current={cat.slug} />
+  <Contact title={home.contact_title} text={home.contact_text} image={home.contact_image} variant="cta-section" />
 </Base>
