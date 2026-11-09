@@ -20,6 +20,9 @@ This repo is the AltheraCode marketing site. **There is no developer.** The mark
   - `src/content/tech.json`: technology names and logos, matched by name on case-study pages.
   - `public/media/`: uploaded images, served at `/media/...`.
 
+## Design system (read before any visual change)
+The site's look is documented in **`docs/design-system/`**. Before adding a page or section, or changing how anything looks, read `docs/design-system/README.md` (golden rules + checklist), then the file the task needs: `brand.md` (logo, colours, fonts, glyphs, tone), `tokens.md` (exact sizes, colours, spacing, breakpoints, motion), `components.md` (markup for headings, pills, buttons, cards, forms), `sections.md` (every existing section with screenshots in `screenshots/`, page recipes). The current site is the source of truth. The Brand Book v1.1 in `docs/design-system/source/` is a concept for a future redesign: apply its tone, logo and accessibility rules, but not its fonts or visual system unless the team asks for a redesign. If a change adds a new section type, component or rule, update the guide in the same PR.
+
 ## Where things live
 | You want to… | Edit |
 |---|---|
@@ -27,7 +30,8 @@ This repo is the AltheraCode marketing site. **There is no developer.** The mark
 | Change how a section looks or is built | `src/sections/<Name>.astro` plus classes in `webflow.css` (or new styles in `site.css`) |
 | Add a new page | If it can be built from the existing sections, marketing can make it in the CMS ("Нові сторінки (з секцій)"), no code needed. Otherwise `src/pages/<url>.astro` (or `src/pages/<folder>/<url>.astro`), wrapped in `<Base title description>` |
 | Change header, footer or `<head>` | `src/sections/Header.astro`, `Footer.astro`, `src/layouts/Base.astro` |
-| Colors, fonts, spacing | `:root` variables in `src/styles/webflow.css` |
+| Colors, fonts, spacing | `:root` variables in `src/styles/webflow.css` (values and rules: `docs/design-system/tokens.md`) |
+| Check how something should look | `docs/design-system/` (start with `README.md`) |
 
 ## Rules
 1. **Never push to `main` or `staging`.** Always work on a new branch (`claude/<short-topic>`) and open a pull request against `main`. In the PR description, say in plain words what changed and which pages to check on the preview link.
